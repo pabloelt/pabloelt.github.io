@@ -1,0 +1,7 @@
+Para descargar los iconos podemos usar -> Fontawesome
+
+Descargamos el icono en formato svg y lo guardamos en la carpeta de assets directamente.
+Para el color, lo seleccionamos directamente en la aplicación de Fontawesome. Podemos transformar el código que 
+usamos en los anteriores estilos a RGB mediante la página: rgb to hex (directamente en google).
+
+Para el color HEADER sería HEX: #F1F2F4 -> RGB: 241, 242, 244
