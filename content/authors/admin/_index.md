@@ -44,7 +44,8 @@ bio: HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'about/#contact' # For a direct email link, use "mailto:test@example.org".
+    #link: 'about/#contact' # For a direct email link, use "mailto:test@example.org".
+    mailto: your-email@example.com
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/
@@ -54,9 +55,9 @@ social:
 
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+  - icon: cv
+    icon_pack: ai
+    link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 #email: ""

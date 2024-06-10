@@ -28,10 +28,10 @@ content:
   filter_button:
     - name: All
       tag: '*'
+    - name: Discovery Projects
+      tag: DP
     - name: Machine Learning
       tag: ML
-    - name: Computer Vision
-      tag: CV
     - name: NLP
       tag: NLP
 
