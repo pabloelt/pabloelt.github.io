@@ -72,4 +72,9 @@ Me considero una persona trabajadora, resolutiva y disciplinada con sus objetivo
 ---
 ## Contact
 
-Contact me on the following links:
+Contact me on:
+| | |
+| :- | :- |
+| Email: | pe.lopeztello@hmail.com |
+| Phone: | (+34) 648842486 |
+| LinkedIn: | Contact me here |
