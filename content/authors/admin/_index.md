@@ -61,6 +61,12 @@ social:
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 #email: ""
+
+
+#| Email: | pe.lopeztello@hmail.com |
+#| :- | :- |
+#| Phone: | (+34) 648842486 |
+#| LinkedIn: | [Contact me here](https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/) |
 ---
 
 **Doctor Ingeniero industrial** con amplia competencia en el mundo académico. Recientemente terminé mis estudios de doctorado, una experiencia muy gratificante que me ha permitido conocer gente increíble y aprender mucho de ellos. Ahora que finalicé mi doctorado, estoy interesado en expandir mi conocimiento en el mundo del data science y tratar de aportar todo lo que pueda a esta comunidad.
@@ -73,8 +79,6 @@ Me considero una persona trabajadora, resolutiva y disciplinada con sus objetivo
 
 ## Contact
 
-Contact me on:
-
 Email: &nbsp; pe.lopeztello@gmail.com
 
 Phone: &nbsp; (+34) 648842486
@@ -82,7 +86,3 @@ Phone: &nbsp; (+34) 648842486
 LinkedIn: &nbsp; [Contact me here](https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/)
 
 
-| Email: | pe.lopeztello@hmail.com |
-| :- | :- |
-| Phone: | (+34) 648842486 |
-| LinkedIn: | [Contact me here](https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/) |
