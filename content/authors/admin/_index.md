@@ -70,10 +70,12 @@ Me considero una persona trabajadora, resolutiva y disciplinada con sus objetivo
 {{< icon name="download" pack="fas" >}} {{< staticref "uploads/cv.pdf" "newtab" >}}Download{{< /staticref >}} my CV as a PDF.
 
 ---
+
 ## Contact
 
 Contact me on:
 
+|    |    |
 | :- | :- |
 | Email: | pe.lopeztello@hmail.com |
 | Phone: | (+34) 648842486 |
