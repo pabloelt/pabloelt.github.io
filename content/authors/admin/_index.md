@@ -63,14 +63,15 @@ social:
 #email: ""
 ---
 
-Doctor Ingeniero industrial con amplia competencia en el mundo académico. Recientemente terminé mis estudios de doctorado, una experiencia muy gratificante que me ha permitido conocer gente increíble y aprender mucho de ellos. Ahora que finalicé mi doctorado, estoy interesado en expandir mi conocimiento en el mundo del data science y tratar de aportar todo lo que pueda a esta comunidad.
+# Hola
+
+**Doctor Ingeniero industrial** con amplia competencia en el mundo académico. Recientemente terminé mis estudios de doctorado, una experiencia muy gratificante que me ha permitido conocer gente increíble y aprender mucho de ellos. Ahora que finalicé mi doctorado, estoy interesado en expandir mi conocimiento en el mundo del data science y tratar de aportar todo lo que pueda a esta comunidad.
 
 Me considero una persona trabajadora, resolutiva y disciplinada con sus objetivos. Busco una oportunidad para desarrollar mi carrera y dar lo mejor de mí en este nuevo campo.
 
 {{< icon name="download" pack="fas" >}} {{< staticref "uploads/cv.pdf" "newtab" >}}Download{{< /staticref >}} my CV as a PDF.
 
 ---
-# Contact
+## Contact
 
 Contact me on the following links:
----
