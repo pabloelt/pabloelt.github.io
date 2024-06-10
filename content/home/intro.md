@@ -21,4 +21,4 @@ author: admin
 Hy! My name is Pablo Esteban López-Tello. Welcome to my Data Science Portfolio!
 {style="font-size: 1.2rem; background: #FFB76B; background: linear-gradient(to right, #FFB76B 0%, #FFA73D 30%, #FF7C00 60%, #FF7F04 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"}
 
-Know more aboute [me](/about/) and check out my portfolio below.
+Know more [about me](/about/) and check out my portfolio below.
