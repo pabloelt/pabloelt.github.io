@@ -69,6 +69,10 @@ social:
 #| LinkedIn: | [Contact me here](https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/) |
 ---
 
+My name is Pablo Esteban. I am passionate about solving problems and optimizing processes, especially those related to programming and business knowledge.
+
+---
+
 Since I was a child, I have always been curious about how the world around me worked. This curiosity led me to pursue a degree in Industrial Engineering. During my studies, I gained knowledge in multiple disciplines, but I was particularly captivated by Fluid Mechanics.
 
 After completing my bachelor's and master's degrees, I had the opportunity to work as a researcher in the Fluid Mechanics department at the University of Málaga, which prompted me to start my doctoral studies. Over the course of four years, I worked on the propulsion of small aquatic vehicles and the energy harvesting through bio-inspired devices. Additionally, I completed a research stay in Luleå, Sweden, where I collaborated with the team responsible for designing hydraulic turbines and improved my English proficiency.
