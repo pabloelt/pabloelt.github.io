@@ -29,11 +29,11 @@ content:
     - name: All
       tag: '*'
     - name: Discovery Projects
-      tag: DP
+      tag: Discovery Projects
     - name: Machine Learning
-      tag: ML
-    - name: NLP
-      tag: NLP
+      tag: Machine Learning
+    - name: Dashboards
+      tag: Dashboards
 
 design:
   columns: '1'

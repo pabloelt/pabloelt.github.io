@@ -2,8 +2,8 @@
 title: Project 1
 summary: Reas Estate Markets's Analysis for rental vacation
 tags: 
-  - DP
-date: 2022-01-01
+  - Discovery Projects
+date: 2024-06-01
 #external_link: http://github.com
 ---
 

@@ -2,7 +2,7 @@
 title: Cosmetics Semantic Search
 summary: Write about your project here...
 tags:
-  - ML
+  - Machine Learning
 date: 2022-01-01
-external_link:
+#external_link:
 ---
