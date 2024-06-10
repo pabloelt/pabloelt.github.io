@@ -18,7 +18,7 @@ status:
 #  url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
+bio: Hola me llamo Pablo Esteban y soy Data Scientist.
 
 #interests:
 #- Artificial Intelligence
@@ -44,8 +44,8 @@ bio: HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA.
 social:
   - icon: envelope
     icon_pack: fas
+    mailto: 'pe.lopeztello@gmail.com'
     #link: 'about/#contact' # For a direct email link, use "mailto:test@example.org".
-    mailto: your-email@example.com
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/
