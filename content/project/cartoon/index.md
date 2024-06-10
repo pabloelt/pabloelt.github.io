@@ -4,7 +4,6 @@ summary: Reas Estate Markets's Analysis for rental vacation
 tags: 
   - DP
 date: 2022-01-01
-share: flase
 #external_link: http://github.com
 ---
 
