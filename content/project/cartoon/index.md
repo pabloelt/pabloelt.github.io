@@ -7,9 +7,12 @@ date: 2022-01-01
 #external_link: http://github.com
 ---
 
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España)
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España)
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España)
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España)
+Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
+Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
+
+![Scenario 1: Across columns](/avatar.jpg)
+
+Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
+Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 
 
