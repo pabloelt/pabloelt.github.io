@@ -1,8 +1,13 @@
 ---
 title: Cartoon Face Generator
-summary: Write about your project here...
+summary: Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España)
 tags:
   - CV
 date: 2022-01-01
-external_link: http://github.com
+#external_link: http://github.com
 ---
+
+Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España)
+Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España)
+Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España)
+Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España)
