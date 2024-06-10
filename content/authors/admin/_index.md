@@ -44,7 +44,7 @@ bio: Hola me llamo Pablo Esteban y soy Data Scientist.
 social:
   - icon: envelope
     icon_pack: fas
-    mailto: 'pe.lopeztello@gmail.com'
+    link: 'mailto:pe.lopeztello@gmail.com'
     #link: 'about/#contact' # For a direct email link, use "mailto:test@example.org".
   - icon: linkedin
     icon_pack: fab
@@ -68,3 +68,9 @@ Doctor Ingeniero industrial con amplia competencia en el mundo académico. Recie
 Me considero una persona trabajadora, resolutiva y disciplinada con sus objetivos. Busco una oportunidad para desarrollar mi carrera y dar lo mejor de mí en este nuevo campo.
 
 {{< icon name="download" pack="fas" >}} {{< staticref "uploads/cv.pdf" "newtab" >}}Download{{< /staticref >}} my CV as a PDF.
+
+---
+# Contact
+
+Contact me on the following links:
+---
