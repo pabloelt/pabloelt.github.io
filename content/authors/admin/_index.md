@@ -75,6 +75,13 @@ Me considero una persona trabajadora, resolutiva y disciplinada con sus objetivo
 
 Contact me on:
 
+Email: &nbsp; pe.lopeztello@gmail.com
+
+Phone: &nbsp; (+34) 648842486
+
+LinkedIn: &nbsp; [Contact me here](https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/)
+
+
 |    |    |
 | :- | :- |
 | Email: | pe.lopeztello@hmail.com |
