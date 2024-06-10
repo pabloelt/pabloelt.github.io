@@ -18,9 +18,7 @@ status:
 #  url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: 
-  - Data Scientist and PhD in Mechatronics
-  - I am passionate about solving problems and optimizing processes, especially those related to programming and business knowledge.
+bio: Data Scientist and PhD in Mechatronics. I am passionate about solving problems and optimizing processes, especially those related to programming and business knowledge.
 
 #interests:
 #- Artificial Intelligence
