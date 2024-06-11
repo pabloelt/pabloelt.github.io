@@ -7,11 +7,9 @@ date: 2024-06-01
 #external_link: http://github.com
 ---
 
-*Note: Documentation available on the*
-{style="color: #aaaaaa"}
-*[GitHub Repository](https://github.com/pabloelt)*
-*are currently in Spanish. It will be soon updated to English.*
-{style="background: #aaaaaa; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"}
+*Note: Documentation available on the* {style="color: #aaaaaa"}
+*[GitHub Repository](https://github.com/pabloelt)* {style="color: blue"}
+*are currently in Spanish. It will be soon updated to English.* {style="color: #aaaaaa"}
 
 {{< toc >}}
 
