@@ -1,6 +1,6 @@
 ---
-title: Project 1
-summary: Reas Estate Markets's Analysis for rental vacation
+title: Real Estate Markets's Analysis for rental vacation
+summary: The available public AirBnb data sources are analysed to find insights that can help to understand the characteristics of the vacation rental market in Madrid (Spain) and guide the team’s research work in terms of rental prices, occupancy levels and purchase prices.
 tags: 
   - Discovery Projects
 date: 2024-06-01
