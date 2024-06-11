@@ -7,6 +7,10 @@ date: 2024-06-01
 #external_link: http://github.com
 ---
 
+Note: Documentation available on the GitHub Repository are currently in Spanish. It will be soon updated to English.
+
+
+
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 
