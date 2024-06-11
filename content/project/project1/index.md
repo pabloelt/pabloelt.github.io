@@ -12,7 +12,7 @@ date: 2024-06-01
 
 {{< toc >}}
 
-## Introduction
+## **Introduction**
 {style="color: #BBDEFC"}
 
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
