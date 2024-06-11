@@ -13,7 +13,7 @@ date: 2024-06-01
 {{< toc >}}
 
 ## Introduction
-{style="color: red"}
+{style="color: #BBDEFC"}
 
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
@@ -21,6 +21,7 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 ---
 
 ## Objectives
+{style="color: #BBDEFC"}
 
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
@@ -33,6 +34,7 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 ---
 
 ## Project design
+{style="color: #BBDEFC"}
 
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
@@ -40,6 +42,7 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 ---
 
 ## Data quality
+{style="color: #BBDEFC"}
 
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
@@ -47,6 +50,7 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 ---
 
 ## Esploratory Data Analysis
+{style="color: #BBDEFC"}
 
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
@@ -54,6 +58,7 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 ---
 
 ## Results communication
+{style="color: #BBDEFC"}
 
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
