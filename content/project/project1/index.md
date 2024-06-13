@@ -15,21 +15,36 @@ date: 2024-06-01
 ## Introduction
 {style="color: #BBDEFC"}
 
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
+In this project, we analyze potential real estate investments in the vacation rental sector in Madrid (Spain). To that end, we are using publicly available data from the market leader, Airbnb, and we will identify the properties with the greatest commercial potential for vacation rentals.
+
+Notes:
+
+* This article presents a technical explanation of the development process followed in the project.
+* Source code can be found [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation).
 
 ---
 
 ## Objectives
 {style="color: #BBDEFC"}
 
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
+The main objective is to identify the property profiles that maximize commercial potential in the vacation rental market. This will guide the valuation team on where to start looking for such opportunities and highlight the key neighborhoods and geographical areas, which are most promising to focus on. This analysis is primarily conducted in terms of rental prices, occupancy levels, and purchase prices.
 
-![Project 1: Across columns](/project1/avatar.jpg)
+### Levers
 
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
+The levers for this project are clear and are summarized below:
+
+* **Rental price:** The higher the rental price per night, the greater the profitability.
+* **Occupancy rate:** The more days per year a property can be rented, the greater the profitability.
+* **Purchase price:** The cheaper the property can be acquired, the greater the profitability.
+
+### KPIs
+
+The KPIs that results from the above-mentioned levers are the following:
+
+* **KPI 1:**
+* **KPI 2:**
+* **KPI 3:**
+
 
 ---
 
@@ -65,3 +80,4 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 
 
 
+![Project 1: Across columns](/project1/avatar.jpg)
