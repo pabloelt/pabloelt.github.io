@@ -138,11 +138,13 @@ ul.network-icon .big-icon {
 .wg-about .article-style {
   text-align: justify;
 }
-// Arreglando margenes en projects:
+// Arreglando margenes en projects
 .article-container {
   max-width: 1000px;
 }
-.article-header.article-container.featured-image-wrapper.mt-4.mb-4.element.style {
+// Arreglando tamaño de foto featured
+//.article-header.article-container.featured-image-wrapper.mt-4.mb-4
+.element.style {
   max-width: 1000px;
   max-height: auto;
 }
