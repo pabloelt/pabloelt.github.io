@@ -68,10 +68,8 @@ social:
 #| Phone: | (+34) 648842486 |
 #| LinkedIn: | [Contact me here](https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/) |
 
-.article-style {
-  text-align: justify;
-}
 ---
+
 My name is Pablo Esteban. I'm passionate about solving problems and optimizing processes, especially those related to coding and business knowledge.
 
 ---
