@@ -136,9 +136,13 @@ ul.network-icon .big-icon {
 }
 // Arreglando justificado dentro de about
 .wg-about .article-style {
-  text-align: justify
+  text-align: justify;
 }
-
+// Arreglando margenes en projects:
 .article-container {
-  max-width: 1000px
+  max-width: 1000px;
+}
+.article-header.article-container.featured-image-wrapper.mt-4.mb-4.element.style {
+  max-width: 1000px;
+  max-height: auto;
 }
