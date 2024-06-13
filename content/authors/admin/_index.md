@@ -92,7 +92,8 @@ My goal now is to build a career in this new field, helping individuals and comp
 Email: &nbsp; pe.lopeztello@gmail.com
 
 Phone: &nbsp; 
-(+34) 648842486{style="color: #BBDEFC"}
+(+34) 648842486
+{style="color: #BBDEFC"}
 
 LinkedIn: &nbsp; [Contact me here](https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/)
 

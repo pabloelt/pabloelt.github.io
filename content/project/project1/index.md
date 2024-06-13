@@ -49,7 +49,7 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 
 ---
 
-## Esploratory Data Analysis
+## Exploratory Data Analysis
 {style="color: #BBDEFC"}
 
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
