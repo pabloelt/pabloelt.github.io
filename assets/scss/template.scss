@@ -140,9 +140,10 @@ ul.network-icon .big-icon {
 }
 // Arreglando margenes en projects
 .article-container {
-  max-width: 1000px;
+  max-width: 1200px;
 }
 // Arreglando tamaño de foto featured
-.article-header.article-container.featured-image-wrapper.mt-4.mb-4.element.style {
-  max-width: 1000px;
+.article-header.article-container.featured-image-wrapper.mt-4.mb-4 .element.style {
+  max-width: 1200px;
+  max-height: 800px;
 }
