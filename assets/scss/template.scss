@@ -66,8 +66,8 @@ ul.network-icon .big-icon {
 }
 
 .home-section > .content {
-  width: 65em;
-  max-width: calc(100% - 2em);
+  width: 45em;
+  max-width: calc(100% - 4em);
   margin: 0 auto;
 }
 
@@ -127,4 +127,7 @@ ul.network-icon .big-icon {
 }
 .w-100 {
   max-width: 60%;
+}
+.article-container {
+  text-align: justify;
 }
