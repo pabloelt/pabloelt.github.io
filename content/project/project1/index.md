@@ -7,7 +7,7 @@ date: 2024-06-01
 #external_link: http://github.com
 ---
 
-*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt) is currently in Spanish. It will be soon updated to English.*
+*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation) is currently in Spanish. It will be soon updated to English.*
 {style="color: #aaaaaa"}
 
 {{< toc >}}
