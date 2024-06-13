@@ -30,14 +30,16 @@ Notes:
 The main objective is to identify the property profiles that maximize commercial potential in the vacation rental market. This will guide the valuation team on where to start looking for such opportunities and highlight the key neighborhoods and geographical areas, which are most promising to focus on. This analysis is primarily conducted in terms of rental prices, occupancy levels, and purchase prices.
 
 ### Levers
+{style="color: #BBDEFC"}
 
 The levers for this project are clear and are summarized below:
 
-* **Rental price:** The higher the rental price per night, the greater the profitability.
+* <text style='color: #f76497; font-weight: normal;'>Rental price:</text> **Rental price:** The higher the rental price per night, the greater the profitability.
 * **Occupancy rate:** The more days per year a property can be rented, the greater the profitability.
 * **Purchase price:** The cheaper the property can be acquired, the greater the profitability.
 
 ### KPIs
+{style="color: #BBDEFC"}
 
 The KPIs that results from the above-mentioned levers are the following:
 
