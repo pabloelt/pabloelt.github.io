@@ -134,8 +134,11 @@ ul.network-icon .big-icon {
 .article-container {
   text-align: justify;
 }
-
-
+// Arreglando justificado dentro de about
 .wg-about .article-style {
   text-align: justify
+}
+
+.article-container {
+  max-width: 1000 px
 }
