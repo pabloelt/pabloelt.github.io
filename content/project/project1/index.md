@@ -139,9 +139,15 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 
 
-
+<text style='color: #BBDEFC; font-weight: normal;'>1. Ten neighborhoods with a high investment potential have been identified</text>
 
 
 {{< figure src="/project1/exhibit_1.png" title="Exhibit 1: There are 10 neighborhoods with a high investment potential." >}}
 
 {{< figure src="/project1/exhibit_2.png" title="Exhibit 2: ." >}}
+
+{{< figure src="/project1/exhibit_3.png" title="Exhibit 3: ." >}}
+
+{{< figure src="/project1/exhibit_4.png" title="Exhibit 4: ." >}}
+
+{{< figure src="/project1/exhibit_5.png" title="Exhibit 5: ." >}}
