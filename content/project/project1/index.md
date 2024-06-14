@@ -97,4 +97,4 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 
 
 
-![Project 1: Across columns](/project1/avatar.jpg)
+[Project 1: Across columns](/project1/exhibit_1.png)
