@@ -12,7 +12,7 @@ date: 2024-06-01
 
 {{< toc >}}
 
-## Introduction
+## 1. Introduction
 {style="color: #BBDEFC"}
 
 In this project, we analyze potential real estate investments in the vacation rental sector in Madrid (Spain). To that end, we are using publicly available data from the market leader, Airbnb, and we will identify the properties with the greatest commercial potential for vacation rentals.
@@ -24,19 +24,19 @@ Notes:
 
 ---
 
-## Objectives
+## 2. Objectives
 {style="color: #BBDEFC"}
 
 The main objective is to identify the property profiles that maximize commercial potential in the vacation rental market. This will guide the valuation team on where to start looking for such opportunities and highlight the key neighborhoods and geographical areas, which are most promising to focus on. This analysis is primarily conducted in terms of rental prices, occupancy levels, and purchase prices.
 
 ---
 
-## Project Design
+## 3. Project Design
 {style="color: #BBDEFC"}
 
 This project has been designed by taking into consideration the following levers, KPIs, and entities from which data have been obtained.
 
-### Levers
+### 3.1 Levers
 {style="color: #BBDEFC; font-weight: normal"}
 
 The levers for this project are clear and are summarized below:
@@ -45,7 +45,7 @@ The levers for this project are clear and are summarized below:
 * <text style='color: #BBDEFC; font-weight: normal;'>Occupancy rate:</text> The more days per year a property can be rented, the greater the profitability.
 * <text style='color: #BBDEFC; font-weight: normal;'>Purchase price:</text> The cheaper the property can be acquired, the greater the profitability.
 
-### KPIs
+### 3.2 KPIs
 {style="color: #BBDEFC; font-weight: normal"}
 
 The KPIs that results from the above-mentioned levers are the following:
@@ -54,7 +54,7 @@ The KPIs that results from the above-mentioned levers are the following:
 * <text style='color: #BBDEFC; font-weight: normal;'>KPI 2:</text> We calculate the occupancy rate as the number of days per year that the property is rented in percentage.
 * <text style='color: #BBDEFC; font-weight: normal;'>KPI 3:</text> We calculate the purchase price of a property by multiplying the number of square meters by the average price per square meter in the area where the property is located. Additionally, we apply a 25% discount to the official price, assuming that our purchasing team can negotiate that.
 
-### Entities and Data
+### 3.3 Entities and Data
 {style="color: #BBDEFC; font-weight: normal"}
 
 The real data used in this project is collected from [Airbnb](https://insideairbnb.com/get-the-data/) and [Idealista](https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/) platforms. The most relevant entities from which we can obtain data are summarized below:
@@ -65,7 +65,7 @@ The real data used in this project is collected from [Airbnb](https://insideairb
 
 ---
 
-## Data Quality
+## 4. Data Quality
 {style="color: #BBDEFC"}
 
 In this stage of the project, general data quality correction processes have been applied, such as:
@@ -83,14 +83,14 @@ The entire process can be consulted in detail [here](https://github.com/pabloelt
 
 ---
 
-## Exploratory Data Analysis
+## 5. Exploratory Data Analysis
 {style="color: #BBDEFC"}
 
 The aim of this phase of the project is to identify trends and patterns that can be transformed into insights, providing valuable information for our project. To achieve this, we perform various statistical evaluations and create graphical representations.
 
 In order to guide this process, a series of seed questions are proposed to serve as a basis for the analysis.
 
-### Seed questions
+### 5.1 Seed questions
 {style="color: #BBDEFC; font-weight: normal"}
 
 **Regarding rental price:**
@@ -118,7 +118,7 @@ In order to guide this process, a series of seed questions are proposed to serve
 * <text style='color: #BBDEFC; font-weight: normal;'>Q15:</text> What is the relationship between property price and rental price by district?
 * <text style='color: #BBDEFC; font-weight: normal;'>Q17:</text> What is the relationship between property price and occupancy by district?
 
-### Insights
+### 5.2 Insights
 {style="color: #BBDEFC; font-weight: normal"}
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
@@ -132,13 +132,13 @@ Once the exploratory data analysis has been conducted, the following insights ha
 
 ---
 
-## Results Communication
+## 6. Results Communication
 {style="color: #BBDEFC"}
 
 In this stage of the project, we are presenting the insights that we have obtained during the exploratory data analysis and the main conclusions for each of them.
 
 
-<text style='color: #BBDEFC; font-weight: normal;'>1. Ten neighborhoods with a high investment potential have been identified</text>
+<text style='color: #BBDEFC; font-weight: normal;'>6.1 Ten neighborhoods with a high investment potential have been identified</text>
 
 * They can be segmented into 4 groups depending on the type, quality, and property location.
 * These 4 groups, which have been identified, are the following:
@@ -149,20 +149,20 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 {{< figure src="/project1/exhibit_1.png" title="Exhibit 1: Relation between rental and purchase price for each neighborhood." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>2. It is recommended to search for two-bedroom properties that can accommodate 4 guests</text>
+<text style='color: #BBDEFC; font-weight: normal;'>6.2 It is recommended to search for two-bedroom properties that can accommodate 4 guests</text>
 
 * The number of guests that maximize the rental price while minimizing the property's purchase price is 4.
 
 {{< figure src="/project1/exhibit_2.png" title="Exhibit 2: Optimal number of guests based on the rental and purchase price." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>3. It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest</text>
+<text style='color: #BBDEFC; font-weight: normal;'>6.3 It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest</text>
 
 * These properties are expected to have a lower purchase price.
 * It seems that proximity to points of interest does not have a particular impact on rental prices.
 
 {{< figure src="/project1/exhibit_3.png" title="Exhibit 3: Relation between the purchase price and the distance to the PoI (Puerta del Sol)." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>4. A new business model based on rentals for specific moments of high sporting interest should be explored</text>
+<text style='color: #BBDEFC; font-weight: normal;'>6.4 A new business model based on rentals for specific moments of high sporting interest should be explored</text>
 
 * It is advisable to look for opportunities in the San Blas neighborhood.
 * These properties present a particularly high cost-income ratio per night.
