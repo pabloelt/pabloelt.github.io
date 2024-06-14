@@ -135,25 +135,40 @@ Once the exploratory data analysis has been conducted, the following insights ha
 ## Results Communication
 {style="color: #BBDEFC"}
 
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
+In this stage of the project, we are presenting the insights that we have obtained during the exploratory data analysis and the main conclusions for each of them.
 
 
 <text style='color: #BBDEFC; font-weight: normal;'>1. Ten neighborhoods with a high investment potential have been identified</text>
+
+* They can be segmented into 4 groups depending on the type, quality, and property location.
+* These 4 groups, which have been identified, are the following:
+  * *Low cost Investment*: Simancas, Ambroz, Marroquina, San Juan Bautista.
+  * *Medium cost investment*: El Plantio, Valdemarín, Valdefuentes.
+  * *Medium-high cost investment*: Jerónimos, Fuentela reina.
+  * *High cost investment*: Recoletos.
 
 {{< figure src="/project1/exhibit_1.png" title="Exhibit 1: Relation between rental and purchase price for each neighborhood." >}}
 
 <text style='color: #BBDEFC; font-weight: normal;'>2. It is recommended to search for two-bedroom properties that can accommodate 4 guests</text>
 
+* The number of guests that maximize the rental price while minimizing the property's purchase price is 4.
+
 {{< figure src="/project1/exhibit_2.png" title="Exhibit 2: Optimal number of guests based on the rental and purchase price." >}}
 
 <text style='color: #BBDEFC; font-weight: normal;'>3. It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest</text>
+
+* These properties are expected to have a lower purchase price.
+* It seems that proximity to points of interest does not have a particular impact on rental prices.
 
 {{< figure src="/project1/exhibit_3.png" title="Exhibit 3: Relation between the purchase price and the distance to the PoI (Puerta del Sol)." >}}
 
 <text style='color: #BBDEFC; font-weight: normal;'>4. A new business model based on rentals for specific moments of high sporting interest should be explored</text>
 
+* It is advisable to look for opportunities in the San Blas neighborhood.
+* These properties present a particularly high cost-income ratio per night.
+
 {{< figure src="/project1/exhibit_4.png" title="Exhibit 4: Relation between rental and purchase price for each district." >}}
 
+* There are still many rentals that are not exploiting this potential.
 
 {{< figure src="/project1/exhibit_5.png" title="Exhibit 5: Rental price map in San Blas neighborhood. Red dots indicate properties with hight rental prices." >}}
