@@ -141,13 +141,19 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 
 <text style='color: #BBDEFC; font-weight: normal;'>1. Ten neighborhoods with a high investment potential have been identified</text>
 
+{{< figure src="/project1/exhibit_1.png" title="Exhibit 1: Relation between rental and purchase price for each neighborhood." >}}
 
-{{< figure src="/project1/exhibit_1.png" title="Exhibit 1: There are 10 neighborhoods with a high investment potential." >}}
+<text style='color: #BBDEFC; font-weight: normal;'>2. It is recommended to search for two-bedroom properties that can accommodate 4 guests</text>
 
-{{< figure src="/project1/exhibit_2.png" title="Exhibit 2: ." >}}
+{{< figure src="/project1/exhibit_2.png" title="Exhibit 2: Optimal number of guests based on the rental and purchase price." >}}
 
-{{< figure src="/project1/exhibit_3.png" title="Exhibit 3: ." >}}
+<text style='color: #BBDEFC; font-weight: normal;'>3. It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest</text>
 
-{{< figure src="/project1/exhibit_4.png" title="Exhibit 4: ." >}}
+{{< figure src="/project1/exhibit_3.png" title="Exhibit 3: Relation between the purchase price and the distance to the PoI (Puerta del Sol)." >}}
 
-{{< figure src="/project1/exhibit_5.png" title="Exhibit 5: ." >}}
+<text style='color: #BBDEFC; font-weight: normal;'>4. A new business model based on rentals for specific moments of high sporting interest should be explored</text>
+
+{{< figure src="/project1/exhibit_4.png" title="Exhibit 4: Relation between rental and purchase price for each district." >}}
+
+
+{{< figure src="/project1/exhibit_5.png" title="Exhibit 5: Rental price map in San Blas neighborhood. Red dots indicate properties with hight rental prices." >}}
