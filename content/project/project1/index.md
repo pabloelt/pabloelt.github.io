@@ -138,7 +138,7 @@ Once the exploratory data analysis has been conducted, the following insights ha
 In this stage of the project, we are presenting the insights that we have obtained during the exploratory data analysis and the main conclusions for each of them.
 
 
-<text style='color: #BBDEFC; font-weight: normal;'>6.1 Ten neighborhoods with a high investment potential have been identified</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Ten neighborhoods with a high investment potential have been identified</text>
 
 * They can be segmented into 4 groups depending on the type, quality, and property location.
 * These 4 groups, which have been identified, are the following:
@@ -149,20 +149,20 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 {{< figure src="/project1/exhibit_1.png" title="Exhibit 1: Relation between rental and purchase price for each neighborhood." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>6.2 It is recommended to search for two-bedroom properties that can accommodate 4 guests</text>
+<text style='color: #BBDEFC; font-weight: normal;'>It is recommended to search for two-bedroom properties that can accommodate 4 guests</text>
 
 * The number of guests that maximize the rental price while minimizing the property's purchase price is 4.
 
 {{< figure src="/project1/exhibit_2.png" title="Exhibit 2: Optimal number of guests based on the rental and purchase price." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>6.3 It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest</text>
+<text style='color: #BBDEFC; font-weight: normal;'>It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest</text>
 
 * These properties are expected to have a lower purchase price.
 * It seems that proximity to points of interest does not have a particular impact on rental prices.
 
 {{< figure src="/project1/exhibit_3.png" title="Exhibit 3: Relation between the purchase price and the distance to the PoI (Puerta del Sol)." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>6.4 A new business model based on rentals for specific moments of high sporting interest should be explored</text>
+<text style='color: #BBDEFC; font-weight: normal;'>A new business model based on rentals for specific moments of high sporting interest should be explored</text>
 
 * It is advisable to look for opportunities in the San Blas neighborhood.
 * These properties present a particularly high cost-income ratio per night.
