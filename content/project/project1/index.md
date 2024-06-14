@@ -43,10 +43,18 @@ The levers for this project are clear and are summarized below:
 
 The KPIs that results from the above-mentioned levers are the following:
 
-* **KPI 1:**
-* **KPI 2:**
-* **KPI 3:**
+* <text style='color: #BBDEFC; font-weight: normal;'>KPI 1:</text> We calculate the rental price as the price paid per night in euros based on the data registered by Airbnb
+* <text style='color: #BBDEFC; font-weight: normal;'>KPI 2:</text> We calculate the occupancy rate as the number of days per year that the property is rented in percentage.
+* <text style='color: #BBDEFC; font-weight: normal;'>KPI 3:</text> of a property by multiplying the number of square meters by the average price per square meter in the area where the property is located. Additionally, we will apply a 25% discount to the official price, assuming that our purchasing team can negotiate that.
 
+### Entities and Data
+{style="color: #BBDEFC; font-weight: normal"}
+
+The real data used in this project is collected from [Airbnb](https://insideairbnb.com/get-the-data/) and [Idealista](https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/) platforms. The most relevant entities from which we can obtain data are summarized below:
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Properties:</text> Location, rental price, room type, reviews, minimun/maximum nights, number of bedrooms, number of beds, …
+* <text style='color: #BBDEFC; font-weight: normal;'>Hosts:</text> Name, id, url, location, verifications, …
+* <text style='color: #BBDEFC; font-weight: normal;'>Districts:</text> Neighborhood, district, …
 
 ---
 
