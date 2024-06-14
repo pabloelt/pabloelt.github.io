@@ -86,8 +86,41 @@ The entire process can be consulted in detail [here](https://github.com/pabloelt
 ## Exploratory Data Analysis
 {style="color: #BBDEFC"}
 
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
+The aim of this phase of the project is to identify trends and patterns that can be transformed into insights, providing valuable information for our project. To achieve this, we perform various statistical evaluations and create graphical representations. A more detailed analysis can be found [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation/blob/main/Notebooks/05_Analisis%20e%20insights.ipynb).
+
+In order to guide this process, a series of seed questions are proposed to serve as a basis for the analysis.
+
+### Seed questions
+{style="color: #BBDEFC; font-weight: normal"}
+
+**Regarding rental price:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> What is the average price and price range, by districts and neighborhoods?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> What is the ranking of districts and neighborhoods by average rental price?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> What factors (other than location) determine the rental price?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text> What is the relationship between the size of the property and the price at which it can be rented?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> How does competition (number of available properties per neighborhood) influence the rental price?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> How do prices vary by type of rental (whole apartment, private room, shared room)?
+
+**Regarding occupancy rate:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text> What is the average occupancy rate by district and by neighborhood?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> How likely is the occupancy rate in each district?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> What is the ranking of districts and neighborhoods by occupancy rate?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q10:</text> What factors (other than location) determine occupancy rate?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q11:</text> What is the relationship between property size and occupancy rate?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q12:</text> How does competition (number of properties available per district) influence occupancy rate?
+
+**Regarding purchase price:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Q13:</text> What is the ranking of price per m2 by district?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q14:</text> What is the ranking of property price (m2 * average size) by district?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q15:</text> What is the relationship between property price and rental price by district?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q17:</text> What is the relationship between property price and occupancy by district?
+
+### Insights
+{style="color: #BBDEFC; font-weight: normal"}
+
 
 ---
 
