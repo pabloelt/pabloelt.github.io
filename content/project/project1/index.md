@@ -29,6 +29,13 @@ Notes:
 
 The main objective is to identify the property profiles that maximize commercial potential in the vacation rental market. This will guide the valuation team on where to start looking for such opportunities and highlight the key neighborhoods and geographical areas, which are most promising to focus on. This analysis is primarily conducted in terms of rental prices, occupancy levels, and purchase prices.
 
+---
+
+## Project Design
+{style="color: #BBDEFC"}
+
+This project has been designed by taking into consideration the following levers, KPIs, and entities from which data have been obtained.
+
 ### Levers
 {style="color: #BBDEFC; font-weight: normal"}
 
@@ -45,32 +52,32 @@ The KPIs that results from the above-mentioned levers are the following:
 
 * <text style='color: #BBDEFC; font-weight: normal;'>KPI 1:</text> We calculate the rental price as the price paid per night in euros based on the data registered by Airbnb
 * <text style='color: #BBDEFC; font-weight: normal;'>KPI 2:</text> We calculate the occupancy rate as the number of days per year that the property is rented in percentage.
-* <text style='color: #BBDEFC; font-weight: normal;'>KPI 3:</text> of a property by multiplying the number of square meters by the average price per square meter in the area where the property is located. Additionally, we will apply a 25% discount to the official price, assuming that our purchasing team can negotiate that.
+* <text style='color: #BBDEFC; font-weight: normal;'>KPI 3:</text> We calculate the purchase price of a property by multiplying the number of square meters by the average price per square meter in the area where the property is located. Additionally, we apply a 25% discount to the official price, assuming that our purchasing team can negotiate that.
 
 ### Entities and Data
 {style="color: #BBDEFC; font-weight: normal"}
 
 The real data used in this project is collected from [Airbnb](https://insideairbnb.com/get-the-data/) and [Idealista](https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/) platforms. The most relevant entities from which we can obtain data are summarized below:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Properties:</text> Location, rental price, room type, reviews, minimun/maximum nights, number of bedrooms, number of beds, …
+* <text style='color: #BBDEFC; font-weight: normal;'>Properties:</text> Location, rental price, room type, reviews, minimun/maximum nights, number of bedrooms, beds, …
 * <text style='color: #BBDEFC; font-weight: normal;'>Hosts:</text> Name, id, url, location, verifications, …
 * <text style='color: #BBDEFC; font-weight: normal;'>Districts:</text> Neighborhood, district, …
-
----
-
-## Project Design
-{style="color: #BBDEFC"}
-
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
 
 ---
 
 ## Data Quality
 {style="color: #BBDEFC"}
 
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
-Este es el primer projecto de Business Analitics sobre la optimización del mercado inmobiliario en Madrid (España).
+In this stage of the project, general data quality correction processes have been applied, such as:
+
+* Data renaming.
+* Type correction.
+* Proper selection of the most relevant data for the project.
+* Analysis of nulls and duplicated registers.
+* Analysis of numerical and categorical variables.
+* Imputation of nulls through a crosstab analysis.
+
+The entire process can be consulted in detail [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation/blob/main/Notebooks/03_Creacion%20del%20datamart%20analitico.ipynb).
 
 ---
 
