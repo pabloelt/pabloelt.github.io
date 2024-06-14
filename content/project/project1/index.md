@@ -77,7 +77,7 @@ In this stage of the project, general data quality correction processes have bee
 * Analysis of numerical and categorical variables.
 * Imputation of nulls through a crosstab analysis.
 * Discretization of variables.
-* Creation of new variables: square meters estimation, purchase price estiamtion, ...
+* Creation of new variables: square meters estimation, purchase price estimation, ...
 
 The entire process can be consulted in detail [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation/blob/main/Notebooks/03_Creacion%20del%20datamart%20analitico.ipynb).
 
@@ -86,7 +86,7 @@ The entire process can be consulted in detail [here](https://github.com/pabloelt
 ## Exploratory Data Analysis
 {style="color: #BBDEFC"}
 
-The aim of this phase of the project is to identify trends and patterns that can be transformed into insights, providing valuable information for our project. To achieve this, we perform various statistical evaluations and create graphical representations. A more detailed analysis can be found [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation/blob/main/Notebooks/05_Analisis%20e%20insights.ipynb).
+The aim of this phase of the project is to identify trends and patterns that can be transformed into insights, providing valuable information for our project. To achieve this, we perform various statistical evaluations and create graphical representations.
 
 In order to guide this process, a series of seed questions are proposed to serve as a basis for the analysis.
 
@@ -121,6 +121,14 @@ In order to guide this process, a series of seed questions are proposed to serve
 ### Insights
 {style="color: #BBDEFC; font-weight: normal"}
 
+Once the exploratory data analysis has been conducted, the following insights have been obtained:
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> Ten neighborhoods with a high investment potential have been identified.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> It is recommended to search for two-bedroom properties that can accommodate 4 guests.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> A new business model based on rentals for specific moments of high sporting interest should be explored.
+
+ A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation/blob/main/Notebooks/05_Analisis%20e%20insights.ipynb).
 
 ---
 
