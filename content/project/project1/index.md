@@ -99,5 +99,5 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 
 ![Project 1: Across columns](/project1/exhibit_1.png)
 
-{{< figure src="/project1/exhibit_1.png" title="Caption" >}}
+{{< figure src="/project1/exhibit_1.png" title="Exhibit 1: There are 10 neighborhoods with a high investment potential." >}}
 
