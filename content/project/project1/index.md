@@ -98,5 +98,4 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 
 
 ![Project 1: Across columns](/project1/exhibit_1.png)
-Exhibit 1: There are 10 neighborhoods with a high investment potential.
-<text style='color: #BBDEFC; font-weight: lighter; align-text: center'>Exhibit 1: There are 10 neighborhoods with a high investment potential.</text>
+<text style='font-weight: lighter; align: center'>Exhibit 1: There are 10 neighborhoods with a high investment potential.</text>
