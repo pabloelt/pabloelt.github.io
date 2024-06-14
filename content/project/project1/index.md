@@ -98,4 +98,13 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 
 
 ![Project 1: Across columns](/project1/exhibit_1.png)
-<text style='font-weight: 100; text-align: center'>Exhibit 1: There are 10 neighborhoods with a high investment potential.</text>
+
+<figure>
+   <figcaption><p>{{ with .Title }} {{ . | markdownify }} {{ end }}
+   </p></figcaption>
+ <a href="{{ .Destination | /project1/exhibit_1 }}" target="_blank">
+<img src="{{ replace .Destination ".png" ".png.small" | safeURL }}"  alt="{{ .Text }}"
+{{ with .Title }}title="{{ Hola que tal }}"{{ end }}/>
+</a>
+</figure>
+
