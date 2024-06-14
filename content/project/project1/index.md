@@ -76,6 +76,8 @@ In this stage of the project, general data quality correction processes have bee
 * Analysis of nulls and duplicated registers.
 * Analysis of numerical and categorical variables.
 * Imputation of nulls through a crosstab analysis.
+* Discretization of variables.
+* Creation of new variables: square meters estimation, purchase price estiamtion, ...
 
 The entire process can be consulted in detail [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation/blob/main/Notebooks/03_Creacion%20del%20datamart%20analitico.ipynb).
 
@@ -97,7 +99,8 @@ Este es el primer projecto de Business Analitics sobre la optimización del merc
 
 
 
-![Project 1: Across columns](/project1/exhibit_1.png)
+
 
 {{< figure src="/project1/exhibit_1.png" title="Exhibit 1: There are 10 neighborhoods with a high investment potential." >}}
 
+{{< figure src="/project1/exhibit_2.png" title="Exhibit 2: ." >}}
