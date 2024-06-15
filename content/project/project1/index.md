@@ -15,7 +15,9 @@ date: 2024-06-01
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-In this project, we analyze potential real estate investments in the vacation rental sector in Madrid (Spain). To that end, we are using publicly available data from the market leader, Airbnb, and we will identify the properties with the greatest commercial potential for vacation rentals.
+The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
+
+As the main deliverable, the management expects to receive a detailed typology of properties that the valuation team should target among the existing opportunities in the city, as well as the primary neighborhoods or geographic areas to focus on.
 
 Notes:
 
@@ -27,7 +29,9 @@ Notes:
 ## 2. Objectives
 {style="color: #BBDEFC"}
 
-The main objective is to identify the property profiles that maximize commercial potential in the vacation rental market. This will guide the valuation team on where to start looking for such opportunities and highlight the key neighborhoods and geographical areas, which are most promising to focus on. This analysis is primarily conducted in terms of rental prices, occupancy levels, and purchase prices.
+The main objective is to identify the property profiles with the highest potential in the vacation rental market. This can guide the valuation team on where to start looking for such opportunities and highlight the key neighborhoods and geographical areas, which are most promising to focus on.
+
+This analysis is primarily conducted in terms of rental prices, occupancy levels, and purchase prices.
 
 ---
 
@@ -61,7 +65,7 @@ The real data used in this project is collected from [Airbnb](https://insideairb
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Properties:</text> Location, rental price, room type, reviews, minimun/maximum nights, number of bedrooms, beds, …
 * <text style='color: #BBDEFC; font-weight: normal;'>Hosts:</text> Name, id, url, location, verifications, …
-* <text style='color: #BBDEFC; font-weight: normal;'>Districts:</text> Neighborhood, district, …
+* <text style='color: #BBDEFC; font-weight: normal;'>Locations:</text> Neighborhood, district, latitude, longitude, …
 
 ---
 
