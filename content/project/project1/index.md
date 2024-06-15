@@ -175,4 +175,4 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 * There are still many rentals that are not exploiting this potential.
 
-{{< figure src="/project1/exhibit_5.png" title="Exhibit 5: Rental price map in San Blas neighborhood. Red dots indicate properties with hight rental prices." >}}
+{{< figure src="/project1/exhibit_5.png" title="Exhibit 5: Rental price map in San Blas neighborhood. Red dots indicate properties with high rental prices." >}}
