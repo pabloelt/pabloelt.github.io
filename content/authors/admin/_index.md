@@ -86,7 +86,7 @@ These four years of hard work showed me that my true passion lies in the world o
 
 My goal now is to build a career in this new field, helping individuals and companies become more efficient and productive through data analysis.
 
-{{< icon name="download" pack="fas" >}} {{< staticref "uploads/cv.pdf" "newtab" >}} Download{{< /staticref >}} my CV as a PDF.
+{{< icon name="download" pack="fas" >}} &ensp; {{< staticref "uploads/cv.pdf" "newtab" >}}Download{{< /staticref >}} my CV as a PDF.
 
 ---
 
