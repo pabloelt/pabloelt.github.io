@@ -78,7 +78,7 @@ Since I was a child, I have always been curious about how the world around me wo
 
 After completing my bachelor's and master's degrees, I had the opportunity to work as a researcher in the Fluid Mechanics department at the University of Málaga, which prompted me to start my doctoral studies. Over the course of four years, I worked on the propulsion of small aquatic vehicles and the energy harvesting through bio-inspired devices. Additionally, I completed a research stay in Luleå, Sweden, where I collaborated with the team responsible for designing hydraulic turbines and improved my English proficiency.
 
-{{< icon name="graduation_cap" pack="fas" >}} [You can see here some of my articles](https://www.researchgate.net/profile/Pablo-Esteban-Lopez-Tello)
+:graduation_cap: [You can see here some of my articles](https://www.researchgate.net/profile/Pablo-Esteban-Lopez-Tello)
 
 These four years of hard work showed me that my true passion lies in the world of Data Science. Consequently, I decided to further my education in this field by completing an intensive six-month training course in artificial intelligence, machine learning, and business analytics using Python, SQL, and Tableau.
 
