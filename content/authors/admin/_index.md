@@ -84,7 +84,7 @@ These four years of hard work showed me that my true passion lies in the world o
 
 My goal now is to build a career in this new field, helping individuals and companies become more efficient and productive through data analysis.
 
-{{< icon name="download" pack="fas" >}} {{< staticref "uploads/cv.pdf" "newtab" >}}Download{{< /staticref >}} my CV as a PDF.
+{{< icon name="download" pack="fas" >}} &ensp; {{< staticref "uploads/cv.pdf" "newtab" >}}Download{{< /staticref >}} my CV as a PDF.
 
 ---
 
@@ -96,5 +96,5 @@ Phone: &nbsp; <text style='color: #BBDEFC; font-weight: normal;'>(+34) 648842486
 
 LinkedIn: &nbsp; [Contact me here](https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/)
 
-<i class="fa fa-camera-retro fa-4x"></i> fa-4x &nbsp; pe.lopeztello@gmail.com
+<i class="fa fa-envelope fa-2x"></i> &nbsp; pe.lopeztello@gmail.com
 
