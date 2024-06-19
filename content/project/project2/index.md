@@ -26,4 +26,6 @@ Notes:
 
 ---
 
+{{< figure src="/project2/exhibit_1_p1.png" title="Exhibit 1: ." >}}
+
 {{< figure src="/project2/exhibit_1.png" title="Exhibit 1: ." >}}
