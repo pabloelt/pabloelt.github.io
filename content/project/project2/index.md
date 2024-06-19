@@ -30,4 +30,16 @@ Notes:
 
 The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
 
-{{< figure src="/project2/exhibit_1_p1.png" title="Exhibit 2: ." >}}
+{{< figure src="/project2/exhibit_2.png" title="Exhibit 2: ." >}}
+
+The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
+
+{{< figure src="/project2/exhibit_3.png" title="Exhibit 3: ." >}}
+
+The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
+
+{{< figure src="/project2/exhibit_4.png" title="Exhibit 4: ." >}}
+
+The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
+
+{{< figure src="/project2/exhibit_5.png" title="Exhibit 5: ." >}}
