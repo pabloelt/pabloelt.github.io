@@ -127,10 +127,10 @@ ul.network-icon .big-icon {
   display: none;
 }
 // Arreglando tamaño de las imagenes (no principales) insertadas
-.w-100 {
+//.w-100 {
   //max-width: 50%;
-  width: 100%
-}
+  //width: 100%
+//}
 // Arreglando texto no justificado
 .article-container {
   text-align: justify;
@@ -151,4 +151,8 @@ ul.network-icon .big-icon {
 // Arreglando texto no justificado en cartas de projects
 .card-text {
   text-align: justify;
+}
+
+.content-card img {
+  width: 100%;
 }
