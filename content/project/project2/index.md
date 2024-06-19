@@ -25,3 +25,5 @@ Notes:
 * Source code can be found [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation).
 
 ---
+
+{{< figure src="/project2/exhibit_1.png" title="Exhibit 1: ." >}}
