@@ -3,7 +3,7 @@ title: Detection of Inefficiencies in Photovoltaic Solar Plants
 summary: Two underperforming photovoltaic solar plants are being analyzed to determine the root cause of the problem. The analysis considers several perspectives, including sensor data, energy generation, and the efficiency in the energy conversion.
 tags:
   - Discovery Projects
-date: 2022-01-01
+date: 2024-08-01
 #external_link:
 ---
 
