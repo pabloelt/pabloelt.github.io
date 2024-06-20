@@ -185,7 +185,7 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 * The registered amounts of KW of DC and AC are also weird, since the *kw_dc* registered in Plant 1 is ten times larger than in Plant 2.
 
-At this stage of the project, the data collection processes and their reliability needs to be reviewed. However, for educational purposes, __**we will proceed with the analysis under the assumption that the values of DC and AC are correct**__.
+At this stage of the project, the data collection processes and their reliability needs to be reviewed. However, for educational purposes, <u>**we will proceed with the analysis under the assumption that the values of DC and AC are correct**</u>.
 
 
 <text style='color: #BBDEFC; font-weight: normal;'>Plant 2 generates much lower levels of DC even at similar levels of irradiation</text>
