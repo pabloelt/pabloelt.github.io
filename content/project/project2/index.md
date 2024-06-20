@@ -148,8 +148,8 @@ Once the exploratory data analysis has been conducted, the following insights ha
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> The quality of the data is pretty bad.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> Plant 2 generates much lower levels of DC even at similar levels of irradiation.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Plant 1 has a very low capacity to convert DC to AC.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Inverters in Plant 2 are receiving high quantities of zero DC production, while inverters in Plant 1 does not present this problem.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Inverters in Plant 1 are not working properly, while inverters in Plant 1 does it. Modules in Plant 1 needs inspection.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Inverters in Plant 2 are receiving high quantities of zero DC production.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Inverters in Plant 1 are not working properly.
 
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/detection-inefficiencies-photovoltaic-solar-plants/blob/main/Notebooks/04_Analisis%20e%20Insights.ipynb).
 
@@ -206,17 +206,20 @@ At this stage of the project, the data collection processes and their reliabilit
 {{< figure src="/project2/exhibit_5.png" title="Exhibit 5: ." >}}
 
 
-<text style='color: #BBDEFC; font-weight: normal;'>Inverters in Plant 2 are receiving high quantities of zero DC production, while inverters in Plant 1 does not present this problem</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Inverters in Plant 2 are receiving high quantities of zero DC production</text>
 
-
+* The strange reduction of efficiency in Plant 2 is due to the high quantities of zero DC production that is coming to the affected inverters.
+* Inverters in Plant 1 does not present this problem.
 
 {{< figure src="/project2/exhibit_6.png" title="Exhibit 6: ." >}}
 
 
-<text style='color: #BBDEFC; font-weight: normal;'>Inverters in Plant 1 are not working properly, while inverters in Plant 1 does it. Modules in Plant 1 needs inspection</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Inverters in Plant 1 are not working properly</text>
+
+* Inverters in Pant 1 are not working as they should, so their modules needs to be inspected.
+* Inverters in Plant 2 are working fine.
+
+{{< figure src="/project2/exhibit_8.png" title="Exhibit 7: ." >}}
 
 
-{{< figure src="/project2/exhibit_7.png" title="Exhibit 7: ." >}}
-
-
-{{< figure src="/project2/exhibit_8.png" title="Exhibit 8: ." >}}
+{{< figure src="/project2/exhibit_7.png" title="Exhibit 8: ." >}}
