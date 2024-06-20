@@ -147,8 +147,9 @@ Once the exploratory data analysis has been conducted, the following insights ha
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> Both solar plants are receiving approximately the same amount of energy.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> The quality of the data is pretty bad.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> Plant 2 generates much lower levels of DC even at similar levels of irradiation.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Plant 1 has a very low capacity to convert DC to AC. The inverters are not working properly.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Plant 2 presents several inverters that are not receiving sufficient DC production. The inverters are working fine, so the modules need inspection.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Plant 1 has a very low capacity to convert DC to AC.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Inverters in Plant 2 are receiving high quantities of zero DC production, while inverters in Plant 1 does not present this problem.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Inverters in Plant 1 are not working properly, while inverters in Plant 1 does it. Modules in Plant 1 needs inspection.
 
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/detection-inefficiencies-photovoltaic-solar-plants/blob/main/Notebooks/04_Analisis%20e%20Insights.ipynb).
 
@@ -197,26 +198,25 @@ At this stage of the project, the data collection processes and their reliabilit
 {{< figure src="/project2/exhibit_4.png" title="Exhibit 4: Total production of DC in KW per day in each of the affected plants. The variability in Plant 1 is much higher." >}}
 
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Plant 1 has a very low capacity to convert DC to AC. The inverters are not working properly</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Plant 1 has a very low capacity to convert DC to AC</text>
 
-
-
-
-
-
-
-The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
+* It seems that Plant 1 has a very poor conversion from DC to AC.
+* Plant 2 presents a regular conversion but there is a strange reduction of efficiency in the middle hours. 
 
 {{< figure src="/project2/exhibit_5.png" title="Exhibit 5: ." >}}
 
-The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
+
+<text style='color: #BBDEFC; font-weight: normal;'>Inverters in Plant 2 are receiving high quantities of zero DC production, while inverters in Plant 1 does not present this problem</text>
+
+
 
 {{< figure src="/project2/exhibit_6.png" title="Exhibit 6: ." >}}
 
-The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
+
+<text style='color: #BBDEFC; font-weight: normal;'>Inverters in Plant 1 are not working properly, while inverters in Plant 1 does it. Modules in Plant 1 needs inspection</text>
+
 
 {{< figure src="/project2/exhibit_7.png" title="Exhibit 7: ." >}}
 
-The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
 
 {{< figure src="/project2/exhibit_8.png" title="Exhibit 8: ." >}}
