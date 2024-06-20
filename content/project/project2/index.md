@@ -168,13 +168,18 @@ In this stage of the project, we are presenting the insights that we have obtain
   * Maximum irradiation is reached from 11 am to 12 am.
   * Maximum ambient temperature is reached from 2 pm to 4 pm.
 
-{{< figure src="/project2/exhibit_1.png" title="Exhibit 1: Levels of energy received on each plant based on irradiation, ambient and modules temperature." >}}
+{{< figure src="/project2/exhibit_1.png" title="Exhibit 1: Levels of energy received on each plant based on irradiation, ambient, and modules temperature." >}}
+
+* A deeper anaysis on these quantities is also conducted. The irradiation levels seems to be more connected with the modules than the ambient temperature in both plants.
+
+{{< figure src="/project2/exhibit_2.png" title="Exhibit 2: Several metrics analyzing irradiation, ambient, and modules temperature, highlighting the connections between these factors." >}}
+
 
 <text style='color: #BBDEFC; font-weight: normal;'>The quality of the data is pretty bad</text>
 
-The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
 
-{{< figure src="/project2/exhibit_2.png" title="Exhibit 2: ." >}}
+
+
 
 The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
 
