@@ -96,11 +96,60 @@ In order to guide this process, a series of seed questions are proposed to serve
 ### 5.1 Seed questions
 {style="color: #BBDEFC; font-weight: normal"}
 
-**Regarding rental price:**
+**Regarding irradiation:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text>
+* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> Does sufficient irradiation reach the plants every day?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> Is it similar at both plants?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> How is it distributed by hour?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text>How is it related to ambient temperature and module temperature?
 
+**Regarding the plants:**
 
+* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> Do they receive the same amount of irradiation?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> Do they have a similar number of inverters?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text> Do they generate a similar amount of DC?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> Do they generate a similar amount of AC?
+
+**Regarding DC generation:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> What is the relationship between irradiation and DC generation?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q10:</text> Is it affected at any point by the ambient or module temperature?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q11:</text> Is it similar at both plants?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q12:</text> How is it distributed throughout the day?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q13:</text> Is it consistent over the days?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q14:</text> Is it consistent across all inverters?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q15:</text> Have there been moments of failure?
+
+**Regarding AC generation:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Q16:</text> What is the relationship between DC and AC generation?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q17:</text> Is it similar at both plants?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q18:</text> How is it distributed throughout the day?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q19:</text> Is it consistent over the days?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q20:</text> Is it consistent across all inverters?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q21:</text> Have there been moments of failure?
+
+**Regarding meters and sensors:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Q22:</text> Are the irradiation data reliable?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q23:</text> Are the temperature data reliable?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q24:</text> Are the DC data reliable?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q25:</text> Are the AC data reliable?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q26:</text> Are the data similar between both plants?
+
+### 5.2 Insights
+{style="color: #BBDEFC; font-weight: normal"}
+
+Once the exploratory data analysis has been conducted, the following insights have been obtained:
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> Ten neighborhoods with a high investment potential have been identified.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> It is recommended to search for two-bedroom properties that can accommodate 4 guests.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> A new business model based on rentals for specific moments of high sporting interest should be explored.
+
+ A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/detection-inefficiencies-photovoltaic-solar-plants/blob/main/Notebooks/04_Analisis%20e%20Insights.ipynb).
+
+---
 
 
 
