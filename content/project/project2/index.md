@@ -229,5 +229,5 @@ At this stage of the project, the data collection processes and their reliabilit
 <text style='color: #BBDEFC; font-weight: normal;'>Final recommendations</text>
 
 * Review the data collection processes and their reliability.
-* Perform a maintenance inspection on the identified inverters in Plant 2, since there are many moments of zero DC generation.
+* Perform a maintenance inspection on the modules connected with the identified inverters in Plant 2, since there are many moments of zero DC generation.
 * Perform a maintenance inspection of all inverters in Plant 1.
