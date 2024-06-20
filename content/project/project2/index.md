@@ -1,13 +1,13 @@
 ---
-title: Project 2
-summary: The available public AirBnb data is analysed to find insights that can help to understand the characteristics of the vacation rental market in Madrid (Spain) and guide the team’s research work in terms of rental prices, occupancy levels and purchase prices.
+title: Detection of Inefficiencies in Photovoltaic Solar Plants
+summary: Two underperforming photovoltaic solar plants are being analyzed to determine the root cause of the problem. The analysis considers several perspectives, including sensor data, energy generation, and the efficiency in the energy conversion.
 tags:
   - Discovery Projects
 date: 2022-01-01
 #external_link:
 ---
 
-*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation) is currently in Spanish. It will be soon updated to English.*
+*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/detection-inefficiencies-photovoltaic-solar-plants) is currently in Spanish. It will be soon updated to English.*
 {style="color: #aaaaaa"}
 
 {{< toc >}}
@@ -27,10 +27,13 @@ Notes:
 ---
 
 ## 2. Objectives
+{style="color: #BBDEFC"}
 
 The main objective is to analyze the data from the past month for the two affected solar plants and investigate the root cause of the problem. Based on this analysis, the company will decide whether to dispatch a team of engineers to the plants or apply another solution.
 
 ## 3. Project Design
+{style="color: #BBDEFC"}
+
 This project has been designed by taking into consideration the following levers, KPIs, and entities from which data have been obtained. In addition, a brief scheme of how this photovoltaic solar plants works, is presented below.
 
 {{< figure src="/project2/scheme.png" title="A brief scheme of how the photovoltaic solar plants works." >}}
