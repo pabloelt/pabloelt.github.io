@@ -31,6 +31,8 @@ Notes:
 
 The main objective is to analyze the data from the past month for the two affected solar plants and investigate the root cause of the problem. Based on this analysis, the company will decide whether to dispatch a team of engineers to the plants or apply another solution.
 
+---
+
 ## 3. Project Design
 {style="color: #BBDEFC"}
 
@@ -160,15 +162,15 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 <text style='color: #BBDEFC; font-weight: normal;'>Both solar plants are receiving approximately the same amount of energy</text>
 
+* The two affected solar plants are receiving approximately the same energy levels based on irradiation, ambient temperature, and temperature reached by the photovoltaic modules. Moreover, the following data has been found in the sensors analysis:
 
+  * Irradiation is working on the modules from 7 am to 5 pm.
+  * Maximum irradiation is reached from 11 am to 12 am.
+  * Maximum ambient temperature is reached from 2 pm to 4 pm.
 
+{{< figure src="/project2/exhibit_1.png" title="Exhibit 1: Levels of energy received on each plant based on irradiation, ambient and modules temperature." >}}
 
-
-
-
-The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
-
-{{< figure src="/project2/exhibit_1.png" title="Exhibit 1: ." >}}
+<text style='color: #BBDEFC; font-weight: normal;'>The quality of the data is pretty bad</text>
 
 The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
 
