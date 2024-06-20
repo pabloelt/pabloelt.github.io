@@ -147,9 +147,8 @@ Once the exploratory data analysis has been conducted, the following insights ha
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> Both solar plants are receiving approximately the same amount of energy.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> The quality of the data is pretty bad.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> Plant 2 generates much lower levels of DC even at similar levels of irradiation.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Plant 1 has much more variability, while Plant 2 is more consistent.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Plant 1 has a very low capacity to convert DC to AC. The inverters are not working properly.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Plant 2 presents several inverters that are not receiving sufficient DC production. The inverters are working fine, so the modules need inspection.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Plant 1 has a very low capacity to convert DC to AC. The inverters are not working properly.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Plant 2 presents several inverters that are not receiving sufficient DC production. The inverters are working fine, so the modules need inspection.
 
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/detection-inefficiencies-photovoltaic-solar-plants/blob/main/Notebooks/04_Analisis%20e%20Insights.ipynb).
 
@@ -177,17 +176,34 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 <text style='color: #BBDEFC; font-weight: normal;'>The quality of the data is pretty bad</text>
 
+* The amount of KW registered per day is not trustworthy in either of the two affected plants.
+
+  * Plant 1 presents a peak in the cumulative variable *kw_dia*, which should not be there.
+  * Plant 2 presents cumulative data at the earliest hours of the day. It should not be possible.
+
+{{< figure src="/project2/exhibit_3.png" title="Exhibit 3: Mean values of the cumulative KW per hour during a working day for each of the affected plants." >}}
+
+* The registered amounts of KW of DC and AC are also weird, since the *kw_dc* registered in Plant 1 is ten times larger than in Plant 2.
+
+At this stage of the project, the data collection processes and their reliability needs to be reviewed. However, for educational purposes, **we will proceed with the analysis under the assumption that the values of DC and AC are correct**.
+
+
+<text style='color: #BBDEFC; font-weight: normal;'>Plant 2 generates much lower levels of DC even at similar levels of irradiation</text>
+
+* It seems that Plant 1 generates much more DC than Plant 2 for approxiamtely the same levels of irradiation and temperature.
+
+  * Furthermore, Plant 1 has much more variability, while Plant 2 is more consistent.
+
+{{< figure src="/project2/exhibit_4.png" title="Exhibit 4: Total production of DC in KW per day in each of the affected plants. The variability in Plant 1 is much higher." >}}
+
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Plant 1 has a very low capacity to convert DC to AC. The inverters are not working properly</text>
 
 
 
 
-The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
 
-{{< figure src="/project2/exhibit_3.png" title="Exhibit 3: ." >}}
 
-The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
-
-{{< figure src="/project2/exhibit_4.png" title="Exhibit 4: ." >}}
 
 The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
 
