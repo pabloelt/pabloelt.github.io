@@ -142,14 +142,25 @@ In order to guide this process, a series of seed questions are proposed to serve
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> Ten neighborhoods with a high investment potential have been identified.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> It is recommended to search for two-bedroom properties that can accommodate 4 guests.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> A new business model based on rentals for specific moments of high sporting interest should be explored.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> Both solar plants are receiving approximately the same amount of energy.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> The quality of the data is pretty bad.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> Plant 2 generates much lower levels of DC even at similar levels of irradiation.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Plant 1 has much more variability, while Plant 2 is more consistent.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Plant 1 has a very low capacity to convert DC to AC. The inverters are not working properly.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Plant 2 presents several inverters that are not receiving sufficient DC production. The inverters are working fine, so the modules need inspection.
 
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/detection-inefficiencies-photovoltaic-solar-plants/blob/main/Notebooks/04_Analisis%20e%20Insights.ipynb).
 
 ---
+
+## 6. Results Communication
+{style="color: #BBDEFC"}
+
+In this stage of the project, we are presenting the insights that we have obtained during the exploratory data analysis and the main conclusions for each of them.
+
+<text style='color: #BBDEFC; font-weight: normal;'>Both solar plants are receiving approximately the same amount of energy</text>
+
+
 
 
 
