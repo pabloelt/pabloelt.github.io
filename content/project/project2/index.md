@@ -191,7 +191,7 @@ At this stage of the project, the data collection processes and their reliabilit
 
 <text style='color: #BBDEFC; font-weight: normal;'>Plant 2 generates much lower levels of DC even at similar levels of irradiation</text>
 
-* It seems that Plant 1 generates much more DC than Plant 2 for approxiamtely the same levels of irradiation and temperature.
+* It seems that Plant 1 generates much more DC than Plant 2 for the same levels of irradiation and temperature.
 
   * Furthermore, Plant 1 has much more variability, while Plant 2 is more consistent.
 
@@ -203,7 +203,7 @@ At this stage of the project, the data collection processes and their reliabilit
 * It seems that Plant 1 has a very poor conversion from DC to AC.
 * Plant 2 presents a regular conversion but there is a strange reduction of efficiency in the middle hours. 
 
-{{< figure src="/project2/exhibit_5.png" title="Exhibit 5: ." >}}
+{{< figure src="/project2/exhibit_5.png" title="Exhibit 5: Mean efficiency curves per hour for both of the affected plants." >}}
 
 
 <text style='color: #BBDEFC; font-weight: normal;'>Inverters in Plant 2 are receiving high quantities of zero DC production</text>
@@ -211,7 +211,7 @@ At this stage of the project, the data collection processes and their reliabilit
 * The strange reduction of efficiency in Plant 2 is due to the high quantities of zero DC production that is coming to the affected inverters.
 * Inverters in Plant 1 does not present this problem.
 
-{{< figure src="/project2/exhibit_6.png" title="Exhibit 6: ." >}}
+{{< figure src="/project2/exhibit_6.png" title="Exhibit 6: Percentage of zero DC production for each inverter in each of the plants." >}}
 
 
 <text style='color: #BBDEFC; font-weight: normal;'>Inverters in Plant 1 are not working properly</text>
@@ -219,7 +219,15 @@ At this stage of the project, the data collection processes and their reliabilit
 * Inverters in Pant 1 are not working as they should, so their modules needs to be inspected.
 * Inverters in Plant 2 are working fine.
 
-{{< figure src="/project2/exhibit_8.png" title="Exhibit 7: ." >}}
+{{< figure src="/project2/exhibit_8.png" title="Exhibit 7: Efficiency boxplots for each inverter in Plant 1." >}}
 
 
-{{< figure src="/project2/exhibit_7.png" title="Exhibit 8: ." >}}
+{{< figure src="/project2/exhibit_7.png" title="Exhibit 8: Efficiency boxplots for each inverter in Plant 2." >}}
+
+
+
+<text style='color: #BBDEFC; font-weight: normal;'>Final recommendations</text>
+
+* Review the data collection processes and their reliability.
+* Perform a maintenance inspection on the identified inverters in Plant 2, since there are many moments of zero DC generation.
+* Perform a maintenance inspection of all inverters in Plant 1.
