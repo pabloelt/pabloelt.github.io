@@ -39,6 +39,8 @@ This analysis is primarily conducted in terms of rental prices, occupancy levels
 ## 3. Project Design
 {style="color: #BBDEFC"}
 
+{{< figure src="/project3/customerjourney.png" title="" >}}
+
 This project has been designed by taking into consideration the following levers, KPIs, and entities from which data have been obtained.
 
 ### 3.1 Levers
