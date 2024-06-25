@@ -1,12 +1,14 @@
 ---
 title: Analysis and Optimization of an Ecommerce Company 
-summary: The available public AirBnb data is analysed to find insights that can help to understand the characteristics of the vacation rental market in Madrid (Spain) and guide the team’s research work in terms of rental prices, occupancy levels and purchase prices.
+summary: A comprehensive Conversion Rate Optimization (CRO) plan is developed to reverse the stagnant trend in an ecommerce company and drive a significant increase in its revenues. This plan consists of 10 specific initiatives, categorized into five key business levers (number of views, conversion rate, cross-selling, purchase frequency, and customer loyalty).
+
+
 tags:
   - Discovery Projects
 date: 2024-06-24
 #external_link: http://github.com
 ---
-*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation) is currently in Spanish. It will be soon updated to English.*
+*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company) is currently in Spanish. It will be soon updated to English.*
 {style="color: #aaaaaa"}
 
 {{< toc >}}
@@ -150,28 +152,26 @@ In this stage of the project, we are presenting the insights that we have obtain
   * *Medium-high cost investment*: Jerónimos, Fuentela reina.
   * *High cost investment*: Recoletos.
 
-{{< figure src="/project1/exhibit_1.png" title="Exhibit 1: Relation between rental and purchase price for each neighborhood." >}}
+{{< figure src="/project3/exhibit_1.png" title="Exhibit 1: ." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>It is recommended to search for two-bedroom properties that can accommodate 4 guests</text>
 
-* The number of guests that maximize the rental price while minimizing the property's purchase price is 4.
+{{< figure src="/project3/exhibit_2.png" title="Exhibit 2: ." >}}
 
-{{< figure src="/project1/exhibit_2.png" title="Exhibit 2: Optimal number of guests based on the rental and purchase price." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest</text>
+{{< figure src="/project3/exhibit_3.png" title="Exhibit 3: ." >}}
 
-* These properties are expected to have a lower purchase price.
-* It seems that proximity to points of interest does not have a particular impact on rental prices.
 
-{{< figure src="/project1/exhibit_3.png" title="Exhibit 3: Relation between the purchase price and the distance to the PoI (Puerta del Sol)." >}}
+{{< figure src="/project3/exhibit_4.png" title="Exhibit 4: ." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>A new business model based on rentals for specific moments of high sporting interest should be explored</text>
 
-* It is advisable to look for opportunities in the San Blas neighborhood.
-* These properties present a particularly high cost-income ratio per night.
+{{< figure src="/project3/exhibit_5.png" title="Exhibit 5: ." >}}
 
-{{< figure src="/project1/exhibit_4.png" title="Exhibit 4: Relation between rental and purchase price for each district." >}}
 
-* There are still many rentals that are not exploiting this potential.
+{{< figure src="/project3/exhibit_6.png" title="Exhibit 6: ." >}}
 
-{{< figure src="/project1/exhibit_5.png" title="Exhibit 5: Rental price map in San Blas neighborhood. Red dots indicate properties with high rental prices." >}}
+
+{{< figure src="/project3/exhibit_7.png" title="Exhibit 7: ." >}}
+
+
+{{< figure src="/project3/exhibit_8.png" title="Exhibit 8: ." >}}
+
