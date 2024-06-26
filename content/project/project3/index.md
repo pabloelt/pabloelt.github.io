@@ -224,7 +224,7 @@ With these values the average monthly revenue is found to be around 125.000€
 
 <text style='color: #BBDEFC; font-weight: normal;'>90% of new customers do not make a repeat purchase in the subsequent months</text>
 
-* A customers cohort analysis is developed:
+* A customers cohort analysis is performed:
 
 {{< figure src="/project3/exhibit_6.png" title="Exhibit 6: Customers cohort analysis." >}}
 
@@ -264,9 +264,10 @@ The powerful recommendation system optimised for the customers preferences:
 
 {{< figure src="/project3/exhibit_10_2.png" title="Exhibit 10.2: Powerful and optimised recommendation system." >}}
 
-
+---
 
 ## 7. Actionable initiatives
+{style="color: #BBDEFC"}
 
 A plan of 10 specific initiatives, organized into five major business levers, has been derived from the exploratory data analysis to break the stagnant trend in the company over the last few months and achieve an overall increase in ecommerce revenues:
 
@@ -293,4 +294,4 @@ A plan of 10 specific initiatives, organized into five major business levers, ha
 
 <text style='color: #BBDEFC; font-weight: normal;'>Actions to improve customer loyalty:</text>
 
-*Create a loyalty program based on the new RFM segmentation.
+* Create a loyalty program based on the new RFM segmentation.
