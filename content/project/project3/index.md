@@ -1,8 +1,6 @@
 ---
 title: Analysis and Optimization of an Ecommerce Company 
 summary: A comprehensive Conversion Rate Optimization (CRO) plan is developed to reverse the stagnant trend in an ecommerce company and drive a significant increase in its revenues. This plan consists of 10 specific initiatives, categorized into five key business levers.
-
-
 tags:
   - Discovery Projects
 date: 2024-06-24
@@ -177,3 +175,5 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 {{< figure src="/project3/exhibit_8.png" title="Exhibit 8: ." >}}
 
+
+{{< figure src="/project3/exhibit_9.png" title="Exhibit 9: ." >}}
