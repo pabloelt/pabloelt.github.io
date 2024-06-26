@@ -163,7 +163,7 @@ Once the exploratory data analysis has been conducted, the following insights ha
 
 
 
- 
+
 
 Insight 1: Conversion rates are very poor.
       60% from views to cart additions.
@@ -204,19 +204,6 @@ Insight 10: sistema de recomendación adaptado a las visualizaciones del usuario
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 ## 6. Results Communication
@@ -224,45 +211,57 @@ Insight 10: sistema de recomendación adaptado a las visualizaciones del usuario
 
 In this stage of the project, we are presenting the insights that we have obtained during the exploratory data analysis and the main conclusions for each of them.
 
+<text style='color: #BBDEFC; font-weight: normal;'>The conversion rates are very poor</text>
 
-<text style='color: #BBDEFC; font-weight: normal;'>Ten neighborhoods with a high investment potential have been identified</text>
-
-* They can be segmented into 4 groups depending on the type, quality, and property location.
-* These 4 groups, which have been identified, are the following:
-  * *Low cost Investment*: Simancas, Ambroz, Marroquina, San Juan Bautista.
-  * *Medium cost investment*: El Plantio, Valdemarín, Valdefuentes.
-  * *Medium-high cost investment*: Jerónimos, Fuentela reina.
-  * *High cost investment*: Recoletos.
+* 60% from views to cart additions.
+* 22% from cart additions to purchases.
+* 13% from views to purchases.
 
 {{< figure src="/project3/exhibit_1.png" title="Exhibit 1: ." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Average session numbers are low</text>
+
+* 2.2 products are viewed.
+* 1.3 products are added to the cart.
+* 0.9 products are removed from the cart.
+* 0.3 products are purchased.
+
+With these values the average monthly revenue is found to be around 125.000€
 
 {{< figure src="/project3/exhibit_2.png" title="Exhibit 2: ." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>The most popular purchasing hours are at 1 am, 8 am, from 11 am to 1 pm, and at 6 pm</text>
 
 {{< figure src="/project3/exhibit_3.png" title="Exhibit 3: ." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Weekly trends show a peak on the 22nd, possibly due to the start of Black Friday week</text>
 
 {{< figure src="/project3/exhibit_4_1.png" title="Exhibit 4.1: ." >}}
 
 
 {{< figure src="/project3/exhibit_4_2.png" title="Exhibit 4.2: ." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Most customers make only one purchase and spend an average of less than 50€</text>
 
 {{< figure src="/project3/exhibit_5.png" title="Exhibit 5: ." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>90% of new customers do not make a repeat purchase in the subsequent months</text>
 
 {{< figure src="/project3/exhibit_6.png" title="Exhibit 6: ." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>The average LTV is 42€</text>
 
 {{< figure src="/project3/exhibit_7.png" title="Exhibit 7: ." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Prime customers are identified though the RFM analysis</text>
 
 {{< figure src="/project3/exhibit_8.png" title="Exhibit 8: ." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Nearly half of the products have not been purchased in the last five months</text>
 
 {{< figure src="/project3/exhibit_9.png" title="Exhibit 9: ." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>A powerful recommendation system adapted to the user's views is developed</text>
 
 {{< figure src="/project3/exhibit_10_1.png" title="Exhibit 10.1: ." >}}
 
