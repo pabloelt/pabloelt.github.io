@@ -118,30 +118,30 @@ In order to guide this process, a series of seed questions are proposed to serve
 ### 5.1 Seed questions
 {style="color: #BBDEFC; font-weight: normal"}
 
-**Regarding rental price:**
+**Regarding customer journey:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> What is the average price and price range, by districts and neighborhoods?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> What is the ranking of districts and neighborhoods by average rental price?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> What factors (other than location) determine the rental price?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text> What is the relationship between the size of the property and the price at which it can be rented?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> How does competition (number of available properties per neighborhood) influence the rental price?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> How do prices vary by type of rental (whole apartment, private room, shared room)?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> What does a typical shopping process look like?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> How many products are viewed, added to cart, abandoned and purchased on average per session?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> How have these metrics been trending in recent months?
 
-**Regarding occupancy rate:**
+**Regarding clients:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text> What is the average occupancy rate by district and by neighborhood?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> How likely is the occupancy rate in each district?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> What is the ranking of districts and neighborhoods by occupancy rate?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q10:</text> What factors (other than location) determine occupancy rate?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q11:</text> What is the relationship between property size and occupancy rate?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q12:</text> How does competition (number of properties available per district) influence occupancy rate?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text> How many products does each customer buy?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> How much does each customer spend on average?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> Are there ‘good customers’ that need to be identified and treated differently?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text> Do customers repeat purchases in the following months?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> What is the average LTV of a customer?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> Can campaigns can be tailored to customer’s value?
 
-**Regarding purchase price:**
+**Regarding products:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q13:</text> What is the ranking of price per m2 by district?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q14:</text> What is the ranking of property price (m2 * average size) by district?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q15:</text> What is the relationship between property price and rental price by district?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q17:</text> What is the relationship between property price and occupancy by district?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q10:</text> What are the best-selling products?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q11:</text> Are there products that do not sell?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q12:</text> Is there a relationship between the price of the product and its sales volume?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q13:</text> Are there products that are visited but not purchased?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q14:</text> Are there products that are recurrently removed from the cart?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q15:</text> Could personalized product recommendations be made for each customer?
+
 
 ### 5.2 Insights
 {style="color: #BBDEFC; font-weight: normal"}
