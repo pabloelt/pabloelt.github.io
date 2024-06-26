@@ -162,48 +162,6 @@ Once the exploratory data analysis has been conducted, the following insights ha
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Notebooks/03_Analisis%20e%20Insights.ipynb).
 
 
-
-
-
-Insight 1: Conversion rates are very poor.
-      60% from views to cart additions.
-      22% from cart additions to purchases.
-      13% from views to purchases.
-
-Insight 2: Average session numbers are low
-      2.2 products are viewed.
-      1.3 products are added to the cart.
-      0.9 products are removed from the cart.
-      0.3 products are purchased.
-      Media facturación mensual: 125000€
-
-Insight 3: Las horas en las que la gente compra más son la 1, las 8, de 11 a 13 y las 18.
-      info es muy relevante por ejemplo de cara a paid ads, tanto de generación de tráfico como de retargeting
-      Parece haber algún subtipo de usuario que compra a la 1 de la mañana, que aunque no sea muy frecuente sí compra mucho
-
-Insight 4: Tendencia semanal muestra un pico el día 22, posiblemente por el inicio de la semana black friday
-      días de Navidad tienen una tendencia decreciente, lo que significa que los consumidores claramente han adelantado sus compras
-
-Insight 5: La mayoría de los clientes solo realiza una compra y se gasta menos de 50€ de media.
-      La compra mediana contiene 5 productos. Gran recorrido para mejorar este ratio con sistemas de recomendación.
-
-Insight 6: El 90% de que los nuevos clientes no vuelve a comprar en los meses posteriores.
-      Analisis de cohortes
-
-Insight 7: El LTV medio es de 42€.
-      Aplicando nuestro margen sobre esa cifra y el % que queremos dedicar a captación nos sale el importe máximo a invertir en CPA.
-      Aplicar las acciones de CRO permitirá incrementar el LTV y por tanto también el CPA, siendo una ventaja estratégica muy importante.
-
-Insight 8: Mediante el análisis RFM, podemos identificar los clientes que con mayor probabilidad responderán mejor a nuevas campañas
-
-Insight 9: Casi la mitad de los productos no han tenido ninguna venta en los 5 meses del histórico.
-      Eliminarlos del catálogo
-      Investigar por qué no están funcionando
-
-Insight 10: sistema de recomendación adaptado a las visualizaciones del usuario
-
-
-
 ---
 
 ## 6. Results Communication
@@ -219,6 +177,8 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 {{< figure src="/project3/exhibit_1.png" title="Exhibit 1: ." >}}
 
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>Average session numbers are low</text>
 
 * 2.2 products are viewed.
@@ -230,40 +190,76 @@ With these values the average monthly revenue is found to be around 125.000€
 
 {{< figure src="/project3/exhibit_2.png" title="Exhibit 2: ." >}}
 
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>The most popular purchasing hours are at 1 am, 8 am, from 11 am to 1 pm, and at 6 pm</text>
+
+* This information is highly relevant, particularly for strategies involving paid ads, both for generating traffic and for retargeting efforts.
+
+* Additionally, there appears to be a user subtype that makes purchases at 1 AM. While not occurring frequently, this group tends to spend significantly when they do make purchases.
 
 {{< figure src="/project3/exhibit_3.png" title="Exhibit 3: ." >}}
 
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>Weekly trends show a peak on the 22nd, possibly due to the start of Black Friday week</text>
+
+* Weekly analysis during the five months:
 
 {{< figure src="/project3/exhibit_4_1.png" title="Exhibit 4.1: ." >}}
 
+* Daily analysis around the Black Friday campaign:
 
 {{< figure src="/project3/exhibit_4_2.png" title="Exhibit 4.2: ." >}}
 
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>Most customers make only one purchase and spend an average of less than 50€</text>
+
+* The median purchase currently includes only 5 products, indicating there is significant potential for improvement in this ratio through the implementation of recommendation systems.
 
 {{< figure src="/project3/exhibit_5.png" title="Exhibit 5: ." >}}
 
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>90% of new customers do not make a repeat purchase in the subsequent months</text>
+
+* A customers cohort analysis is developed:
 
 {{< figure src="/project3/exhibit_6.png" title="Exhibit 6: ." >}}
 
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>The average LTV is 42€</text>
+
+* Implementing CRO actions will the LTV, thereby enhancing our strategic advantage.
 
 {{< figure src="/project3/exhibit_7.png" title="Exhibit 7: ." >}}
 
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>Prime customers are identified though the RFM analysis</text>
+
+* Thanks to the RFM analysis, we can identify our top-tier customers and tailor more targeted campaigns based on this information.
 
 {{< figure src="/project3/exhibit_8.png" title="Exhibit 8: ." >}}
 
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>Nearly half of the products have not been purchased in the last five months</text>
+
+* They should be eliminated or, at least, properly investigated.
 
 {{< figure src="/project3/exhibit_9.png" title="Exhibit 9: ." >}}
 
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>A powerful recommendation system adapted to the user's views is developed</text>
+
+A basic recommendation system based on the most sold items:
 
 {{< figure src="/project3/exhibit_10_1.png" title="Exhibit 10.1: ." >}}
 
+The powerful recommendation system optimised for the customers preferences:
 
 {{< figure src="/project3/exhibit_10_2.png" title="Exhibit 10.2: ." >}}
