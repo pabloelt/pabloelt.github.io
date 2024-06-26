@@ -54,9 +54,9 @@ The levers for this project are clear and are summarized below:
 
 The KPIs that results from the above-mentioned levers are the following:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>KPI 1:</text> We calculate the rental price as the price paid per night in euros based on the data registered by Airbnb
-* <text style='color: #BBDEFC; font-weight: normal;'>KPI 2:</text> We calculate the occupancy rate as the number of days per year that the property is rented in percentage.
-* <text style='color: #BBDEFC; font-weight: normal;'>KPI 3:</text> We calculate the purchase price of a property by multiplying the number of square meters by the average price per square meter in the area where the property is located. Additionally, we apply a 25% discount to the official price, assuming that our purchasing team can negotiate that.
+* <text style='color: #BBDEFC; font-weight: normal;'>Rental price:</text> It is calculated as the price paid per night in euros based on the data registered by Airbnb.
+* <text style='color: #BBDEFC; font-weight: normal;'>Occupancy rate:</text> It is calculated as the number of days per year that the property is rented in percentage.
+* <text style='color: #BBDEFC; font-weight: normal;'>Property purchase price:</text> It is calculated by multiplying the number of square meters by the average price per square meter in the area where the property is located. Additionally, we apply a 25% discount to the official price, assuming that our purchasing team can negotiate that.
 
 ### 3.3 Entities and Data
 {style="color: #BBDEFC; font-weight: normal"}

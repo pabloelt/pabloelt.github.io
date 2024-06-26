@@ -28,8 +28,8 @@ Notes:
 
 The main objective is to analyze the transactional data to identify potential CRO actions that can increase visits, conversions, and average ticket size, thereby boosting the overall revenue of the ecommerce company. To achieve this goal, we will create advanced analytical assets such as:
 
-* **RFM Segmentation:** Analyzing customer data based on Recency, Frequency, and Monetary value to identify key customer segments and tailor marketing strategies accordingly.
-* **Recommendation System:** Developing a recommendation system to personalize the shopping experience, encouraging higher conversions and increasing the average ticket size.
+* <text style='color: #BBDEFC; font-weight: normal;'>RFM Segmentation:</text> Analyzing customer data based on Recency, Frequency, and Monetary value to identify key customer segments and tailor marketing strategies accordingly.
+* <text style='color: #BBDEFC; font-weight: normal;'>Recommendation System:</text> Developing a recommendation system to personalize the shopping experience, encouraging higher conversions and increasing the average ticket size.
 
 These tools will help us implement effective CRO actions and drive substantial revenue growth.
 
@@ -38,13 +38,11 @@ These tools will help us implement effective CRO actions and drive substantial r
 ## 3. Project Design
 {style="color: #BBDEFC"}
 
-To establish the levers, a brief explanation about the customer journey is requiered.
+To establish the levers, a brief explanation about the customer journey is requiered. The first step is when a user visits the ecommerce website. Typically, they will come from:
 
-The first step is when a user visits the ecommerce website. Typically, they will come from:
-
-* Paid campaigns: Paid ads such as Facebook Ads or Google Ads.
-* Organic content: Blog, social media, etc.
-* Direct traffic: Knows the URL and enters it directly into the browser.
+* <text style='color: #BBDEFC; font-weight: normal;'>Paid campaigns:</text> Paid ads such as Facebook Ads or Google Ads.
+* <text style='color: #BBDEFC; font-weight: normal;'>Organic content:</text> Blog, social media, etc.
+* <text style='color: #BBDEFC; font-weight: normal;'>Direct traffic:</text> Knows the URL and enters it directly into the browser.
 
 The second step occurs when the user browses the website and adds a product to the cart.
 
@@ -55,52 +53,41 @@ The third step involves customer re-engagement through retargeting or email mark
 
 {{< figure src="/project3/customerjourney.png" title="" >}}
 
-Other key metrics for managing this type of business include:
-
-* CPA (Cost Per Acquisition): Aggregate cost of acquiring a customer through a marketing campaign.
-* AOV (Average Order Value): Average value of customer shopping carts, providing insight into the average amount users spend on the ecommerce site.
-* Purchase frequency: Number of times a user makes a purchase on the ecommerce site.
-* LTV (Lifetime Value): Predicts the average profit from a customer throughout their entire lifetime as a buyer on the ecommerce site.
-* Churn rate: Metric indicating the number of customers who no longer purchase services from the ecommerce site.
-
-
-
-
-
-
-
-
-
-
-
-This project has been designed by taking into consideration the following levers, KPIs, and entities from which data have been obtained.
 
 ### 3.1 Levers
 {style="color: #BBDEFC; font-weight: normal"}
 
 The levers for this project are clear and are summarized below:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Rental price:</text> The higher the rental price per night, the greater the profitability.
-* <text style='color: #BBDEFC; font-weight: normal;'>Occupancy rate:</text> The more days per year a property can be rented, the greater the profitability.
-* <text style='color: #BBDEFC; font-weight: normal;'>Purchase price:</text> The cheaper the property can be acquired, the greater the profitability.
+* <text style='color: #BBDEFC; font-weight: normal;'>Customer journey:</text> How can we optimize each step of the process?
+* <text style='color: #BBDEFC; font-weight: normal;'>Customers:</text> How can we use available customer information to optimize our campaigns?
+* <text style='color: #BBDEFC; font-weight: normal;'>Products:</text> How can we optimize the product catalog and personalize which products we present to each customer?
+
 
 ### 3.2 KPIs
 {style="color: #BBDEFC; font-weight: normal"}
 
 The KPIs that results from the above-mentioned levers are the following:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>KPI 1:</text> We calculate the rental price as the price paid per night in euros based on the data registered by Airbnb
-* <text style='color: #BBDEFC; font-weight: normal;'>KPI 2:</text> We calculate the occupancy rate as the number of days per year that the property is rented in percentage.
-* <text style='color: #BBDEFC; font-weight: normal;'>KPI 3:</text> We calculate the purchase price of a property by multiplying the number of square meters by the average price per square meter in the area where the property is located. Additionally, we apply a 25% discount to the official price, assuming that our purchasing team can negotiate that.
+* <text style='color: #BBDEFC; font-weight: normal;'>Views:</text> Number of views of the products available in the ecommerce website.
+* <text style='color: #BBDEFC; font-weight: normal;'>Conversion rate:</text> Number of items that are finally purchased from the views in the ecommerce website.
+* <text style='color: #BBDEFC; font-weight: normal;'>Purchase frequency:</text> Number of times a user makes a purchase on the ecommerce website.
+* <text style='color: #BBDEFC; font-weight: normal;'>CPA (Cost Per Acquisition):</text> Aggregate cost of acquiring a customer through a marketing campaign.
+* <text style='color: #BBDEFC; font-weight: normal;'>AOV (Average Order Value):</text> Average value of customer shopping carts, providing insight into the average amount users spend on the ecommerce site.
+* <text style='color: #BBDEFC; font-weight: normal;'>LTV (Lifetime Value):</text> Predicts the average profit from a customer throughout their entire lifetime as a buyer on the ecommerce site.
+* <text style='color: #BBDEFC; font-weight: normal;'>Churn rate:</text> Metric indicating the number of customers who no longer purchase services from the ecommerce site.
+
 
 ### 3.3 Entities and Data
 {style="color: #BBDEFC; font-weight: normal"}
 
-The real data used in this project is collected from [Airbnb](https://insideairbnb.com/get-the-data/) and [Idealista](https://www.idealista.com/sala-de-prensa/informes-precio-vivienda/) platforms. The most relevant entities from which we can obtain data are summarized below:
+The most relevant entities from which we can obtain data are summarized below:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Properties:</text> Location, rental price, room type, reviews, minimun/maximum nights, number of bedrooms, beds, …
-* <text style='color: #BBDEFC; font-weight: normal;'>Hosts:</text> Name, id, url, location, verifications, …
-* <text style='color: #BBDEFC; font-weight: normal;'>Locations:</text> Neighborhood, district, latitude, longitude, …
+* Users.
+* Customers.
+* Sessions.
+* Events (view, add to cart, remove from cart, purchase).
+* Products.
 
 ---
 
@@ -114,11 +101,10 @@ In this stage of the project, general data quality correction processes have bee
 * Proper selection of the most relevant data for the project.
 * Analysis of nulls and duplicated registers.
 * Analysis of numerical and categorical variables.
-* Imputation of nulls through a crosstab analysis.
 * Discretization of variables.
-* Creation of new variables: square meters estimation, purchase price estimation, ...
+* Creation of new variables.
 
-The entire process can be consulted in detail [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation/blob/main/Notebooks/03_Creacion%20del%20datamart%20analitico.ipynb).
+The entire process can be consulted in detail [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Notebooks/02_Creacion%20del%20Datamart%20Analitico.ipynb).
 
 ---
 
