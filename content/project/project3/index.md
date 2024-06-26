@@ -14,7 +14,7 @@ date: 2024-06-24
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-TThe client for this project is a cosmetics ecommerce company based in Russia. They have experienced flat growth over the past few months and have hired us to analyze their transactional data and implement Conversion Rate Optimization (CRO) actions to reverse this situation.
+The client for this project is a cosmetics ecommerce company based in Russia. They have experienced flat growth over the past few months and have hired us to analyze their transactional data and implement Conversion Rate Optimization (CRO) actions to reverse this situation.
 
 Notes:
 
