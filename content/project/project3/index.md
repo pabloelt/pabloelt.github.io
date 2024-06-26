@@ -175,7 +175,7 @@ In this stage of the project, we are presenting the insights that we have obtain
 * 22% from cart additions to purchases.
 * 13% from views to purchases.
 
-{{< figure src="/project3/exhibit_1.png" title="Exhibit 1: ." >}}
+{{< figure src="/project3/exhibit_1.png" title="Exhibit 1: Baseline conversion rates." >}}
 
 
 
@@ -188,7 +188,7 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 With these values the average monthly revenue is found to be around 125.000€
 
-{{< figure src="/project3/exhibit_2.png" title="Exhibit 2: ." >}}
+{{< figure src="/project3/exhibit_2.png" title="Exhibit 2: Baseline average session numbers." >}}
 
 
 
@@ -198,7 +198,7 @@ With these values the average monthly revenue is found to be around 125.000€
 
 * Additionally, there appears to be a user subtype that makes purchases at 1 AM. While not occurring frequently, this group tends to spend significantly when they do make purchases.
 
-{{< figure src="/project3/exhibit_3.png" title="Exhibit 3: ." >}}
+{{< figure src="/project3/exhibit_3.png" title="Exhibit 3: Hourly analysis of the main events on the ecommerce website." >}}
 
 
 
@@ -206,11 +206,11 @@ With these values the average monthly revenue is found to be around 125.000€
 
 * Weekly analysis during the five months:
 
-{{< figure src="/project3/exhibit_4_1.png" title="Exhibit 4.1: ." >}}
+{{< figure src="/project3/exhibit_4_1.png" title="Exhibit 4.1: Weekly analysis of the main events on the ecommerce website." >}}
 
 * Daily analysis around the Black Friday campaign:
 
-{{< figure src="/project3/exhibit_4_2.png" title="Exhibit 4.2: ." >}}
+{{< figure src="/project3/exhibit_4_2.png" title="Exhibit 4.2: Daily analysis of the main events around the Black Friday Campaign." >}}
 
 
 
@@ -218,7 +218,7 @@ With these values the average monthly revenue is found to be around 125.000€
 
 * The median purchase currently includes only 5 products, indicating there is significant potential for improvement in this ratio through the implementation of recommendation systems.
 
-{{< figure src="/project3/exhibit_5.png" title="Exhibit 5: ." >}}
+{{< figure src="/project3/exhibit_5.png" title="Exhibit 5: Bar plots for the evolution of the spent money and the numbers of items purchased by the customers." >}}
 
 
 
@@ -226,15 +226,15 @@ With these values the average monthly revenue is found to be around 125.000€
 
 * A customers cohort analysis is developed:
 
-{{< figure src="/project3/exhibit_6.png" title="Exhibit 6: ." >}}
+{{< figure src="/project3/exhibit_6.png" title="Exhibit 6: Customers cohort analysis." >}}
 
 
 
 <text style='color: #BBDEFC; font-weight: normal;'>The average LTV is 42€</text>
 
-* Implementing CRO actions will the LTV, thereby enhancing our strategic advantage.
+* Implementing CRO actions will increase the LTV, thereby enhancing our strategic advantage.
 
-{{< figure src="/project3/exhibit_7.png" title="Exhibit 7: ." >}}
+{{< figure src="/project3/exhibit_7.png" title="Exhibit 7: Metrics for the total spent money by the customers. The median value is adopted since there are some anomalous values." >}}
 
 
 
@@ -242,7 +242,7 @@ With these values the average monthly revenue is found to be around 125.000€
 
 * Thanks to the RFM analysis, we can identify our top-tier customers and tailor more targeted campaigns based on this information.
 
-{{< figure src="/project3/exhibit_8.png" title="Exhibit 8: ." >}}
+{{< figure src="/project3/exhibit_8.png" title="Exhibit 8: RFM analysis applied to identify the top-tier customers." >}}
 
 
 
@@ -250,7 +250,7 @@ With these values the average monthly revenue is found to be around 125.000€
 
 * They should be eliminated or, at least, properly investigated.
 
-{{< figure src="/project3/exhibit_9.png" title="Exhibit 9: ." >}}
+{{< figure src="/project3/exhibit_9.png" title="Exhibit 9: Pie diagram for the number of purchased products during the last five months." >}}
 
 
 
@@ -258,11 +258,11 @@ With these values the average monthly revenue is found to be around 125.000€
 
 A basic recommendation system based on the most sold items:
 
-{{< figure src="/project3/exhibit_10_1.png" title="Exhibit 10.1: ." >}}
+{{< figure src="/project3/exhibit_10_1.png" title="Exhibit 10.1: Basic recommendation system." >}}
 
 The powerful recommendation system optimised for the customers preferences:
 
-{{< figure src="/project3/exhibit_10_2.png" title="Exhibit 10.2: ." >}}
+{{< figure src="/project3/exhibit_10_2.png" title="Exhibit 10.2: Powerful and optimised recommendation system." >}}
 
 
 
