@@ -263,3 +263,34 @@ A basic recommendation system based on the most sold items:
 The powerful recommendation system optimised for the customers preferences:
 
 {{< figure src="/project3/exhibit_10_2.png" title="Exhibit 10.2: ." >}}
+
+
+
+## 7. Actionable initiatives
+
+A plan of 10 specific initiatives, organized into five major business levers, has been derived from the exploratory data analysis to break the stagnant trend in the company over the last few months and achieve an overall increase in ecommerce revenues:
+
+<text style='color: #BBDEFC; font-weight: normal;'>Actions to increase the number of views:</text>
+
+* Review paid campaigns (generation and retargeting) to focus investment during the time slots between 9 am and 1 pm, and between 6 pm and 8 pm.
+* Concentrate investment for the Christmas and post-Christmas period during the Black Friday week.
+* Increase investment to reach the maximum CPA based on the identified LTV.
+
+<text style='color: #BBDEFC; font-weight: normal;'>Actions to increase conversion rates:</text>
+
+* Preconfigure the homepage with the products identified in the "most viewed" and "most sold" analyses.
+* Work on products with a high cart abandonment rate.
+* Work on products that are frequently viewed but infrequently purchased.
+
+<text style='color: #BBDEFC; font-weight: normal;'>Actions to increase cross-selling:</text>
+
+* The median purchase is 5 products at the moment. To increase this ratio, implement real-time recommendations using the new recommendation system.
+
+<text style='color: #BBDEFC; font-weight: normal;'>Actions to increase purchase frequency:</text>
+
+* The 90% of the customers only make a single purchase. Create a periodic newsletter using the new recommendation system to increase visit frequency.
+* Run promotional campaigns targeting the top segments identified in the RFM segmentation.
+
+<text style='color: #BBDEFC; font-weight: normal;'>Actions to improve customer loyalty:</text>
+
+*Create a loyalty program based on the new RFM segmentation.
