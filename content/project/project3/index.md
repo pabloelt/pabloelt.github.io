@@ -148,9 +148,22 @@ In order to guide this process, a series of seed questions are proposed to serve
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
 
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> The conversion rates are very poor.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> The average session numbers are low.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> The most popular purchasing hours are at 1 am, 8 am, from 11 am to 1 pm, and at 6 pm.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Weekly trends show a peak on the 22nd, possibly due to the start of Black Friday week.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Most customers make only one purchase and spend an average of less than 50€.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> 90% of new customers do not make a repeat purchase in the subsequent months.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> The average LTV is 42€.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 8:</text> Prime customers are identified though the RFM analysis.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 9:</text> Nearly half of the products have not been purchased in the last five months.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 10:</text> A powerful recommendation system adapted to the user's views is developed.
+
+ A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Notebooks/03_Analisis%20e%20Insights.ipynb).
 
 
 
+ 
 
 Insight 1: Conversion rates are very poor.
       60% from views to cart additions.
@@ -201,12 +214,8 @@ Insight 10: sistema de recomendación adaptado a las visualizaciones del usuario
 
 
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> Ten neighborhoods with a high investment potential have been identified.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> It is recommended to search for two-bedroom properties that can accommodate 4 guests.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> A new business model based on rentals for specific moments of high sporting interest should be explored.
 
- A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation/blob/main/Notebooks/05_Analisis%20e%20insights.ipynb).
+
 
 ---
 
