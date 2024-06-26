@@ -14,30 +14,64 @@ date: 2024-06-24
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-The client for this project is a real estate company that invests in large cities by purchasing properties to rent out as vacation apartments. The managers have decided to invest in Madrid and are interested in analyzing publicly available data from the sector leader, Airbnb, to identify the types of properties with the greatest commercial potential for vacation rentals.
-
-As the main deliverable, the management expects to receive a detailed typology of properties that the valuation team should target among the existing opportunities in the city, as well as the primary neighborhoods or geographic areas to focus on.
+TThe client for this project is a cosmetics ecommerce company based in Russia. They have experienced flat growth over the past few months and have hired us to analyze their transactional data and implement Conversion Rate Optimization (CRO) actions to reverse this situation.
 
 Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
-* Source code can be found [here](https://github.com/pabloelt/real-estate-market-analysis-rental-vacation).
+* Source code can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company).
 
 ---
 
 ## 2. Objectives
 {style="color: #BBDEFC"}
 
-The main objective is to identify the property profiles with the highest potential in the vacation rental market. This can guide the valuation team on where to start looking for such opportunities and highlight the key neighborhoods and geographical areas, which are most promising to focus on.
+The main objective is to analyze the transactional data to identify potential CRO actions that can increase visits, conversions, and average ticket size, thereby boosting the overall revenue of the ecommerce company. To achieve this goal, we will create advanced analytical assets such as:
 
-This analysis is primarily conducted in terms of rental prices, occupancy levels, and purchase prices.
+* **RFM Segmentation:** Analyzing customer data based on Recency, Frequency, and Monetary value to identify key customer segments and tailor marketing strategies accordingly.
+* **Recommendation System:** Developing a recommendation system to personalize the shopping experience, encouraging higher conversions and increasing the average ticket size.
+
+These tools will help us implement effective CRO actions and drive substantial revenue growth.
 
 ---
 
 ## 3. Project Design
 {style="color: #BBDEFC"}
 
+To establish the levers, a brief explanation about the customer journey is requiered.
+
+The first step is when a user visits the ecommerce website. Typically, they will come from:
+
+* Paid campaigns: Paid ads such as Facebook Ads or Google Ads.
+* Organic content: Blog, social media, etc.
+* Direct traffic: Knows the URL and enters it directly into the browser.
+
+The second step occurs when the user browses the website and adds a product to the cart.
+
+* They can remove products from the cart, exit without making a purchase, or ultimately place an order.
+* A common process is cross-selling, where other products that might interest the user are recommended.
+
+The third step involves customer re-engagement through retargeting or email marketing.
+
 {{< figure src="/project3/customerjourney.png" title="" >}}
+
+Other key metrics for managing this type of business include:
+
+* CPA (Cost Per Acquisition): Aggregate cost of acquiring a customer through a marketing campaign.
+* AOV (Average Order Value): Average value of customer shopping carts, providing insight into the average amount users spend on the ecommerce site.
+* Purchase frequency: Number of times a user makes a purchase on the ecommerce site.
+* LTV (Lifetime Value): Predicts the average profit from a customer throughout their entire lifetime as a buyer on the ecommerce site.
+* Churn rate: Metric indicating the number of customers who no longer purchase services from the ecommerce site.
+
+
+
+
+
+
+
+
+
+
 
 This project has been designed by taking into consideration the following levers, KPIs, and entities from which data have been obtained.
 
