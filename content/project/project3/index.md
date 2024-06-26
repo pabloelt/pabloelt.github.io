@@ -83,11 +83,11 @@ The KPIs that results from the above-mentioned levers are the following:
 
 The most relevant entities from which we can obtain data are summarized below:
 
-* Users.
-* Customers.
-* Sessions.
-* Events (view, add to cart, remove from cart, purchase).
-* Products.
+* <text style='color: #BBDEFC; font-weight: normal;'>User:</text> User ID.
+* <text style='color: #BBDEFC; font-weight: normal;'>Date:</text> Operation date.
+* <text style='color: #BBDEFC; font-weight: normal;'>Session:</text> Session ID.
+* <text style='color: #BBDEFC; font-weight: normal;'>Event:</text> View, add to cart, remove from cart, purchase.
+* <text style='color: #BBDEFC; font-weight: normal;'>Product:</text> Category, product id, price.
 
 ---
 
@@ -148,6 +148,59 @@ In order to guide this process, a series of seed questions are proposed to serve
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
 
+
+
+
+
+Insight 1: Conversion rates are very poor.
+      60% from views to cart additions.
+      22% from cart additions to purchases.
+      13% from views to purchases.
+
+Insight 2: Average session numbers are low
+      2.2 products are viewed.
+      1.3 products are added to the cart.
+      0.9 products are removed from the cart.
+      0.3 products are purchased.
+      Media facturación mensual: 125000€
+
+Insight 3: Las horas en las que la gente compra más son la 1, las 8, de 11 a 13 y las 18.
+      info es muy relevante por ejemplo de cara a paid ads, tanto de generación de tráfico como de retargeting
+      Parece haber algún subtipo de usuario que compra a la 1 de la mañana, que aunque no sea muy frecuente sí compra mucho
+
+Insight 4: Tendencia semanal muestra un pico el día 22, posiblemente por el inicio de la semana black friday
+      días de Navidad tienen una tendencia decreciente, lo que significa que los consumidores claramente han adelantado sus compras
+
+Insight 5: La mayoría de los clientes solo realiza una compra y se gasta menos de 50€ de media.
+      La compra mediana contiene 5 productos. Gran recorrido para mejorar este ratio con sistemas de recomendación.
+
+Insight 6: El 90% de que los nuevos clientes no vuelve a comprar en los meses posteriores.
+      Analisis de cohortes
+
+Insight 7: El LTV medio es de 42€.
+      Aplicando nuestro margen sobre esa cifra y el % que queremos dedicar a captación nos sale el importe máximo a invertir en CPA.
+      Aplicar las acciones de CRO permitirá incrementar el LTV y por tanto también el CPA, siendo una ventaja estratégica muy importante.
+
+Insight 8: Mediante el análisis RFM, podemos identificar los clientes que con mayor probabilidad responderán mejor a nuevas campañas
+
+Insight 9: Casi la mitad de los productos no han tenido ninguna venta en los 5 meses del histórico.
+      Eliminarlos del catálogo
+      Investigar por qué no están funcionando
+
+Insight 10: sistema de recomendación adaptado a las visualizaciones del usuario
+
+
+
+
+
+
+
+
+
+
+
+
+
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> Ten neighborhoods with a high investment potential have been identified.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> It is recommended to search for two-bedroom properties that can accommodate 4 guests.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> It is recommended to search for properties in one of the identified neighborhoods that are not necessarily close to points of interest.
@@ -181,7 +234,10 @@ In this stage of the project, we are presenting the insights that we have obtain
 {{< figure src="/project3/exhibit_3.png" title="Exhibit 3: ." >}}
 
 
-{{< figure src="/project3/exhibit_4.png" title="Exhibit 4: ." >}}
+{{< figure src="/project3/exhibit_4_1.png" title="Exhibit 4.1: ." >}}
+
+
+{{< figure src="/project3/exhibit_4_2.png" title="Exhibit 4.2: ." >}}
 
 
 {{< figure src="/project3/exhibit_5.png" title="Exhibit 5: ." >}}
@@ -197,3 +253,9 @@ In this stage of the project, we are presenting the insights that we have obtain
 
 
 {{< figure src="/project3/exhibit_9.png" title="Exhibit 9: ." >}}
+
+
+{{< figure src="/project3/exhibit_10_1.png" title="Exhibit 10.1: ." >}}
+
+
+{{< figure src="/project3/exhibit_10_2.png" title="Exhibit 10.2: ." >}}
