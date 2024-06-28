@@ -295,3 +295,23 @@ A plan of 10 specific initiatives, organized into five major business levers, ha
 <text style='color: #BBDEFC; font-weight: normal;'>Actions to improve customer loyalty:</text>
 
 10. Create a loyalty program based on the new RFM segmentation.
+
+---
+
+## 7. Business case implementation
+{style="color: #BBDEFC"}
+
+We have also implemented a business case model for a neutral scenario, assuming that the new CRO protocols achieve the following:
+
+* Increase the conversion rate from 13% to 15%.
+* Increase the median purchase from 5 to 6 products, representing a 20% increase in this metric.
+* Increase the purchase frequency from 10% to 12%, representing a 20% increase in this metric.
+
+After one year of applying these protocols, the results are as follows:
+
+* The CRO protocols generated 249300€.
+* The cost of implementing the measures was 114000€.
+* The resultant profit is 135300€.
+* The ROI (Return on Investment) is 118.68%.
+
+The details of this analysis can be consulted [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Business_Case.xlsx).
