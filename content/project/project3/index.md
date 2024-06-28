@@ -305,7 +305,7 @@ We have also implemented a business case model for a neutral scenario, assuming 
 
 * Increase the conversion rate from 13% to 15%.
 * Increase the median purchase from 5 to 6 products, representing a 20% increase in this metric.
-* Increase the purchase frequency from 10% to 12%, representing a 20% increase in this metric.
+* Increase the purchase recency from 10% to 12%, representing a 20% increase in this metric.
 
 After one year of applying these protocols, the results are as follows:
 
