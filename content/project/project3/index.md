@@ -298,7 +298,7 @@ A plan of 10 specific initiatives, organized into five major business levers, ha
 
 ---
 
-## 7. Business case implementation
+## 8. Business case implementation
 {style="color: #BBDEFC"}
 
 We have also implemented a business case model for a neutral scenario, assuming that the new CRO protocols achieve the following:
