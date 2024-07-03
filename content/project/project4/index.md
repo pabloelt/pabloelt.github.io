@@ -19,7 +19,7 @@ The client for this project is a hotel group specializing in the vacation market
 Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
-* Final dashboard and its individual sheets can be found [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).
+* Final dashboard and its individual sheets are publicly available [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).
 
 ---
 
@@ -33,7 +33,9 @@ The main objective is to create a functional and interactive dashboard for the c
 ## 3. Project Design
 {style="color: #BBDEFC"}
 
+For the design of this project, we have followed a straightforward methodology, summarized in the following image. The initial time invested in creating this methodology plan will help us to organize the information properly and to present a more complete and valuable final dashboard. Additionally, this methodology will also help to optimize time and resources in the implementation of the dashboard.
 
+{{< figure src="/project4/methodology.png" title="Summarized methodology followed in the project design of the interactive dashboard." >}}
 
 ### 3.1 Company Requirements
 {style="color: #BBDEFC; font-weight: normal"}
