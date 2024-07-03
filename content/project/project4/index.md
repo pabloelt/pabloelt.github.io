@@ -14,24 +14,19 @@ date: 2024-07-02
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-The client for this project is a cosmetics ecommerce company based in Russia. They have experienced flat growth over the past few months and have hired us to analyze their transactional data and implement Conversion Rate Optimization (CRO) actions to reverse this situation.
+The client for this project is a hotel group specializing in the vacation market. They operate several hotels and rooms worldwide. However, the general performance of the group is not properly organized. Consequently, they need a functional and interactive dashboard displaying the main KPIs and the most relevant information to streamline the operations of the company.
 
 Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
-* Source code can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company).
+* Final dashboard and its individual sheets can be found [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).
 
 ---
 
 ## 2. Objectives
 {style="color: #BBDEFC"}
 
-The main objective is to analyze the transactional data to identify potential CRO actions that can increase visits, conversions, and average ticket size, thereby boosting the overall revenue of the ecommerce company. To achieve this goal, we will create advanced analytical assets such as:
-
-* <text style='color: #BBDEFC; font-weight: normal;'>RFM Segmentation:</text> Analyzing customer data based on Recency, Frequency, and Monetary value to identify key customer segments and tailor marketing strategies accordingly.
-* <text style='color: #BBDEFC; font-weight: normal;'>Recommendation System:</text> Developing a recommendation system to personalize the shopping experience, encouraging higher conversions and increasing the average ticket size.
-
-These tools will help us implement effective CRO actions and drive substantial revenue growth.
+The main objective is to create a functional and interactive dashboard for the company. This will enable managers to organize hotel information effectively and operate in a more data-driven manner. [Tableau Public](https://public.tableau.com/app/discover) software is used for this project.
 
 ---
 
