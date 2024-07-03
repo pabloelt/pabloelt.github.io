@@ -40,28 +40,28 @@ For the design of this project, we have followed a straightforward methodology, 
 ### 3.1 Company requirements
 {style="color: #BBDEFC; font-weight: normal"}
 
- The goal in this first and fundamental step is to determine the requirements and the scope of the project. To achieve this, some meetings are organized with the management team of the hotel group to understand their expectations, the business problematics they face, the KPIs they want to measure, the desired time frames, and other relevant details for the good performance of the company. A summary of the questions posed to the management team and their feedback are presented bellow.
+ The goal in this first and fundamental step is to determine the requirements and the scope of the project. To achieve this, some meetings are organized with the management team of the hotel group to understand their expectations, the business problematics they face, the KPIs they want to measure, the desired time frames, and other relevant details for the good performance of the company. A summary of the questions posed to the management team and its feedback are presented bellow.
 
 <text style='color: #BBDEFC; font-weight: normal;'>What business objectives do you want to achieve by developing this dashboard?</text>
 
 * To have a single report containing the main data necessary for hotel management.
 * To view current data as well as trends over the last few months.
-* To ensure the entire management team uses the same data and shares the same metrics.
+* To ensure that the entire management team uses the same data and shares the same metrics.
 
 <text style='color: #BBDEFC; font-weight: normal;'>What data specifically would you like to visualize?</text>
 
 * Turnover
 * Number of reservations
 * Occupancy rate
-* RevPAR (Revenue per Available Room)
 * ADR (Average Daily Rate)
+* RevPAR (Revenue per Available Room)
 * Cancellation rate
 
-<text style='color: #BBDEFC; font-weight: normal;'>Through which dimensions would you like to see such metrics?</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Through which dimensions would you like to see these metrics?</text>
 
 * All of the above metrics with the ability to select specific dates for data consultation.
-* Evolution of the occupancy rate for the last 6 months and its seasonality.
-* Bookings categorized by the customer’s country.
+* Evolution of the occupancy rate for the last 6 months.
+* Turnover and number of reservations categorized by the customer’s country and how all the metrics are affected by country selection.
 
 <text style='color: #BBDEFC; font-weight: normal;'>What time frame do you need to visualize for the information?</text>
 
@@ -69,13 +69,16 @@ For the design of this project, we have followed a straightforward methodology, 
 
 <text style='color: #BBDEFC; font-weight: normal;'>At what time unit would you like to see that information?</text>
 
-* Value of all the mentioned metrics according to the selected dates.
-* Evolution of the occupancy rate over the last 6 months.
-* For the seasonality of the occupancy rate, display all available historical data.
-* For bookings by country, use all available data.
+* Values of all the mentioned metrics according to the selected dates.
+* For the evolution of the occupancy rate over the last 6 months, only the available data for that period is used no matter the selected dates in the filter.
+
 
 ### 3.2 Data sources
 {style="color: #BBDEFC; font-weight: normal"}
+
+In the secondo step of the project design, the goal consists of identifying the data sources. How many data sources are available, where are they located, what information is available, which files need to be modified, and so on. In this case, the data provided by the company is contained in a single comma-separated values text file called *hotels.csv*.
+
+This file directly contains the information of two of the metrics required by the client: the number of reservations and the ADR.
 
 ### 3.3 Required calculations
 {style="color: #BBDEFC; font-weight: normal"}
