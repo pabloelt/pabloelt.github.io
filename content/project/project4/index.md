@@ -6,7 +6,7 @@ tags:
 date: 2024-07-02
 #external_link: http://github.com
 ---
-*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company) is currently in Spanish. It will be soon updated to English.*
+*Note: The dynamic dashboard can be visualized [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).*
 {style="color: #aaaaaa"}
 
 {{< toc >}}
