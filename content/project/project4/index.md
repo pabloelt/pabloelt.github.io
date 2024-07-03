@@ -125,13 +125,7 @@ Finally, the distribution of the clients is presented in a map. This component i
 ### 3.5 Dashboard design
 {style="color: #BBDEFC; font-weight: normal"}
 
-
----
-
-## 4. Dashboard implementation
-{style="color: #BBDEFC"}
-
-
+In the final step, the dashboard design is addressed. The size and structure of the dashboard are defined, ensuring compatibility with different devices such as desktops, tablets, and phones. The data filter is located at the top right corner of the dashboard, and some additional decorative elements are included for a more polished presentation. The final dashboard versions are presented bellow.
 
 {{< figure src="/project4/dashboard_desktop.png" title="Dream Resort Hotels Dynamic Dashboard. Desktop version." >}}
 
@@ -139,4 +133,4 @@ Finally, the distribution of the clients is presented in a map. This component i
 
 {{< figure src="/project4/dashboard_phone.png" title="Dream Resort Hotels Dynamic Dashboard. Phone version." >}}
 
-
+The final interactive dashboard and its individual sheets are publicly available [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).
