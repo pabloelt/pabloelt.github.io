@@ -83,12 +83,18 @@ This file directly contains the information of two of the metrics required by th
 ### 3.3 Required calculations
 {style="color: #BBDEFC; font-weight: normal"}
 
-{{< figure src="/project4/required_calculations.png" title="." >}}
+In the third step, we identify the requirements specified by the management team that are not directly available in the data source. The necessary new information is calculated according to the following table.
 
-{{< figure src="/project4/dashboard_components.png" title="." >}}
+{{< figure src="/project4/required_calculations.png" title="Calculation formulas and the corresponding data source fields for each insights." >}}
+
+These calculations will ensure that all necessary metrics are available for the dashboard, providing comprehensive insights for the management team.
+
 
 ### 3.4 Dashboard components
 {style="color: #BBDEFC; font-weight: normal"}
+
+
+{{< figure src="/project4/dashboard_components.png" title="." >}}
 
 ### 3.5 Dashboard design
 {style="color: #BBDEFC; font-weight: normal"}
