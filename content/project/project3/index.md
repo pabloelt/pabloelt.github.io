@@ -51,7 +51,7 @@ The second step occurs when the user browses the website and adds a product to t
 
 The third step involves customer re-engagement through retargeting or email marketing.
 
-{{< figure src="/project3/customerjourney.png" title="" >}}
+{{< figure src="/project3/customerjourney.png" title="Custom journey in an ecommerce company." >}}
 
 
 ### 3.1 Levers
