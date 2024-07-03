@@ -76,20 +76,21 @@ For the design of this project, we have followed a straightforward methodology, 
 ### 3.2 Data sources
 {style="color: #BBDEFC; font-weight: normal"}
 
-In the secondo step of the project design, the goal consists of identifying the data sources. How many data sources are available, where are they located, what information is available, which files need to be modified, and so on. In this case, the data provided by the company is contained in a single comma-separated values text file called *hotels.csv*.
+In the second step of the project design, the goal consists of identifying the data sources. How many data sources are available, where are they located, what information is available, which files need to be modified, and so on. In this case, the data provided by the company is contained in a single comma-separated values text file called *hotels.csv*.
 
 This file directly contains the information of two of the metrics required by the client: the number of reservations and the ADR.
 
 ### 3.3 Required calculations
 {style="color: #BBDEFC; font-weight: normal"}
 
-### 3.4 Required calculations
+{{< figure src="/project4/required_calculations.png" title="." >}}
+
+{{< figure src="/project4/dashboard_components.png" title="." >}}
+
+### 3.4 Dashboard components
 {style="color: #BBDEFC; font-weight: normal"}
 
-### 3.5 Dashboard components
-{style="color: #BBDEFC; font-weight: normal"}
-
-### 3.6 Dashboard design
+### 3.5 Dashboard design
 {style="color: #BBDEFC; font-weight: normal"}
 
 
