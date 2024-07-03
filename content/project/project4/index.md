@@ -107,13 +107,19 @@ A band containing all the KPIs is created and located at the top of the dashboar
 
 The occupancy rate evolution in the last 6 months is presented through a line plot and located under the KPIs band. Notice that this dashboard component is not affected by the date slider, since we are presenting the whole information during the 6 most recent months.
 
-{{< figure src="/project4/kpis_band.png" title="Component for the occupancy rate evolution in the last 6 months." >}}
+{{< figure src="/project4/occupancy_rate_6m.png" title="Component for the occupancy rate evolution in the last 6 months." >}}
 
 <text style='color: #BBDEFC; font-weight: normal;'>Monthly occupancy rate</text>
 
+The seasonality is analysed through the monthly occupancy rate. A component for this metrics is created using a bar plot and located in the left corner under the occupancy rate evolution.
+
+{{< figure src="/project4/monthly_occupancy_rate.png" title="Component for the monthly occupancy rate." >}}
+
 <text style='color: #BBDEFC; font-weight: normal;'>Client adquisition map</text>
 
+Finally, the distribution of the clients is presented in a map. This component is located on the right corner under the occupancy rate evolution and next to the monthly occupancy rate. Notice that this component is also used as a filter for the rest of the performance indicators through an action order.
 
+{{< figure src="/project4/client_adquisition_map.png" title="Component for the client adquisition map." >}}
 
 
 ### 3.5 Dashboard design
