@@ -1,6 +1,6 @@
 ---
 title: Dream Resort Hotels Dynamic Dashboard
-summary: A comprehensive Conversion Rate Optimization (CRO) plan is developed to reverse the stagnant trend in an ecommerce company and drive a significant increase in its revenues. This plan consists of 10 specific initiatives, categorized into five key business levers.
+summary: An interactive and dynamic dashboard has been developed for a hotel group. The main KPIs, including turnover, number of reservations, occupancy rate, ADR (Average Daily Rate), RevPAR (Revenue per Available Room), and cancellation rate, are visualized in the dashboard along with other relevant metrics.
 tags:
   - Dashbords
 date: 2024-07-02
