@@ -1,8 +1,8 @@
 ---
 title: Dream Resort Hotels Dynamic Dashboard
-summary: An interactive and dynamic dashboard has been developed for a hotel group. The main KPIs, including turnover, number of reservations, occupancy rate, ADR (Average Daily Rate), RevPAR (Revenue per Available Room), and cancellation rate, are visualized in the dashboard along with other relevant metrics.
+summary: An interactive and dynamic dashboard has been developed for a hotel group. The main KPIs, including turnover, number of reservations, occupancy rate, ADR, RevPAR, and cancellation rate, are visualized in the dashboard along with other relevant metrics.
 tags:
-  - Dashbords
+  - Dashboards
 date: 2024-07-02
 #external_link: http://github.com
 ---
