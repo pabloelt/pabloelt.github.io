@@ -14,7 +14,7 @@ date: 2024-07-02
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-The client for this project is a hotel group specializing in the vacation market. They operate several hotels and rooms worldwide. However, the general performance information of the group is not properly organized. Consequently, they need a functional and interactive dashboard displaying the main KPIs and the most relevant information to streamline the operations of the company.
+The client for this project is a hotel group specialized in the vacation market. They operate several hotels and rooms worldwide. However, the general performance information of the group is not properly organized. Consequently, they need a functional and interactive dashboard displaying the main KPIs and the most relevant information to streamline the operations of the company.
 
 Notes:
 
@@ -69,8 +69,8 @@ For the design of this project, we have followed a straightforward methodology, 
 
 <text style='color: #BBDEFC; font-weight: normal;'>At what time unit would you like to see that information?</text>
 
-* Values of all the mentioned metrics according to the selected dates.
-* For the evolution of the occupancy rate over the last 6 months, only the available data for that period is used no matter the selected dates in the filter.
+* For the values of all the mentioned metrics, we want to select specific dates for data consultation.
+* For the evolution of the occupancy rate over the last 6 months, we only want to visualize the available data for that period independently of the selected dates in the filter.
 
 
 ### 3.2 Data sources
@@ -117,7 +117,7 @@ The seasonality is analysed through the monthly occupancy rate. A component for 
 
 <text style='color: #BBDEFC; font-weight: normal;'>Client adquisition map</text>
 
-Finally, the distribution of the clients is presented in a map. This component is located on the right corner under the occupancy rate evolution and next to the monthly occupancy rate. Notice that this component is also used as a filter for the rest of the performance indicators through an action order.
+Finally, the distribution of the clients is presented in a map. This component is located at the right corner under the occupancy rate evolution and next to the monthly occupancy rate. Notice that this component is also used as a filter for the rest of the performance indicators through an action order.
 
 {{< figure src="/project4/client_adquisition_map.png" title="Component for the client adquisition map." >}}
 
