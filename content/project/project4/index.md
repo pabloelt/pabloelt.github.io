@@ -6,7 +6,7 @@ tags:
 date: 2024-07-02
 #external_link: http://github.com
 ---
-*Note: The dynamic dashboard can be visualized [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).*
+*Note: The final interactive dashboard and its individual sheets are publicly available [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).*
 {style="color: #aaaaaa"}
 
 {{< toc >}}
@@ -93,8 +93,28 @@ These calculations will ensure that all necessary metrics are available for the 
 ### 3.4 Dashboard components
 {style="color: #BBDEFC; font-weight: normal"}
 
+In this step, the most appropriate visualizations are chosen for each insight, along with the relevant filters and actions. This information is summarized in the following table.
 
-{{< figure src="/project4/dashboard_components.png" title="." >}}
+{{< figure src="/project4/dashboard_components.png" title="Dashboard components selected for each insight." >}}
+
+<text style='color: #BBDEFC; font-weight: normal;'>KPIs band</text>
+
+A band containing all the KPIs is created and located at the top of the dashboard. These are the most valuable metrics, which are used to present the main performance information of the company.
+
+{{< figure src="/project4/kpis_band.png" title="KPIs band used to present the most relevant information." >}}
+
+<text style='color: #BBDEFC; font-weight: normal;'>Occupancy rate evolution in the last 6 months</text>
+
+The occupancy rate evolution in the last 6 months is presented through a line plot and located under the KPIs band. Notice that this dashboard component is not affected by the date slider, since we are presenting the whole information during the 6 most recent months.
+
+{{< figure src="/project4/kpis_band.png" title="Component for the occupancy rate evolution in the last 6 months." >}}
+
+<text style='color: #BBDEFC; font-weight: normal;'>Monthly occupancy rate</text>
+
+<text style='color: #BBDEFC; font-weight: normal;'>Client adquisition map</text>
+
+
+
 
 ### 3.5 Dashboard design
 {style="color: #BBDEFC; font-weight: normal"}
