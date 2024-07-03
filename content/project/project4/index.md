@@ -14,7 +14,7 @@ date: 2024-07-02
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-The client for this project is a hotel group specializing in the vacation market. They operate several hotels and rooms worldwide. However, the general performance of the group is not properly organized. Consequently, they need a functional and interactive dashboard displaying the main KPIs and the most relevant information to streamline the operations of the company.
+The client for this project is a hotel group specializing in the vacation market. They operate several hotels and rooms worldwide. However, the general performance information of the group is not properly organized. Consequently, they need a functional and interactive dashboard displaying the main KPIs and the most relevant information to streamline the operations of the company.
 
 Notes:
 
@@ -33,23 +33,38 @@ The main objective is to create a functional and interactive dashboard for the c
 ## 3. Project Design
 {style="color: #BBDEFC"}
 
-To establish the levers, a brief explanation about the customer journey is requiered. The first step is when a user visits the ecommerce website. Typically, they will come from:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Paid campaigns:</text> Paid ads such as Facebook Ads or Google Ads.
-* <text style='color: #BBDEFC; font-weight: normal;'>Organic content:</text> Blog, social media, etc.
-* <text style='color: #BBDEFC; font-weight: normal;'>Direct traffic:</text> Knows the URL and enters it directly into the browser.
 
-The second step occurs when the user browses the website and adds a product to the cart.
+### 3.1 Company Requirements
+{style="color: #BBDEFC; font-weight: normal"}
 
-* They can remove products from the cart, exit without making a purchase, or ultimately place an order.
-* A common process is cross-selling, where other products that might interest the user are recommended.
+### 3.2 Data sources
+{style="color: #BBDEFC; font-weight: normal"}
 
-The third step involves customer re-engagement through retargeting or email marketing.
+### 3.3 Required calculations
+{style="color: #BBDEFC; font-weight: normal"}
 
-{{< figure src="/project4/dashboard_desktop.png" title="" >}}
+### 3.4 Required calculations
+{style="color: #BBDEFC; font-weight: normal"}
 
-{{< figure src="/project4/dashboard_tablet.png" title="" >}}
+### 3.5 Dashboard components
+{style="color: #BBDEFC; font-weight: normal"}
 
-{{< figure src="/project4/dashboard_phone.png" title="" >}}
+### 3.6 Dashboard design
+{style="color: #BBDEFC; font-weight: normal"}
+
+
+---
+
+## 4. Dashboard implementation
+{style="color: #BBDEFC"}
+
+
+
+{{< figure src="/project4/dashboard_desktop.png" title="Dream Resort Hotels Dynamic Dashboard. Desktop version." >}}
+
+{{< figure src="/project4/dashboard_tablet.png" title="Dream Resort Hotels Dynamic Dashboard. Tablet version." >}}
+
+{{< figure src="/project4/dashboard_phone.png" title="Dream Resort Hotels Dynamic Dashboard. Phone version." >}}
 
 
