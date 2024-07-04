@@ -20,7 +20,7 @@ Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
 * Final dashboard and its individual sheets are publicly available [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).
-* {{< staticref "uploads/hotels.csv" "newtab" >}}hotels.csv{{< /staticref >}} my CV as a PDF.
+* You can also download the data source {{< staticref "uploads/hotels.csv" "newtab" >}}hotels.csv{{< /staticref >}} used in this project.
 
 ---
 
