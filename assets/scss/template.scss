@@ -165,6 +165,8 @@ ul.network-icon .big-icon {
 //  text-align: justify;
 //}
 // Arreglando texto no justificado en cartas de projects
-.card-text.article-style {
-  text-align: justify;
+.card-text {
+  .article-style {
+    text-align: justify;
+  }
 }
