@@ -1,6 +1,6 @@
 ---
 title: Lead Scoring Analysis and Segmentation 
-summary: A lead scoring analysis is conducted for an online teaching company that has identified a very low client conversion rate. The goals are to reverse this trend by using a machine learning model based on available company data and to categorize customers with an effective segmentation.
+summary: A lead scoring analysis is conducted for an online teaching company with a very low client conversion rate. The goals are to reverse this trend by using a machine learning model based on the available company data and to categorize customers with an effective segmentation.
 tags:
   - Machine Learning
 date: 2024-08-21
