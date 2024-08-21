@@ -28,12 +28,16 @@ Notes:
 ## 2. Objectives
 {style="color: #BBDEFC"}
 
-The main objective is to analyze the transactional data to identify potential CRO actions that can increase visits, conversions, and average ticket size, thereby boosting the overall revenue of the ecommerce company. To achieve this goal, we will create advanced analytical assets such as:
+The main objective is to analyse the historical leads information of the company to propose potential actions that will increase the overall turnover and reverse the low conversion rate at which the company is operating. To achieve this goal, we will create advanced analytical assets such as:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>RFM Segmentation:</text> Analyzing customer data based on Recency, Frequency, and Monetary value to identify key customer segments and tailor marketing strategies accordingly.
-* <text style='color: #BBDEFC; font-weight: normal;'>Recommendation System:</text> Developing a recommendation system to personalize the shopping experience, encouraging higher conversions and increasing the average ticket size.
+* <text style='color: #BBDEFC; font-weight: normal;'>Predictive lead scoring algorithm:</text> This tool will assist the sales team in identifying potential customers who are most likely to convert into final clients, as well as leads that are not economically viable to pursue.
+* <text style='color: #BBDEFC; font-weight: normal;'>Customer segmantation algorithm:</text> It will help to identify the key customer groups interested in the product, enabling the sales team to tailor marketing efforts effectively for each identified segment."
 
-These tools will help us implement effective CRO actions and drive substantial revenue growth.
+---
+
+## 3. Understanding of the problem
+{style="color: #BBDEFC"}
+
 
 ---
 
