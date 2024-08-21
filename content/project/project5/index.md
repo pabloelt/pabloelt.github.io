@@ -1,9 +1,9 @@
 ---
-title: Lead Scoring and Segmentation 
-summary: A lead scoring plan is conducted An extensive Conversion Rate Optimization (CRO) plan is developed to reverse the stagnant trend in an ecommerce company and drive a significant increase in its revenues. This plan consists of 10 specific initiatives, categorized into five key business levers.
+title: Lead Scoring Analysis and Segmentation 
+summary: A lead scoring analysis is conducted for an online teaching company that has identified a very low client conversion rate. The goals are to reverse this trend by using a machine learning model based on available company data and to categorize customers with an effective segmentation.
 tags:
-  - Discovery Projects
-date: 2024-06-24
+  - Machine Learning
+date: 2024-08-21
 #external_link: http://github.com
 ---
 *Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company) is currently in Spanish. It will be soon updated to English.*
