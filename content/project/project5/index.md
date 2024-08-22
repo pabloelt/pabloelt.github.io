@@ -70,7 +70,7 @@ The project has been designed with a multi-step methodology, which is summarized
 
 The process for this project consists of two main stages: the development phase and the production phase.
 
-The development phase begins with the setup and data importation, followed by a thorough data quality review. Next, an exploratory data analysis is conducted to uncover key insights. The variable transformation step involves selecting the most relevant variables that impact the problem and applying the necessary transformations. Following this, models are implemented for both the predictive and segmentation algorithms. During the evaluation process, all metrics are thoroughly tested.
+The development phase begins with the set up and data importation, followed by a thorough data quality review. Next, an exploratory data analysis is conducted to uncover key insights. The variable transformation step involves selecting the most relevant variables that impact the problem and applying the necessary transformations. Following this, models are implemented for both the predictive and segmentation algorithms. During the evaluation process, all metrics are thoroughly tested.
 
 In the production phase, the models are prepared for deployment, ensuring that the code is optimized for production. Additionally, a retraining script is created during this stage to facilitate future updates.
 
