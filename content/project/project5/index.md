@@ -206,7 +206,11 @@ Once the exploratory data analysis has been conducted, the following insights ha
 
 ---
 
-## 10. Business case implementation
+## 10. Evaluation and production of the models
+{style="color: #BBDEFC"}
+
+---
+## 11. Business case implementation
 {style="color: #BBDEFC"}
 
 
