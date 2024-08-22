@@ -38,6 +38,24 @@ The main objective is to analyse the historical leads information of the company
 ## 3. Understanding of the problem
 {style="color: #BBDEFC"}
 
+Nowadays, there are basically two main methodologies that a company can apply in order to get a final client. These are outbound and inbound marketing models. Outbound marketing is known for using traditional methods to reach potential buyers, such as advertisements, events, product samples, and phone calls. In contrast, inbound marketing focuses on attracting consumers to the company, encouraging them to seek out more information about a product or service on their own.
+
+Outbound strategies are often seen as more aggressive, requiring consistent and repeated efforts from sellers. In inbound marketing, however, sellers typically engage only after the customer has made the first move.
+
+Inbound marketing guarantees that when executed properly, the company will reach a more targeted audience with higher buying potential. As a result, investing in inbound marketing is more economical, often yielding a higher return on investment.
+
+{{< figure src="/project5/inbound_model.png" title="Inbound marketing strategy." >}}
+
+One of the challenges associated with inbound marketing is that the number of generated leads exceeds the capacity of the sales channels, leading to several issues:
+
+* Conflicts between marketing and sales departments: The marketing department expects a higher conversion rate from the large pool of leads, while the sales department is frustrated by the low quality of these leads, feeling they are wasting valuable time.
+
+* Saturation of the sales channels: The sales team can only handle a limited number of leads effectively.
+
+* Low conversion rate: As a result, the company's performance is significantly below potential, which could be improved with proper lead management based on Machine Learning optimization.
+
+
+
 
 ---
 
