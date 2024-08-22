@@ -90,7 +90,7 @@ The KPIs that results from the above-mentioned levers are the following:
 * <text style='color: #BBDEFC; font-weight: normal;'>Lead-to-customer conversion rate (CR):</text> Ratio at which leads convert into customers. It is defined as:
 {{< math >}}
 $$
-CR(%) = \frac{N_C}{N_L}\cdot 100,
+CR[\%] = \frac{N_C}{N_L}\cdot 100,
 $$
 {{< /math >}}
 where {{< math >}}$N_C${{< /math >}} and {{< math >}}$N_L${{< /math >}} are de number of final customers and leads, respectively.
@@ -99,7 +99,7 @@ where {{< math >}}$N_C${{< /math >}} and {{< math >}}$N_L${{< /math >}} are de n
 * <text style='color: #BBDEFC; font-weight: normal;'>Sales profit (SP):</text> Net profit obtained from the sales of the online course. It is defined as:
 {{< math >}}
 $$
-SP($) = \left( Price_{prod} - Cost_{leads conv} \right) \cdot N_C / Cost_{leads not conv},
+SP[$] = \left( Price_{prod} - Cost_{leads \ conv} \right) \cdot N_C - Cost_{leads \ not \ conv},
 $$
 {{< /math >}}
 * <text style='color: #BBDEFC; font-weight: normal;'>AOV (Average Order Value):</text> Average value of customer shopping carts, providing insight into the average amount users spend on the ecommerce site.
