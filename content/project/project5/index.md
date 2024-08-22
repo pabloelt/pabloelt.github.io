@@ -102,10 +102,7 @@ $$
 SP[$] = \left( Price_{prod} - Cost_{leads \ conv} \right) \cdot N_C - Cost_{leads \ not \ conv},
 $$
 {{< /math >}}
-* <text style='color: #BBDEFC; font-weight: normal;'>AOV (Average Order Value):</text> Average value of customer shopping carts, providing insight into the average amount users spend on the ecommerce site.
-* <text style='color: #BBDEFC; font-weight: normal;'>LTV (Lifetime Value):</text> Predicts the average profit from a customer throughout their entire lifetime as a buyer on the ecommerce site.
-* <text style='color: #BBDEFC; font-weight: normal;'>Churn rate:</text> Metric indicating the number of customers who no longer purchase services from the ecommerce site.
-
+where {{< math >}}$Price_{prod}${{< /math >}} is the price of the online course, {{< math >}}$Cost_{leads \ conv}${{< /math >}} is the cost per lead arising from commercial and marketing actions, and {{< math >}}$Cost_{leads \ not \ conv}${{< /math >}} is the lost investment in unconverted lead management.
 
 ### 4.4 Entities and Data
 {style="color: #BBDEFC; font-weight: normal"}
