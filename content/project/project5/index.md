@@ -90,6 +90,11 @@ The main levers for this project are summarized below:
 The KPIs that results from the above-mentioned levers are the following:
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Lead-to-customer conversion rate (CR):</text> Ratio at which leads convert into customers. It is defined as:
+{{< math >}}
+$$
+\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}
+$$
+{{< /math >}}
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Conversion rate:</text> Number of items that are finally purchased from the views in the ecommerce website.
 * <text style='color: #BBDEFC; font-weight: normal;'>Purchase frequency:</text> Number of times a user makes a purchase on the ecommerce website.
