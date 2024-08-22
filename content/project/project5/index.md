@@ -77,30 +77,11 @@ In the production phase, the models are prepared for deployment, ensuring that t
 ### 4.2 Levers
 {style="color: #BBDEFC; font-weight: normal"}
 
-To establish the levers, a brief explanation about the customer journey is requiered. The first step is when a user visits the ecommerce website. Typically, they will come from:
+The main levers for this project are summarized below:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Paid campaigns:</text> Paid ads such as Facebook Ads or Google Ads.
-* <text style='color: #BBDEFC; font-weight: normal;'>Organic content:</text> Blog, social media, etc.
-* <text style='color: #BBDEFC; font-weight: normal;'>Direct traffic:</text> Knows the URL and enters it directly into the browser.
-
-The second step occurs when the user browses the website and adds a product to the cart.
-
-* They can remove products from the cart, exit without making a purchase, or ultimately place an order.
-* A common process is cross-selling, where other products that might interest the user are recommended.
-
-The third step involves customer re-engagement through retargeting or email marketing.
-
-{{< figure src="/project3/customerjourney.png" title="Custom journey in an ecommerce company." >}}
-
-
-### 3.1 Levers
-{style="color: #BBDEFC; font-weight: normal"}
-
-The levers for this project are clear and are summarized below:
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Customer journey:</text> How can we optimize each step of the process?
-* <text style='color: #BBDEFC; font-weight: normal;'>Customers:</text> How can we use available customer information to optimize our campaigns?
-* <text style='color: #BBDEFC; font-weight: normal;'>Products:</text> How can we optimize the product catalog and personalize which products we present to each customer?
+* <text style='color: #BBDEFC; font-weight: normal;'>Leads:</text> Understanding general information about the leads the company receives is crucial for optimizing future marketing campaigns.
+* <text style='color: #BBDEFC; font-weight: normal;'>Conversion rate:</text> This metric indicates the ratio at which leads convert into customers. Our goal is to maximize this metric to boost the company’s profits.
+* <text style='color: #BBDEFC; font-weight: normal;'>Commercial channels optimization:</text> The sales department has various channels for communicating with leads, including phone calls, SMS, emails, web chat, and a subcontracted lead management company. Optimizing these channels is key to improving overall efficiency.
 
 
 ### 4.3 KPIs
@@ -108,7 +89,8 @@ The levers for this project are clear and are summarized below:
 
 The KPIs that results from the above-mentioned levers are the following:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Views:</text> Number of views of the products available in the ecommerce website.
+* <text style='color: #BBDEFC; font-weight: normal;'>Lead-to-customer conversion rate (CR):</text> Ratio at which leads convert into customers. It is defined as:
+
 * <text style='color: #BBDEFC; font-weight: normal;'>Conversion rate:</text> Number of items that are finally purchased from the views in the ecommerce website.
 * <text style='color: #BBDEFC; font-weight: normal;'>Purchase frequency:</text> Number of times a user makes a purchase on the ecommerce website.
 * <text style='color: #BBDEFC; font-weight: normal;'>CPA (Cost Per Acquisition):</text> Aggregate cost of acquiring a customer through a marketing campaign.
