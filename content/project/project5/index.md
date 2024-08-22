@@ -111,7 +111,7 @@ The most relevant entities from which we can obtain data are summarized below:
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Leads:</text> Leads historical data is provided by the client in a *.csv* file, which contains information about 37 different features for 9240 different leads.
 * <text style='color: #BBDEFC; font-weight: normal;'>Product:</text> The product that the company is trying to sell is a high-value online course design to train proffesionals in the data science sector. Its price is 49.99$.
-* <text style='color: #BBDEFC; font-weight: normal;'>Commercial channels:</text> The main commercial channels are phone calls, sms, emails, web chat, ad campaings, and a subcontracted lead management company. The lead management average cost is stimated at 3.50$ per lead.
+* <text style='color: #BBDEFC; font-weight: normal;'>Commercial channels:</text> The main commercial channels are phone calls, sms, emails, web chat, ad campaings, and a subcontracted lead management company. The lead management average cost is estimated at 3.50$ per lead.
 
 ---
 
@@ -160,7 +160,16 @@ In order to guide this process, a series of seed questions are proposed to serve
 * <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> How effective have the company’s advertising campaigns been?
 * <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> How well is the current lead magnet performing?
 
-### 6.2 Insights
+### 6.2 Some results obtained through the EDA
+{style="color: #BBDEFC; font-weight: normal"}
+
+These are some of the results that we have obtained by performing the exploratory data analysis (EDA).
+
+
+
+ A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Notebooks/03_Analisis%20e%20Insights.ipynb).
+
+### 6.3 Insights
 {style="color: #BBDEFC; font-weight: normal"}
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
@@ -176,10 +185,30 @@ Once the exploratory data analysis has been conducted, the following insights ha
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 9:</text> Nearly half of the products have not been purchased in the last five months.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 10:</text> A powerful recommendation system adapted to the user's views is developed.
 
- A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Notebooks/03_Analisis%20e%20Insights.ipynb).
+### 6.4 Recommended actions
+{style="color: #BBDEFC; font-weight: normal"}
 
 
 ---
+
+## 7. Variable transformation
+{style="color: #BBDEFC"}
+
+---
+
+## 8. Lead segmentation model
+{style="color: #BBDEFC"}
+
+---
+
+## 9. Lead scoring model
+{style="color: #BBDEFC"}
+
+---
+
+## 10. Business case implementation
+{style="color: #BBDEFC"}
+
 
 ## 6. Results Communication
 {style="color: #BBDEFC"}
