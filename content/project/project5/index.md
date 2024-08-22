@@ -109,11 +109,9 @@ where {{< math >}}$Price_{prod}${{< /math >}} is the price of the online course,
 
 The most relevant entities from which we can obtain data are summarized below:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>User:</text> User ID.
-* <text style='color: #BBDEFC; font-weight: normal;'>Date:</text> Operation date.
-* <text style='color: #BBDEFC; font-weight: normal;'>Session:</text> Session ID.
-* <text style='color: #BBDEFC; font-weight: normal;'>Event:</text> View, add to cart, remove from cart, purchase.
-* <text style='color: #BBDEFC; font-weight: normal;'>Product:</text> Category, product id, price.
+* <text style='color: #BBDEFC; font-weight: normal;'>Leads:</text> Leads historical data is provided by the client in a *.csv* file, which contains information about 37 different features for 9240 different leads.
+* <text style='color: #BBDEFC; font-weight: normal;'>Product:</text> The product that the company is trying to sell is a high-value online course design to train proffesionals in the data science sector. Its price is 49.99$.
+* <text style='color: #BBDEFC; font-weight: normal;'>Commercial channels:</text> The main commercial channels are phone calls, sms, emails, web chat, ad campaings, and a subcontracted lead management company. The lead management average cost is stimated at 3.50$ per lead.
 
 ---
 
@@ -141,35 +139,28 @@ The aim of this phase of the project is to identify trends and patterns that can
 
 In order to guide this process, a series of seed questions are proposed to serve as a basis for the analysis.
 
-### 5.1 Seed questions
+### 6.1 Seed questions
 {style="color: #BBDEFC; font-weight: normal"}
 
-**Regarding customer journey:**
+**Regarding Leads:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> What does a typical shopping process look like?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> How many products are viewed, added to cart, abandoned and purchased on average per session?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> How have these metrics been trending in recent months?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> What are the main demographic profiles in the company’s lead database?
 
-**Regarding clients:**
+**Regarding Conversion Rate:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text> How many products does each customer buy?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> How much does each customer spend on average?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> Are there ‘good customers’ that need to be identified and treated differently?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text> Do customers repeat purchases in the following months?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> What is the average LTV of a customer?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> Can campaigns can be tailored to customer’s value?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> What is the current lead-to-customer conversion rate?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> What factors have the most significant impact on lead-to-customer conversion?
 
-**Regarding products:**
+**Regarding Commercial and Marketing Channels:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q10:</text> What are the best-selling products?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q11:</text> Are there products that do not sell?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q12:</text> Is there a relationship between the price of the product and its sales volume?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q13:</text> Are there products that are visited but not purchased?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q14:</text> Are there products that are recurrently removed from the cart?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q15:</text> Could personalized product recommendations be made for each customer?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text> How are the company’s commercial and marketing channels performing?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> From which sources is the company attracting potential customers? Which sources are the most promising?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> Which demographic profile should be the primary focus of marketing efforts?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text> What percentage of leads are open to receiving communications via email or phone calls?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> How effective have the company’s advertising campaigns been?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> How well is the current lead magnet performing?
 
-
-### 5.2 Insights
+### 6.2 Insights
 {style="color: #BBDEFC; font-weight: normal"}
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
