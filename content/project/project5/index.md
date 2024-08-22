@@ -54,13 +54,28 @@ One of the challenges associated with inbound marketing is that the number of ge
 
 * Low conversion rate: As a result, the company's performance is significantly below potential, which could be improved with proper lead management based on Machine Learning optimization.
 
-
-
+For all the reasons mentioned above, it is essential to implement some form of lead prioritization to achieve higher conversion rates. The assets we are developing for the company—specifically the predictive lead scoring and customer segmentation algorithms—are designed to address this need. These tools will enable the company to identify the highest-quality leads and recognize key customer segments, thereby refining their approach strategy for each group.
 
 ---
 
-## 3. Project Design
+## 4. Project Design
 {style="color: #BBDEFC"}
+
+### 4.1 Methodology
+{style="color: #BBDEFC; font-weight: normal"}
+
+The project has been designed with a multi-step methodology, which is summarized in the figure bellow.
+
+{{< figure src="/project5/methodology.png" title="Project methodology." >}}
+
+The process for this project consists of two main stages: the development phase and the production phase.
+
+The development phase begins with the setup and data importation, followed by a thorough data quality review. Next, an exploratory data analysis is conducted to uncover key insights. The variable transformation step involves selecting the most relevant variables that impact the problem and applying the necessary transformations. Following this, models are implemented for both the predictive and segmentation algorithms. During the evaluation process, all metrics are thoroughly tested.
+
+In the production phase, the models are prepared for deployment, ensuring that the code is optimized for production. Additionally, a retraining script is created during this stage to facilitate future updates.
+
+### 4.2 Levers
+{style="color: #BBDEFC; font-weight: normal"}
 
 To establish the levers, a brief explanation about the customer journey is requiered. The first step is when a user visits the ecommerce website. Typically, they will come from:
 
@@ -88,7 +103,7 @@ The levers for this project are clear and are summarized below:
 * <text style='color: #BBDEFC; font-weight: normal;'>Products:</text> How can we optimize the product catalog and personalize which products we present to each customer?
 
 
-### 3.2 KPIs
+### 4.3 KPIs
 {style="color: #BBDEFC; font-weight: normal"}
 
 The KPIs that results from the above-mentioned levers are the following:
@@ -102,7 +117,7 @@ The KPIs that results from the above-mentioned levers are the following:
 * <text style='color: #BBDEFC; font-weight: normal;'>Churn rate:</text> Metric indicating the number of customers who no longer purchase services from the ecommerce site.
 
 
-### 3.3 Entities and Data
+### 4.4 Entities and Data
 {style="color: #BBDEFC; font-weight: normal"}
 
 The most relevant entities from which we can obtain data are summarized below:
@@ -115,7 +130,7 @@ The most relevant entities from which we can obtain data are summarized below:
 
 ---
 
-## 4. Data Quality
+## 5. Data Quality
 {style="color: #BBDEFC"}
 
 In this stage of the project, general data quality correction processes have been applied, such as:
@@ -132,7 +147,7 @@ The entire process can be consulted in detail [here](https://github.com/pabloelt
 
 ---
 
-## 5. Exploratory Data Analysis
+## 6. Exploratory Data Analysis
 {style="color: #BBDEFC"}
 
 The aim of this phase of the project is to identify trends and patterns that can be transformed into insights, providing valuable information for our project. To achieve this, we perform various statistical evaluations and create graphical representations.
