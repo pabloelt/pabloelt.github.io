@@ -200,6 +200,17 @@ Once the exploratory data analysis has been conducted, the following insights ha
 ### 6.4 Recommended actions
 {style="color: #BBDEFC; font-weight: normal"}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Actions to improve leads' management:</text>
+
+1. 
+
+
+<text style='color: #BBDEFC; font-weight: normal;'>Actions to improve lead-to-customer conversion rate:</text>
+
+
+
+
+<text style='color: #BBDEFC; font-weight: normal;'>Actions to improve commercial and marketing channels performance:</text>
 
 ---
 
