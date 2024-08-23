@@ -233,7 +233,7 @@ As outlined during the exploratory data analysis, two distinct models will be de
 
 In both models, categorical variables must be transformed into numerical ones. Since the categorical cariables in the dataset are all nominal, the one-hot encoding technique is employed for this purpose.
 
-For the lead segmentation model, an unsupervised machine learning algorithm is recommended, specifically the K-means algorithm. This clustering-based algorithm is highly sensitive to the scales of different features because it relies on distance calculations. Therefore, rescaling techniques must be applied to ensure that all features are on the same scale. Given the decision to apply one-hot encoding to categorical variables, the most appropriate rescaling technique in this case is min-max scaling, which will transform feature values to a scale between 0 and 1.
+For the lead segmentation model, an unsupervised machine learning algorithm is recommended, specifically the KMeans algorithm. This clustering-based algorithm is highly sensitive to the scales of different features because it relies on distance calculations. Therefore, rescaling techniques must be applied to ensure that all features are on the same scale. Given the decision to apply one-hot encoding to categorical variables, the most appropriate rescaling technique in this case is min-max scaling, which will transform feature values to a scale between 0 and 1.
 
 For the predictive lead scoring model, a supervised machine learning algorithm is recommended. Among the various classification algorithms available, the most promising candidates are logistic regression, random forest, XGBoost, and LightGBM. We will analyze these options in more detail later.
 
@@ -241,12 +241,38 @@ Additionally, we need to decide whether to apply feature discretization or binar
 
 Lastly, it is important to note that class balancing processes are not necessary for this project, as the dataset contains a sufficiently significant representation of both classes (converted=1, converted=0).
 
-
-
 ---
 
 ## 8. Lead segmentation model
 {style="color: #BBDEFC"}
+
+
+
+### 8.1 Selecting the number of segments
+{style="color: #BBDEFC"}
+
+{{< figure src="/project5/exhibit_1.png" title="Exhibit 3. Main methods for identifying the optimal number of clusters in KMeans algorithm." >}}
+
+### 8.2 Segment profiling
+{style="color: #BBDEFC"}
+
+{{< figure src="/project5/exhibit_1.png" title="Exhibit 4. Unsupervised ML modelling: Cluster results from KMeans algorithm." >}}
+
+### 8.3 Segment analysis
+{style="color: #BBDEFC"}
+
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 0:</text>
+
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 1:</text>
+
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 2:</text>
+
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 3:</text>
+
+### 8.4 Segmentation insights
+{style="color: #BBDEFC"}
+
+
 
 ---
 
