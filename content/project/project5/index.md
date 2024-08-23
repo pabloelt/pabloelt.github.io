@@ -249,17 +249,17 @@ Lastly, it is important to note that class balancing processes are not necessary
 
 
 ### 8.1 Selecting the number of segments
-{style="color: #BBDEFC"}
+{style="color: #BBDEFC; font-weight: normal"}
 
-{{< figure src="/project5/exhibit_1.png" title="Exhibit 3. Main methods for identifying the optimal number of clusters in KMeans algorithm." >}}
+{{< figure src="/project5/exhibit_3.png" title="Exhibit 3. Main methods for identifying the optimal number of clusters in KMeans algorithm." >}}
 
 ### 8.2 Segment profiling
-{style="color: #BBDEFC"}
+{style="color: #BBDEFC; font-weight: normal"}
 
-{{< figure src="/project5/exhibit_1.png" title="Exhibit 4. Unsupervised ML modelling: Cluster results from KMeans algorithm." >}}
+{{< figure src="/project5/exhibit_4.png" title="Exhibit 4. Unsupervised ML modelling: Cluster results from KMeans algorithm." >}}
 
 ### 8.3 Segment analysis
-{style="color: #BBDEFC"}
+{style="color: #BBDEFC; font-weight: normal"}
 
 <text style='color: #BBDEFC; font-weight: normal;'>Segment 0:</text>
 
@@ -270,7 +270,7 @@ Lastly, it is important to note that class balancing processes are not necessary
 <text style='color: #BBDEFC; font-weight: normal;'>Segment 3:</text>
 
 ### 8.4 Segmentation insights
-{style="color: #BBDEFC"}
+{style="color: #BBDEFC; font-weight: normal"}
 
 
 
