@@ -275,18 +275,48 @@ After completing this process, it was determined that a 4-cluster segmentation p
 ### 8.2 Segment profiling
 {style="color: #BBDEFC; font-weight: normal"}
 
+Once the optimal number of clusters and the most relevant segmentation variables have been selected, the model is trained and executed, assigning each lead to one of the four existing clusters.
+
+To understand the business implications, average values for each variable used in the model has been calculated, allowing us to identify the most distinguishing characteristics of each segment. This is shown in the table below.
+
 {{< figure src="/project5/exhibit_4.png" title="Exhibit 4. Unsupervised ML modelling: Cluster results from KMeans algorithm." >}}
 
 ### 8.3 Segment analysis
 {style="color: #BBDEFC; font-weight: normal"}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 0:</text>
+After analysing the above results, the most differential characteristics for each segment are identified and presented.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 1:</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super High-quality Leads</text>
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 2:</text>
+* Origin: Lead Add Form.
+* Last activity: Non categorize.
+* Occupancy: Working Professionals.
+* Largest time spent on the website.
+* Great conversion rate. Nine out of ten leads in this segment end up buying the company's product.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 3:</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 1: Very low-quality Leads</text>
+
+* Origin: Landing Page Submission.
+* Last activity: Email opened.
+* Occupancy: Students and unemployed.
+* Very low time spent on the website.
+* Worst conversion rate group.
+
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 2: Medium-quality Leads</text>
+
+* Origin: Landing Page Submission.
+* Last activity: SMS sent.
+* Occupancy: Unemployed.
+* They spent some time on the website.
+* Moderate conversion rate.
+
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 3: Low-quality Leads</text>
+
+* Origin: API.
+* Last activity: Chat conversation.
+* Occupancy: Unemployed.
+* Very low time spent on the website.
+* Low conversion rate.
 
 ### 8.4 Segmentation insights
 {style="color: #BBDEFC; font-weight: normal"}
