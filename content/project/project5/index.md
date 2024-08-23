@@ -99,10 +99,10 @@ where {{< math >}}$N_C${{< /math >}} and {{< math >}}$N_L${{< /math >}} are de n
 * <text style='color: #BBDEFC; font-weight: normal;'>Sales profit (SP):</text> Net profit obtained from the sales of the online course. It is defined as:
 {{< math >}}
 $$
-SP[$] = \left( Price_{prod} - Cost_{leads \ conv} \right) \cdot N_C - Cost_{leads \ not \ conv},
+SP[$] = \left( Price_{prod} \cdot CR - Cost_{leads} \right) \cdot N_L,
 $$
 {{< /math >}}
-where {{< math >}}$Price_{prod}${{< /math >}} is the price of the online course, {{< math >}}$Cost_{leads \ conv}${{< /math >}} is the cost per lead arising from commercial and marketing actions, and {{< math >}}$Cost_{leads \ not \ conv}${{< /math >}} is the lost investment in unconverted lead management.
+where {{< math >}}$Price_{prod}${{< /math >}} is the price of the online course, and {{< math >}}$Cost_{leads}${{< /math >}} is the cost per lead arising from commercial and marketing actions.
 
 ### 4.4 Entities and Data
 {style="color: #BBDEFC; font-weight: normal"}
@@ -187,7 +187,7 @@ Once the exploratory data analysis has been conducted, the following insights ha
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> The current conversion rate of the company is 41.56%.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Working professionals presents the highest conversion rate of 90.74%.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Unemployed leads, which are the largest group, have a low conversion rate of 36.52%.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> Almost all leads that comes from the source *Reference* are converted into customers (89.19% conversion rate) . However, only 4.56% of leads come from this source.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> Almost all leads that comes from the source *Reference* are converted into customers (89.19% conversion rate). However, only 4.56% of leads come from this source.
 
 **Commercial and marketing channels:**
 
@@ -255,13 +255,13 @@ In order to identify the optimal number of clusters in the KMeans algorithm, we 
 
 {{< figure src="/project5/exhibit_3.png" title="Exhibit 3. Main methods for identifying the optimal number of clusters in KMeans algorithm." >}}
 
-* Elbow Method: This method typically identifies the optimal number of clusters by selecting the point where the curve bends or "elbows," indicating diminishing returns in reducing within-cluster variance. However, in this case, the chart shows only a linear decrease, offering little useful guidance for cluster selection.
+* **Elbow Method:** This method typically identifies the optimal number of clusters by selecting the point where the curve bends or "elbows," indicating diminishing returns in reducing within-cluster variance. However, in this case, the chart shows only a linear decrease, offering little useful guidance for cluster selection.
 
-* Silhouette Method: This metric measures how similar each point is to its own cluster compared to other clusters. Values closer to 1 indicate better-defined clusters. Here, a segmentation of 4 to 5 clusters appears optimal based on this method.
+* **Silhouette Method:** This metric measures how similar each point is to its own cluster compared to other clusters. Values closer to 1 indicate better-defined clusters. Here, a segmentation of 4 to 5 clusters appears optimal based on this method.
 
-* Calinski-Harabasz Index: This index evaluates cluster separation, with higher values indicating better-defined clusters. According to this method, a segmentation into 3 or 4 clusters is likely the best.
+* **Calinski-Harabasz Index:** This index evaluates cluster separation, with higher values indicating better-defined clusters. According to this method, a segmentation into 3 or 4 clusters is likely the best.
 
-* Davies-Bouldin Index: This index assesses the average similarity ratio of each cluster to its most similar cluster, with lower values indicating better clustering. For this analysis, a segmentation of 4 clusters is preferred based on this index.
+* **Davies-Bouldin Index:** This index assesses the average similarity ratio of each cluster to its most similar cluster, with lower values indicating better clustering. For this analysis, a segmentation of 4 clusters is preferred based on this index.
 
 It is important to note that an iterative process was applied before arriving at the final charts. The procedure involved the following steps:
 
@@ -270,7 +270,7 @@ It is important to note that an iterative process was applied before arriving at
 3. Typically, initial segmentations revealed some inconsistencies, leading to the elimination of certain variables and testing different cluster configurations.
 4. Steps 1 through 3 were repeated several times until a final, consistent cluster segmentation was achieved.
 
-After completing this process, it was determined that a 4-cluster segmentation provided the most meaningful business insights
+After completing this process, it was determined that a 4-cluster segmentation provided the most meaningful business insights.
 
 ### 8.2 Segment profiling
 {style="color: #BBDEFC; font-weight: normal"}
