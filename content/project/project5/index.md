@@ -204,12 +204,12 @@ Once the exploratory data analysis has been conducted, the following insights ha
 
 1. Enhance the quality of survey or form questions to gather more user inputs and reduce the occurrence of NaN or default (‘Select’) values.
 2. Collect timestamps for website visits to enable seasonality analysis and implement cookies to track and identify users as they navigate different pages on the website.
-3. Develop a new <text style='color: #BBDEFC; font-weight: normal;'>lead segmentation algorithm</text> that categorizes the company's diverse lead profiles, enabling the identification of the best-fitting group for each new lead. This will allow for more personalized commercial actions.
+3. Develop a new <text style='color: #BBDEFC; font-weight: normal;'>_lead segmentation algorithm_</text> that categorizes the company's diverse lead profiles, enabling the identification of the best-fitting group for each new lead. This will allow for more personalized commercial actions.
 
 
 <text style='color: #BBDEFC; font-weight: normal;'>Actions to improve lead-to-customer conversion rate:</text>
 
-1. Implement a <text style='color: #BBDEFC; font-weight: normal;'>predictive lead scoring algorithm</text> that identifies individuals most likely to convert into paying customers. This will reduce the sales team's workload allowing them to focus more time on engaging with the most promising leads.
+1. Implement a <text style='color: #BBDEFC; font-weight: normal;'>_predictive lead scoring algorithm_</text> that identifies individuals most likely to convert into paying customers. This will reduce the sales team's workload allowing them to focus more time on engaging with the most promising leads.
 
 
 <text style='color: #BBDEFC; font-weight: normal;'>Actions to improve commercial and marketing channels performance:</text>
@@ -219,11 +219,29 @@ Once the exploratory data analysis has been conducted, the following insights ha
 3. Allocate more resources to acquiring leads through ‘Reference’ channel, as they demonstrate the highest conversion rate.
 4. Boost investments in SMS campaigns, given their strong performance.
 
-
 ---
 
 ## 7. Variable transformation
 {style="color: #BBDEFC"}
+
+At this stage of the project, various variable transformation techniques are applied to ensure they meet the requirements of the algorithms used in the modeling phase.
+
+As outlined during the exploratory data analysis, two distinct models will be developed:
+
+1. A <text style='color: #BBDEFC; font-weight: normal;'>lead segmentation model</text> to assist sales and marketing teams in identifying different lead profiles within the company.
+2. A <text style='color: #BBDEFC; font-weight: normal;'>predictive lead scoring model</text> to pinpoint individuals most likely to convert into paying customers.
+
+In both models, categorical variables must be transformed into numerical ones. Since the categorical cariables in the dataset are all nominal, the one-hot encoding technique is employed for this purpose.
+
+For the lead segmentation model, an unsupervised machine learning algorithm is recommended, specifically the K-means algorithm. This clustering-based algorithm is highly sensitive to the scales of different features because it relies on distance calculations. Therefore, rescaling techniques must be applied to ensure that all features are on the same scale. Given the decision to apply one-hot encoding to categorical variables, the most appropriate rescaling technique in this case is min-max scaling, which will transform feature values to a scale between 0 and 1.
+
+For the predictive lead scoring model, a supervised machine learning algorithm is recommended. Among the various classification algorithms available, the most promising candidates are logistic regression, random forest, XGBoost, and LightGBM. We will analyze these options in more detail later.
+
+Additionally, we need to decide whether to apply feature discretization or binarization. Considering that the project's primary focus is on prediction accuracy rather than interpretability, and given that one of the models is based on a segmentation algorithm, neither discretization nor binarization will be applied.
+
+Lastly, it is important to note that class balancing processes are not necessary for this project, as the dataset contains a sufficiently significant representation of both classes (converted=1, converted=0).
+
+
 
 ---
 
@@ -242,144 +260,6 @@ Once the exploratory data analysis has been conducted, the following insights ha
 
 ---
 ## 11. Business case implementation
-{style="color: #BBDEFC"}
-
-
-## 6. Results Communication
-{style="color: #BBDEFC"}
-
-In this stage of the project, we are presenting the insights that we have obtained during the exploratory data analysis and the main conclusions for each of them.
-
-<text style='color: #BBDEFC; font-weight: normal;'>The conversion rates are very poor</text>
-
-* 60% from views to cart additions.
-* 22% from cart additions to purchases.
-* 13% from views to purchases.
-
-{{< figure src="/project3/exhibit_1.png" title="Exhibit 1: Baseline conversion rates." >}}
-
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>Average session numbers are low</text>
-
-* 2.2 products are viewed.
-* 1.3 products are added to the cart.
-* 0.9 products are removed from the cart.
-* 0.3 products are purchased.
-
-With these values the average monthly revenue is found to be around 125.000€
-
-{{< figure src="/project3/exhibit_2.png" title="Exhibit 2: Baseline average session numbers." >}}
-
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>The most popular purchasing hours are at 1 am, 8 am, from 11 am to 1 pm, and at 6 pm</text>
-
-* This information is highly relevant, particularly for strategies involving paid ads, both for generating traffic and for retargeting efforts.
-
-* Additionally, there appears to be a user subtype that makes purchases at 1 AM. While not occurring frequently, this group tends to spend significantly when they do make purchases.
-
-{{< figure src="/project3/exhibit_3.png" title="Exhibit 3: Hourly analysis of the main events on the ecommerce website." >}}
-
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>Weekly trends show a peak on the 22nd, possibly due to the start of Black Friday week</text>
-
-* Weekly analysis during the five months:
-
-{{< figure src="/project3/exhibit_4_1.png" title="Exhibit 4.1: Weekly analysis of the main events on the ecommerce website." >}}
-
-* Daily analysis around the Black Friday campaign:
-
-{{< figure src="/project3/exhibit_4_2.png" title="Exhibit 4.2: Daily analysis of the main events around the Black Friday Campaign." >}}
-
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>Most customers make only one purchase and spend an average of less than 50€</text>
-
-* The median purchase currently includes only 5 products, indicating there is significant potential for improvement in this ratio through the implementation of recommendation systems.
-
-{{< figure src="/project3/exhibit_5.png" title="Exhibit 5: Bar plots for the evolution of the spent money and the numbers of items purchased by the customers." >}}
-
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>90% of new customers do not make a repeat purchase in the subsequent months</text>
-
-* A customers cohort analysis is performed:
-
-{{< figure src="/project3/exhibit_6.png" title="Exhibit 6: Customers cohort analysis." >}}
-
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>The average LTV is 42€</text>
-
-* Implementing CRO actions will increase the LTV, thereby enhancing our strategic advantage.
-
-{{< figure src="/project3/exhibit_7.png" title="Exhibit 7: Metrics for the total spent money by the customers. The median value is adopted since there are some anomalous values." >}}
-
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>Prime customers are identified though the RFM analysis</text>
-
-* Thanks to the RFM analysis, we can identify our top-tier customers and tailor more targeted campaigns based on this information.
-
-{{< figure src="/project3/exhibit_8.png" title="Exhibit 8: RFM analysis applied to identify the top-tier customers." >}}
-
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>Nearly half of the products have not been purchased in the last five months</text>
-
-* They should be eliminated or, at least, properly investigated.
-
-{{< figure src="/project3/exhibit_9.png" title="Exhibit 9: Pie diagram for the number of purchased products during the last five months." >}}
-
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>A powerful recommendation system adapted to the user's views is developed</text>
-
-A basic recommendation system based on the most sold items:
-
-{{< figure src="/project3/exhibit_10_1.png" title="Exhibit 10.1: Basic recommendation system." >}}
-
-The powerful recommendation system optimised for the customers preferences:
-
-{{< figure src="/project3/exhibit_10_2.png" title="Exhibit 10.2: Powerful and optimised recommendation system." >}}
-
----
-
-## 7. Actionable initiatives
-{style="color: #BBDEFC"}
-
-A plan of 10 specific initiatives, organized into five major business levers, has been derived from the exploratory data analysis to break the stagnant trend in the company over the last few months and achieve an overall increase in ecommerce revenues:
-
-<text style='color: #BBDEFC; font-weight: normal;'>Actions to increase the number of views:</text>
-
-1. Review paid campaigns (generation and retargeting) to focus investment during the time slots between 9 am and 1 pm, and between 6 pm and 8 pm.
-2. Concentrate investment for the Christmas and post-Christmas period during the Black Friday week.
-3. Increase investment to reach the maximum CPA based on the identified LTV.
-
-<text style='color: #BBDEFC; font-weight: normal;'>Actions to increase conversion rates:</text>
-
-4. Preconfigure the homepage with the products identified in the "most viewed" and "most sold" analyses.
-5. Work on products with a high cart abandonment rate.
-6. Work on products that are frequently viewed but infrequently purchased.
-
-<text style='color: #BBDEFC; font-weight: normal;'>Actions to increase cross-selling:</text>
-
-7. The median purchase is 5 products at the moment. To increase this ratio, implement real-time recommendations using the new recommendation system.
-
-<text style='color: #BBDEFC; font-weight: normal;'>Actions to increase purchase frequency:</text>
-
-8. The 90% of the customers only make a single purchase. Create a periodic newsletter using the new recommendation system to increase visit frequency.
-9. Run promotional campaigns targeting the top segments identified in the RFM segmentation.
-
-<text style='color: #BBDEFC; font-weight: normal;'>Actions to improve customer loyalty:</text>
-
-10. Create a loyalty program based on the new RFM segmentation.
-
----
-
-## 8. Business case implementation
 {style="color: #BBDEFC"}
 
 We have also implemented a business case model for a neutral scenario, assuming that the new CRO protocols achieve the following:
