@@ -324,8 +324,8 @@ After analysing the above results, the most differential characteristics for eac
 1. The company's most valuable leads are working professionals who arrive through the lead form submission.
 
 2. While SMS campaigns are generally effective, they should be targeted more precisely:
-* Focus on working professionals from API sources who spend above-average time on the website.
-* Avoid sending SMS to leads from Landing Page Submissions who spend minimal time on the site, as they represent the lowest quality leads and divert resources from more promising campaigns.
+  * Focus on working professionals from API sources who spend above-average time on the website.
+  * Avoid sending SMS to leads from Landing Page Submissions who spend minimal time on the site, as they represent the lowest quality leads and divert resources from more promising campaigns.
 
 3. The live chat feature primarily attracts low-quality leads. The company should consider reallocating resources from this service and, for leads from API sources, prioritize email marketing and SMS campaigns instead.
 
