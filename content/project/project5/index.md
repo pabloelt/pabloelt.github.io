@@ -163,9 +163,11 @@ In order to guide this process, a series of seed questions are proposed to serve
 ### 6.2 Some results obtained through the EDA
 {style="color: #BBDEFC; font-weight: normal"}
 
-These are some of the results that we have obtained by performing the exploratory data analysis (EDA).
+These are some of the results that we have obtained by performing the exploratory Data Analysis (EDA) for both categorical and numerical variables that are present in the dataset.
 
+{{< figure src="/project5/exhibit_1.png" title="Exhibit 1. Exploratory Data Analysis: Occupation, lead source and last activity." >}}
 
+{{< figure src="/project5/exhibit_2.png" title="Exhibit 2. Exploratory Data Analysis: Numerical variables." >}}
 
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Notebooks/03_Analisis%20e%20Insights.ipynb).
 
