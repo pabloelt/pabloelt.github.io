@@ -176,16 +176,26 @@ These are some of the results that we have obtained by performing the explorator
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> The conversion rates are very poor.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> The average session numbers are low.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> The most popular purchasing hours are at 1 am, 8 am, from 11 am to 1 pm, and at 6 pm.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Weekly trends show a peak on the 22nd, possibly due to the start of Black Friday week.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Most customers make only one purchase and spend an average of less than 50€.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> 90% of new customers do not make a repeat purchase in the subsequent months.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> The average LTV is 42€.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 8:</text> Prime customers are identified though the RFM analysis.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 9:</text> Nearly half of the products have not been purchased in the last five months.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 10:</text> A powerful recommendation system adapted to the user's views is developed.
+**Leads:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> The mayority of the potential customers that are interested in the company are unemployed, particularly 88.84% of the leads.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> Only 8.64% of the leads are working professionals.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> The number of leads coming that comes from students is very low. It only represents 2.05% of the leads.
+
+**Lead-to-customer conversion rate:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> The current conversion rate of the company is 41.56%.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Working professionals presents the highest conversion rate of 90.74%.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Unemployed leads, which are the largest group, have a low conversion rate of 36.52%.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> Almost all leads that comes from the source *Reference* are converted into customers (89.19% conversion rate) . However, only 4.56% of leads come from this source.
+
+**Commercial and marketing channels:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 8:</text> It is observed that 99.98% and 91.07% of the leads do not want to receive phone calls nor emails, respectively. Therefore, the mayority of people that visit the website are not interested in the product.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 9:</text> Email marketing campaigns have untapped potential, since last activity of 41.33% of total number of leads was opening an email but only 36.15% of them were finally converted. Only 14.9% of leads who want to be contacted by email end up converting into paying customers.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 10:</text> SMS campaigns have proven to be highly effective, boasting a conversion rate of 60.82%.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 11:</text> Most potential customers were not interested in receiving a free copy of the lead magnet. Those who did show interest are primarily unemployed and downloaded it mainly from the landing page.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 12:</text> Converted leads spend a median of 16 minutes on the website and visit an average of 2.5 pages per session. In contrast, non-converted leads spend a median of only 6 minutes on the site. 
 
 ### 6.4 Recommended actions
 {style="color: #BBDEFC; font-weight: normal"}
