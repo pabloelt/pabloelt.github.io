@@ -335,26 +335,32 @@ After analysing the above results, the most differential characteristics for eac
 ## 9. Lead scoring model
 {style="color: #BBDEFC"}
 
+
+
+### 9.1 Variable selection for predictive model
+{style="color: #BBDEFC; font-weight: normal"}
+
+{{< figure src="/project5/exhibit_5.png" title="Exhibit 5. Feature importance: Permutation importance method." >}}
+
+### 9.2 Model selection
+{style="color: #BBDEFC; font-weight: normal"}
+
+{{< figure src="/project5/exhibit_6.png" title="Exhibit 6. Performance comparison of the selected models for several metrics." >}}
+
+### 9.3 Optimal discrimination thershold for maximizing ROI
+{style="color: #BBDEFC; font-weight: normal"}
+
 ---
 
 ## 10. Evaluation and production of the models
 {style="color: #BBDEFC"}
 
 ---
-## 11. Business case implementation
-{style="color: #BBDEFC"}
 
-We have also implemented a business case model for a neutral scenario, assuming that the new CRO protocols achieve the following:
+## 11. Retraining and Production scripts
 
-* Increase the conversion rate from 13% to 15%.
-* Increase the median purchase from 5 to 6 products, representing a 20% increase in this metric.
-* Increase the purchase recency from 10% to 12%, representing a 20% increase in this metric.
+After successfully developing, training, and evaluating both segmentation and predictive models, the final stage of the project involves organizing and optimizing the entire process. This is accomplished by compiling all necessary processes, functions, and code into two streamlined Python scripts:
 
-After one year of applying these protocols, the results are as follows:
+* <text style='color: #BBDEFC; font-weight: normal;'>Retraining Script:</text> This script is designed to automatically retrain all developed models with new data as needed, ensuring that the models remain accurate and up-to-date.
 
-* The CRO protocols generated 249300€.
-* The cost of implementing the measures was 114000€.
-* The resultant profit is 135300€.
-* The ROI (Return on Investment) is 118.68%.
-
-The details of this analysis can be consulted [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Business_Case.xlsx).
+* <text style='color: #BBDEFC; font-weight: normal;'>Production Script:</text> This script executes all models and generates the desired results, ensuring a smooth transition from development to production."
