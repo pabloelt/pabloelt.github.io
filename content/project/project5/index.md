@@ -30,8 +30,8 @@ Notes:
 
 The main objective is to analyse the historical leads information of the company to propose potential actions that will increase the overall turnover and reverse the low conversion rate at which the company is operating. To achieve this goal, we will create advanced analytical assets such as:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Predictive lead scoring algorithm:</text> This tool will assist the sales team in identifying potential customers who are most likely to convert into final clients, as well as leads that are not economically viable to pursue.
-* <text style='color: #BBDEFC; font-weight: normal;'>Customer segmantation algorithm:</text> It will help to identify the key customer groups interested in the product, enabling the sales team to tailor marketing efforts effectively for each identified segment."
+* <text style='color: #BBDEFC; font-weight: normal;'>Lead segmentation model:</text> This tool will help to identify the key customer groups interested in the product, enabling the sales team to tailor marketing efforts effectively for each identified segment."
+* <text style='color: #BBDEFC; font-weight: normal;'>Predictive lead scoring model:</text> It will assist the sales team in identifying potential customers who are most likely to convert into final clients, as well as leads that are not economically viable to pursue.
 
 ---
 
@@ -113,6 +113,8 @@ The most relevant entities from which we can obtain data are summarized below:
 * <text style='color: #BBDEFC; font-weight: normal;'>Product:</text> The product that the company is trying to sell is a high-value online course design to train proffesionals in the data science sector. Its price is 49.99$.
 * <text style='color: #BBDEFC; font-weight: normal;'>Commercial channels:</text> The main commercial channels are phone calls, sms, emails, web chat, ad campaings, and a subcontracted lead management company. The lead management average cost is estimated at 3.50$ per lead.
 
+Before conducting any analysis or data transformation, it is crucial to set aside a portion of the dataset for validation purposes. This reserved data is used to validate the models after they have been trained and tested on the remaining data. Specifically, 30% of the dataset is saved for validation, while the remaining 70% is used for training the models.
+
 ---
 
 ## 5. Data Quality
@@ -171,7 +173,7 @@ These are some of the results that we have obtained by performing the explorator
 
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Notebooks/03_Analisis%20e%20Insights.ipynb).
 
-### 6.3 Insights
+### 6.3 Insights obtained through the EDA
 {style="color: #BBDEFC; font-weight: normal"}
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
@@ -286,7 +288,7 @@ To understand the business implications, average values for each variable used i
 
 After analysing the above results, the most differential characteristics for each segment are identified and presented.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super High-quality Leads</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
 
 * Origin: Lead Add Form.
 * Last activity: Non categorize.
@@ -332,20 +334,40 @@ After analysing the above results, the most differential characteristics for eac
 
 ---
 
-## 9. Lead scoring model
+## 9. Predictive lead scoring model
 {style="color: #BBDEFC"}
 
+A predictive lead scoring model is developed using a supervised machine learning approach. At this stage of the project, several algorithms are tested, including logistic regression, random forest, XGBoost, and LightGBM. Each algorithm is analyzed with an extensive range of hyperparameters to ensure optimal predictive performance. The implementation of this model will enhance customer identification, thereby increasing the conversion rate (CR) and reducing marketing costs.
 
 
 ### 9.1 Variable selection for predictive model
 {style="color: #BBDEFC; font-weight: normal"}
 
+Several variable selection methods were tested to identify the most useful features for the predictive model. The primary methods considered were mutual selection, recursive feature elimination, and permutation importance. Among these, permutation importance proved to be the most accurate for this case and aligned well with the variable selection used in the lead segmentation model. The results are displayed in the image below. 
+
 {{< figure src="/project5/exhibit_5.png" title="Exhibit 5. Feature importance: Permutation importance method." >}}
+
+Based on the permutation importance method, the 20 most relevant variables were selected for the predictive model. Additionally, the correlations between these variables were examined, and highly correlated ones were removed. While strong correlations do not typically hinder tree-based algorithms, they can negatively impact the performance of other algorithms, such as logistic regression.
 
 ### 9.2 Model selection
 {style="color: #BBDEFC; font-weight: normal"}
 
+Different combinations of hyperparameters are tested for each of the algorithms and the ones with the best AUC (Area under Curve) scoring are collected.
+
+The performance of these algorithms are tested with three methods, which are cumulative gains curve,  lift curve, and ROC curve.
+
+Roughly speaking, the cumulative gain curve measures the effectiveness of a classification model by showing the proportion of true positives, while the lift curve shows the ratio of the model's performance to random performance, which helps to understand how much better the model is compared to random guessing. The ROC curve is used to evaluate the trade-off between the true positive rate (sensitivity) and the false positive rate at various threshold settings.
+
+The cumulative gains and lift curves focus on how well the model identifies positives within a sorted population, while the ROC curve evaluates the overall discrimination capability of the model across all thresholds. The results are shown in the figure below.
+
 {{< figure src="/project5/exhibit_6.png" title="Exhibit 6. Performance comparison of the selected models for several metrics." >}}
+
+The XGBoost algorithm presents the best performance in the three charts, however, the results are pretty similar for all of them. Therefore, it is decided to implement the logistic regression algorithm for the project due to the following reasons:
+
+1. Its predictive ability closely matches that of the random forest, XGBoost, and LightGBM models.
+2. It offers greater interpretability compared to the more complex tre-based algorithms.
+3. Being a simpler model, it is easier to maintain and quicker to train, retrain, and execute.
+4. Its mathematical simplicity allows for easy migration to the platforms and software used by the company.
 
 ### 9.3 Optimal discrimination thershold for maximizing ROI
 {style="color: #BBDEFC; font-weight: normal"}
@@ -358,6 +380,7 @@ After analysing the above results, the most differential characteristics for eac
 ---
 
 ## 11. Retraining and Production scripts
+{style="color: #BBDEFC"}
 
 After successfully developing, training, and evaluating both segmentation and predictive models, the final stage of the project involves organizing and optimizing the entire process. This is accomplished by compiling all necessary processes, functions, and code into two streamlined Python scripts:
 
