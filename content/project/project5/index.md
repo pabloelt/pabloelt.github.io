@@ -375,7 +375,7 @@ Thus, the logistic regression algorithm is used with the following hyperparametr
 * penalty = 'l1'
 * solver = 'saga'
 
-### 9.3 Optimal discrimination thershold for maximizing ROI
+### 9.3 Optimal discrimination treshold for maximizing ROI
 {style="color: #BBDEFC; font-weight: normal"}
 
 Once the predictive model is trained and tested, the next step is to specify the optimal threshold that determines whether a lead is classified as a potential customer (1) or not (0) based on the model's score. To achieve this, a method focused on maximizing ROI is implemented. This method determines the optimal threshold using confusion and impact matrices, which are defined as follows.
