@@ -352,9 +352,7 @@ Based on the permutation importance method, the 20 most relevant variables were 
 ### 9.2 Model selection
 {style="color: #BBDEFC; font-weight: normal"}
 
-Different combinations of hyperparameters are tested for each of the algorithms and the ones with the best AUC (Area under Curve) scoring are collected. On the other hand, all of the combinations are tested with the **cross-validation** method in order to ensure a good stability in the models.
-
-The performance of these algorithms is tested with three methods, which are cumulative gains curve,  lift curve, and ROC curve.
+Different combinations of hyperparameters are tested for each of the algorithms and the ones with the best AUC (Area under Curve) scoring are collected. On the other hand, all of the combinations are tested with the **cross-validation** method in order to ensure a good stability in the models. The performance of these algorithms is tested with three methods, which are cumulative gains curve,  lift curve, and ROC curve.
 
 Roughly speaking, the cumulative gain curve measures the effectiveness of a classification model by showing the proportion of true positives, while the lift curve shows the ratio of the model's performance to random performance, which helps to understand how much better the model is compared to random guessing. The ROC curve is used to evaluate the trade-off between the true positive rate (sensitivity) and the false positive rate at various threshold settings.
 
