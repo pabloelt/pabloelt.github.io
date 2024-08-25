@@ -352,30 +352,51 @@ Based on the permutation importance method, the 20 most relevant variables were 
 ### 9.2 Model selection
 {style="color: #BBDEFC; font-weight: normal"}
 
-Different combinations of hyperparameters are tested for each of the algorithms and the ones with the best AUC (Area under Curve) scoring are collected.
+Different combinations of hyperparameters are tested for each of the algorithms and the ones with the best AUC (Area under Curve) scoring are collected. On the other hand, all of the combinations are tested with the **cross-validation** method in order to ensure a good stability in the models.
 
-The performance of these algorithms are tested with three methods, which are cumulative gains curve,  lift curve, and ROC curve.
+The performance of these algorithms is tested with three methods, which are cumulative gains curve,  lift curve, and ROC curve.
 
 Roughly speaking, the cumulative gain curve measures the effectiveness of a classification model by showing the proportion of true positives, while the lift curve shows the ratio of the model's performance to random performance, which helps to understand how much better the model is compared to random guessing. The ROC curve is used to evaluate the trade-off between the true positive rate (sensitivity) and the false positive rate at various threshold settings.
 
 The cumulative gains and lift curves focus on how well the model identifies positives within a sorted population, while the ROC curve evaluates the overall discrimination capability of the model across all thresholds. The results are shown in the figure below.
 
-{{< figure src="/project5/exhibit_6.png" title="Exhibit 6. Performance comparison of the selected models for several metrics." >}}
+{{< figure src="/project5/exhibit_6.png" title="Exhibit 6. Performance comparison of the selected algorithms for several metrics." >}}
 
-The XGBoost algorithm presents the best performance in the three charts, however, the results are pretty similar for all of them. Therefore, it is decided to implement the logistic regression algorithm for the project due to the following reasons:
+The XGBoost algorithm presents the best performance in the three charts, however, the results are pretty similar for all of them. Therefore, it is decided to implement the **logistic regression algorithm** for the project due to the following reasons:
 
 1. Its predictive ability closely matches that of the random forest, XGBoost, and LightGBM models.
 2. It offers greater interpretability compared to the more complex tre-based algorithms.
 3. Being a simpler model, it is easier to maintain and quicker to train, retrain, and execute.
 4. Its mathematical simplicity allows for easy migration to the platforms and software used by the company.
 
+Thus, the logistic regression algorithm is used with the following hyperparametrization:
+* C = 1
+* n_jobs = -1
+* penalty = 'l1'
+* solver = 'saga'
+
 ### 9.3 Optimal discrimination thershold for maximizing ROI
 {style="color: #BBDEFC; font-weight: normal"}
 
+Once the predictive model is trained and tested, the next step is to specify the optimal threshold that determines whether a lead is classified as a potential customer (1) or not (0) based on the model's score. To achieve this, a method focused on maximizing ROI is implemented. This method determines the optimal threshold using confusion and impact matrices, which are defined as follows.
+
+{{< figure src="/project5/confusion_matrix.jpg" title="Confusion and Impact matrices." >}}
+
+* **Confusion matrix:** This matrix is used to describe the performance of a classification model. It shows the actual versus predicted classifications and helps to identify how often the model is correctly and incorrectly predicting each class. The output “TN” stands for True Negative which shows the number of negative examples classified accurately. Similarly, “TP” stands for True Positive which indicates the number of positive examples classified accurately. The term “FP” shows False Positive value, i.e., the number of actual negative examples classified as positive; and “FN” means a False Negative value which is the number of actual positive examples classified as negative.
+* **Impact matrix:** This matrix is used to quantify the impact or cost associated with the different types of errors made by a model, such as false positives and false negatives. Unlike the confusion matrix, which counts occurrences, the impact matrix assigns a numerical value to the consequences of these outcomes. The output “ITN” stands for Impact of True Negative which shows the economic impact of not to carry out any commercial actions on those leads that were not going to buy the product. Similarly, “ITP” stands for Impact of True Positive which indicates the net profit obtained from commercial actions on customers who end up buying the course. The term “IFP” shows Impact of False Positive value, i.e., the opportunity cost of not having carried out commercial actions on leads who would have become customers. Finally, “IFN” means a Impact of False Negative value which represent the economic cost of commercial actions carried out on a lead that finally does not buy the company’s product.
+
+Therefore, by calculating the confusion matrix and multiplying it by the economic impact matrix for each possible value of the discrimination threshold, it becomes possible to determine which threshold maximizes the resulting function and, consequently, the company’s ROI. The results are shown in the image below.
+
+{{< figure src="/project5/exhibit_7.png" title="Exhibit 7. Expected value for each discrimination treshold. Optimal value is found at 0.01." >}}
+
+In this case, the discrimination threshold value that provides the higher return on investment for the company is 0.01.
+
 ---
 
-## 10. Evaluation and production of the models
+## 10. Evaluation of the predictive lead scoring model
 {style="color: #BBDEFC"}
+
+
 
 ---
 
@@ -386,4 +407,4 @@ After successfully developing, training, and evaluating both segmentation and pr
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Retraining Script:</text> This script is designed to automatically retrain all developed models with new data as needed, ensuring that the models remain accurate and up-to-date.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Production Script:</text> This script executes all models and generates the desired results, ensuring a smooth transition from development to production."
+* <text style='color: #BBDEFC; font-weight: normal;'>Production Script:</text> This script executes all models and generates the desired results, ensuring a smooth transition from development to production.
