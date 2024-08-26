@@ -391,9 +391,9 @@ Once the predictive model is trained and tested, the next step is to specify the
 
 Therefore, by calculating the confusion matrix and multiplying it by the economic impact matrix for each possible value of the discrimination threshold, it becomes possible to determine which threshold maximizes the resulting function and, consequently, the company’s ROI. The results are shown in the image below.
 
-{{< figure src="/project5/exhibit_7.png" title="Exhibit 7. Expected value for each discrimination treshold. Optimal value is found at 0.09." >}}
+{{< figure src="/project5/exhibit_7.png" title="Exhibit 7. Expected value for each discrimination treshold. Optimal value is found at 0.05." >}}
 
-In this case, the discrimination threshold value that provides the higher return on investment for the company is 0.09.
+In this case, the discrimination threshold value that provides the higher return on investment for the company is 0.05.
 
 ---
 
@@ -402,10 +402,10 @@ In this case, the discrimination threshold value that provides the higher return
 
 Finally, the model has been tested on a batch of 2084 leads never seen before by the model (the validation dataset that we reserved at the beginning). By applying the developed lead scoring predictive model, the company has been able to:
 
-1. Increase its conversion rate from 41.70% up to 50.18%.
-2. Reduce by 18.14% the workload to be manage by the sales department.
-3. Reduce by 30.04% the lost in investments.
-4. Increase its sales profit by 3.76%.
+1. Increase its conversion rate from 41.70% up to 45.77%.
+2. Reduce by 9.31% the workload to be manage by the sales department.
+3. Reduce by 28.81% the lost in investments.
+4. Increase its sales profit by 4.75%.
 
 {{< figure src="/project5/kpi_results.png" title="KPIs improvements achieved after applying the predictive lead scoring model." >}}
 
