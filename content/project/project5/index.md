@@ -6,7 +6,7 @@ tags:
 date: 2024-08-21
 #external_link: http://github.com
 ---
-*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company) is currently in Spanish. It will be soon updated to English.*
+*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation) is currently in Spanish. It will be soon updated to English.*
 {style="color: #aaaaaa"}
 
 {{< toc >}}
@@ -21,7 +21,7 @@ Once these leads are acquired, the sales team begins reaching out via calls, ema
 Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
-* Source code can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company).
+* Source code can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation).
 
 ---
 
@@ -136,7 +136,7 @@ In this stage of the project, general data quality correction processes have bee
 * Discretization of variables.
 * Creation of new variables.
 
-The entire process can be consulted in detail [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Notebooks/02_Creacion%20del%20Datamart%20Analitico.ipynb).
+The entire process can be consulted in detail [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/02_Calidad%20de%20Datos.ipynb).
 
 ---
 
@@ -177,7 +177,7 @@ These are some of the results that we have obtained by performing the explorator
 
 {{< figure src="/project5/exhibit_2.png" title="Exhibit 2. Exploratory Data Analysis: Numerical variables." >}}
 
- A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/analysis-and-optimization-of-an-ecommerce-company/blob/main/Notebooks/03_Analisis%20e%20Insights.ipynb).
+ A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/03_EDA.ipynb).
 
 ### 6.3 Insights obtained through the EDA
 {style="color: #BBDEFC; font-weight: normal"}
@@ -249,12 +249,15 @@ Additionally, we need to decide whether to apply feature discretization or binar
 
 Lastly, it is important to note that class balancing processes are not necessary for this project, as the dataset contains a sufficiently significant representation of both classes (converted=1, converted=0).
 
+More details can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/04_Transformacion%20de%20datos.ipynb).
 ---
 
 ## 8. Lead segmentation model
 {style="color: #BBDEFC"}
 
 At this stage, after completing data quality checks, exploratory data analysis, and variable transformation, we are ready to develop the lead segmentation model. As mentioned earlier, an unsupervised machine learning model will be used for this purpose, specifically the KMeans algorithm, which has demonstrated strong performance in the clustering process. By implementing this model, we aim to uncover new insights that can enhance the company's sales and marketing strategies.
+
+More details about the lead segmentation model can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/05_Modelizacion%20para%20No%20Supervisado.ipynb).
 
 ### 8.1 Selecting the number of segments
 {style="color: #BBDEFC; font-weight: normal"}
@@ -345,6 +348,8 @@ After analysing the above results, the most differential characteristics for eac
 
 A predictive lead scoring model is developed using a supervised machine learning approach. At this stage of the project, several algorithms are tested, including logistic regression, random forest, XGBoost, and LightGBM. Each algorithm is analyzed with an extensive range of hyperparameters to ensure optimal predictive performance. The implementation of this model will enhance customer identification, thereby increasing the conversion rate (CR) and reducing marketing costs.
 
+More details for the predictive lead scoring model can be consulted [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/07_Modelizacion%20para%20Clasificacion.ipynb).
+
 
 ### 9.1 Variable selection for predictive model
 {style="color: #BBDEFC; font-weight: normal"}
@@ -354,6 +359,8 @@ Several variable selection methods were tested to identify the most useful featu
 {{< figure src="/project5/exhibit_5.png" title="Exhibit 5. Feature importance: Permutation importance method." >}}
 
 Based on the permutation importance method, the 20 most relevant variables were selected for the predictive model. Additionally, the correlations between these variables were examined, and highly correlated ones were removed. While strong correlations do not typically hinder tree-based algorithms, they can negatively impact the performance of other algorithms, such as logistic regression.
+
+More details [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/06_Preselecci%C3%B3n%20de%20variables.ipynb).
 
 ### 9.2 Model selection
 {style="color: #BBDEFC; font-weight: normal"}
@@ -408,6 +415,8 @@ Finally, the model has been tested on a batch of 2084 leads never seen before by
 4. Increase its sales profit by 4.75%.
 
 {{< figure src="/project5/kpi_results.png" title="KPIs improvements achieved after applying the predictive lead scoring model." >}}
+
+The evaluation results can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/05_Resultados/Resultados%20del%20proyecto.ipynb).
 
 ---
 
