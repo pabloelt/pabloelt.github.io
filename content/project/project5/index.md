@@ -250,6 +250,7 @@ Additionally, we need to decide whether to apply feature discretization or binar
 Lastly, it is important to note that class balancing processes are not necessary for this project, as the dataset contains a sufficiently significant representation of both classes (converted=1, converted=0).
 
 More details can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/04_Transformacion%20de%20datos.ipynb).
+
 ---
 
 ## 8. Lead segmentation model
