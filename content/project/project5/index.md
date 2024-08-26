@@ -94,15 +94,21 @@ CR[\%] = \frac{N_C}{N_L}\cdot 100,
 $$
 {{< /math >}}
 where {{< math >}}$N_C${{< /math >}} and {{< math >}}$N_L${{< /math >}} are de number of final customers and leads, respectively.
-* <text style='color: #BBDEFC; font-weight: normal;'>Sales department workload:</text> Number of potential customers to be managed by the sales team.
-* <text style='color: #BBDEFC; font-weight: normal;'>Lost investment in unconverted lead management:</text> Cost of commercial efforts directed toward potential customers who ultimately do not purchase the company’s product.
+* <text style='color: #BBDEFC; font-weight: normal;'>Sales department workload ({{< math >}}$N_L${{< /math >}}):</text> Number of potential customers to be managed by the sales team.
+* <text style='color: #BBDEFC; font-weight: normal;'>Lost investment in unconverted lead management ({{< math >}}$Cost_{not \ conv \ leads}${{< /math >}}):</text> Cost of commercial efforts directed toward potential customers who ultimately do not purchase the company’s product. It is defined as:
+{{< math >}}
+$$
+Cost_{not \ conv \ leads} = \left( N_L - N_C \right) \cdot Cost_{leads},
+$$
+{{< /math >}}
+where {{< math >}}$Cost_{leads}${{< /math >}} is the cost per lead arising from commercial and marketing actions.
 * <text style='color: #BBDEFC; font-weight: normal;'>Sales profit (SP):</text> Net profit obtained from the sales of the online course. It is defined as:
 {{< math >}}
 $$
-SP[$] = \left( Price_{prod} \cdot CR - Cost_{leads} \right) \cdot N_L,
+SP[$] = \left( Price_{prod} - Cost_{leads} \right) \cdot N_C - Cost_{not \conv \ leads},
 $$
 {{< /math >}}
-where {{< math >}}$Price_{prod}${{< /math >}} is the price of the online course, and {{< math >}}$Cost_{leads}${{< /math >}} is the cost per lead arising from commercial and marketing actions.
+being {{< math >}}$Price_{prod}${{< /math >}} the price of the online course.
 
 ### 4.4 Entities and Data
 {style="color: #BBDEFC; font-weight: normal"}
@@ -111,7 +117,7 @@ The most relevant entities from which we can obtain data are summarized below:
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Leads:</text> Leads historical data is provided by the client in a *.csv* file, which contains information about 37 different features for 9240 different leads.
 * <text style='color: #BBDEFC; font-weight: normal;'>Product:</text> The product that the company is trying to sell is a high-value online course design to train proffesionals in the data science sector. Its price is 49.99$.
-* <text style='color: #BBDEFC; font-weight: normal;'>Commercial channels:</text> The main commercial channels are phone calls, sms, emails, web chat, ad campaings, and a subcontracted lead management company. The lead management average cost is estimated at 3.50$ per lead.
+* <text style='color: #BBDEFC; font-weight: normal;'>Commercial channels:</text> The main commercial channels are phone calls, sms, emails, web chat, ad campaings, and a subcontracted lead management company. The lead management average cost is estimated at 5$ per lead.
 
 Before conducting any analysis or data transformation, it is crucial to set aside a portion of the dataset for validation purposes. This reserved data is used to validate the models after they have been trained and tested on the remaining data. Specifically, 30% of the dataset is saved for validation, while the remaining 70% is used for training the models.
 
@@ -186,7 +192,7 @@ Once the exploratory data analysis has been conducted, the following insights ha
 
 **Lead-to-customer conversion rate:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> The current conversion rate of the company is 41.56%.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> The current conversion rate of the company is 41.70%.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Working professionals presents the highest conversion rate of 90.74%.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Unemployed leads, which are the largest group, have a low conversion rate of 36.52%.
 * <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> Almost all leads that comes from the source *Reference* are converted into customers (89.19% conversion rate). However, only 4.56% of leads come from this source.
@@ -385,9 +391,9 @@ Once the predictive model is trained and tested, the next step is to specify the
 
 Therefore, by calculating the confusion matrix and multiplying it by the economic impact matrix for each possible value of the discrimination threshold, it becomes possible to determine which threshold maximizes the resulting function and, consequently, the company’s ROI. The results are shown in the image below.
 
-{{< figure src="/project5/exhibit_7.png" title="Exhibit 7. Expected value for each discrimination treshold. Optimal value is found at 0.01." >}}
+{{< figure src="/project5/exhibit_7.png" title="Exhibit 7. Expected value for each discrimination treshold. Optimal value is found at 0.09." >}}
 
-In this case, the discrimination threshold value that provides the higher return on investment for the company is 0.01.
+In this case, the discrimination threshold value that provides the higher return on investment for the company is 0.09.
 
 ---
 
