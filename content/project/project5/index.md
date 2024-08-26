@@ -30,7 +30,7 @@ Notes:
 
 The main objective is to analyse the historical leads information of the company to propose potential actions that will increase the overall turnover and reverse the low conversion rate at which the company is operating. To achieve this goal, we will create advanced analytical assets such as:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Lead segmentation model:</text> This tool will help to identify the key customer groups interested in the product, enabling the sales team to tailor marketing efforts effectively for each identified segment."
+* <text style='color: #BBDEFC; font-weight: normal;'>Lead segmentation model:</text> This tool will help to identify the key customer groups interested in the product, enabling the sales team to tailor marketing efforts effectively for each identified segment.
 * <text style='color: #BBDEFC; font-weight: normal;'>Predictive lead scoring model:</text> It will assist the sales team in identifying potential customers who are most likely to convert into final clients, as well as leads that are not economically viable to pursue.
 
 ---
