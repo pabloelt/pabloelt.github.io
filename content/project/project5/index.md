@@ -400,7 +400,14 @@ In this case, the discrimination threshold value that provides the higher return
 ## 10. Evaluation of the predictive lead scoring model
 {style="color: #BBDEFC"}
 
+Finally, the model has been tested on a batch of 2084 leads never seen before by the model (the validation dataset that we reserved at the beginning). By applying the developed lead scoring predictive model, the company has been able to:
 
+1. Increase its conversion rate from 41.70% up to 50.18%.
+2. Reduce by 18.14% the workload to be manage by the sales department.
+3. Reduce by 30.04% the lost in investments.
+4. Increase its sales profit by 3.76%.
+
+{{< figure src="/project5/kpi_results.png" title="KPIs improvements achieved after applying the predictive lead scoring model." >}}
 
 ---
 
