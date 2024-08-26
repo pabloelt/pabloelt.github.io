@@ -95,7 +95,7 @@ $$
 {{< /math >}}
 where {{< math >}}$N_C${{< /math >}} and {{< math >}}$N_L${{< /math >}} are de number of final customers and leads, respectively.
 * <text style='color: #BBDEFC; font-weight: normal;'>Sales department workload {{< math >}}$(N_L)${{< /math >}}:</text> Number of potential customers to be managed by the sales team.
-* <text style='color: #BBDEFC; font-weight: normal;'>Lost investment in unconverted lead management {{< math >}}$(Cost_{not \ conv \ leads})${{< /math >}}:</text> Cost of commercial efforts directed toward potential customers who ultimately do not purchase the company’s product. It is defined as:
+* <text style='color: #BBDEFC; font-weight: normal;'>Loss investment in unconverted lead management {{< math >}}$(Cost_{not \ conv \ leads})${{< /math >}}:</text> Cost of commercial efforts directed toward potential customers who ultimately do not purchase the company’s product. It is defined as:
 {{< math >}}
 $$
 Cost_{not \ conv \ leads} = \left( N_L - N_C \right) \cdot Cost_{leads},
@@ -402,9 +402,9 @@ In this case, the discrimination threshold value that provides the higher return
 
 Finally, the model has been tested on a batch of 2084 leads never seen before by the model (the validation dataset that we reserved at the beginning). By applying the developed lead scoring predictive model, the company has been able to:
 
-1. Increase its conversion rate from 41.70% up to 45.77%.
-2. Reduce by 9.31% the workload to be manage by the sales department.
-3. Reduce by 28.81% the lost in investments.
+1. Increase its conversion rate from 41.70% to 45.77%.
+2. Reduce by 9.31% the workload to be managed by the sales department.
+3. Reduce by 28.81% the loss in investments.
 4. Increase its sales profit by 4.75%.
 
 {{< figure src="/project5/kpi_results.png" title="KPIs improvements achieved after applying the predictive lead scoring model." >}}
