@@ -247,24 +247,18 @@ Once the exploratory data analysis has been conducted, the following insights ha
 ### 6.4 Recommended actions
 {style="color: #BBDEFC; font-weight: normal"}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Actions to improve leads' management:</text>
+Some of the actionable initiatives that the company can implement are the following:
 
-1. Enhance the quality of survey or form questions to gather more user inputs and reduce the occurrence of NaN or default (‘Select’) values.
-2. Collect timestamps for website visits to enable seasonality analysis and implement cookies to track and identify users as they navigate different pages on the website.
-3. Develop a new <text style='color: #BBDEFC; font-weight: normal;'>_lead segmentation algorithm_</text> that categorizes the company's diverse lead profiles, enabling the identification of the best-fitting group for each new lead. This will allow for more personalized commercial actions.
+1. With the current information, it’s challenging to determine whether intermittent demand is due to stock-outs or simply zero demand for the product. Therefore, it is highly recommended to track warehouse data closely.
 
+2. To optimize sales and reduce warehouse costs, implementing a forecasting model based on machine learning algorithms can be highly effective. A bottom-up approach, starting at the product level, is particularly recommended in this context.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Actions to improve lead-to-customer conversion rate:</text>
+3. Discounts have proven to be quite successful, especially for product 090, which is the top seller. It may be worthwhile to apply this strategy to other products and evaluate the overall impact.
 
-1. Implement a <text style='color: #BBDEFC; font-weight: normal;'>_predictive lead scoring algorithm_</text> that identifies individuals most likely to convert into paying customers. This will reduce the sales team's workload allowing them to focus more time on engaging with the most promising leads.
+4. Saturdays and Sundays show the highest sales volumes, presenting an opportunity to develop targeted strategies and campaigns.
 
+5. Special days like Thanksgiving, Labor Day, and Easter generate significant sales. These occasions should be thoroughly analyzed, and marketing strategies should be developed to enhance the company’s profitability.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Actions to improve commercial and marketing channels performance:</text>
-
-1. Enhance the content strategy across the website, lead magnet, and emails to attract more traffic and increase user engagement. Focus on creating tailored content specifically for working professionals interested in the data science sector.
-2. Develop a referral program to motivate existing customers to recommend the course to their friends, family, and colleagues.
-3. Allocate more resources to acquiring leads through ‘Reference’ channel, as they demonstrate the highest conversion rate.
-4. Boost investments in SMS campaigns, given their strong performance.
 
 ---
 
