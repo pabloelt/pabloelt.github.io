@@ -249,7 +249,7 @@ Once the exploratory data analysis has been conducted, the following insights ha
 
 Some of the actionable initiatives that the company can implement are the following:
 
-1. With the current information, it’s challenging to determine whether intermittent demand is due to stock-outs or simply zero demand for the product. Therefore, it is highly recommended to track warehouse data closely.
+1. With the current information, it is challenging to determine whether intermittent demand is due to stock-outs or simply zero demand for the product. Therefore, it is highly recommended to track warehouse data closely.
 
 2. To optimize sales and reduce warehouse costs, implementing a forecasting model based on machine learning algorithms can be highly effective. A bottom-up approach, starting at the product level, is particularly recommended in this context.
 
