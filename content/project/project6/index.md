@@ -71,9 +71,9 @@ The project has been designed with a multi-step methodology, which is summarized
 
 The process for this project consists of two main stages: the development phase and the production phase.
 
-The development phase begins with the set up and data importation, followed by a thorough data quality review. Next, an exploratory data analysis is conducted to uncover key insights. The variable transformation step involves selecting the most relevant variables that impact the problem and applying the necessary transformations. Following this, models are implemented for both the predictive and segmentation algorithms. During the evaluation process, all metrics are thoroughly tested.
+The development phase begins with the set up and data importation, followed by a thorough data quality review. Next, an exploratory data analysis is conducted to uncover key insights. The variable transformation step involves selecting the most relevant variables that impact the problem and applying the necessary transformations. Following this, the forecasting model is implemented based on machine learning algorithms. During the evaluation process, all metrics are thoroughly tested.
 
-In the production phase, the models are prepared for deployment, ensuring that the code is optimized for production. Additionally, a retraining script is created during this stage to facilitate future updates.
+In the production phase, the model is prepared for deployment, ensuring that the code is optimized for production. Additionally, a retraining script is created during this stage to facilitate future updates.
 
 ### 4.2 Project scope, entities, and data
 {style="color: #BBDEFC; font-weight: normal"}
@@ -188,32 +188,33 @@ In order to guide this process, a series of seed questions are proposed to serve
 ### 6.1 Seed questions
 {style="color: #BBDEFC; font-weight: normal"}
 
-**Regarding Leads:**
+**Regarding sales:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> What are the main demographic profiles in the company’s lead database?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> How has the company's sales performance evolved over time?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> How about the sales per product?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> How are product sales performing across different stores?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text> Are product sales consistent over time, or are there periods with zero demand? If so, is this due to stock-outs, or are the products simply not selling during those periods?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> What is the seasonality pattern in sales? How do sales vary by month and by day of the week?
 
-**Regarding Conversion Rate:**
+**Regarding sell price:**
+* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> How have the selling prices for each product changed over time?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text>  Are the selling prices fixed, or are they adjusted based on seasonality?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> How is the selling price impacted by seasonality?
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> What is the current lead-to-customer conversion rate?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> What factors have the most significant impact on lead-to-customer conversion?
+**Regarding events:**
+* <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> How do major events throughout the year affect sales? Which holidays or festivities have the most significant impact?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q10:</text> How does each event category influence sales?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q11:</text> Which products are particularly affected by these special occasions?
 
-**Regarding Commercial and Marketing Channels:**
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text> How are the company’s commercial and marketing channels performing?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> From which sources is the company attracting potential customers? Which sources are the most promising?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> Which demographic profile should be the primary focus of marketing efforts?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text> What percentage of leads are open to receiving communications via email or phone calls?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> How effective have the company’s advertising campaigns been?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> How well is the current lead magnet performing?
 
 ### 6.2 Some results obtained through the EDA
 {style="color: #BBDEFC; font-weight: normal"}
 
 These are some of the results that we have obtained by performing the exploratory Data Analysis (EDA) for both categorical and numerical variables that are present in the dataset.
 
-{{< figure src="/project5/exhibit_1.png" title="Exhibit 1. Exploratory Data Analysis: Occupation, lead source and last activity." >}}
+{{< figure src="/project6/exhibit_2.png" title="Exhibit 2. Exploratory Data Analysis: Sell price evolution over time for each of the products." >}}
 
-{{< figure src="/project5/exhibit_2.png" title="Exhibit 2. Exploratory Data Analysis: Numerical variables." >}}
+{{< figure src="/project6/exhibit_3.png" title="Exhibit 3. Exploratory Data Analysis: Seasonality of the sales for each of the products." >}}
 
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/03_EDA.ipynb).
 
@@ -222,26 +223,26 @@ These are some of the results that we have obtained by performing the explorator
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
 
-**Leads:**
+**Sales:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> The mayority of the potential customers that are interested in the company are unemployed, particularly 88.84% of the leads.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> Only 8.64% of the leads are working professionals.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> The number of leads coming that comes from students is very low. It only represents 2.05% of the leads.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> New products were added after a few months, initially launched in just one store.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> One store is more significant, often used to test new products before they are introduced in the second store.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> There are periods when certain products experience zero demand. It is unclear whether this is due to stock-outs or simply a lack of sales during those times.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Product performance is influenced by seasonality. Some products perform better in summer, while others do better in winter.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Saturdays and Sundays consistently show the highest sales across all products.
 
-**Lead-to-customer conversion rate:**
+**Sell price:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> The current conversion rate of the company is 41.70%.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Working professionals presents the highest conversion rate of 90.74%.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Unemployed leads, which are the largest group, have a low conversion rate of 36.52%.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> Almost all leads that comes from the source *Reference* are converted into customers (89.19% conversion rate). However, only 4.56% of leads come from this source.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text>  Selling prices show high variability, especially for certain products.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> Discounts are relatively common for some products.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 8:</text> While some products have seen consistent price increases, others have experienced permanent price reductions. However, the majority of products maintain relatively stable prices.
 
-**Commercial and marketing channels:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 8:</text> It is observed that 99.98% and 91.07% of the leads do not want to receive phone calls nor emails, respectively. Therefore, the mayority of people that visit the website are not interested in the product.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 9:</text> Email marketing campaigns have untapped potential, since last activity of 41.33% of total number of leads was opening an email but only 36.15% of them were finally converted. Only 14.9% of leads who want to be contacted by email end up converting into paying customers.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 10:</text> SMS campaigns have proven to be highly effective, boasting a conversion rate of 60.82%.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 11:</text> Most potential customers were not interested in receiving a free copy of the lead magnet. Those who did show interest are primarily unemployed and downloaded it mainly from the landing page.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 12:</text> Converted leads spend a median of 16 minutes on the website and visit an average of 2.5 pages per session. In contrast, non-converted leads spend a median of only 6 minutes on the site. 
+**Events:**
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 9:</text>  Sales per product tend to increase during special events, with Thanksgiving, Labor Day, and Easter performing particularly well.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 10:</text> All event categories show similar performance, though sporting and cultural events generate slightly higher sales on average.
+
 
 ### 6.4 Recommended actions
 {style="color: #BBDEFC; font-weight: normal"}
