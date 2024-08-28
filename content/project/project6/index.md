@@ -49,11 +49,12 @@ Forecasting is one of the most widely used techniques in the data science field 
 
 In this context, traditional sales forecasting methods have been reliable for decades. However, with the advent of machine learning algorithms, it is now possible to implement powerful forecasting models using a data science approach. These modern techniques enable the prediction of product or service demand over a specified future period by leveraging historical company data. Compared to traditional forecasting methods, a machine learning approach offers several advantages:
 
-Accelerated data processing speed
-Automated forecast updates based on recent data
-Enhanced data analysis capabilities
-Identification of hidden patterns in data
-Greater adaptability to changes
+* Accelerated data processing speed
+* Automated forecast updates based on recent data
+* Enhanced data analysis capabilities
+* Identification of hidden patterns in data
+* Greater adaptability to changes
+
 For this project, an innovative forecasting model has been developed, utilizing massive and scalable machine learning techniques.
 
 ---
