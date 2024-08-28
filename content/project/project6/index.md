@@ -121,8 +121,26 @@ In this project, a bottom-up approach is implemented for hierarchical forecastin
 
 <text style='color: #BBDEFC; font-weight: normal;'>Intermittent demand:</text>
 
+Intermittent demand, or sporadic demand, occurs when a product experiences multiple periods of zero sales. This issue can arise from two primary causes:
+* The product was in stock but no sales occurred.
+* The product was out of stock, preventing any sales.
+The source of these zero values can sometimes be unclear, leading to noise and making it difficult for the model to generate accurate predictions.
 
 {{< figure src="/project6/exhibit_1.png" title="Exhibit 1. Intermittent demand for item 120, which is sold in both stores." >}}
+
+To address intermittent demand, several solutions can be employed:
+
+* Getting the inventory information. It helps us to generate stock-out features that allow the algorithms to discriminate the cause of the zero values.
+
+* If the inventary information and/or stock-out marks are not available, another possible approach is to model at a higher hierarchical level, especially if the products are in very low demand.
+
+* It is also possible to create synthetic features that try to identify whether or not stock-outs have occurred.
+
+* Employing forecasting methods based on machine learning techniques, which are less sensitive to these problems than classical approaches.
+
+* Lastly, there is some more advanced methodologies such as croston method and specialized machine learning models can predict the probability of zero sales on certain days.
+
+In this project, since inventory and stock-out information are not available, synthetic features will be created based on business rules to indicate potential stock-out scenarios.
 
 <text style='color: #BBDEFC; font-weight: normal;'>Huge amount of Stock Keeping Units (SKUs):</text>
 
