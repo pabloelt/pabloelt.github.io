@@ -1,5 +1,5 @@
 ---
-title: Forecasting for a retail company 
+title: Forecasting for a Retail Company 
 summary: A forecasting model is developed to reduce warehouse costs and stock-outs by using a scalable set of recursive machine learning algorithms. This model predicts demand for the next 8 days at a store-product level, based on the historical data provided by the company.
 tags:
   - Machine Learning
@@ -14,9 +14,7 @@ date: 2024-08-02
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-The client for this project is an online teaching company that offers a high-value online course designed to train professionals in the data science sector. The company advertises this course on various websites and search engines. When people visit the website—promoted effectively by the marketing department—they may browse the course, fill out a form, or watch related videos. If they provide their email address or phone number through a form, they are classified as a lead. Additionally, the company also acquires leads through referrals from past clients.
-
-Once these leads are acquired, the sales team begins reaching out via calls, emails, and other forms of communication. However, while some leads convert into customers, most do not, leading to inefficiencies that negatively impact the company’s profitability.
+The client for this project is a large retailer based in the United States. The company has identified issues in its warehouse operations, leading to losses and stock-outs for several products. The objective is to implement a forecasting model using artificial intelligence algorithms to predict the appropriate stock levels for at least the next 8 days. This initiative aims to enhance operational efficiency and increase the company's profitability.
 
 Notes:
 
@@ -28,31 +26,35 @@ Notes:
 ## 2. Objectives
 {style="color: #BBDEFC"}
 
-The main objective is to analyse the historical leads information of the company to propose potential actions that will increase the overall turnover and reverse the low conversion rate at which the company is operating. To achieve this goal, we will create advanced analytical assets such as:
+The primary objective is to develop a forecasting model utilizing a set of machine learning algorithms to predict sales for the next 8 days at the store-product level. These algorithms are trained using the extensive three-year history available in the retail company's SQL database, employing massive modeling techniques to ensure accuracy and reliability.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Lead segmentation model:</text> This tool will help to identify the key customer groups interested in the product, enabling the sales team to tailor marketing efforts effectively for each identified segment.
-* <text style='color: #BBDEFC; font-weight: normal;'>Predictive lead scoring model:</text> It will assist the sales team in identifying potential customers who are most likely to convert into final clients, as well as leads that are not economically viable to pursue.
+{{< figure src="/project6/system.png" title="Three-steps approach employed to developed the forecasting model." >}}
 
 ---
 
 ## 3. Understanding of the problem
 {style="color: #BBDEFC"}
 
-Nowadays, there are basically two main methodologies that a company can apply in order to get a final client. These are outbound and inbound marketing models. Outbound marketing is known for using traditional methods to reach potential buyers, such as advertisements, events, product samples, and phone calls. In contrast, inbound marketing focuses on attracting consumers to the company, encouraging them to seek out more information about a product or service on their own.
+Forecasting is one of the most widely used techniques in the data science field due to its significant impact on a company's balance sheet and its potential to greatly enhance overall performance. Some of the mayor beneficts are summarized below:
 
-Outbound strategies are often seen as more aggressive, requiring consistent and repeated efforts from sellers. In inbound marketing, however, sellers typically engage only after the customer has made the first move.
+* <text style='color: #BBDEFC; font-weight: normal;'>Inventory Optimization:</text> Forecasting helps predict demand more accurately, reducing overstock and stock-outs. This leads to better inventory management, minimizing costs and improving cash flow.
 
-Inbound marketing guarantees that when executed properly, the company will reach a more targeted audience with higher buying potential. As a result, investing in inbound marketing is more economical, often yielding a higher return on investment.
+* <text style='color: #BBDEFC; font-weight: normal;'>Improved Customer Satisfaction:</text> By anticipating demand, the company can ensure products are available when customers want them, enhancing the shopping experience and increasing customer loyalty.
 
-{{< figure src="/project5/inbound_model.png" title="Inbound marketing strategy." >}}
+* <text style='color: #BBDEFC; font-weight: normal;'>Better Decision-Making:</text> Forecasting provides data-driven insights, enabling more informed decisions about pricing, promotions, and product launches, ultimately improving profitability.
 
-One of the challenges associated with inbound marketing is that the number of generated leads exceeds the capacity of the sales channels, leading to several issues:
+* <text style='color: #BBDEFC; font-weight: normal;'>Resource Allocation:</text> Forecasting helps in planning staffing, logistics, and marketing efforts, ensuring resources are allocated effectively to meet anticipated demand.
 
-* Conflicts between marketing and sales departments: The marketing department expects a higher conversion rate from the large pool of leads, while the sales department is frustrated by the low quality of these leads, feeling they are wasting valuable time.
-* Saturation of the sales channels: The sales team can only handle a limited number of leads effectively.
-* Low conversion rate: As a result, the company's performance is significantly below potential, which could be improved with proper lead management based on Machine Learning optimization.
+* <text style='color: #BBDEFC; font-weight: normal;'>Competitive Advantage:</text> Companies with better forecasting capabilities can respond more quickly to market changes, offering them an edge over competitors.
 
-For all the reasons mentioned above, it is essential to implement some form of lead prioritization to achieve higher conversion rates. The assets we are developing for the company—specifically the predictive lead scoring and customer segmentation algorithms—are designed to address this need. These tools will enable the company to identify the highest-quality leads and recognize key customer segments, thereby refining their approach strategy for each group.
+In this context, traditional sales forecasting methods have been reliable for decades. However, with the advent of machine learning algorithms, it is now possible to implement powerful forecasting models using a data science approach. These modern techniques enable the prediction of product or service demand over a specified future period by leveraging historical company data. Compared to traditional forecasting methods, a machine learning approach offers several advantages:
+
+Accelerated data processing speed
+Automated forecast updates based on recent data
+Enhanced data analysis capabilities
+Identification of hidden patterns in data
+Greater adaptability to changes
+For this project, an innovative forecasting model has been developed, utilizing massive and scalable machine learning techniques.
 
 ---
 
