@@ -37,15 +37,15 @@ The primary objective is to develop a forecasting model utilizing a set of machi
 
 Forecasting is one of the most widely used techniques in the data science field due to its significant impact on a company's balance sheet and its potential to greatly enhance overall performance. Some of the mayor beneficts are summarized below:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Inventory Optimization:</text> Forecasting helps predict demand more accurately, reducing overstock and stock-outs. This leads to better inventory management, minimizing costs and improving cash flow.
+* <text style='color: #BBDEFC; font-weight: normal;'>Inventory optimization:</text> Forecasting helps predict demand more accurately, reducing overstock and stock-outs. This leads to better inventory management, minimizing costs and improving cash flow.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Improved Customer Satisfaction:</text> By anticipating demand, the company can ensure products are available when customers want them, enhancing the shopping experience and increasing customer loyalty.
+* <text style='color: #BBDEFC; font-weight: normal;'>Improved customer satisfaction:</text> By anticipating demand, the company can ensure products are available when customers want them, enhancing the shopping experience and increasing customer loyalty.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Better Decision-Making:</text> Forecasting provides data-driven insights, enabling more informed decisions about pricing, promotions, and product launches, ultimately improving profitability.
+* <text style='color: #BBDEFC; font-weight: normal;'>Better decision-making:</text> Forecasting provides data-driven insights, enabling more informed decisions about pricing, promotions, and product launches, ultimately improving profitability.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Resource Allocation:</text> Forecasting helps in planning staffing, logistics, and marketing efforts, ensuring resources are allocated effectively to meet anticipated demand.
+* <text style='color: #BBDEFC; font-weight: normal;'>Resource allocation:</text> Forecasting helps in planning staffing, logistics, and marketing efforts, ensuring resources are allocated effectively to meet anticipated demand.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Competitive Advantage:</text> Companies with better forecasting capabilities can respond more quickly to market changes, offering them an edge over competitors.
+* <text style='color: #BBDEFC; font-weight: normal;'>Competitive advantage:</text> Companies with better forecasting capabilities can respond more quickly to market changes, offering them an edge over competitors.
 
 In this context, traditional sales forecasting methods have been reliable for decades. However, with the advent of machine learning algorithms, it is now possible to implement powerful forecasting models using a data science approach. These modern techniques enable the prediction of product or service demand over a specified future period by leveraging historical company data. Compared to traditional forecasting methods, a machine learning approach offers several advantages:
 
@@ -75,54 +75,40 @@ The development phase begins with the set up and data importation, followed by a
 
 In the production phase, the models are prepared for deployment, ensuring that the code is optimized for production. Additionally, a retraining script is created during this stage to facilitate future updates.
 
-### 4.2 Levers
+### 4.2 Project scope, entities, and data
 {style="color: #BBDEFC; font-weight: normal"}
 
-The main levers for this project are summarized below:
+This project is developed using data from a three-year SQL database of a large American retailer. However, due to the computational constraints of the available equipment, the project's scope is limited to forecasting sales for ten products that belong to a sigle category (food) in two different stores. Nevertheless, the system is fully scalable and can be extended to predict sales for additional products, categories, and stores by simply adjusting the relevant parameters.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Leads:</text> Understanding general information about the leads the company receives is crucial for optimizing future marketing campaigns.
-* <text style='color: #BBDEFC; font-weight: normal;'>Conversion rate:</text> This metric indicates the ratio at which leads convert into customers. Our goal is to maximize this metric to boost the company’s profits.
-* <text style='color: #BBDEFC; font-weight: normal;'>Commercial channels optimization:</text> The sales department has various channels for communicating with leads, including phone calls, SMS, emails, web chat, and a subcontracted lead management company. Optimizing these channels is key to improving overall efficiency.
-
-
-### 4.3 KPIs
-{style="color: #BBDEFC; font-weight: normal"}
-
-The KPIs that results from the above-mentioned levers are the following:
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Lead-to-customer conversion rate {{< math >}}$(CR)${{< /math >}}:</text> Ratio at which leads convert into customers. It is defined as:
-{{< math >}}
-$$
-CR[\%] = \frac{N_C}{N_L}\cdot 100,
-$$
-{{< /math >}}
-where {{< math >}}$N_C${{< /math >}} and {{< math >}}$N_L${{< /math >}} are de number of final customers and leads, respectively.
-* <text style='color: #BBDEFC; font-weight: normal;'>Sales department workload {{< math >}}$(N_L)${{< /math >}}:</text> Number of potential customers to be managed by the sales team.
-* <text style='color: #BBDEFC; font-weight: normal;'>Loss investment in unconverted lead management {{< math >}}$(Cost_{not \ conv \ leads})${{< /math >}}:</text> Cost of commercial efforts directed toward potential customers who ultimately do not purchase the company’s product. It is defined as:
-{{< math >}}
-$$
-Cost_{not \ conv \ leads} = \left( N_L - N_C \right) \cdot Cost_{leads},
-$$
-{{< /math >}}
-where {{< math >}}$Cost_{leads}${{< /math >}} is the cost per lead arising from commercial and marketing actions.
-* <text style='color: #BBDEFC; font-weight: normal;'>Sales profit {{< math >}}$(SP)${{< /math >}}:</text> Net profit obtained from the sales of the online course. It is defined as:
-{{< math >}}
-$$
-SP[$] = \left( Price_{prod} - Cost_{leads} \right) \cdot N_C - Cost_{not \ conv \ leads},
-$$
-{{< /math >}}
-being {{< math >}}$Price_{prod}${{< /math >}} the price of the online course.
-
-### 4.4 Entities and Data
-{style="color: #BBDEFC; font-weight: normal"}
+{{< figure src="/project6/scheme.png" title="Basis scheme of the retail company's performance." >}}
 
 The most relevant entities from which we can obtain data are summarized below:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Leads:</text> Leads historical data is provided by the client in a *.csv* file, which contains information about 37 different features for 9240 different leads.
-* <text style='color: #BBDEFC; font-weight: normal;'>Product:</text> The product that the company is trying to sell is a high-value online course design to train proffesionals in the data science sector. Its price is 49.99$.
-* <text style='color: #BBDEFC; font-weight: normal;'>Commercial channels:</text> The main commercial channels are phone calls, sms, emails, web chat, ad campaings, and a subcontracted lead management company. The lead management average cost is estimated at 5$ per lead.
+* <text style='color: #BBDEFC; font-weight: normal;'>Store id:</text> It shows the identification number associated with the store at which the product are sold.
+* <text style='color: #BBDEFC; font-weight: normal;'>Item id:</text> Identification number for each of the items that the company offers.
+* <text style='color: #BBDEFC; font-weight: normal;'>Operation day:</text> Code for the day when a certain product is sold.
+* <text style='color: #BBDEFC; font-weight: normal;'>Number of sales:</text> The quantity of items sold each day for each store, as recorded in the dataset.
+* <text style='color: #BBDEFC; font-weight: normal;'>Sell price:</text> Price at which the items are sold.
 
-Before conducting any analysis or data transformation, it is crucial to set aside a portion of the dataset for validation purposes. This reserved data is used to validate the models after they have been trained and tested on the remaining data. Specifically, 30% of the dataset is saved for validation, while the remaining 70% is used for training the models.
+
+### 4.3 Forecasting-related problems approach
+{style="color: #BBDEFC; font-weight: normal"}
+
+<text style='color: #BBDEFC; font-weight: normal;'>Hierarchical Forecasting:</text>
+
+{{< figure src="/project6/hierarchical_structure.png" title="Hierarchical structure of the project." >}}
+
+<text style='color: #BBDEFC; font-weight: normal;'>Intermittent demand:</text>
+
+
+<text style='color: #BBDEFC; font-weight: normal;'>Huge amount of Stock Keeping Units (SKUs):</text>
+
+
+
+
+
+
+
 
 ---
 
