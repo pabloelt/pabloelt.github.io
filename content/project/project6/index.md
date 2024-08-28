@@ -131,23 +131,30 @@ The source of these zero values can sometimes be unclear, leading to noise and m
 
 To address intermittent demand, several solutions can be employed:
 
-* Getting the inventory information. It helps us to generate stock-out features that allow the algorithms to discriminate the cause of the zero values.
+* **Getting the inventory information:** It helps us to generate stock-out features that allow the algorithms to discriminate the cause of the zero values.
 
-* If the inventary information and/or stock-out marks are not available, another possible approach is to model at a higher hierarchical level, especially if the products are in very low demand.
+* **Model at a higher hierarchical level:** If the inventary information and/or stock-out marks are not available, another possible approach is to model at a higher hierarchical level, especially if the products are in very low demand.
 
-* It is also possible to create synthetic features that try to identify whether or not stock-outs have occurred.
+* **Create synthetic features:** It is also possible to create synthetic features that try to identify whether or not stock-outs have occurred.
 
-* Employing forecasting methods based on machine learning techniques, which are less sensitive to these problems than classical approaches.
+* **Machine learning forecasting:** Employing forecasting methods based on machine learning techniques, which are less sensitive to these problems than classical approaches.
 
-* Lastly, there is some more advanced methodologies such as croston method and specialized machine learning models can predict the probability of zero sales on certain days.
+* **Advanced methodologies:** Lastly, there is some more advanced methodologies such as croston method and specialized machine learning models can predict the probability of zero sales on certain days.
 
 In this project, since inventory and stock-out information are not available, synthetic features will be created based on business rules to indicate potential stock-out scenarios.
 
 <text style='color: #BBDEFC; font-weight: normal;'>Huge amount of Stock Keeping Units (SKUs):</text>
 
+In practical applications, particularly in sectors like retail and e-commerce, there are often thousands of different products that need to be modeled to predict sales levels accurately. Given the vast number of SKUs, the desired level of temporal aggregation (e.g., hourly, daily, weekly), the volume of historical data, and the available computational resources, the modeling process can become computationally infeasible. This complexity can challenge even advanced systems and may necessitate the use of scalable approaches or optimization techniques to manage the modeling workload effectively.
 
+In this context, several solutions can be employed:
 
+* **Adopt Machine Learning Forecasting:** Machine learning models, once trained, can generate forecasts much faster than traditional methods, improving efficiency.
+* **Utilize Fast Algorithms:** Implement faster algorithms like LightGBM, which are optimized for speed and scalability.
+* **Hierarchical Modeling:** Model at a higher hierarchical level and apply top-down reconciliation techniques to estimate forecasts for lower levels, balancing detail and computational demands.
+* **Leverage Big Data Technologies:** Employ big data techniques, such as using powerful cloud computing resources or big data clusters, to handle large datasets and complex models efficiently.
 
+Consequently, for the reasosns explained above, a forecasting model based on a machine learning approach and a LightGBM tree-based algorithm architecture has been developed in this project.
 
 
 
