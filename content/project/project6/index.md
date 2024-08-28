@@ -124,6 +124,7 @@ In this project, a bottom-up approach is implemented for hierarchical forecastin
 Intermittent demand, or sporadic demand, occurs when a product experiences multiple periods of zero sales. This issue can arise from two primary causes:
 * The product was in stock but no sales occurred.
 * The product was out of stock, preventing any sales.
+
 The source of these zero values can sometimes be unclear, leading to noise and making it difficult for the model to generate accurate predictions.
 
 {{< figure src="/project6/exhibit_1.png" title="Exhibit 1. Intermittent demand for item 120, which is sold in both stores." >}}
