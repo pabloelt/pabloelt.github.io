@@ -1,6 +1,6 @@
 ---
 title: Forecasting for a retail company 
-summary: A forecasting model is developed to reduce warehouse costs and stock-outs by using a scalable set of recursive machine learning algorithms. This model predicts demand for the next 8 days at a store-product level, based on the historical SQL data provided by the company.
+summary: A forecasting model is developed to reduce warehouse costs and stock-outs by using a scalable set of recursive machine learning algorithms. This model predicts demand for the next 8 days at a store-product level, based on the historical data provided by the company.
 tags:
   - Machine Learning
 date: 2024-08-02
