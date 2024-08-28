@@ -90,7 +90,7 @@ The most relevant entities from which we can obtain data are summarized below:
 * <text style='color: #BBDEFC; font-weight: normal;'>Number of sales:</text> The quantity of items sold each day for each store, as recorded in the dataset.
 * <text style='color: #BBDEFC; font-weight: normal;'>Sell price:</text> Price at which the items are sold.
 
-Before conducting any analysis or data transformation, it is crucial to set aside a portion of the dataset for validation purposes. This reserved data will be used to validate the models after they have been trained and tested on the remaining data. Since this is a forecasting project, the reserved data must be in chronological order to accurately test the model's performance. Therefore, the data from the last month, December 2015, has been extracted and will be used as a validation later.
+Before conducting any analysis or data transformation, it is crucial to set aside a portion of the dataset for validation purposes. This reserved data will be used to validate the models after they have been trained and tested on the remaining data. Since this is a forecasting project, the reserved data must be in chronological order (time series) to accurately test the model's performance. Therefore, the data from the last month, December 2015, has been extracted and will be used as a validation later.
 
 
 ### 4.3 Forecasting-related problems approach
@@ -98,10 +98,31 @@ Before conducting any analysis or data transformation, it is crucial to set asid
 
 <text style='color: #BBDEFC; font-weight: normal;'>Hierarchical Forecasting:</text>
 
+In forecasting models, it is common to encounter time series data that follows a hierarchical aggregation structure. In the retail market, for instance, sales data for a Stock Keeping Unit (SKU) at a store often rolls up into various category and subcategory hierarchies. In such cases, it's essential to ensure that the sales forecasts are consistent when aggregated to higher levels. To achieve this, a hierarchical forecasting approach is employed, which generates coherent forecasts (or reconciles incoherent ones). This approach allows individual time series to be forecasted independently while maintaining the relationships within the hierarchy.
+
 {{< figure src="/project6/hierarchical_structure.png" title="Hierarchical structure of the project." >}}
+
+The major problems when generating a forecasting model are the following:
+
+* There are different levels of hierarchies in the commercial catalog.
+* It may be interesting to predict sales at different levels.
+* Since the forecasts are probabilistic, predictions at different levels will not match exactly.
+
+A hierarchy forecasting approach offers different methods to solve these problems. The most common ones include:
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Bottom-up:</text> This method begins by forecasting at the most granular level of the hierarchy (e.g., items in level 2) and then aggregates these forecasts up to higher levels (e.g., stores in level 1 and finally food in level 0). It provides detailed and localized insights, capturing specific trends and patterns. However, the aggregation process may introduce inconsistencies or misalignment at higher levels if the individual forecasts are not well-calibrated.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Top-down:</text> This method begins with forecasting at the highest level of the hierarchy (e.g., food in level 0) and then distributes the forecast down to lower levels (e.g., stores in level 1 and finally items in level 0). The roll down is done by mantaining the percentage representation of each subcategory from the raw data. This system ensures that the overall forecast is consistent with the broader organizational targets and constraints. However, it might overlook specific local variations or nuances that are important at lower levels.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Hybrid:</text> This method combines elements of both bottom-up and top-down approaches. For example, it might start with a top-down forecast to set high-level targets and then refine the forecast using bottom-up methods to adjust for local details. It aims to balance the accuracy of detailed forecasts with the consistency of high-level targets, potentially improving both overall alignment and granularity. However, implementing a hybrid approach can be complex, as it requires coordination between different forecasting processes and levels of the hierarchy.
+
+In this project, a bottom-up approach is implemented for hierarchical forecasting, where the models are developed at the most granular level, specifically the store-product level.
+
 
 <text style='color: #BBDEFC; font-weight: normal;'>Intermittent demand:</text>
 
+
+{{< figure src="/project6/exhibit_1.png" title="Exhibit 1. Intermittent demand for item 120, which is sold in both stores." >}}
 
 <text style='color: #BBDEFC; font-weight: normal;'>Huge amount of Stock Keeping Units (SKUs):</text>
 
