@@ -131,15 +131,15 @@ The source of these zero values can sometimes be unclear, leading to noise and m
 
 To address intermittent demand, several solutions can be employed:
 
-* **Getting the inventory information:** It helps us to generate stock-out features that allow the algorithms to discriminate the cause of the zero values.
+* <text style='color: #BBDEFC; font-weight: normal;'>Getting the inventory information:</text> It helps us to generate stock-out features that allow the algorithms to discriminate the cause of the zero values.
 
-* **Model at a higher hierarchical level:** If the inventary information and/or stock-out marks are not available, another possible approach is to model at a higher hierarchical level, especially if the products are in very low demand.
+* <text style='color: #BBDEFC; font-weight: normal;'>Model at a higher hierarchical level:</text> If the inventary information and/or stock-out marks are not available, another possible approach is to model at a higher hierarchical level, especially if the products are in very low demand.
 
-* **Create synthetic features:** It is also possible to create synthetic features that try to identify whether or not stock-outs have occurred.
+* <text style='color: #BBDEFC; font-weight: normal;'>Create synthetic features:</text> It is also possible to create synthetic features that try to identify whether or not stock-outs have occurred.
 
-* **Machine learning forecasting:** Employing forecasting methods based on machine learning techniques, which are less sensitive to these problems than classical approaches.
+* <text style='color: #BBDEFC; font-weight: normal;'>Machine learning forecasting:</text> Employing forecasting methods based on machine learning techniques, which are less sensitive to these problems than classical approaches.
 
-* **Advanced methodologies:** Lastly, there is some more advanced methodologies such as croston method and specialized machine learning models can predict the probability of zero sales on certain days.
+* <text style='color: #BBDEFC; font-weight: normal;'>Advanced methodologies:</text> Lastly, there is some more advanced methodologies such as croston method and specialized machine learning models can predict the probability of zero sales on certain days.
 
 In this project, since inventory and stock-out information are not available, synthetic features will be created based on business rules to indicate potential stock-out scenarios.
 
@@ -149,10 +149,10 @@ In practical applications, particularly in sectors like retail and e-commerce, t
 
 In this context, several solutions can be employed:
 
-* **Adopt Machine Learning Forecasting:** Machine learning models, once trained, can generate forecasts much faster than traditional methods, improving efficiency.
-* **Utilize Fast Algorithms:** Implement faster algorithms like LightGBM, which are optimized for speed and scalability.
-* **Hierarchical Modeling:** Model at a higher hierarchical level and apply top-down reconciliation techniques to estimate forecasts for lower levels, balancing detail and computational demands.
-* **Leverage Big Data Technologies:** Employ big data techniques, such as using powerful cloud computing resources or big data clusters, to handle large datasets and complex models efficiently.
+* <text style='color: #BBDEFC; font-weight: normal;'>Adopt Machine Learning Forecasting:</text> Machine learning models, once trained, can generate forecasts much faster than traditional methods, improving efficiency.
+* <text style='color: #BBDEFC; font-weight: normal;'>Utilize Fast Algorithms:</text> Implement faster algorithms like LightGBM, which are optimized for speed and scalability.
+* <text style='color: #BBDEFC; font-weight: normal;'>Hierarchical Modeling:</text> Model at a higher hierarchical level and apply top-down reconciliation techniques to estimate forecasts for lower levels, balancing detail and computational demands.
+* <text style='color: #BBDEFC; font-weight: normal;'>Leverage Big Data Technologies:</text> Employ big data techniques, such as using powerful cloud computing resources or big data clusters, to handle large datasets and complex models efficiently.
 
 Consequently, for the reasosns explained above, a forecasting model based on a machine learning approach and a LightGBM tree-based algorithm architecture has been developed in this project.
 
