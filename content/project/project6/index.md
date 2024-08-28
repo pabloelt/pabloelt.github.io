@@ -90,6 +90,8 @@ The most relevant entities from which we can obtain data are summarized below:
 * <text style='color: #BBDEFC; font-weight: normal;'>Number of sales:</text> The quantity of items sold each day for each store, as recorded in the dataset.
 * <text style='color: #BBDEFC; font-weight: normal;'>Sell price:</text> Price at which the items are sold.
 
+Before conducting any analysis or data transformation, it is crucial to set aside a portion of the dataset for validation purposes. This reserved data will be used to validate the models after they have been trained and tested on the remaining data. Since this is a forecasting project, the reserved data must be in chronological order to accurately test the model's performance. Therefore, the data from the last month, December 2015, has been extracted and will be used as a validation later.
+
 
 ### 4.3 Forecasting-related problems approach
 {style="color: #BBDEFC; font-weight: normal"}
