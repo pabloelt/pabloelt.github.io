@@ -310,9 +310,15 @@ As a result of this analysis, a number of 73 variables have been selected. This 
 The objective at this stage of the project is not to produce the final models, but to design the modeling process—covering algorithm selection, hyperparameter optimization, and model evaluation—at the minimum analysis unit (product-store). This is done to ensure the process functions correctly and to identify and eliminate potential error sources before scaling the one-step forecasting process to all product-store combinations.
 
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Cross-validation strategy:</text>
 
+To prevent overfitting and evaluate model performance more robustly than with a simple train-test split, a cross-validation strategy has been implemented. However, cross-validation for time series data is not straightforward. Randomly assigning samples to the test or train sets is not feasible due to the temporal dependency between observations. The time sequence must be preserved.
 
+The appropriate method for cross-validating time series models is rolling cross-validation. This approach starts with a small subset of data for training, forecasts subsequent data points, and then assesses the accuracy of these forecasts. The forecasted data points are incorporated into the next training set, and the process continues with forecasting subsequent data points.
+
+{{< figure src="/project6/cross_validation.png" title="Cross-validation process for time-series data." >}}
+
+In the present project the cross-validation process has been implemented using <text style='color: #BBDEFC; font-weight: normal;'>sklearn.model_selection.TimeSeriesSplit</text> class of scikit-learn package with 3 splits and 8 days as maximum training size.
 
 <text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
 
