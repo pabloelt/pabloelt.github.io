@@ -262,25 +262,25 @@ Some of the actionable initiatives that the company can implement are the follow
 
 ---
 
-## 7. Variable transformation
+## 7. Variable creation and transformation
 {style="color: #BBDEFC"}
 
 At this stage of the project, various variable transformation techniques are applied to ensure they meet the requirements of the algorithms used in the modeling phase.
 
-As outlined during the exploratory data analysis, two distinct models will be developed:
+First, to enhance the model’s predictive capacity, new variables are introduced, including:
 
-1. A <text style='color: #BBDEFC; font-weight: normal;'>lead segmentation model</text> to assist sales and marketing teams in identifying different lead profiles within the company.
-2. A <text style='color: #BBDEFC; font-weight: normal;'>predictive lead scoring model</text> to pinpoint individuals most likely to convert into paying customers.
+* <text style='color: #BBDEFC; font-weight: normal;'>Intermittent demand variables:</text> These variables estimate stock-outs using a rolling feature. It assumes that after a certain number of days with zero sales, a stock-out has occurred. Variables are created to account for fixed stock-outs over 3, 7, and 15 days.
 
-In both models, categorical variables must be transformed into numerical ones. Since the categorical cariables in the dataset are all nominal, the one-hot encoding technique is employed for this purpose.
+* <text style='color: #BBDEFC; font-weight: normal;'>Lag variables:</text> Lag variables are generated for sales (over a range of up to 15 days), selling price (over a range of up to 7 days), and stock-outs (over a range of up to 1 day). The one-day lag for stock-outs is chosen due to the nature of the variable. Since predicting exact zero demand is challenging for the model, using longer lags would be less effective, making a 1-day lag sufficient for this approach. These lag variables are particullarly useful in forecasting predictive models.
 
-For the lead segmentation model, an unsupervised machine learning algorithm is recommended, specifically the KMeans algorithm. This clustering-based algorithm is highly sensitive to the scales of different features because it relies on distance calculations. Therefore, rescaling techniques must be applied to ensure that all features are on the same scale. Given the decision to apply one-hot encoding to categorical variables, the most appropriate rescaling technique in this case is min-max scaling, which will transform feature values to a scale between 0 and 1.
+* <text style='color: #BBDEFC; font-weight: normal;'>Rolling windows variables:</text> Rolling window variables for the minimum, average, and maximum values are created over a range of up to 15 days. These rolling variables have demonstrated strong predictive power in forecasting projects.
 
-For the predictive lead scoring model, a supervised machine learning algorithm is recommended. Among the various classification algorithms available, the most promising candidates are logistic regression, random forest, XGBoost, and LightGBM. We will analyze these options in more detail later.
+Note that all of these defined variables need to be shifted by one day in the functions, as the model cannot access information for the day it is predicting.
 
-Additionally, we need to decide whether to apply feature discretization or binarization. Considering that the project's primary focus is on prediction accuracy rather than interpretability, and given that one of the models is based on a segmentation algorithm, neither discretization nor binarization will be applied.
+On the other hand, **one-hot encoding** and **target encoding** techniques are used to transform categorical variables into numerical ones. Both methods are applied at this stage: one-hot encoding serves as the basic transformation, while target encoding incorporates sales information before the transformation. We will experiment with both and select the most predictive approach during model analysis.
 
-Lastly, it is important to note that class balancing processes are not necessary for this project, as the dataset contains a sufficiently significant representation of both classes (converted=1, converted=0).
+Regarding the numerical variables, no transformations are necessary since we are using LightGBM, a tree-based algorithm known for its effectiveness in forecasting projects with large datasets. As such, **normalization** and **rescaling** are not required for this project. Similarly, **discretization** or **binarization** of variables is not useful for this project, as our primary focus is on the model's forecasting accuracy rather than interpretability. **Class balancing** is also not applicable in this context.
+
 
 More details can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/04_Transformacion%20de%20datos.ipynb).
 

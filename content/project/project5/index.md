@@ -239,15 +239,15 @@ As outlined during the exploratory data analysis, two distinct models will be de
 1. A <text style='color: #BBDEFC; font-weight: normal;'>lead segmentation model</text> to assist sales and marketing teams in identifying different lead profiles within the company.
 2. A <text style='color: #BBDEFC; font-weight: normal;'>predictive lead scoring model</text> to pinpoint individuals most likely to convert into paying customers.
 
-In both models, categorical variables must be transformed into numerical ones. Since the categorical cariables in the dataset are all nominal, the one-hot encoding technique is employed for this purpose.
+In both models, categorical variables must be transformed into numerical ones. Since the categorical cariables in the dataset are all nominal, the **one-hot encoding** technique is employed for this purpose.
 
-For the lead segmentation model, an unsupervised machine learning algorithm is recommended, specifically the KMeans algorithm. This clustering-based algorithm is highly sensitive to the scales of different features because it relies on distance calculations. Therefore, rescaling techniques must be applied to ensure that all features are on the same scale. Given the decision to apply one-hot encoding to categorical variables, the most appropriate rescaling technique in this case is min-max scaling, which will transform feature values to a scale between 0 and 1.
+For the lead segmentation model, an unsupervised machine learning algorithm is recommended, specifically the KMeans algorithm. This clustering-based algorithm is highly sensitive to the scales of different features because it relies on distance calculations. Therefore, rescaling techniques must be applied to ensure that all features are on the same scale. Given the decision to apply one-hot encoding to categorical variables, the most appropriate rescaling technique in this case is **min-max scaling**, which will transform feature values to a scale between 0 and 1.
 
 For the predictive lead scoring model, a supervised machine learning algorithm is recommended. Among the various classification algorithms available, the most promising candidates are logistic regression, random forest, XGBoost, and LightGBM. We will analyze these options in more detail later.
 
-Additionally, we need to decide whether to apply feature discretization or binarization. Considering that the project's primary focus is on prediction accuracy rather than interpretability, and given that one of the models is based on a segmentation algorithm, neither discretization nor binarization will be applied.
+Additionally, we need to decide whether to apply feature **discretization** or **binarization**. Considering that the project's primary focus is on prediction accuracy rather than interpretability, and given that one of the models is based on a segmentation algorithm, neither discretization nor binarization will be applied.
 
-Lastly, it is important to note that class balancing processes are not necessary for this project, as the dataset contains a sufficiently significant representation of both classes (converted=1, converted=0).
+Lastly, it is important to note that **class balancing** processes are not necessary for this project, as the dataset contains a sufficiently significant representation of both classes (converted=1, converted=0).
 
 More details can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/04_Transformacion%20de%20datos.ipynb).
 
