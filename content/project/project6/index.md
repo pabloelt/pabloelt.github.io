@@ -302,7 +302,7 @@ A general variable selection process, considering all products in the dataset, i
 
 {{< figure src="/project6/exhibit_4.png" title="Exhibit 4. General variable selection analysis: A number of 73 variables has been selected through the Mutual Information method." >}}
 
-As a result of this analysis, 73 variables have been selected. This set of variables will be used when applying the Mutual Information method to each product-store combination.
+As a result of this analysis, a number of 73 variables have been selected. This number of variables will be used when applying the Mutual Information method to each product-store combination.
 
 ### 8.2 Segment profiling
 {style="color: #BBDEFC; font-weight: normal"}
