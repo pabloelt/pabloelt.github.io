@@ -286,36 +286,23 @@ More details can be found [here](https://github.com/pabloelt/lead-scoring-analys
 
 ---
 
-## 8. Lead segmentation model
+## 8. Forecasting model
 {style="color: #BBDEFC"}
 
-At this stage, after completing data quality checks, exploratory data analysis, and variable transformation, we are ready to develop the lead segmentation model. As mentioned earlier, an unsupervised machine learning model will be used for this purpose, specifically the KMeans algorithm, which has demonstrated strong performance in the clustering process. By implementing this model, we aim to uncover new insights that can enhance the company's sales and marketing strategies.
+At this stage, after completing data quality checks, exploratory data analysis, and variable transformation, we are ready to develop the forecasting model. As mentioned earlier, a supervised machine learning model will be used for this purpose, specifically the LightGBM algorithm, which has demonstrated strong performance in forecasting projects.
 
-More details about the lead segmentation model can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/05_Modelizacion%20para%20No%20Supervisado.ipynb).
+To develop the final forecasting model, we need to create a specific model for each product sold in each store. This requires building 20 independent models and reconciling the information using the bottom-up strategy mentioned earlier. The approach involves first testing a particular case to determine the optimal specifications. Then, in the final code, a loop will be implemented to apply the best parameters obtained for that specific product-store combination.
 
-### 8.1 Selecting the number of segments
+More details about this process can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/05_Modelizacion%20para%20No%20Supervisado.ipynb).
+
+### 8.1 General variable selection
 {style="color: #BBDEFC; font-weight: normal"}
 
-In order to identify the optimal number of clusters in the KMeans algorithm, we apply 4 different methods. The result are shown in the figure below.
+A general variable selection process, considering all products in the dataset, is conducted at this stage of the project. The most predictive features are identified by comparing the results of three different selection methods: Recursive Feature Elimination, Mutual Information, and Permutation Importance. Among these, the Mutual Information method has demonstrated the best performance, offering a smooth transition between variables. This is crucial because we do not want to eliminate too many variables, as this selection analysis will need to be performed for each specific product-store combination.
 
-{{< figure src="/project5/exhibit_3.png" title="Exhibit 3. Main methods for identifying the optimal number of clusters in KMeans algorithm." >}}
+{{< figure src="/project6/exhibit_4.png" title="Exhibit 4. General variable selection analysis: A number of 73 variables has been selected through the Mutual Information method." >}}
 
-* **Elbow Method:** This method typically identifies the optimal number of clusters by selecting the point where the curve bends or "elbows," indicating diminishing returns in reducing within-cluster variance. However, in this case, the chart shows only a linear decrease, offering little useful guidance for cluster selection.
-
-* **Silhouette Method:** This metric measures how similar each point is to its own cluster compared to other clusters. Values closer to 1 indicate better-defined clusters. Here, a segmentation of 4 to 5 clusters appears optimal based on this method.
-
-* **Calinski-Harabasz Index:** This index evaluates cluster separation, with higher values indicating better-defined clusters. According to this method, a segmentation into 3 or 4 clusters is likely the best.
-
-* **Davies-Bouldin Index:** This index assesses the average similarity ratio of each cluster to its most similar cluster, with lower values indicating better clustering. For this analysis, a segmentation of 4 clusters is preferred based on this index.
-
-It is important to note that an iterative process was applied before arriving at the final charts. The procedure involved the following steps:
-
-1. Initially, charts for the four methods mentioned above were generated. Based on this data, a fixed number of clusters was selected.
-2. The KMeans algorithm was then applied with this fixed segmentation, and the values for each variable were analyzed.
-3. Typically, initial segmentations revealed some inconsistencies, leading to the elimination of certain variables and testing different cluster configurations.
-4. Steps 1 through 3 were repeated several times until a final, consistent cluster segmentation was achieved.
-
-After completing this process, it was determined that a 4-cluster segmentation provided the most meaningful business insights.
+As a result of this analysis, 73 variables have been selected. This set of variables will be used when applying the Mutual Information method to each product-store combination.
 
 ### 8.2 Segment profiling
 {style="color: #BBDEFC; font-weight: normal"}
