@@ -304,62 +304,41 @@ A general variable selection process, considering all products in the dataset, i
 
 As a result of this analysis, a number of 73 variables have been selected. This number of variables will be used when applying the Mutual Information method to each product-store combination.
 
-### 8.2 Segment profiling
+### 8.2 Developing a one-step forecasting model for a specific product-store combination
 {style="color: #BBDEFC; font-weight: normal"}
 
-Once the optimal number of clusters and the most relevant segmentation variables have been selected, the model is trained and executed, assigning each lead to one of the four existing clusters.
+The objective at this stage of the project is not to produce the final models, but to design the modeling process—covering algorithm selection, hyperparameter optimization, and model evaluation—at the minimum analysis unit (product-store). This is done to ensure the process functions correctly and to identify and eliminate potential error sources before scaling the one-step forecasting process to all product-store combinations.
 
-To understand the business implications, average values for each variable used in the model has been calculated, allowing us to identify the most distinguishing characteristics of each segment. This is shown in the table below.
-
-{{< figure src="/project5/exhibit_4.png" title="Exhibit 4. Unsupervised ML modelling: Cluster results from KMeans algorithm." >}}
-
-### 8.3 Segment analysis
-{style="color: #BBDEFC; font-weight: normal"}
-
-After analysing the above results, the most differential characteristics for each segment are identified and presented.
 
 <text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
 
-* Origin: Lead Add Form.
-* Last activity: Non categorize.
-* Occupancy: Working Professionals.
-* Largest time spent on the website.
-* Great conversion rate. Nine out of ten leads in this segment end up buying the company's product.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 1: Very low-quality Leads</text>
 
-* Origin: Landing Page Submission.
-* Last activity: Email opened.
-* Occupancy: Students and unemployed.
-* Very low time spent on the website.
-* Worst conversion rate group.
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 2: Medium-quality Leads</text>
 
-* Origin: Landing Page Submission.
-* Last activity: SMS sent.
-* Occupancy: Unemployed.
-* They spend some time on the website.
-* Moderate conversion rate.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 3: Low-quality Leads</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
 
-* Origin: API.
-* Last activity: Chat conversation.
-* Occupancy: Unemployed.
-* Very low time spent on the website.
-* Low conversion rate.
 
-### 8.4 Segmentation insights
+
+
+<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
+
+
+
+### 8.3 Generalizing the one-step forecasting model creation process
 {style="color: #BBDEFC; font-weight: normal"}
 
-1. The company's most valuable leads are working professionals who arrive through the lead form submission.
 
-2. While SMS campaigns are generally effective, they should be targeted more precisely:
-  * Focus on working professionals from API sources who spend above-average time on the website.
-  * Avoid sending SMS to leads from Landing Page Submissions who spend minimal time on the site, as they represent the lowest quality leads and divert resources from more promising campaigns.
 
-3. The live chat feature primarily attracts low-quality leads. The company should consider reallocating resources from this service and, for leads from API sources, prioritize email marketing and SMS campaigns instead.
+
+
+
+### 8.4 Recursive multi-Step Time Series Forecasting
+{style="color: #BBDEFC; font-weight: normal"}
+
+
 
 
 ---
