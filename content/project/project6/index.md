@@ -309,6 +309,8 @@ As a result of this analysis, a number of 73 variables have been selected. This 
 
 The objective at this stage of the project is not to produce the final models, but to design the modeling process—covering algorithm selection, hyperparameter optimization, and model evaluation—at the minimum analysis unit (product-store). This is done to ensure the process functions correctly and to identify and eliminate potential error sources before scaling the one-step forecasting process to all product-store combinations.
 
+For this case, the product with code 586 sold in the store CA_3 is selected for this specific analysis.
+
 
 <text style='color: #BBDEFC; font-weight: normal;'>Cross-validation strategy:</text>
 
@@ -320,17 +322,30 @@ The appropriate method for cross-validating time series models is rolling cross-
 
 In the present project the cross-validation process has been implemented using <text style='color: #BBDEFC; font-weight: normal;'>sklearn.model_selection.TimeSeriesSplit</text> class of scikit-learn package with 3 splits and 8 days as maximum training size.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Selecting algorithm and hyperparameters:</text>
 
+As outlined in the general design phase of the project, the LightGBM algorithm is chosen for implementing the various models due to its strong balance between predictive accuracy and computational efficiency.
 
+Different combinations of hyperparameters have been tested to find those with the best performance. Evaluation scores obtained in the tested parametrizations remains stable during the cross-validation process, which is a good indicator of the stability of the model predictions.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
+In the particular case of product 586 sold in store CA_3, the best parametrization obtained for the LightGBM algorithm is:
 
+* learning_rate = 0.1
+* max_iter = 100
+* max_leaf_nodes = 31
+* max_depth = None
+* min_samples_leaf = 20
+* l2_regularization = 0
+* max_bins = 255
+* scoring = 'loss'
 
+<text style='color: #BBDEFC; font-weight: normal;'>Checking:</text>
 
+The objective here is not to evaluate the model's quality, as the predictions were made using the training data, but rather to ensure that the process functions correctly. We aim to confirm that the predictions are within the correct order of magnitude and that no other anomalies are detected before moving forward with the project.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Segment 0: Super high-quality Leads</text>
+{{< figure src="/project6/exhibit_5.png" title="Exhibit 5: Checking of the predicted data from the forecasting model for product 'FOODS_3_586' sold in store 'CA_3' over the last three months." >}}
 
+No issues have been identified, so the project will proceed as planned.
 
 
 ### 8.3 Generalizing the one-step forecasting model creation process
