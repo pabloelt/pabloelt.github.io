@@ -391,14 +391,19 @@ For this project, a recursive multi-step forecasting approach has been implement
 ## 9. Evaluation of the forecasting model
 {style="color: #BBDEFC"}
 
-Finally, the model has been tested on a batch of 2084 leads never seen before by the model (the validation dataset that we reserved at the beginning). By applying the developed lead scoring predictive model, the company has been able to:
+Once the general production code is developed, the forecasting model's performance can be evaluated. To do this, we first need to prepare the data for the model. In real-life operation, the model requires only the last 15 days of data to function, as determined by the lag variables defined earlier in the modeling process. To facilitate this, we have prepared a file called 'DatosParaProduccion.csv,' which is part of the validation data (December 2015) reserved at the beginning of this project specifically for the evaluation of the final forecasting model.
 
-1. Increase its conversion rate from 41.70% to 45.77%.
-2. Reduce by 9.31% the workload to be managed by the sales department.
-3. Reduce by 28.81% the loss in investments.
-4. Increase its sales profit by 4.75%.
+In a real-life scenario, data will typically be sourced from a SQL database. The process should follow these steps:
 
-{{< figure src="/project5/kpi_results.png" title="KPIs improvements achieved after applying the predictive lead scoring model." >}}
+* A SQL script should be prepared to extract the company’s last 15 days of data, with additional commands to structure the resulting CSV file. The output file must match the structure of 'DatosParaProduccion.csv' to ensure the forecasting model operates correctly.
+
+* The CSV file is then generated and passed to the model to obtain predictions for the next 8 days.
+
+* This process is repeated automatically each day to provide new predictive data, enabling informed business decisions that enhance the company's profitability.
+
+Therefore, the model has been evaluated using the prepared data in 'DatosParaProduccion.csv,' and the predictions for each product-store combination are shown in the figure below. While some models perform better than others, the overall performance of the recursive forecasting approach is satisfactory. The final mean absolute error, calculated by comparing actual and predicted sales across all product-store combinations, is approximately 4.73.
+
+{{< figure src="/project6/exhibit_7.png" title="Exhibit 7. Comparison between the predicted and real sales for each product for the last 8 days of December 2015." >}}
 
 The evaluation results can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/05_Resultados/Resultados%20del%20proyecto.ipynb).
 
