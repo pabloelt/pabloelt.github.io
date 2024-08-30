@@ -1,5 +1,5 @@
 ---
-title: Forecasting for a Retail Company 
+title: Sales Forecasting for a Retail Company 
 summary: A forecasting model is developed to reduce warehouse costs and stock-outs by using a scalable set of recursive machine learning algorithms. This model predicts demand for the next 8 days at a store-product level, based on the historical data provided by the company.
 tags:
   - Machine Learning
