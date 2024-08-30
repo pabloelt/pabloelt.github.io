@@ -351,10 +351,16 @@ No issues have been identified, so the project will proceed as planned.
 ### 8.3 Generalizing the one-step forecasting model creation process
 {style="color: #BBDEFC; font-weight: normal"}
 
+Once the forecasting model has been created and tested for an individual product-store combination, we can develop the necessary code to scale this process across all product-store combinations (massive forecasting evaluation). At this stage, the same 73 variables selected for product 586 are still being used. These variables will be updated to the specific ones for each combination in the final production code. The model algorithms, however, are now tailored to each specific combination.
 
 
+<text style='color: #BBDEFC; font-weight: normal;'>Checking:</text>
 
+Again, it is important to note that the results obtained here are solely for verifying that the process functions correctly, not for evaluating the quality of the models, as predictions are made using the training data rather than the validation dataset.
 
+{{< figure src="/project6/exhibit_6.png" title="Exhibit 6: Checking of the predicted data from the forecasting model for all product-store combinations over the last three months." >}}
+
+No issues have been identified and the project can continue.
 
 ### 8.4 Recursive multi-Step Time Series Forecasting
 {style="color: #BBDEFC; font-weight: normal"}
