@@ -362,7 +362,7 @@ Again, it is important to note that the results obtained here are solely for ver
 
 No issues have been identified and the project can continue.
 
-### 8.4 Multi-Step Time Series Forecasting
+### 8.4 Multi-Step Forecasting
 {style="color: #BBDEFC; font-weight: normal"}
 
 Once the general code for production is developed, it is essential to decide on the type of multi-step forecasting to implement. There are two main approaches to this: a direct forecasting and a recursive forecasting.
@@ -385,70 +385,10 @@ This approach is simpler as it requires only one model, reducing both training t
 
 For this project, a recursive multi-step forecasting approach has been implemented to minimize development and maintenance costs for the models."
 
----
-
-## 9. Predictive lead scoring model
-{style="color: #BBDEFC"}
-
-A predictive lead scoring model is developed using a supervised machine learning approach. At this stage of the project, several algorithms are tested, including logistic regression, random forest, XGBoost, and LightGBM. Each algorithm is analyzed with an extensive range of hyperparameters to ensure optimal predictive performance. The implementation of this model will enhance customer identification, thereby increasing the conversion rate (CR) and reducing marketing costs.
-
-More details for the predictive lead scoring model can be consulted [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/07_Modelizacion%20para%20Clasificacion.ipynb).
-
-
-### 9.1 Variable selection for predictive model
-{style="color: #BBDEFC; font-weight: normal"}
-
-Several variable selection methods were tested to identify the most useful features for the predictive model. The primary methods considered were mutual selection, recursive feature elimination, and permutation importance. Among these, permutation importance proved to be the most accurate for this case and aligned well with the variable selection used in the lead segmentation model. The results are displayed in the image below. 
-
-{{< figure src="/project5/exhibit_5.png" title="Exhibit 5. Feature importance: Permutation importance method." >}}
-
-Based on the permutation importance method, the 20 most relevant variables were selected for the predictive model. Additionally, the correlations between these variables were examined, and highly correlated ones were removed. While strong correlations do not typically hinder tree-based algorithms, they can negatively impact the performance of other algorithms, such as logistic regression.
-
-More details [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/06_Preselecci%C3%B3n%20de%20variables.ipynb).
-
-### 9.2 Model selection
-{style="color: #BBDEFC; font-weight: normal"}
-
-Different combinations of hyperparameters are tested for each of the algorithms and the ones with the best AUC (Area under Curve) scoring are collected. On the other hand, all of the combinations are tested with the **cross-validation** method in order to ensure a good stability in the models. The performance of these algorithms is tested with three methods, which are cumulative gains curve,  lift curve, and ROC curve.
-
-Roughly speaking, the cumulative gain curve measures the effectiveness of a classification model by showing the proportion of true positives, while the lift curve shows the ratio of the model's performance to random performance, which helps to understand how much better the model is compared to random guessing. The ROC curve is used to evaluate the trade-off between the true positive rate (sensitivity) and the false positive rate at various threshold settings.
-
-The cumulative gains and lift curves focus on how well the model identifies positives within a sorted population, while the ROC curve evaluates the overall discrimination capability of the model across all thresholds. The results are shown in the figure below.
-
-{{< figure src="/project5/exhibit_6.png" title="Exhibit 6. Performance comparison of the selected algorithms for several metrics." >}}
-
-The XGBoost algorithm presents the best performance in the three charts, however, the results are pretty similar for all of them. Therefore, it is decided to implement the **logistic regression algorithm** for the project due to the following reasons:
-
-1. Its predictive ability closely matches that of the random forest, XGBoost, and LightGBM models.
-2. It offers greater interpretability compared to the more complex tre-based algorithms.
-3. Being a simpler model, it is easier to maintain and quicker to train, retrain, and execute.
-4. Its mathematical simplicity allows for easy migration to the platforms and software used by the company.
-
-Thus, the logistic regression algorithm is used with the following hyperparametrization:
-* C = 1
-* n_jobs = -1
-* penalty = 'l1'
-* solver = 'saga'
-
-### 9.3 Optimal discrimination threshold for maximizing ROI
-{style="color: #BBDEFC; font-weight: normal"}
-
-Once the predictive model is trained and tested, the next step is to specify the optimal threshold that determines whether a lead is classified as a potential customer (1) or not (0) based on the model's score. To achieve this, a method focused on maximizing ROI is implemented. This method determines the optimal threshold using confusion and impact matrices, which are defined as follows.
-
-{{< figure src="/project5/confusion_matrix.jpg" title="Confusion and Impact matrices." >}}
-
-* **Confusion matrix:** This matrix is used to describe the performance of a classification model. It shows the actual versus predicted classifications and helps to identify how often the model is correctly and incorrectly predicting each class. The output “TN” stands for True Negative which shows the number of negative examples classified accurately. Similarly, “TP” stands for True Positive which indicates the number of positive examples classified accurately. The term “FP” shows False Positive value, i.e., the number of actual negative examples classified as positive; and “FN” means a False Negative value which is the number of actual positive examples classified as negative.
-* **Impact matrix:** This matrix is used to quantify the impact or cost associated with the different types of errors made by a model, such as false positives and false negatives. Unlike the confusion matrix, which counts occurrences, the impact matrix assigns a numerical value to the consequences of these outcomes. The output “ITN” stands for Impact of True Negative which shows the economic impact of not to carry out any commercial actions on those leads that were not going to buy the product. Similarly, “ITP” stands for Impact of True Positive which indicates the net profit obtained from commercial actions on customers who end up buying the course. The term “IFP” shows Impact of False Positive value, i.e., the opportunity cost of not having carried out commercial actions on leads who would have become customers. Finally, “IFN” means a Impact of False Negative value which represent the economic cost of commercial actions carried out on a lead that finally does not buy the company’s product.
-
-Therefore, by calculating the confusion matrix and multiplying it by the economic impact matrix for each possible value of the discrimination threshold, it becomes possible to determine which threshold maximizes the resulting function and, consequently, the company’s ROI. The results are shown in the image below.
-
-{{< figure src="/project5/exhibit_7.png" title="Exhibit 7. Expected value for each discrimination treshold. Optimal value is found at 0.05." >}}
-
-In this case, the discrimination threshold value that provides the higher return on investment for the company is 0.05.
 
 ---
 
-## 10. Evaluation of the predictive lead scoring model
+## 9. Evaluation of the forecasting model
 {style="color: #BBDEFC"}
 
 Finally, the model has been tested on a batch of 2084 leads never seen before by the model (the validation dataset that we reserved at the beginning). By applying the developed lead scoring predictive model, the company has been able to:
@@ -464,10 +404,10 @@ The evaluation results can be found [here](https://github.com/pabloelt/lead-scor
 
 ---
 
-## 11. Retraining and Production scripts
+## 10. Retraining and Production scripts
 {style="color: #BBDEFC"}
 
-After successfully developing, training, and evaluating both segmentation and predictive models, the final stage of the project involves organizing and optimizing the entire process. This is accomplished by compiling all necessary processes, functions, and code into two streamlined Python scripts:
+After successfully developing, training, and evaluating the forecasting model, the final stage of the project involves organizing and optimizing the entire process. This is accomplished by compiling all necessary processes, functions, and code into two streamlined Python scripts:
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Retraining Script:</text> This script is designed to automatically retrain all developed models with new data as needed, ensuring that the models remain accurate and up-to-date.
 
