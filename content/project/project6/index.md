@@ -302,6 +302,8 @@ A general variable selection process, considering all products in the dataset, i
 
 As a result of this analysis, a number of 73 variables have been selected. This number of variables will be used when applying the Mutual Information method to each product-store combination.
 
+More information is provided [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/05_Preselecci%C3%B3n%20de%20variables.ipynb).
+
 ### 8.2 Developing a one-step forecasting model for a specific product-store combination
 {style="color: #BBDEFC; font-weight: normal"}
 
