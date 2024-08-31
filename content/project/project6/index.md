@@ -3,10 +3,10 @@ title: Sales Forecasting for a Retail Company
 summary: A forecasting model is developed to reduce warehouse costs and stock-outs by using a scalable set of recursive machine learning algorithms. This model predicts demand for the next 8 days at a store-product level, based on the historical company's data.
 tags:
   - Machine Learning
-date: 2024-08-02
+date: 2024-08-30
 #external_link: http://github.com
 ---
-*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation) is currently in Spanish. It will be soon updated to English.*
+*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/sales-forcasting-for-a-retail-company) is currently in Spanish. It will be soon updated to English.*
 {style="color: #aaaaaa"}
 
 {{< toc >}}
@@ -19,7 +19,7 @@ The client for this project is a large retailer based in the United States. The 
 Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
-* Source code can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation).
+* Source code can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company).
 
 ---
 
@@ -157,8 +157,6 @@ In this context, several solutions can be employed:
 Consequently, for the reasosns explained above, a forecasting model based on a machine learning approach and a LightGBM tree-based algorithm architecture has been developed in this project.
 
 
-
-
 ---
 
 ## 5. Data Quality
@@ -174,7 +172,7 @@ In this stage of the project, general data quality correction processes have bee
 * Discretization of variables.
 * Creation of new variables.
 
-The entire process can be consulted in detail [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/02_Calidad%20de%20Datos.ipynb).
+The entire process can be consulted in detail [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/02_Calidad%20de%20Datos.ipynb).
 
 ---
 
@@ -216,7 +214,7 @@ These are some of the results that we have obtained by performing the explorator
 
 {{< figure src="/project6/exhibit_3.png" title="Exhibit 3. Exploratory Data Analysis: Seasonality of the sales for each of the products." >}}
 
- A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/03_EDA.ipynb).
+ A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/03_EDA.ipynb).
 
 ### 6.3 Insights obtained through the EDA
 {style="color: #BBDEFC; font-weight: normal"}
@@ -282,7 +280,7 @@ On the other hand, **one-hot encoding** and **target encoding** techniques are u
 Regarding the numerical variables, no transformations are necessary since we are using LightGBM, a tree-based algorithm known for its effectiveness in forecasting projects with large datasets. As such, **normalization** and **rescaling** are not required for this project. Similarly, **discretization** or **binarization** of variables is not useful for this project, as our primary focus is on the model's forecasting accuracy rather than interpretability. **Class balancing** is also not applicable in this context.
 
 
-More details can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/04_Transformacion%20de%20datos.ipynb).
+More details can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/04_Transformacion%20de%20datos.ipynb).
 
 ---
 
@@ -293,7 +291,7 @@ At this stage, after completing data quality checks, exploratory data analysis, 
 
 To develop the final forecasting model, we need to create a specific model for each product sold in each store. This requires building 20 independent models and reconciling the information using the bottom-up strategy mentioned earlier. The approach involves first testing a particular case to determine the optimal specifications. Then, in the final code, a loop will be implemented to apply the best parameters obtained for that specific product-store combination.
 
-More details about this process can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/03_Notebooks/02_Desarrollo/05_Modelizacion%20para%20No%20Supervisado.ipynb).
+More details about this process can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/06_Modelizacion%20para%20Regresion.ipynb).
 
 ### 8.1 General variable selection
 {style="color: #BBDEFC; font-weight: normal"}
@@ -405,7 +403,7 @@ Therefore, the model has been evaluated using the prepared data in 'DatosParaPro
 
 {{< figure src="/project6/exhibit_7.png" title="Exhibit 7. Comparison between the predicted and real sales for each product for the last 8 days of December 2015." >}}
 
-The evaluation results can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/blob/main/05_Resultados/Resultados%20del%20proyecto.ipynb).
+The evaluation results can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/07_Preparacion%20del%20codigo%20de%20produccion.ipynb).
 
 ---
 
