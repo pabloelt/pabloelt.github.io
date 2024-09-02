@@ -14,7 +14,6 @@ date: 2024-08-30
 {{< toc >}}
 
 <ul class="cta-group">
-  justify-content: center
   <li>
     <a href="https://03-notebooks03-systemapp-risk-scoring-deploymentapp-ri-cv1jfo.streamlitapp.com/" target="_blank" rel="noopener" class="btn btn-primary px-3 py-3">Launch Credit Risk Analyzer Web App!</a>
   </li>
