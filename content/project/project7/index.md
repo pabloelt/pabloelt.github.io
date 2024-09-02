@@ -77,7 +77,7 @@ In the production phase, the model is prepared for deployment, ensuring that the
 ### 4.2 Project scope
 {style="color: #BBDEFC; font-weight: normal"}
 
-To estimate the Expected Loss ({{< math >}}$(EL)${{< /math >}}) associated with a loan application, three key risk parameters are considered:
+To estimate the Expected Loss {{< math >}}$(EL)${{< /math >}} associated with a loan application, three key risk parameters are considered:
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Probability of Default {{< math >}}$(PD)${{< /math >}}:</text> This measures the likelihood that a borrower will default, based on an internally assigned credit rating.
 
