@@ -5,6 +5,9 @@ tags:
   - Machine Learning
 date: 2024-08-30
 #external_link: http://github.com
+
+<a class="btn btn-outline-primary btn-page-header" href="https://03-notebooks03-systemapp-risk-scoring-deploymentapp-ri-cv1jfo.streamlitapp.com/" target="_blank" rel="noopener">
+    <i class="fas fa-paper-plane mr-1"></i>Launch Web App</a>
 ---
 
 *Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/sales-forcasting-for-a-retail-company) is currently in Spanish. It will be soon updated to English.*
