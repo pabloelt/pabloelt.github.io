@@ -9,13 +9,13 @@ date: 2024-08-30
 *Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/sales-forcasting-for-a-retail-company) is currently in Spanish. It will be soon updated to English.*
 {style="color: #aaaaaa"}
 
- block: buttons
+- block: buttons
     content:
       buttons:
         - title: Read my latest paper on LLMs
           icon: brands/arxiv
           url: https://arxiv.org/abs/2304.01852
-          
+
 {{< toc >}}
 
 
