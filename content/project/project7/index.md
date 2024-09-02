@@ -237,18 +237,22 @@ More details can be found [here](https://github.com/pabloelt/sales-forcasting-fo
 ## 8. Risk-scoring model
 {style="color: #BBDEFC"}
 
-
-
-
-
-
-The risk-scoring model is compound of three different and independent models: a first one for the Probability of Default, a second one for the Exposure at Default, and a third one for the Loss Given Default.
+At this stage, after completing data quality checks, exploratory data analysis, and variable transformation, we are ready to develop the risk-scoring model. As mentioned earlier, this model is compound of three different and independent algorithms: a first one for the Probability of Default, a second one for the Exposure at Default, and a third one for the Loss Given Default.
 
 {{< figure src="/project7/el_models.png" title="Expected loss predicted with a combination of three different machine learning algorithms for PD, EAD, and LGD." >}}
 
 It is important to note that the model for estimating the Probability of Default will utilize a logistic regression algorithm. ‘Black box algorithms’ are often unsuitable for regulated financial services due to their lack of interpretability and auditability, which can pose macro-level risks and, in some cases, conflict with legal requirements for explainability. To address this, a highly explainable AI model like logistic regression will be used, as it provides clear and understandable insights into its decision-making process.
 
 For estimating Exposure at Default and Loss Given Default, various algorithms and hyperparameter combinations were evaluated, including Ridge, Lasso, and LightGBM. Ultimately, the LightGBM algorithm was selected for both cases due to its superior performance.
+
+
+
+
+
+
+
+
+
 
 
 
