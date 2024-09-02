@@ -126,11 +126,6 @@ ul.network-icon .big-icon {
 .powered-by {
   display: none;
 }
-// Arreglando tamaño de las imagenes (no principales) insertadas
-//.w-100 {
-  //max-width: 50%;
-  //width: 100%
-//}
 // Arreglando texto no justificado
 .article-container {
   text-align: justify;
@@ -139,37 +134,21 @@ ul.network-icon .big-icon {
 .wg-about .article-style {
   text-align: justify;
 }
-// Arreglando justificado dentro de tag (No funciona)
-//.wg-tag {
-//  .wg-discovery-projects .article-style {
-//    text-align: justify;
-//  }
-//}
 // Arreglando margenes en projects
 .article-container {
   max-width: 1200px;
 }
-// Arreglando tamaño de foto featured -> No llegó a funcionar
-//.article-header.article-container.featured-image-wrapper.mt-4.mb-4 .element.style {
-//  max-width: 1200px;
-//  max-height: 800px;
-//}
-
 // Arreglando definitivamente el tamaño de las imagenes (no principales) insertadas
 .content-card img {
   max-width: 100%;
 }
-
-// Arreglando texto no justificado en cartas de projects
-//.card-text {
-//  text-align: justify;
-//}
 // Arreglando texto no justificado en cartas de projects
 .card-text {
   .article-style {
     text-align: justify;
   }
 }
+// Centrando botones en todos los proyectos
 .cta-group{
   justify-content: center
 }

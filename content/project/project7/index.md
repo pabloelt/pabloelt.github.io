@@ -1,6 +1,6 @@
 ---
-title: Risk Scoring for Banking Sector 
-summary: A forecasting model is developed to reduce warehouse costs and stock-outs by using a scalable set of recursive machine learning algorithms. This model predicts demand for the next 8 days at a store-product level, based on the historical company's data.
+title: Risk Scoring for Company in the Banking Sector 
+summary: A risk scoring model is developed using machine learning algorithms to assess the profitability of each new transaction or customer. The model predicts the expected loss by analyzing the probability of default, loss given default, and exposure at default.
 tags:
   - Machine Learning
 date: 2024-08-30
