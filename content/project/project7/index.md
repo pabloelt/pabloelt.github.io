@@ -1,20 +1,29 @@
 ---
-title: Sales Forecasting for a Retail Company 
+title: Risk Scoring for Banking Sector 
 summary: A forecasting model is developed to reduce warehouse costs and stock-outs by using a scalable set of recursive machine learning algorithms. This model predicts demand for the next 8 days at a store-product level, based on the historical company's data.
 tags:
   - Machine Learning
 date: 2024-08-30
 #external_link: http://github.com
+
+sections:
+  - block: cta-button-list
+    content:
+      # Need a custom icon?
+      # Add an SVG image to the `assets/media/icons/` folder and reference it in the `icon` field below
+      buttons:
+        - text: Read my latest paper on LLMs
+          icon: academicons/arxiv
+          url: https://arxiv.org/abs/2304.01852
+        - text: Watch my new YouTube video to achieve 20x productivity
+          icon: brands/youtube
+          url: https://youtube.com
+        - text: Connect with me on LinkedIn
+          icon: brands/linkedin
+          url: https://linkedin.com
 ---
 *Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/sales-forcasting-for-a-retail-company) is currently in Spanish. It will be soon updated to English.*
 {style="color: #aaaaaa"}
-
-- block: buttons
-    content:
-      buttons:
-        - title: Read my latest paper on LLMs
-          icon: brands/arxiv
-          url: https://arxiv.org/abs/2304.01852
 
 {{< toc >}}
 
