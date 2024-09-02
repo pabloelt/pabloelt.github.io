@@ -1,6 +1,6 @@
 ---
 title: Risk Scoring for Company in the Banking Sector 
-summary: A risk scoring model is developed using machine learning algorithms to assess the profitability of each new transaction or customer. The model predicts the expected loss by analyzing the probability of default, loss given default, and exposure at default.
+summary: A risk-scoring model is developed using machine learning algorithms to assess the profitability of each new transaction or customer. The model predicts the expected loss by analyzing the probability of default, loss given default, and exposure at default.
 tags:
   - Machine Learning
 date: 2024-08-30
@@ -22,48 +22,39 @@ date: 2024-08-30
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-The client for this project is a large retailer based in the United States. The company has identified issues in its warehouse operations, leading to losses and stock-outs for several products. The objective is to implement a forecasting model using artificial intelligence algorithms to predict the appropriate stock levels for at least the next 8 days. This initiative aims to enhance operational efficiency and increase the company's profitability.
+The client for this project is a neo bank company specialized in offering loans at a competitive he client for this project is a neobank specializing in offering competitively priced loans. However, the company is concerned about the quality of borrowers accessing their products. They require a robust system to assist in making informed loan approval decisions based on applicants' profiles.
+
+The goal is to implement a risk-scoring model using artificial intelligence algorithms to identify 'risky' applicants and estimate their associated expected losses. This information will be used to manage the bank's economic capital, portfolio, and risk assessment effectively.
 
 Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
 * Source code can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company).
+* You can also test the credit risk analyzer web application [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company).
 
 ---
 
 ## 2. Objectives
 {style="color: #BBDEFC"}
 
-The primary objective is to develop a forecasting model utilizing a set of machine learning algorithms to predict sales for the next 8 days at the store-product level. These algorithms are trained using the extensive three-year history available in the retail company's SQL database, employing massive modeling techniques to ensure accuracy and reliability.
-
-{{< figure src="/project6/system.png" title="Three-steps approach employed to developed the forecasting model." >}}
+The main objective is to develop a risk-scoring model using machine learning algorithms to predict potentially risky borrowers. This model will estimate the expected financial loss for each new customer-loan pairing, based on the company's historical data. By leveraging this advanced analytical tool, the company's performance will be significantly enhanced.
 
 ---
 
 ## 3. Understanding of the problem
 {style="color: #BBDEFC"}
 
-Forecasting is one of the most widely used techniques in the data science field due to its significant impact on a company's balance sheet and its potential to greatly enhance overall performance. Some of the mayor beneficts are summarized below:
+Credit risk is associated with the possibility that a borrower will fail to meet their obligations according to the agreed terms, such as repaying a loan. This risk is a critical concern for banks because it can lead to financial losses if borrowers default on their loans. Banks manage credit risk through various means, including:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Inventory optimization:</text> Forecasting helps predict demand more accurately, reducing overstock and stock-outs. This leads to better inventory management, minimizing costs and improving cash flow.
+* <text style='color: #BBDEFC; font-weight: normal;'>Credit Assessment:</text> Evaluating the borrower's creditworthiness before approving a loan.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Improved customer satisfaction:</text> By anticipating demand, the company can ensure products are available when customers want them, enhancing the shopping experience and increasing customer loyalty.
+* <text style='color: #BBDEFC; font-weight: normal;'>Diversification:</text> Spreading out lending across different sectors and borrowers to reduce the impact of any single default.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Better decision-making:</text> Forecasting provides data-driven insights, enabling more informed decisions about pricing, promotions, and product launches, ultimately improving profitability.
+* <text style='color: #BBDEFC; font-weight: normal;'>Collateral:</text> Requiring assets to secure loans, which can be seized if the borrower defaults.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Resource allocation:</text> Forecasting helps in planning staffing, logistics, and marketing efforts, ensuring resources are allocated effectively to meet anticipated demand.
+* <text style='color: #BBDEFC; font-weight: normal;'>Monitoring:</text> Continuously assessing borrowers' financial health and adjusting terms as needed.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Competitive advantage:</text> Companies with better forecasting capabilities can respond more quickly to market changes, offering them an edge over competitors.
-
-In this context, traditional sales forecasting methods have been reliable for decades. However, with the advent of machine learning algorithms, it is now possible to implement powerful forecasting models using a data science approach. These modern techniques enable the prediction of product or service demand over a specified future period by leveraging historical company data. Compared to traditional forecasting methods, a machine learning approach offers several advantages:
-
-* Accelerated data processing speed
-* Automated forecast updates based on recent data
-* Enhanced data analysis capabilities
-* Identification of hidden patterns in data
-* Greater adaptability to changes
-
-For this project, an innovative forecasting model has been developed, utilizing massive and scalable machine learning techniques.
+Effective credit risk management is crucial for banks to maintain financial stability and absorb potential losses without compromising their overall health. In this regard, machine learning algorithms have proven particularly valuable. They can be employed to develop sophisticated models that predict financial loss per borrower using data science techniques and historical company data. These advanced models enhance the accuracy of risk assessments and support better decision-making in credit management.
 
 ---
 
@@ -79,91 +70,41 @@ The project has been designed with a multi-step methodology, which is summarized
 
 The process for this project consists of two main stages: the development phase and the production phase.
 
-The development phase begins with the set up and data importation, followed by a thorough data quality review. Next, an exploratory data analysis is conducted to uncover key insights. The variable transformation step involves selecting the most relevant variables that impact the problem and applying the necessary transformations. Following this, the forecasting model is implemented based on machine learning algorithms. During the evaluation process, all metrics are thoroughly tested.
+The development phase begins with the set up and data importation, followed by a thorough data quality review. Next, an exploratory data analysis is conducted to uncover key insights. The variable transformation step involves selecting the most relevant variables that impact the problem and applying the necessary transformations. Following this, the risk-scoring model is implemented based on machine learning algorithms. During the evaluation process, all metrics are thoroughly tested.
 
 In the production phase, the model is prepared for deployment, ensuring that the code is optimized for production. Additionally, a retraining script is created during this stage to facilitate future updates.
 
-### 4.2 Project scope, entities, and data
+### 4.2 Project scope
 {style="color: #BBDEFC; font-weight: normal"}
 
-This project is developed using data from a three-year SQL database of a large American retailer. However, due to the computational constraints of the available equipment, the project's scope is limited to forecasting sales for ten products that belong to a sigle category (food) in two different stores. Nevertheless, the system is fully scalable and can be extended to predict sales for additional products, categories, and stores by simply adjusting the relevant parameters.
+To estimate the Expected Loss ({{< math >}}$(EL)${{< /math >}) associated with a loan application, three key risk parameters are considered:
 
-{{< figure src="/project6/scheme.png" title="Basis scheme of the retail company's performance." >}}
+* <text style='color: #BBDEFC; font-weight: normal;'>Probability of Default {{< math >}}$(PD)${{< /math >}:</text> This measures the likelihood that a borrower will default, based on an internally assigned credit rating.
 
-The most relevant entities from which we can obtain data are summarized below:
+* <text style='color: #BBDEFC; font-weight: normal;'>Exposure at Default {{< math >}}$(EAD)${{< /math >}:</text> This indicates the amount of outstanding debt at the time of default.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Store id:</text> It shows the identification number associated with the store at which the product are sold.
-* <text style='color: #BBDEFC; font-weight: normal;'>Item id:</text> Identification number for each of the items that the company offers.
-* <text style='color: #BBDEFC; font-weight: normal;'>Operation day:</text> Code for the day when a certain product is sold.
-* <text style='color: #BBDEFC; font-weight: normal;'>Number of sales:</text> The quantity of items sold each day for each store, as recorded in the dataset.
-* <text style='color: #BBDEFC; font-weight: normal;'>Sell price:</text> Price at which the items are sold.
+* <text style='color: #BBDEFC; font-weight: normal;'>Loss Given Default {{< math >}}$(LGD)${{< /math >}:</text> This metric represents the percentage of the loan exposure that is not expected to be recovered if a default occurs.
 
-Before conducting any analysis or data transformation, it is crucial to set aside a portion of the dataset for validation purposes. This reserved data will be used to validate the models after they have been trained and tested on the remaining data. Since this is a forecasting project, the reserved data must be in chronological order (time series) to accurately test the model's performance. Therefore, the data from the last month, December 2015, has been extracted and will be used as a validation later.
+To estimate these risk parameters, three predictive machine learning models will be developed. The predictions from these models will then be combined to calculate the expected loss for each loan transaction. To calculate this value, the following formula is applied:
+
+{{< math >}}
+$$
+EL[$] = PD \cdot P[$] \cdot EAD \cdot LDG,
+$$
+{{< /math >}}
+where {{< math >}}$P${{< /math >}} is the loan principal, i.e., the amount of money the borrower whises to apply for.
 
 
-### 4.3 Forecasting-related problems approach
+### 4.3 Entities and data
 {style="color: #BBDEFC; font-weight: normal"}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Hierarchical Forecasting:</text>
+The data under analysis includes information collected by the company about two primary entities:
 
-In forecasting models, it is common to encounter time series data that follows a hierarchical aggregation structure. In the retail market, for instance, sales data for a Stock Keeping Unit (SKU) at a store often rolls up into various category and subcategory hierarchies. In such cases, it's essential to ensure that the sales forecasts are consistent when aggregated to higher levels. To achieve this, a hierarchical forecasting approach is employed, which generates coherent forecasts (or reconciles incoherent ones). This approach allows individual time series to be forecasted independently while maintaining the relationships within the hierarchy.
+* <text style='color: #BBDEFC; font-weight: normal;'>Borrowers:</text> This dataset features details on the applicant's profile, such as employment history, the number of mortgages and credit lines, annual income, and other personal information.
 
-{{< figure src="/project6/hierarchical_structure.png" title="Hierarchical structure of the project." >}}
+* <text style='color: #BBDEFC; font-weight: normal;'>Loans:</text> The remaining features provide information about the loans themselves, including the loan amount, interest rate, status (i.e., whether the loan is current or in default), tenor (either 36 or 60 months), among other details.
 
-The major problems when generating a forecasting model are the following:
-
-* There are different levels of hierarchies in the commercial catalog.
-* It may be interesting to predict sales at different levels.
-* Since the forecasts are probabilistic, predictions at different levels will not match exactly.
-
-A hierarchy forecasting approach offers different methods to solve these problems. The most common ones include:
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Bottom-up:</text> This method begins by forecasting at the most granular level of the hierarchy (e.g., items in level 2) and then aggregates these forecasts up to higher levels (e.g., stores in level 1 and finally food in level 0). It provides detailed and localized insights, capturing specific trends and patterns. However, the aggregation process may introduce inconsistencies or misalignment at higher levels if the individual forecasts are not well-calibrated.
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Top-down:</text> This method begins with forecasting at the highest level of the hierarchy (e.g., food in level 0) and then distributes the forecast down to lower levels (e.g., stores in level 1 and finally items in level 0). The roll down is done by mantaining the percentage representation of each subcategory from the raw data. This system ensures that the overall forecast is consistent with the broader organizational targets and constraints. However, it might overlook specific local variations or nuances that are important at lower levels.
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Hybrid:</text> This method combines elements of both bottom-up and top-down approaches. For example, it might start with a top-down forecast to set high-level targets and then refine the forecast using bottom-up methods to adjust for local details. It aims to balance the accuracy of detailed forecasts with the consistency of high-level targets, potentially improving both overall alignment and granularity. However, implementing a hybrid approach can be complex, as it requires coordination between different forecasting processes and levels of the hierarchy.
-
-In this project, a bottom-up approach is implemented for hierarchical forecasting, where the models are developed at the most granular level, specifically the store-product level.
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>Intermittent demand:</text>
-
-Intermittent demand, or sporadic demand, occurs when a product experiences multiple periods of zero sales. This issue can arise from two primary causes:
-* The product was in stock but no sales occurred.
-* The product was out of stock, preventing any sales.
-
-The source of these zero values can sometimes be unclear, leading to noise and making it difficult for the model to generate accurate predictions.
-
-{{< figure src="/project6/exhibit_1.png" title="Exhibit 1. Intermittent demand for item 120, which is sold in both stores." >}}
-
-To address intermittent demand, several solutions can be employed:
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Getting the inventory information:</text> It helps us to generate stock-out features that allow the algorithms to discriminate the cause of the zero values.
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Model at a higher hierarchical level:</text> If the inventary information and/or stock-out marks are not available, another possible approach is to model at a higher hierarchical level, especially if the products are in very low demand.
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Create synthetic features:</text> It is also possible to create synthetic features that try to identify whether or not stock-outs have occurred.
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Machine learning forecasting:</text> Employing forecasting methods based on machine learning techniques, which are less sensitive to these problems than classical approaches.
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Advanced methodologies:</text> Lastly, there is some more advanced methodologies such as croston method and specialized machine learning models can predict the probability of zero sales on certain days.
-
-In this project, since inventory and stock-out information are not available, synthetic features will be created based on business rules to indicate potential stock-out scenarios.
-
-<text style='color: #BBDEFC; font-weight: normal;'>Huge amount of Stock Keeping Units (SKUs):</text>
-
-In practical applications, particularly in sectors like retail and e-commerce, there are often thousands of different products that need to be modeled to predict sales levels accurately. Given the vast number of SKUs, the desired level of temporal aggregation (e.g., hourly, daily, weekly), the volume of historical data, and the available computational resources, the modeling process can become computationally infeasible. This complexity can challenge even advanced systems and may necessitate the use of scalable approaches or optimization techniques to manage the modeling workload effectively.
-
-In this context, several solutions can be employed:
-
-* <text style='color: #BBDEFC; font-weight: normal;'>Adopt Machine Learning Forecasting:</text> Machine learning models, once trained, can generate forecasts much faster than traditional methods, improving efficiency.
-* <text style='color: #BBDEFC; font-weight: normal;'>Utilize Fast Algorithms:</text> Implement faster algorithms like LightGBM, which are optimized for speed and scalability.
-* <text style='color: #BBDEFC; font-weight: normal;'>Hierarchical Modeling:</text> Model at a higher hierarchical level and apply top-down reconciliation techniques to estimate forecasts for lower levels, balancing detail and computational demands.
-* <text style='color: #BBDEFC; font-weight: normal;'>Leverage Big Data Technologies:</text> Employ big data techniques, such as using powerful cloud computing resources or big data clusters, to handle large datasets and complex models efficiently.
-
-Consequently, for the reasosns explained above, a forecasting model based on a machine learning approach and a LightGBM tree-based algorithm architecture has been developed in this project.
-
+On the other hand, before conducting any analysis or data transformation, it is crucial to set aside a randomly selected portion of the dataset for validation purposes. This reserved data will be used to validate the models after they have been trained and tested on the remaining data.
 
 ---
 
@@ -292,8 +233,28 @@ More details can be found [here](https://github.com/pabloelt/sales-forcasting-fo
 
 ---
 
-## 8. Forecasting model
+## 8. Risk-scoring model
 {style="color: #BBDEFC"}
+
+
+
+
+
+
+The risk-scoring model is compound of three different and independent models: a first one for the probability of default, a second one for the loss given default, and a third one for the exposure at default.
+
+{{< figure src="/project7/el_models.png" title="Expected loss predicted with a combination of three different machine learning algorithms for PD, EAD, and LGD." >}}
+
+It is important to note that the model for estimating the Probability of Default will utilize a logistic regression algorithm. ‘Black box algorithms’ are often unsuitable for regulated financial services due to their lack of interpretability and auditability, which can pose macro-level risks and, in some cases, conflict with legal requirements for explainability. To address this, a highly explainable AI model like logistic regression will be used, as it provides clear and understandable insights into its decision-making process.
+
+For estimating Exposure at Default and Loss Given Default, various algorithms and hyperparameter combinations were evaluated, including Ridge, Lasso, and LightGBM. Ultimately, the LightGBM algorithm was selected for both cases due to its superior performance.
+
+
+
+
+
+
+
 
 At this stage, after completing data quality checks, exploratory data analysis, and variable transformation, we are ready to develop the forecasting model. As mentioned earlier, a supervised machine learning model will be used for this purpose, specifically the LightGBM algorithm, which has demonstrated strong performance in forecasting projects.
 
