@@ -77,13 +77,13 @@ In the production phase, the model is prepared for deployment, ensuring that the
 ### 4.2 Project scope
 {style="color: #BBDEFC; font-weight: normal"}
 
-To estimate the Expected Loss ({{< math >}}$(EL)${{< /math >}) associated with a loan application, three key risk parameters are considered:
+To estimate the Expected Loss ({{< math >}}$(EL)${{< /math >}}) associated with a loan application, three key risk parameters are considered:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Probability of Default {{< math >}}$(PD)${{< /math >}:</text> This measures the likelihood that a borrower will default, based on an internally assigned credit rating.
+* <text style='color: #BBDEFC; font-weight: normal;'>Probability of Default {{< math >}}$(PD)${{< /math >}}:</text> This measures the likelihood that a borrower will default, based on an internally assigned credit rating.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Exposure at Default {{< math >}}$(EAD)${{< /math >}:</text> This indicates the amount of outstanding debt at the time of default.
+* <text style='color: #BBDEFC; font-weight: normal;'>Exposure at Default {{< math >}}$(EAD)${{< /math >}}:</text> This indicates the amount of outstanding debt at the time of default.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Loss Given Default {{< math >}}$(LGD)${{< /math >}:</text> This metric represents the percentage of the loan exposure that is not expected to be recovered if a default occurs.
+* <text style='color: #BBDEFC; font-weight: normal;'>Loss Given Default {{< math >}}$(LGD)${{< /math >}}:</text> This metric represents the percentage of the loan exposure that is not expected to be recovered if a default occurs.
 
 To estimate these risk parameters, three predictive machine learning models will be developed. The predictions from these models will then be combined to calculate the expected loss for each loan transaction. To calculate this value, the following formula is applied:
 
@@ -92,6 +92,7 @@ $$
 EL[$] = PD \cdot P[$] \cdot EAD \cdot LDG,
 $$
 {{< /math >}}
+
 where {{< math >}}$P${{< /math >}} is the loan principal, i.e., the amount of money the borrower whises to apply for.
 
 
