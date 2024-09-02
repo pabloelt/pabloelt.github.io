@@ -41,7 +41,7 @@ The main objective is to develop a risk-scoring model using machine learning alg
 
 ---
 
-## 3. Understanding of the problem
+## 3. Understanding the problem
 {style="color: #BBDEFC"}
 
 Credit risk is associated with the possibility that a borrower will fail to meet their obligations according to the agreed terms, such as repaying a loan. This risk is a critical concern for banks because it can lead to financial losses if borrowers default on their loans. Banks manage credit risk through various means, including:

@@ -35,7 +35,7 @@ The main objective is to analyse the historical leads information of the company
 
 ---
 
-## 3. Understanding of the problem
+## 3. Understanding the problem
 {style="color: #BBDEFC"}
 
 Nowadays, there are basically two main methodologies that a company can apply in order to get a final client. These are outbound and inbound marketing models. Outbound marketing is known for using traditional methods to reach potential buyers, such as advertisements, events, product samples, and phone calls. In contrast, inbound marketing focuses on attracting consumers to the company, encouraging them to seek out more information about a product or service on their own.

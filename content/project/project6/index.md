@@ -33,7 +33,7 @@ The primary objective is to develop a forecasting model utilizing a set of machi
 
 ---
 
-## 3. Understanding of the problem
+## 3. Understanding the problem
 {style="color: #BBDEFC"}
 
 Forecasting is one of the most widely used techniques in the data science field due to its significant impact on a company's balance sheet and its potential to greatly enhance overall performance. Some of the mayor beneficts are summarized below:
