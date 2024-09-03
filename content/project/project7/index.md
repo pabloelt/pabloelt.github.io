@@ -210,7 +210,7 @@ Some of the actionable initiatives that the company can implement are the follow
 
 At this stage of the project, various variable transformation techniques are applied to ensure they meet the requirements of the algorithms used in the modeling phase.
 
-It is important to remark that for the creation of tIt is important to note that creating the risk-scoring model, which predicts the Expected Loss associated with each loan application, requires developing three separate models: one for the Probability of Default (PD), another for the Exposure at Default (EAD), and a third for the Loss Given Default (LGD). To achieve this, we need to create distinct target variables for each model:
+It is important to note that creating the risk-scoring model, which predicts the Expected Loss associated with each loan application, requires developing three separate models: one for the Probability of Default (PD), another for the Exposure at Default (EAD), and a third for the Loss Given Default (LGD). To achieve this, we need to create distinct target variables for each model:
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Target for PD model:</text> This target is created by analyzing the 'estado' category. Records with values such as 'Charged Off', 'Does not meet the credit policy. Status: Charged Off', and 'Default' are considered defaults and are marked with a 'target_pd' of 1. The rest of records are marked with 0. In addition, this target is categorical so a supervised classifier machine learning model will be used.
 
@@ -222,13 +222,19 @@ $$
 $$
 {{< /math >}}
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Rolling windows variables:</text> Rolling window variables for the minimum, average, and maximum values are created over a range of up to 15 days. These rolling variables have demonstrated strong predictive power in forecasting projects.
+* <text style='color: #BBDEFC; font-weight: normal;'>Target for LGD model:</text> This target represents the amount that is not recovered in the event of a default, as defined by the following formula:
 
-Note that all of these defined variables need to be shifted by one day in the functions, as the model cannot access information for the day it is predicting.
+{{< math >}}
+$$
+\textup{target}_{\textup{LGD}} = 1 - \frac{\textup{Amortised amount}}{\textup{Loan amount} - \textup{Amortised amount}},
+$$
+{{< /math >}}
 
-On the other hand, **one-hot encoding** and **target encoding** techniques are used to transform categorical variables into numerical ones. Both methods are applied at this stage: one-hot encoding serves as the basic transformation, while target encoding incorporates sales information before the transformation. We will experiment with both and select the most predictive approach during model analysis.
+On the other hand, **one-hot encoding** and **ordinal encoding** techniques are used to transform categorical variables into numerical ones. At this stage, both methods are applied: one-hot encoding is used for basic transformations, while ordinal encoding is applied to variables with a hierarchical structure, such as profile ratings and length of employment.
 
-Regarding the numerical variables, no transformations are necessary since we are using LightGBM, a tree-based algorithm known for its effectiveness in forecasting projects with large datasets. As such, **normalization** and **rescaling** are not required for this project. Similarly, **discretization** or **binarization** of variables is not useful for this project, as our primary focus is on the model's forecasting accuracy rather than interpretability. **Class balancing** is also not applicable in this context.
+Additionally, the text data in the 'descripcion' variable is analyzed using the **TfidfVectorizer** technique. This method converts a collection of text documents into a matrix of TF-IDF (Term Frequency-Inverse Document Frequency) features. TF-IDF reflects the importance of a word within a document relative to the entire dataset, reducing the weight of commonly used words. This approach is commonly used in text classification and clustering to capture the relevance of terms. However, no relevant terms were identified using this method, so it was ultimately not adopted in this project.
+
+Regarding the numerical variables, **binarization** is applied to the 'num_derogatorios' variable, and **rescaling** is applied to the remaining ones. Specifically, the **MinMaxScaling** technique is used, as it rescales data within a 0 to 1 range, which is more precise for this particular project. Other techniques, such as **discretization**, **normalization**, or **class balancing**, are not applicable in this context.
 
 
 More details can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/04_Transformacion%20de%20datos.ipynb).
