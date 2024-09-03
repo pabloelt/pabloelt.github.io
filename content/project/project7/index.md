@@ -210,11 +210,17 @@ Some of the actionable initiatives that the company can implement are the follow
 
 At this stage of the project, various variable transformation techniques are applied to ensure they meet the requirements of the algorithms used in the modeling phase.
 
-First, to enhance the model’s predictive capacity, new variables are introduced, including:
+It is important to remark that for the creation of tIt is important to note that creating the risk-scoring model, which predicts the Expected Loss associated with each loan application, requires developing three separate models: one for the Probability of Default (PD), another for the Exposure at Default (EAD), and a third for the Loss Given Default (LGD). To achieve this, we need to create distinct target variables for each model:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Intermittent demand variables:</text> These variables estimate stock-outs using a rolling feature. It assumes that after a certain number of days with zero sales, a stock-out has occurred. Variables are created to account for fixed stock-outs over 3, 7, and 15 days.
+* <text style='color: #BBDEFC; font-weight: normal;'>Target for PD model:</text> This target is created by analyzing the 'estado' category. Records with values such as 'Charged Off', 'Does not meet the credit policy. Status: Charged Off', and 'Default' are considered defaults and are marked with a 'target_pd' of 1. The rest of records are marked with 0. In addition, this target is categorical so a supervised classifier machine learning model will be used.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Lag variables:</text> Lag variables are generated for sales (over a range of up to 15 days), selling price (over a range of up to 7 days), and stock-outs (over a range of up to 1 day). The one-day lag for stock-outs is chosen due to the nature of the variable. Since predicting exact zero demand is challenging for the model, using longer lags would be less effective, making a 1-day lag sufficient for this approach. These lag variables are particullarly useful in forecasting predictive models.
+* <text style='color: #BBDEFC; font-weight: normal;'>LTarget for EAD model:</text> This target is determined by calculating the ratio between the outstanding amount and the original loan amount, as defined by the following formula:
+
+{{< math >}}
+$$
+\textup{target_{EAD}} = \fracc{\textup{Loan amount} - \textup{Amortised amount}}{\textup{Loan amount}},
+$$
+{{< /math >}}
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Rolling windows variables:</text> Rolling window variables for the minimum, average, and maximum values are created over a range of up to 15 days. These rolling variables have demonstrated strong predictive power in forecasting projects.
 
