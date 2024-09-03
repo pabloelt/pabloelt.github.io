@@ -157,9 +157,10 @@ These are some of the results that we have obtained by performing the explorator
 
 {{< figure src="/project7/exhibit_1.png" title="Exhibit 1. Exploratory Data Analysis: Analysis for some of the categorical variables present in the dataset." >}}
 
-{{< figure src="/project7/exhibit_2.png" title="Exhibit 2. Exploratory Data Analysis: The top 15 professions with the highest number of loan applications." >}}
+{{< figure src="/project7/exhibit_3.png" title="Exhibit 2. Exploratory Data Analysis: Analysis for some of the numerical variables present in the dataset." >}}
 
-{{< figure src="/project7/exhibit_3.png" title="Exhibit 3. Exploratory Data Analysis: Analysis for some of the numerical variables present in the dataset." >}}
+{{< figure src="/project7/exhibit_2.png" title="Exhibit 3. Exploratory Data Analysis: The top 15 professions with the highest number of loan applications." >}}
+
 
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/03_EDA.ipynb).
 
