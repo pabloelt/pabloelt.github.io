@@ -218,7 +218,7 @@ It is important to remark that for the creation of tIt is important to note that
 
 {{< math >}}
 $$
-\textup{target_{EAD}} = \fracc{\textup{Loan amount} - \textup{Amortised amount}}{\textup{Loan amount}},
+target_{EAD} = \fracc{\textup{Loan amount} - \textup{Amortised amount}}{\textup{Loan amount}},
 $$
 {{< /math >}}
 
