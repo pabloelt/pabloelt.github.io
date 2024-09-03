@@ -214,7 +214,7 @@ It is important to remark that for the creation of tIt is important to note that
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Target for PD model:</text> This target is created by analyzing the 'estado' category. Records with values such as 'Charged Off', 'Does not meet the credit policy. Status: Charged Off', and 'Default' are considered defaults and are marked with a 'target_pd' of 1. The rest of records are marked with 0. In addition, this target is categorical so a supervised classifier machine learning model will be used.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>LTarget for EAD model:</text> This target is determined by calculating the ratio between the outstanding amount and the original loan amount, as defined by the following formula:
+* <text style='color: #BBDEFC; font-weight: normal;'>Target for EAD model:</text> This target is determined by calculating the ratio between the outstanding amount and the original loan amount, as defined by the following formula:
 
 {{< math >}}
 $$

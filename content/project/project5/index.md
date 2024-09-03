@@ -87,28 +87,28 @@ The main levers for this project are summarized below:
 
 The KPIs that results from the above-mentioned levers are the following:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Lead-to-customer conversion rate {{< math >}}$(CR)${{< /math >}}:</text> Ratio at which leads convert into customers. It is defined as:
+* <text style='color: #BBDEFC; font-weight: normal;'>Lead-to-customer conversion rate (CR):</text> Ratio at which leads convert into customers. It is defined as:
 {{< math >}}
 $$
-CR[\%] = \frac{N_C}{N_L}\cdot 100,
+\textup{CR}[\%] = \frac{\textup{N}_\textup{C}}{\textup{N}_\textup{L}}\cdot 100,
 $$
 {{< /math >}}
-where {{< math >}}$N_C${{< /math >}} and {{< math >}}$N_L${{< /math >}} are de number of final customers and leads, respectively.
-* <text style='color: #BBDEFC; font-weight: normal;'>Sales department workload {{< math >}}$(N_L)${{< /math >}}:</text> Number of potential customers to be managed by the sales team.
-* <text style='color: #BBDEFC; font-weight: normal;'>Loss investment in unconverted lead management {{< math >}}$(Cost_{not \ conv \ leads})${{< /math >}}:</text> Cost of commercial efforts directed toward potential customers who ultimately do not purchase the company’s product. It is defined as:
+where {{< math >}}$\textup{N}_\textup{C}${{< /math >}} and {{< math >}}$\textup{N}_\textup{L}${{< /math >}} are de number of final customers and leads, respectively.
+* <text style='color: #BBDEFC; font-weight: normal;'>Sales department workload {{< math >}}$(\textup{N}_\textup{L})${{< /math >}}:</text> Number of potential customers to be managed by the sales team.
+* <text style='color: #BBDEFC; font-weight: normal;'>Loss investment in unconverted lead management {{< math >}}$(\textup{Cost}_{\textup{not conv leads}})${{< /math >}}:</text> Cost of commercial efforts directed toward potential customers who ultimately do not purchase the company’s product. It is defined as:
 {{< math >}}
 $$
-Cost_{not \ conv \ leads} = \left( N_L - N_C \right) \cdot Cost_{leads},
+\textup{Cost}_{\textup{not conv leads}} = \left( \textup{N}_\textup{L} - \textup{N}_\textup{C} \right) \cdot \textup{Cost}_{\textup{leads}},
 $$
 {{< /math >}}
-where {{< math >}}$Cost_{leads}${{< /math >}} is the cost per lead arising from commercial and marketing actions.
-* <text style='color: #BBDEFC; font-weight: normal;'>Sales profit {{< math >}}$(SP)${{< /math >}}:</text> Net profit obtained from the sales of the online course. It is defined as:
+where {{< math >}}$\textup{Cost}_{\textup{leads}}${{< /math >}} is the cost per lead arising from commercial and marketing actions.
+* <text style='color: #BBDEFC; font-weight: normal;'>Sales profit (SP):</text> Net profit obtained from the sales of the online course. It is defined as:
 {{< math >}}
 $$
-SP[$] = \left( Price_{prod} - Cost_{leads} \right) \cdot N_C - Cost_{not \ conv \ leads},
+\textup{SP}[$] = \left( \textup{Price}_{\textup{prod}} - \textup{Cost}_{\textup{leads}} \right) \cdot \textup{N}_\textup{C} - \textup{Cost}_{\textup{not conv leads}},
 $$
 {{< /math >}}
-being {{< math >}}$Price_{prod}${{< /math >}} the price of the online course.
+being {{< math >}}$\textup{Price}_{\textup{prod}}${{< /math >}} the price of the online course.
 
 ### 4.4 Entities and Data
 {style="color: #BBDEFC; font-weight: normal"}
