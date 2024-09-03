@@ -136,23 +136,18 @@ In order to guide this process, a series of seed questions are proposed to serve
 ### 6.1 Seed questions
 {style="color: #BBDEFC; font-weight: normal"}
 
-**Regarding sales:**
+**Regarding borrowers:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> How has the company's sales performance evolved over time?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> How about the sales per product?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> How are product sales performing across different stores?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text> Are product sales consistent over time, or are there periods with zero demand? If so, is this due to stock-outs, or are the products simply not selling during those periods?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> What is the seasonality pattern in sales? How do sales vary by month and by day of the week?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q1:</text> What are the most common professions among clients applying for loans?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q2:</text> How effective is the score feature assigned by the company in evaluating each applicant?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q3:</text> Can different customer behavior profiles be identified based on how they use their credit cards?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q4:</text> How do factors like income and debt-to-income ratio impact the borrower’s profile?
 
-**Regarding sell price:**
-* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> How have the selling prices for each product changed over time?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text>  Are the selling prices fixed, or are they adjusted based on seasonality?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q8:</text> How is the selling price impacted by seasonality?
 
-**Regarding events:**
-* <text style='color: #BBDEFC; font-weight: normal;'>Q9:</text> How do major events throughout the year affect sales? Which holidays or festivities have the most significant impact?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q10:</text> How does each event category influence sales?
-* <text style='color: #BBDEFC; font-weight: normal;'>Q11:</text> Which products are particularly affected by these special occasions?
+**Regarding loans:**
+* <text style='color: #BBDEFC; font-weight: normal;'>Q5:</text> Are there differences in the percentage of late payments and charge-offs between 36-month and 60-month loans?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q6:</text> Are certain loan purposes more likely to default than others?
+* <text style='color: #BBDEFC; font-weight: normal;'>Q7:</text> What type of interest is applied to the loans? how is it related to the borrower’s profile?
 
 
 ### 6.2 Some results obtained through the EDA
@@ -160,9 +155,11 @@ In order to guide this process, a series of seed questions are proposed to serve
 
 These are some of the results that we have obtained by performing the exploratory Data Analysis (EDA) for both categorical and numerical variables that are present in the dataset.
 
-{{< figure src="/project6/exhibit_2.png" title="Exhibit 2. Exploratory Data Analysis: Sell price evolution over time for each of the products." >}}
+{{< figure src="/project7/exhibit_1.png" title="Exhibit 1. Exploratory Data Analysis: Analysis for some of the categorical variables present in the dataset." >}}
 
-{{< figure src="/project6/exhibit_3.png" title="Exhibit 3. Exploratory Data Analysis: Seasonality of the sales for each of the products." >}}
+{{< figure src="/project7/exhibit_2.png" title="Exhibit 2. Exploratory Data Analysis: The top 15 professions with the highest number of loan applications." >}}
+
+{{< figure src="/project7/exhibit_3.png" title="Exhibit 3. Exploratory Data Analysis: Analysis for some of the numerical variables present in the dataset." >}}
 
  A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/03_EDA.ipynb).
 
@@ -171,25 +168,24 @@ These are some of the results that we have obtained by performing the explorator
 
 Once the exploratory data analysis has been conducted, the following insights have been obtained:
 
-**Sales:**
+**Borrowers:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> New products were added after a few months, initially launched in just one store.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> One store is more significant, often used to test new products before they are introduced in the second store.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> There are periods when certain products experience zero demand. It is unclear whether this is due to stock-outs or simply a lack of sales during those times.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Product performance is influenced by seasonality. Some products perform better in summer, while others do better in winter.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> Saturdays and Sundays consistently show the highest sales across all products.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 1:</text> Borrowers with poorer credit scores tend to borrow larger amounts and have lower annual incomes compared to those with higher credit scores. As a result, they face higher monthly installments and interest rates.
 
-**Sell price:**
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 2:</text> One-third of all customers have been employed for more than 10 years, though the job titles of many clients remain unknown. Among those who do provide this information, the top three most common occupations are 'Teacher,' 'Manager,' and 'Owner.'
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text>  Selling prices show high variability, especially for certain products.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> Discounts are relatively common for some products.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 8:</text> While some products have seen consistent price increases, others have experienced permanent price reductions. However, the majority of products maintain relatively stable prices.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 3:</text> The credit score feature is predictive of loan outcomes: the percentage of loans charged off increases as borrowers' credit scores decrease, while the percentage of fully paid loans rises with higher credit scores.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 4:</text> Three main groups of borrowers can be clearly distinguished based on their credit card usage: those who use less than 20% of their available credit, those who use between 20% and 80%, and those who use more than 80% of their available credit.
 
 
-**Events:**
+**Loans:**
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 9:</text>  Sales per product tend to increase during special events, with Thanksgiving, Labor Day, and Easter performing particularly well.
-* <text style='color: #BBDEFC; font-weight: normal;'>Insight 10:</text> All event categories show similar performance, though sporting and cultural events generate slightly higher sales on average.
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 5:</text> In general, 60-month loans tend to have a higher percentage of late payments and charge-offs.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 6:</text> Loans for 'moving' and 'small business' purposes have a slightly higher charge-off rate (16%-17%) compared to the average for other loan purposes, which is around 11%.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Insight 7:</text> The types of interest range from 5 to 31%, with the mayority of them falling below 16%.
 
 
 ### 6.4 Recommended actions
@@ -197,15 +193,13 @@ Once the exploratory data analysis has been conducted, the following insights ha
 
 Some of the actionable initiatives that the company can implement are the following:
 
-1. With the current information, it is challenging to determine whether intermittent demand is due to stock-outs or simply zero demand for the product. Therefore, it is highly recommended to track warehouse data closely.
+1. Credit scores appear to be effective in identifying high-quality borrowers. These profiles should be targeted for promotion, and a broader range of products, such as investment opportunities, stocks, and index funds, could be offered to them.
 
-2. To optimize sales and reduce warehouse costs, implementing a forecasting model based on machine learning algorithms can be highly effective. A bottom-up approach, starting at the product level, is particularly recommended in this context.
+2. The job title category needs improvement to provide more accurate information, which will be beneficial for the development of the machine learning algorithms.
 
-3. Discounts have proven to be quite successful, especially for product 090, which is the top seller. It may be worthwhile to apply this strategy to other products and evaluate the overall impact.
+3. Since three main borrower profiles have been identified based on credit card usage, targeted campaigns can be developed for each group. Customized products or loans tailored to their specific needs could be offered to them.
 
-4. Saturdays and Sundays show the highest sales volumes, presenting an opportunity to develop targeted strategies and campaigns.
-
-5. Special days like Thanksgiving, Labor Day, and Easter generate significant sales. These occasions should be thoroughly analyzed, and marketing strategies should be developed to enhance the company’s profitability.
+4. According to the company's historical data, 30-month loans are performing better. These should be promoted, and additional products in this category could be considered.
 
 
 ---
