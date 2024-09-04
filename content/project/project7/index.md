@@ -264,7 +264,7 @@ Since we are working within an acquisition context, the expected validation metr
 ### 8.1 Probability of Default (PD) model
 {style="color: #BBDEFC; font-weight: normal"}
 
-As previously mentioned, a logistic regression algorithm is selected for the PD model due to its high interpretability. Additionally, appropriate regularization is included in the **hyperparameterization** to help select the most relevant variables, as no general variable selection was applied in the previous step. All combinations are alse tested using the **cross-validation** method to ensure the model's stability. The model's performance is evaluated using three methods: the cumulative gains curve, the lift curve, and the ROC curve.
+As previously mentioned, a supervised classifier machine learning algorithm is used for the PD model. Particularly, a logistic regression is selected due to its high interpretability. Additionally, appropriate regularization is included in the **hyperparameterization** to help select the most relevant variables, as no general variable selection was applied in the previous step. All combinations are alse tested using the **cross-validation** method to ensure the model's stability. The model's performance is evaluated using three methods: the cumulative gains curve, the lift curve, and the ROC curve.
 
 In simple terms, the cumulative gains curve measures the effectiveness of a classification model by showing the proportion of true positives identified, while the lift curve indicates how much better the model performs compared to random guessing, illustrating the model’s added value. The ROC curve evaluates the trade-off between the true positive rate (sensitivity) and the false positive rate across various threshold settings.
 
@@ -290,7 +290,7 @@ More information is provided [here](https://github.com/pabloelt/sales-forcasting
 ### 8.2 Exposure at Default (EAD) model
 {style="color: #BBDEFC; font-weight: normal"}
 
-For the EAD model, different combinations of linear regression algorithms (Ridge, Lasso) are tested against the tree-based LightGBM algorithm, each with various hyperparameter settings. It is found that the LightGBM architecture performs the best. Since interpretability is less critical for the EAD model and due to the significant performance difference between these algorithms in this case, LightGBM is ultimately adopted, as mentioned in previous steps. The final adopted hyperparametrization for the LightGBM algorithm is the following:
+For the EAD model, supervised regressors machine learning algorithms are required. In this case, different combinations of linear regression algorithms (Ridge, Lasso) are tested against the tree-based LightGBM algorithm, each with various hyperparameter settings. It is found that the LightGBM architecture performs the best. Since interpretability is less critical for the EAD model and due to the significant performance difference between these algorithms in this case, LightGBM is ultimately adopted, as mentioned in previous steps. The final adopted hyperparametrization for the LightGBM algorithm is the following:
 
 * learning_rate = 0.1
 * max_iter = 200
