@@ -352,29 +352,16 @@ More information is provided [here](https://github.com/pabloelt/sales-forcasting
 
 
 
-### 8.4 Multi-Step Forecasting
+### 8.4 Final Expected Loss (EL) model
 {style="color: #BBDEFC; font-weight: normal"}
 
-Once the general code for production is developed, it is essential to decide on the type of multi-step forecasting to implement. There are two main approaches to this: a direct forecasting and a recursive forecasting.
+Once the PD, EAD, and LGD models have been developed, the Expected Loss (EL) for each new loan application is obtained by simply combining the predictions of these models and the principal amount of the loan as discussed in the project scope section.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Direct Multi-step Forecasting:</text>
-
-In direct forecasting, separate models are trained for each future time step. For example, to predict the next 3 days, you would need to train three distinct models: one for t+1, another for t+2, and a third for t+3.
-
-{{< figure src="/project6/direct_forecast.png" title="Direct Multi-step Forecast strategy." >}}
-
-This approach allows each model to be tailored to the specific characteristics of the prediction horizon, often resulting in more accurate predictions for the individual time steps since each model is directly optimized for that step using only real data. However, this method requires more computational resources because multiple models need to be trained, and there is no shared information across different days, which can be a disadvantage if the time steps are strongly correlated.
-
-<text style='color: #BBDEFC; font-weight: normal;'>Recursive Multi-step Forecasting:</text>
-
-In recursive forecasting (also known as iterative forecasting), a single model is used to predict one time step ahead, and this prediction is then fed back into the model to predict the next time step, and so on. For example, to predict t+1, t+2, and t+3, the model first predicts t+1, then uses the predicted t+1 to predict t+2, and uses t+2 to predict t+3.
-
-{{< figure src="/project6/recursive_forecast.png" title="Recursive Multi-step Forecast strategy." >}}
-
-This approach is simpler as it requires only one model, reducing both training time and computational resources. It can also be more stable in some cases by leveraging the sequential nature of time series data. However, errors tend to propagate, leading to decreased accuracy for predictions further into the future. Additionally, the model is not specifically optimized for each time step beyond the first one.
-
-For this project, a recursive multi-step forecasting approach has been implemented to minimize development and maintenance costs for the models."
-
+{{< math >}}
+$$
+\textup{EL}[$] = \textup{PD} \cdot \textup{P}[$] \cdot \textup{EAD} \cdot \textup{LDG}.
+$$
+{{< /math >}}
 
 ---
 
