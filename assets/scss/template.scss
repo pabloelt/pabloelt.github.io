@@ -158,14 +158,14 @@ ul.network-icon .big-icon {
     .featured-image-wrapper{
       .mt-4{
         .mb-4{
-          .element{
-            .style{
-              max-width: 1200px;
-              max-height: 1000px;
-            }
+          .style{
+            max-width: 1200px;
+            max-height: 1000px;
           }
-        }        
+        }       
       }      
     }    
   }
 }
+//article-header article-container featured-image-wrapper mt-4 mb-4
+//style = max-width:1200px;max-height:1000px
