@@ -264,11 +264,26 @@ Since we are working within an acquisition context, the expected validation metr
 ### 8.1 Probability of Default (PD) model
 {style="color: #BBDEFC; font-weight: normal"}
 
-A general variable selection process, considering all products in the dataset, is conducted at this stage of the project. The most predictive features are identified by comparing the results of three different selection methods: Recursive Feature Elimination, Mutual Information, and Permutation Importance. Among these, the Mutual Information method has demonstrated the best performance, offering a smooth transition between variables. This is crucial because we do not want to eliminate too many variables, as this selection analysis will need to be performed for each specific product-store combination.
+As previously mentioned, a logistic regression algorithm is selected for the PD model due to its high interpretability. Additionally, appropriate regularization is included in the **hyperparameterization** to help select the most relevant variables, as no general variable selection was applied in the previous step. All combinations are alse tested using the **cross-validation** method to ensure the model's stability. The model's performance is evaluated using three methods: the cumulative gains curve, the lift curve, and the ROC curve.
 
-{{< figure src="/project6/exhibit_4.png" title="Exhibit 4. General variable selection analysis: A number of 73 variables has been selected through the Mutual Information method." >}}
+In simple terms, the cumulative gains curve measures the effectiveness of a classification model by showing the proportion of true positives identified, while the lift curve indicates how much better the model performs compared to random guessing, illustrating the model’s added value. The ROC curve evaluates the trade-off between the true positive rate (sensitivity) and the false positive rate across various threshold settings.
 
-As a result of this analysis, a number of 73 variables have been selected. This number of variables will be used when applying the Mutual Information method to each product-store combination.
+The cumulative gains and lift curves focus on the model's ability to identify positives within a ranked population, while the ROC curve assesses the model's overall discriminatory power across all thresholds. The results are shown in the figure below.
+
+{{< figure src="/project7/exhibit_4.png" title="Exhibit 4. Performance comparison of the logistic regression algorithm for several metrics." >}}
+
+The best hyperparametrization found for the logistic regression algorithm is the following:
+
+* C = 1
+* n_jobs = -1
+* penalty = ’l1'
+* solver = ‘saga’
+
+The model achieved a final AUC of 0.699 after being trained and validated against the test dataset.
+
+Additionally, an analysis of the coefficients from the trained logistic regression model reveals that the factors most strongly influencing the customer’s probability of default are the type of loan interest, loan amount, annual income, number of credit lines, and the monthly payment amount.
+
+{{< figure src="/project7/exhibit_5.png" title="Exhibit 5. Importances for the variables in the PD model." >}}
 
 More information is provided [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/05_Preselecci%C3%B3n%20de%20variables.ipynb).
 
