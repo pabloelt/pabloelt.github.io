@@ -252,29 +252,16 @@ It is important to note that the model for estimating the Probability of Default
 
 For estimating Exposure at Default and Loss Given Default, various algorithms and hyperparameter combinations were evaluated, including Ridge, Lasso, and LightGBM. Ultimately, the LightGBM algorithm was selected for both cases due to its superior performance.
 
+On the other hand, it is important to highlight two main types of scoring analysis:
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Acquisition:</text> Acquisition models, like the one used in this case, are designed to analyze new clients. As a result, the pool of variables available is much more limited, leading to generally lower performance and less favorable validation metrics.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Behavior:</text> Behavior models are used to track and analyze how a client's profile evolves over time. These models leverage a much larger pool of variables, resulting in superior overall performance.
+
+Since we are working within an acquisition context, the expected validation metrics are not as high as those in behavior models. For example, an AUC around 0.7 is considered decent in this type of analysis. Additionally, no **general variable selection** is applied here because the already limited pool of variables would be further reduced, which would not benefit the model's development. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-At this stage, after completing data quality checks, exploratory data analysis, and variable transformation, we are ready to develop the forecasting model. As mentioned earlier, a supervised machine learning model will be used for this purpose, specifically the LightGBM algorithm, which has demonstrated strong performance in forecasting projects.
-
-To develop the final forecasting model, we need to create a specific model for each product sold in each store. This requires building 20 independent models and reconciling the information using the bottom-up strategy mentioned earlier. The approach involves first testing a particular case to determine the optimal specifications. Then, in the final code, a loop will be implemented to apply the best parameters obtained for that specific product-store combination.
-
-More details about this process can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/06_Modelizacion%20para%20Regresion.ipynb).
-
-### 8.1 General variable selection
+### 8.1 Probability of Default (PD) model
 {style="color: #BBDEFC; font-weight: normal"}
 
 A general variable selection process, considering all products in the dataset, is conducted at this stage of the project. The most predictive features are identified by comparing the results of three different selection methods: Recursive Feature Elimination, Mutual Information, and Permutation Importance. Among these, the Mutual Information method has demonstrated the best performance, offering a smooth transition between variables. This is crucial because we do not want to eliminate too many variables, as this selection analysis will need to be performed for each specific product-store combination.
