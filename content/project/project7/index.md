@@ -256,7 +256,7 @@ On the other hand, it is important to highlight two main types of scoring analys
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Acquisition:</text> Acquisition models, like the one used in this case, are designed to analyze new clients. As a result, the pool of variables available is much more limited, leading to generally lower performance and less favorable validation metrics.
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Behavior:</text> Behavior models are used to track and analyze how a client's profile evolves over time. These models leverage a much larger pool of variables, resulting in superior overall performance.
+* <text style='color: #BBDEFC; font-weight: normal;'>Behavioral:</text> Behavioral models are used to track and analyze how a client's profile evolves over time. These models leverage a much larger pool of variables, resulting in superior overall performance.
 
 Since we are working within an acquisition context, the expected validation metrics are not as high as those in behavior models. For example, an AUC around 0.7 is considered decent in this type of analysis. Additionally, no **general variable selection** is applied here because the already limited pool of variables would be further reduced, which would not benefit the model's development. 
 
@@ -270,7 +270,7 @@ In simple terms, the cumulative gains curve measures the effectiveness of a clas
 
 The cumulative gains and lift curves focus on the model's ability to identify positives within a ranked population, while the ROC curve assesses the model's overall discriminatory power across all thresholds. The results are shown in the figure below.
 
-{{< figure src="/project7/exhibit_4.png" title="Exhibit 4. Performance comparison of the logistic regression algorithm for several metrics." >}}
+{{< figure src="/project7/exhibit_4.png" title="Exhibit 4. PD model: Performance comparison of the logistic regression algorithm for several metrics." >}}
 
 The best hyperparametrization found for the logistic regression algorithm is the following:
 
@@ -283,56 +283,54 @@ The model achieved a final AUC of 0.699 after being trained and validated agains
 
 Additionally, an analysis of the coefficients from the trained logistic regression model reveals that the factors most strongly influencing the customer’s probability of default are the type of loan interest, loan amount, annual income, number of credit lines, and the monthly payment amount.
 
-{{< figure src="/project7/exhibit_5.png" title="Exhibit 5. Importances for the variables in the PD model." >}}
+{{< figure src="/project7/exhibit_5.png" title="Exhibit 5. PD model: Feature importances." >}}
 
 More information is provided [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/05_Preselecci%C3%B3n%20de%20variables.ipynb).
 
-### 8.2 Developing a one-step forecasting model for a specific product-store combination
+### 8.2 Exposure at Default (EAD) model
 {style="color: #BBDEFC; font-weight: normal"}
 
-The objective at this stage of the project is not to produce the final models, but to design the modeling process—covering algorithm selection, hyperparameter optimization, and model evaluation—at the minimum analysis unit (product-store). This is done to ensure the process functions correctly and to identify and eliminate potential error sources before scaling the one-step forecasting process to all product-store combinations.
-
-For this case, the product with code 586 sold in the store CA_3 is selected for this specific analysis.
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>Cross-validation strategy:</text>
-
-To prevent overfitting and evaluate model performance more robustly than with a simple train-test split, a cross-validation strategy has been implemented. However, cross-validation for time series data is not straightforward. Randomly assigning samples to the test or train sets is not feasible due to the temporal dependency between observations. The time sequence must be preserved.
-
-The appropriate method for cross-validating time series models is rolling cross-validation. This approach starts with a small subset of data for training, forecasts subsequent data points, and then assesses the accuracy of these forecasts. The forecasted data points are incorporated into the next training set, and the process continues with forecasting subsequent data points.
-
-{{< figure src="/project6/cross_validation.png" title="Cross-validation process for time-series data." >}}
-
-In the present project the cross-validation process has been implemented using <text style='color: #BBDEFC; font-weight: normal;'>sklearn.model_selection.TimeSeriesSplit</text> class of scikit-learn package with 3 splits and 8 days as maximum training size.
-
-<text style='color: #BBDEFC; font-weight: normal;'>Selecting algorithm and hyperparameters:</text>
-
-As outlined in the general design phase of the project, the LightGBM algorithm is chosen for implementing the various models due to its strong balance between predictive accuracy and computational efficiency.
-
-Different combinations of hyperparameters have been tested to find those with the best performance. Evaluation scores obtained in the tested parametrizations remains stable during the cross-validation process, which is a good indicator of the stability of the model predictions.
-
-In the particular case of product 586 sold in store CA_3, the best parametrization obtained for the LightGBM algorithm is:
+For the EAD model, different combinations of linear regression algorithms (Ridge, Lasso) are tested against the tree-based LightGBM algorithm, each with various hyperparameter settings. It is found that the LightGBM architecture performs the best. Since interpretability is less critical for the EAD model and due to the significant performance difference between these algorithms in this case, LightGBM is ultimately adopted, as mentioned in previous steps. The final adopted hyperparametrization for the LightGBM algorithm is the following:
 
 * learning_rate = 0.1
-* max_iter = 100
-* max_leaf_nodes = 31
-* max_depth = None
-* min_samples_leaf = 20
-* l2_regularization = 0
-* max_bins = 255
-* scoring = 'loss'
+* max_iter = 200
+* max_depth = 20
+* min_samples_leaf = 100
+* scoring = 'neg_mean_absolute_percentage_error'
+* l2_regularization = 1
 
-<text style='color: #BBDEFC; font-weight: normal;'>Checking:</text>
+{{< figure src="/project7/exhibit_6.png" title="Exhibit 6. EAD model: Correlation between the model predictions and actual values." >}}
 
-The objective here is not to evaluate the model's quality, as the predictions were made using the training data, but rather to ensure that the process functions correctly. We aim to confirm that the predictions are within the correct order of magnitude and that no other anomalies are detected before moving forward with the project.
+As it is shown in the figure above, the model's error in predicting the level of unpaid loan balance at the time of default is relatively high. However, it is important to note that errors in risk acquisition models (like this one) are generally much higher than in behavioral models, marketing, or customer management models, as significantly less customer information is available.
 
-{{< figure src="/project6/exhibit_5.png" title="Exhibit 5: Checking of the predicted data from the forecasting model for product 'FOODS_3_586' sold in store 'CA_3' over the last three months." >}}
+Additionally, it is important to remember that the model is designed to predict outcomes for both defaulting and non-defaulting borrowers, as this information is not available for new customers. Consequently, the model often attempts to predict the exposure at default for borrowers who are unlikely to default, which also contributes to the higher error rates observed in the modeling process.
 
-No issues have been identified, so the project will proceed as planned.
+{{< figure src="/project7/exhibit_7.png" title="Exhibit 7. EAD model: Comparison between the density function of the model predictions and the actual value of the target." >}}
+
+In the ral data, it can be identified three distinct groups of borrowers: a majority group with zero exposure at default, a second group with intermediate exposures (0.25-0.75), and a final group consisting of borrowers with high exposure at default.
+
+The model’s predictions tend to cluster around intermediate default exposures, leading to larger errors when predicting borrowers with very low or very high actual default exposures.
+
+* For customers who will have very limited exposure at default, the model predicts some degree of exposure, resulting in slightly higher fees or interest charges than they would otherwise be entitled to.
+
+* On the other hand, for customers with high actual default exposures, the model tends to predict lower exposure levels, leading to lower fees or interest being applied than would be appropriate.
+
+However, from a business perspective, the model's overall performance is quite acceptable. It balances the fees and interest not collected from borrowers who end up with high default exposures by applying additional charges to those customers who ultimately do not default, thereby covering the aggregate risk of the client portfolio.
+
+More information is provided [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/05_Preselecci%C3%B3n%20de%20variables.ipynb).
 
 
-### 8.3 Generalizing the one-step forecasting model creation process
+### 8.3 Loss Given Default (LGD) model
 {style="color: #BBDEFC; font-weight: normal"}
+
+
+
+
+
+
+
+
+
 
 Once the forecasting model has been created and tested for an individual product-store combination, we can develop the necessary code to scale this process across all product-store combinations (massive forecasting evaluation). At this stage, the same 73 variables selected for product 586 are still being used. These variables will be updated to the specific ones for each combination in the final production code. The model algorithms, however, are now tailored to each specific combination.
 
