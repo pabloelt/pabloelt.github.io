@@ -307,7 +307,7 @@ Additionally, it is important to remember that the model is designed to predict 
 
 {{< figure src="/project7/exhibit_7.png" title="Exhibit 7. EAD model: Comparison between the density function of the model predictions and the actual value of the target." >}}
 
-In the ral data, it can be identified three distinct groups of borrowers: a majority group with zero exposure at default, a second group with intermediate exposures (0.25-0.75), and a final group consisting of borrowers with high exposure at default.
+In the real data, it can be identified three distinct groups of borrowers: a majority group with zero exposure at default, a second group with intermediate exposures (0.25-0.75), and a final group consisting of borrowers with high exposure at default.
 
 The model’s predictions tend to cluster around intermediate default exposures, leading to larger errors when predicting borrowers with very low or very high actual default exposures.
 
@@ -323,25 +323,34 @@ More information is provided [here](https://github.com/pabloelt/sales-forcasting
 ### 8.3 Loss Given Default (LGD) model
 {style="color: #BBDEFC; font-weight: normal"}
 
+For the LGD model, supervised regression machine learning algorithms are once again required. Similar to the EAD model, various combinations of linear regression algorithms (Ridge, Lasso) are compared against the tree-based LightGBM algorithm, each with different hyperparameter settings. The results are similar to those obtained for the EAD model, with the LightGBM algorithm demonstrating significantly better performance. As in the previous case, interpretability is less critical for the LGD model, and due to the substantial performance difference between these algorithms, LightGBM is ultimately adopted. The final hyperparameter configuration for the LightGBM algorithm is as follows:
+
+* learning_rate = 0.1
+* max_iter = 200
+* max_depth = 20
+* min_samples_leaf = 100
+* scoring = 'neg_mean_absolute_percentage_error'
+* l2_regularization = 0.25
+
+The error for this model is slightly higher than that of the EAD model, which can be attributed to the same reasons previously discussed, with the added factor of greater polarization in the data.
+
+{{< figure src="/project7/exhibit_8.png" title="Exhibit 8. LGD model: Correlation between the model predictions and actual values." >}}
+
+In the real data, two large groups can be distinguished:
+
+* A group of loans where no amount is recovered, either because the borrower has not defaulted or because the borrower has defaulted but the bank has been unable to recover any funds.
+
+* A second group of loans where the full amount has been recovered, either because the borrower has fully repaid the loan or because the bank was able to recover the full amount despite a default.
+
+The model’s predictions tend to gravitate toward intermediate loss levels, resulting in larger errors when predicting loans that are either fully recovered or entirely lost.
+
+{{< figure src="/project7/exhibit_9.png" title="Exhibit 9. LGD model: Comparison between the density function of the model predictions and the actual value of the target." >}}
+
+However, as discussed with the EAD model, the LGD model's performance is still acceptable at an aggregate level from a business perspective. It compensates for the fully lost loans by predicting a loss level between 25% and 75% for most customers, including those who ultimately repay their loans in full, thus covering the overall risk of the client portfolio.
+
+More information is provided [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/05_Preselecci%C3%B3n%20de%20variables.ipynb).
 
 
-
-
-
-
-
-
-
-Once the forecasting model has been created and tested for an individual product-store combination, we can develop the necessary code to scale this process across all product-store combinations (massive forecasting evaluation). At this stage, the same 73 variables selected for product 586 are still being used. These variables will be updated to the specific ones for each combination in the final production code. The model algorithms, however, are now tailored to each specific combination.
-
-
-<text style='color: #BBDEFC; font-weight: normal;'>Checking:</text>
-
-Again, it is important to note that the results obtained here are solely for verifying that the process functions correctly, not for evaluating the quality of the models, as predictions are made using the training data rather than the validation dataset.
-
-{{< figure src="/project6/exhibit_6.png" title="Exhibit 6: Checking of the predicted data from the forecasting model for all product-store combinations over the last three months." >}}
-
-No issues have been identified and the project can continue.
 
 ### 8.4 Multi-Step Forecasting
 {style="color: #BBDEFC; font-weight: normal"}
