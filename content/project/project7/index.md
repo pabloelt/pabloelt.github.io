@@ -22,7 +22,7 @@ date: 2024-09-05
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-The client for this project is a neo bank company specialized in offering loans at a competitive he client for this project is a neobank specializing in offering competitively priced loans. However, the company is concerned about the quality of borrowers accessing their products. They require a robust system to assist in making informed loan approval decisions based on applicants' profiles.
+The client for this project is a neobank specializing in offering competitively priced loans. However, the company is concerned about the quality of borrowers accessing their products. They require a robust system to assist in making informed loan approval decisions based on applicants' profiles.
 
 The goal is to implement a risk-scoring model using artificial intelligence algorithms to identify 'risky' applicants and estimate their associated expected losses. This information will be used to manage the bank's economic capital, portfolio, and risk assessment effectively.
 
