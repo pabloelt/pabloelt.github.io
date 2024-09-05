@@ -365,22 +365,18 @@ $$
 
 ---
 
-## 9. Evaluation of the forecasting model
+## 9. Evaluation of the risk-scoring model
 {style="color: #BBDEFC"}
 
-Once the general production code is developed, the forecasting model's performance can be evaluated. To do this, we first need to prepare the data for the model. In real-life operation, the model requires only the last 15 days of data to function, as determined by the lag variables defined earlier in the modeling process. To facilitate this, we have prepared a file called 'DatosParaProduccion.csv,' which is part of the validation data (December 2015) reserved at the beginning of this project specifically for the evaluation of the final forecasting model.
+Once the general production code is developed, the performance of the risk-scoring model can be evaluated. To do this, the model is tested on a batch of 60000 new loan applications that were never used before, corresponding to the validation dataset reserved at the beginning of the project. The results are displayed in the scatterplot above.
 
-In a real-life scenario, data will typically be sourced from a SQL database. The process should follow these steps:
+{{< figure src="/project7/exhibit_10.png" title="Exhibit 10. EL model: Evaluation of the model vs real EL in the validation dataset." >}}
 
-* A SQL script should be prepared to extract the company’s last 15 days of data, with additional commands to structure the resulting CSV file. The output file must match the structure of 'DatosParaProduccion.csv' to ensure the forecasting model operates correctly.
+As shown in the figure, the results are not ideal. The EL model is struggling to accurately predict some non-defaulted borrowers, assigning them higher loss values than appropriate. Conversely, it also fails to predict certain real losses by assigning them very low values. This poor performance at both extremes is due to the nature of the data, with high polarization, particularly in the LGD model, being the primary cause of this issue.
 
-* The CSV file is then generated and passed to the model to obtain predictions for the next 8 days.
+However, the EL model remains useful for selecting and differentiating loan applications. The denser region of the chart, where more cases are concentrated (and where more applications are likely to fall), performs better, making the model valuable in practical scenarios.
 
-* This process is repeated automatically each day to provide new predictive data, enabling informed business decisions that enhance the company's profitability.
-
-Therefore, the model has been evaluated using the prepared data in 'DatosParaProduccion.csv,' and the predictions for each product-store combination are shown in the figure below. While some models perform better than others, the overall performance of the recursive forecasting approach is satisfactory. The final mean absolute error, calculated by comparing actual and predicted sales across all product-store combinations, is approximately 4.73.
-
-{{< figure src="/project6/exhibit_7.png" title="Exhibit 7. Comparison between the predicted and real sales for each product for the last 8 days of December 2015." >}}
+By implementing this developed risk-scoring model, the neo bank will be able to make more informed decisions about loan applicants. This will enable the bank to more effectively manage its economic capital, client portfolio, and risk assessment processes, ultimately improving the company's performance and increasing profitability.
 
 The evaluation results can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/07_Preparacion%20del%20codigo%20de%20produccion.ipynb).
 
