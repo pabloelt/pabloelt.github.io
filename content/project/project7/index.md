@@ -3,7 +3,7 @@ title: Risk Scoring for Company in the Banking Sector
 summary: A risk-scoring model is developed using machine learning algorithms to assess the profitability of each new transaction or customer. The model predicts the expected loss by analyzing the Probability of Default, Loss Given Default, and Exposure at Default.
 tags:
   - Machine Learning
-date: 2024-08-30
+date: 2024-09-05
 #external_link: http://github.com
 
 ---
