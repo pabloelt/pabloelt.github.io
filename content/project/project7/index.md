@@ -404,4 +404,8 @@ To achieve this, a prototype web application has been designed. This web app gat
   </li>
 </ul>
 
-Once the data is entered, users can click the *CALCULATE RISK* button, which triggers the machine learning models to process the data. The application will then return the Expected Loss for the loan application, along with key performance indicators such as the Probability of Default, Exposure at Default, and Loss Given Default. 
+{{< figure src="/project7/web_app_1.png" title="Risk scoring analyzer web app: Data introduction." >}}
+
+Once the data is entered, users can click the *CALCULATE RISK* button, which triggers the machine learning models to process the data. The application will then return the Expected Loss for the loan application, along with key performance indicators such as the Probability of Default, Exposure at Default, and Loss Given Default.
+
+{{< figure src="/project7/web_app_2.png" title="Risk scoring analyzer web app: Results." >}}
