@@ -15,7 +15,7 @@ date: 2024-09-05
 
 <ul class="cta-group">
   <li>
-    <a href="https://03-notebooks03-systemapp-risk-scoring-deploymentapp-ri-cv1jfo.streamlitapp.com/" target="_blank" rel="noopener" class="btn btn-primary px-3 py-3">Launch Credit Risk Analyzer Web App!</a>
+    <a href="https://risk-scoring-analyzer-web-app.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary px-3 py-3">Launch Risk Scoring Analyzer Web App!</a>
   </li>
 </ul>
 
@@ -390,3 +390,18 @@ After successfully developing, training, and evaluating the forecasting model, t
 * <text style='color: #BBDEFC; font-weight: normal;'>Retraining Script:</text> This script is designed to automatically retrain all developed models with new data as needed, ensuring that the models remain accurate and up-to-date.
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Production Script:</text> This script executes all models and generates the desired results, ensuring a smooth transition from development to production.
+
+## 11. Model deployment. Web app creation
+{style="color: #BBDEFC"}
+
+To maximize the value of the developed machine learning models, it is essential to seamlessly deploy them into production so that employees can start utilizing them to make informed, practical decisions.
+
+To achieve this, a prototype web application has been designed. This web app gathers internal data from the company for each client, as well as information provided by the borrower through their loan application.
+
+<ul class="cta-group">
+  <li>
+    <a href="https://risk-scoring-analyzer-web-app.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary px-3 py-3">Launch Risk Scoring Analyzer Web App!</a>
+  </li>
+</ul>
+
+Once the data is entered, users can click the *CALCULATE RISK* button, which triggers the machine learning models to process the data. The application will then return the Expected Loss for the loan application, along with key performance indicators such as the Probability of Default, Exposure at Default, and Loss Given Default. 
