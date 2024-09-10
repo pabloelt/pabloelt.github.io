@@ -1,5 +1,5 @@
 ---
-title: Risk Scoring for Company in the Banking Sector 
+title: Risk Scoring for a Neobank Company 
 summary: A risk-scoring model is developed for a bank company using machine learning algorithms to assess the profitability of new loan applicants. The model predicts Expected Loss by analyzing Probability of Default, Exposure at Default, and Loss Given Default.
 tags:
   - Machine Learning
