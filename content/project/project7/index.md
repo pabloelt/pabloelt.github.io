@@ -8,7 +8,7 @@ date: 2024-09-09
 
 ---
 
-*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/sales-forcasting-for-a-retail-company) is currently in Spanish. It will be soon updated to English.*
+*Note: Documentation available on the [GitHub Repository](https://github.com/pabloelt/risk-scoring-for-a-neobank-company) is currently in Spanish. It will be soon updated to English.*
 {style="color: #aaaaaa"}
 
 {{< toc >}}
