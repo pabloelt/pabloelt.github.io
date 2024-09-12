@@ -11,6 +11,12 @@ date: 2024-08-21
 
 {{< toc >}}
 
+<ul class="cta-group">
+  <li>
+    <a href="https://lead-scoring-analyzer-web-app.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary px-3 py-3">Launch Lead Scoring Analyzer Web App!</a>
+  </li>
+</ul>
+
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
@@ -22,6 +28,7 @@ Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
 * Source code can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation).
+* You can also test the [Lead Scoring Analyzer](https://lead-scoring-analyzer-web-app.streamlit.app/) web application.
 
 ---
 
@@ -429,3 +436,26 @@ After successfully developing, training, and evaluating both segmentation and pr
 * <text style='color: #BBDEFC; font-weight: normal;'>Retraining Script:</text> This script is designed to automatically retrain all developed models with new data as needed, ensuring that the models remain accurate and up-to-date.
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Production Script:</text> This script executes all models and generates the desired results, ensuring a smooth transition from development to production.
+
+---
+
+## 12. Model deployment. Web app creation
+{style="color: #BBDEFC"}
+
+To maximize the value of the developed machine learning models, it is essential to seamlessly deploy them into production so that employees can start utilizing them to make informed, practical decisions.
+
+To achieve this, a prototype web application has been designed. This web app gathers internal data from the company for each lead, as well as information provided by the customer through a web form application.
+
+<ul class="cta-group">
+  <li>
+    <a href="https://lead-scoring-analyzer-web-app.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary px-3 py-3">Launch Lead Scoring Analyzer Web App!</a>
+  </li>
+</ul>
+
+{{< figure src="/project5/web_app_1.png" title="Lead scoring analyzer web app: Data introduction." >}}
+
+Once the data is entered, users can click the *CALCULATE SCORING* button, which triggers the predictive lead scoring model to process the data. The application will then return the final scoring for the lead, along with some indications about this potential customer.
+
+{{< figure src="/project5/web_app_2.png" title="Lead scoring analyzer web app: Results." >}}
+
+The necessary files for the creation of the web app can be found [here](https://github.com/pabloelt/lead-scoring-analysis-and-segmentation/tree/main/03_Notebooks/03_Sistema/app_leadscoring).

@@ -391,6 +391,8 @@ After successfully developing, training, and evaluating the forecasting model, t
 
 * <text style='color: #BBDEFC; font-weight: normal;'>Production Script:</text> This script executes all models and generates the desired results, ensuring a smooth transition from development to production.
 
+---
+
 ## 11. Model deployment. Web app creation
 {style="color: #BBDEFC"}
 
