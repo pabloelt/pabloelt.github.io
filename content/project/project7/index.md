@@ -3,7 +3,7 @@ title: Risk Scoring for a Neobank Company
 summary: A risk-scoring model is developed for a bank company using machine learning algorithms to assess the profitability of new loan applicants. The model predicts Expected Loss by analyzing Probability of Default, Exposure at Default, and Loss Given Default.
 tags:
   - Machine Learning
-date: 2024-09-05
+date: 2024-09-09
 #external_link: http://github.com
 
 ---
@@ -29,8 +29,8 @@ The goal is to implement a risk-scoring model using artificial intelligence algo
 Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
-* Source code can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company).
-* You can also test the credit risk analyzer web application [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company).
+* Source code can be found [here](https://github.com/pabloelt/risk-scoring-for-a-neobank-company).
+* You can also test the [Risk Scoring Analyzer](https://risk-scoring-analyzer-web-app.streamlit.app/) web application.
 
 ---
 
@@ -122,7 +122,7 @@ In this stage of the project, general data quality correction processes have bee
 * Discretization of variables.
 * Creation of new variables.
 
-The entire process can be consulted in detail [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/02_Calidad%20de%20Datos.ipynb).
+The entire process can be consulted in detail [here](https://github.com/pabloelt/risk-scoring-for-a-neobank-company/blob/main/03_Notebooks/02_Desarrollo/02_Calidad%20de%20Datos.ipynb).
 
 ---
 
@@ -162,7 +162,7 @@ These are some of the results that we have obtained by performing the explorator
 {{< figure src="/project7/exhibit_2.png" title="Exhibit 3. Exploratory Data Analysis: The top 15 professions with the highest number of loan applications." >}}
 
 
- A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/03_EDA.ipynb).
+ A more detailed analysis of this stage can be found [here](https://github.com/pabloelt/risk-scoring-for-a-neobank-company/blob/main/03_Notebooks/02_Desarrollo/03_EDA.ipynb).
 
 ### 6.3 Insights obtained through the EDA
 {style="color: #BBDEFC; font-weight: normal"}
@@ -237,7 +237,7 @@ Additionally, the text data in the 'descripcion' variable is analyzed using the 
 Regarding the numerical variables, **binarization** is applied to the 'num_derogatorios' variable, and **rescaling** is applied to the remaining ones. Specifically, the **MinMaxScaling** technique is used, as it rescales data within a 0 to 1 range, which is more precise for this particular project. Other techniques, such as **discretization**, **normalization**, or **class balancing**, are not applicable in this context.
 
 
-More details can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/04_Transformacion%20de%20datos.ipynb).
+More details can be found [here](https://github.com/pabloelt/risk-scoring-for-a-neobank-company/blob/main/03_Notebooks/02_Desarrollo/04_Transformacion%20de%20datos.ipynb).
 
 ---
 
@@ -285,7 +285,7 @@ Additionally, an analysis of the coefficients from the trained logistic regressi
 
 {{< figure src="/project7/exhibit_5.png" title="Exhibit 5. PD model: Feature importances." >}}
 
-More information is provided [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/05_Preselecci%C3%B3n%20de%20variables.ipynb).
+More information is provided [here](https://github.com/pabloelt/risk-scoring-for-a-neobank-company/blob/main/03_Notebooks/02_Desarrollo/05_Modelizacion%20Clasificacion%20PD.ipynb).
 
 ### 8.2 Exposure at Default (EAD) model
 {style="color: #BBDEFC; font-weight: normal"}
@@ -317,7 +317,7 @@ The model’s predictions tend to cluster around intermediate default exposures,
 
 However, from a business perspective, the model's overall performance is quite acceptable. It balances the fees and interest not collected from borrowers who end up with high default exposures by applying additional charges to those customers who ultimately do not default, thereby covering the aggregate risk of the client portfolio.
 
-More information is provided [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/05_Preselecci%C3%B3n%20de%20variables.ipynb).
+More information is provided [here](https://github.com/pabloelt/risk-scoring-for-a-neobank-company/blob/main/03_Notebooks/02_Desarrollo/06_Modelizacion%20Regresion%20EAD.ipynb).
 
 
 ### 8.3 Loss Given Default (LGD) model
@@ -348,7 +348,7 @@ The model’s predictions tend to gravitate toward intermediate loss levels, res
 
 However, as discussed with the EAD model, the LGD model's performance is still acceptable at an aggregate level from a business perspective. It compensates for the fully lost loans by predicting a loss level between 25% and 75% for most customers, including those who ultimately repay their loans in full, thus covering the overall risk of the client portfolio.
 
-More information is provided [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/05_Preselecci%C3%B3n%20de%20variables.ipynb).
+More information is provided [here](https://github.com/pabloelt/risk-scoring-for-a-neobank-company/blob/main/03_Notebooks/02_Desarrollo/07_Modelizacion%20Regresion%20LGD.ipynb).
 
 
 
@@ -378,7 +378,7 @@ However, the EL model remains useful for selecting and differentiating loan appl
 
 By implementing this developed risk-scoring model, the neo bank will be able to make more informed decisions about loan applicants. This will enable the bank to more effectively manage its economic capital, client portfolio, and risk assessment processes, ultimately improving the company's performance and increasing profitability.
 
-The evaluation results can be found [here](https://github.com/pabloelt/sales-forcasting-for-a-retail-company/blob/main/03_Notebooks/02_Desarrollo/07_Preparacion%20del%20codigo%20de%20produccion.ipynb).
+The evaluation results can be found [here](https://github.com/pabloelt/risk-scoring-for-a-neobank-company/blob/main/03_Notebooks/02_Desarrollo/08_Preparacion%20del%20codigo%20de%20produccion.ipynb).
 
 ---
 
@@ -409,3 +409,5 @@ To achieve this, a prototype web application has been designed. This web app gat
 Once the data is entered, users can click the *CALCULATE RISK* button, which triggers the machine learning models to process the data. The application will then return the Expected Loss for the loan application, along with key performance indicators such as the Probability of Default, Exposure at Default, and Loss Given Default.
 
 {{< figure src="/project7/web_app_2.png" title="Risk scoring analyzer web app: Results." >}}
+
+The necessary files for the creation of the web app can be found [here](https://github.com/pabloelt/risk-scoring-for-a-neobank-company/tree/main/03_Notebooks/03_Sistema/app_riesgos).
