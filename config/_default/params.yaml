@@ -61,6 +61,7 @@ locale:
 features:
   syntax_highlighter:
     enable: true
+    style: light
     extra_languages:
       - r
       - latex
