@@ -158,22 +158,15 @@ ul.network-icon .big-icon {
 //  max-height: 1000px;
 //}
 
-//.highlight{
-//  pre.chroma{
-//    background-color: #fff;
-//  }
-//}
+// Modificando background y colores en bloques de codigo 
 
 .highlight .chroma{
   background-color: #979797;
 }
-
 .n {
   color: #ff0000
 }
-
-.highlight .chroma .language-python .line .cl {
-  .chroma .cl{
-    color: #ff0000
-  }
+.c1 {
+  color: #ff0000
 }
+
