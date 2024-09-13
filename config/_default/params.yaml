@@ -65,7 +65,7 @@ features:
       - r
       - latex
       - sql
-    theme_dark: 'nord'
+    theme: 'nord'
   math:
     enable: true
   privacy_pack:
