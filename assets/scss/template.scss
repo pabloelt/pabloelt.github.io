@@ -166,13 +166,11 @@ ul.network-icon .big-icon {
 
 .highlight{
   pre.chroma{
-    code.language-python{
-      span.line{
-        span.cl{
-          span.c1{
-            .chroma .c1{
-              color: #ff0000
-            }
+    span.line{
+      span.cl{
+        span.c1{
+          .chroma .c1{
+            color: #ff0000
           }
         }
       }
