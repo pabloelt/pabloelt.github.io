@@ -64,7 +64,6 @@ features:
     extra_languages:
       - r
       - latex
-    theme: 'github'
   math:
     enable: true
   privacy_pack:
