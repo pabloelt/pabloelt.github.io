@@ -37,7 +37,7 @@ input_string_var = input("Enter some data: ")
 print("You entered: {}".format(input_string_var))
 ```
 
-```sql
+```mysql
 # SPRINT SEMANA 2 - TAREA 1
 ---------------------------------------------------------------------------------------------------------------------------------------
 
