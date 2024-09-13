@@ -34,6 +34,8 @@ content:
       tag: Machine Learning
     - name: Dashboards
       tag: Dashboards
+    - name: SQL
+      tag: SQL
 
 design:
   columns: '1'
