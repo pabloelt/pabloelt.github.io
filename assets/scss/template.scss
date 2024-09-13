@@ -165,9 +165,12 @@ ul.network-icon .big-icon {
 //}
 
 .highlight .chroma{
-  background-color: #fff;
+  background-color: #979797;
 }
 
+.highlight .dark pre {
+  color: #ff0000
+}
 
 .highlight .chroma .language-python .line .cl {
   .chroma .cl{
