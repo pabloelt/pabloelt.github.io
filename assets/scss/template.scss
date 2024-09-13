@@ -162,4 +162,15 @@ ul.network-icon .big-icon {
   pre.chroma{
     background-color: #fff;
   }
+  code.language-python{
+    span.line{
+      span.cl{
+        span.c1{
+          .chroma .c1{
+            color: #ff0000
+          }
+        }
+      }
+    }
+  }
 }
