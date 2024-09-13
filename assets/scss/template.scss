@@ -165,20 +165,10 @@ ul.network-icon .big-icon {
 //}
 
 .highlight pre.chroma{
-    background-color: #fff;
-  }
+  background-color: #fff;
+}
 
 
-.highlight{
-  pre.chroma{
-    span.line{
-      span.cl{
-        span.c1{
-          .chroma .c1{
-            color: #ff0000
-          }
-        }
-      }
-    }
-  }
+.highlight pre.chroma code.language-mysql span.line span.cl span.c1 .chroma .c1{
+  color: #ff0000
 }
