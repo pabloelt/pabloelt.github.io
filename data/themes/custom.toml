@@ -23,6 +23,3 @@ name = "Starter Blog"
   home_section_odd = "rgb(26, 32, 44)"
   home_section_even = "rgb(26, 32, 44)"
   menu_primary = "rgb(26, 32, 44)"
-
-pygmentsCodefences = true
-pygmentsStyle = "monokailight"

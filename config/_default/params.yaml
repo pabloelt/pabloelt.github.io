@@ -64,7 +64,6 @@ features:
     extra_languages:
       - r
       - latex
-      - sql
   math:
     enable: true
   privacy_pack:
