@@ -25,4 +25,4 @@ name = "Starter Blog"
   menu_primary = "rgb(26, 32, 44)"
 
   pygmentsCodefences = true
-  pygmentsStyle = "pygments"
+  pygmentsStyle = "monokailight"
