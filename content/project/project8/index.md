@@ -41,20 +41,9 @@ print("You entered: {}".format(input_string_var))
 # Example of code highlighting
 input_string_var = input("Enter some data: ")
 print("You entered: {}".format(input_string_var))
-{{ transform.Highlight $input $lang "lineNos=table, style=api" }}
 ```
 
-{{ $input := `fmt.Println("Hello World!")` }}
-{{ transform.Highlight $input "go" }}
 
-{{ $input := `console.log('Hello World!');` }}
-{{ $lang := "js" }}
-{{ transform.Highlight $input $lang "lineNos=table, style=api" }}
-
-{{ $input := `echo "Hello World!"` }}
-{{ $lang := "bash" }}
-{{ $opts := dict "lineNos" "table" "style" "dracula" }}
-{{ transform.Highlight $input $lang $opts }}
 
 
 For the design of this project, we have followed a straightforward methodology, summarized in the following image. The initial time invested in creating this methodology plan will help us to organize the information properly and to present a more complete and valuable final dashboard. Additionally, this methodology will also help to optimize time and resources in the implementation of the dashboard.
