@@ -41,6 +41,7 @@ print("You entered: {}".format(input_string_var))
 # Example of code highlighting
 input_string_var = input("Enter some data: ")
 print("You entered: {}".format(input_string_var))
+{{ transform.Highlight $input $lang "lineNos=table, style=api" }}
 ```
 
 {{ $input := `fmt.Println("Hello World!")` }}
