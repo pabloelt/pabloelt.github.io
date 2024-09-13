@@ -64,7 +64,7 @@ features:
     extra_languages:
       - r
       - latex
-    theme: nord
+    highlight_style: 'nord'
   math:
     enable: true
   privacy_pack:
