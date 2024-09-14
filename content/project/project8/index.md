@@ -26,11 +26,14 @@ Notes:
 
 The main objective of this project is to thoroughly analyze the company's database to extract insights and valuable information related to sales, clients, products, and distribution channels. The project is designed to simulate real-world operations, with 6 sprint weeks planned and regular interactions with various departments. The insights gained from this analysis are expected to significantly enhance the company's performance, leading to increased profitability and reduced costs.
 
+This entire project is conducted using **MySQL**, an open-source relational database management system. Specifically, the **MySQL Workbench** IDE (Integrated Development Environment) is used for the database analysis.
+
 ---
 
-## 3. Project Design
+## 3. Project Results
 {style="color: #BBDEFC"}
 
+As mentioned earlier, the project is divided into several sprint weeks with different goals and interactions with the company's departments. 
 
 ```mysql
 # SPRINT SEMANA 2 - TAREA 1
