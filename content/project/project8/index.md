@@ -33,7 +33,12 @@ This entire project is conducted using **MySQL**, an open-source relational data
 ## 3. Project Results
 {style="color: #BBDEFC"}
 
-As mentioned earlier, the project is divided into several sprint weeks with different goals and interactions with the company's departments. 
+As mentioned earlier, the project is divided into several sprint weeks, each with specific goals and interactions with various departments of the company. These sprints are designed to address different aspects of the business, such as sales, clients, products, and distribution channels.
+
+### 3.1 Sprint Week 1
+{style="color: #BBDEFC; font-weight: normal"}
+
+
 
 ```mysql
 # SPRINT SEMANA 2 - TAREA 1
