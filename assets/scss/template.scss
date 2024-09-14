@@ -161,16 +161,19 @@ ul.network-icon .big-icon {
 // Modificando background y colores en bloques de codigo 
 
 .highlight .chroma{
-  background-color: #979797;
+  background-color: #f3f3f3;
 }
 .chroma .n {
-  color: #ff0000
+  color: rgb(98,100,114)
 }
 .highlight .chroma .c1 {
-  color: #ff0000
+  color: rgb(117,170,219)
 }
 .highlight .chroma .k {
-  color: #ff0000
+  color: rgb(117,170,219)
+}
+.highlight .chroma .o {
+  color: rgb(98,100,114)
 }
 .highlight .chroma .nf {
   color: #ff0000
