@@ -31,11 +31,6 @@ The main objective of this project is to thoroughly analyze the company's databa
 ## 3. Project Design
 {style="color: #BBDEFC"}
 
-```python
-# Example of code highlighting
-input_string_var = input("Enter some data: ")
-print("You entered: {}".format(input_string_var))
-```
 
 ```mysql
 # SPRINT SEMANA 2 - TAREA 1
