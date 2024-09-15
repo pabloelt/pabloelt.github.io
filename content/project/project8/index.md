@@ -17,7 +17,7 @@ The client for this project is a sports company specializing in extreme activiti
 Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
-* Here, you can download the {{< staticref "uploads/project_database.sql" "newtab" >}}database{{< /staticref >}} used in this project.
+* You can also download the {{< staticref "uploads/project_database.sql" "newtab" >}}database{{< /staticref >}} used in this project.
 
 ---
 
