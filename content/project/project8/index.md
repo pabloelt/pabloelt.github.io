@@ -124,7 +124,7 @@ It seems that the new created table *sales_agr* is still not properly connected 
 	--  id_store as a FK with the corresponding table
 	--  id_channel as a FK with the corresponding table
 alter table sales_agr add id_sale int auto_increment primary key,
-					            add foreign key(id_prod) references products (id_prod) on delete cascade,
+                      add foreign key(id_prod) references products (id_prod) on delete cascade,
                       add foreign key(id_store) references stores (id_store) on delete cascade,
                       add foreign key(id_channel) references channels (id_channel) on delete cascade;
 ```
@@ -139,13 +139,13 @@ We can now proceed with order identification as suggested by the IT Director. To
 -- Create a view over sales_agr that includes the order id
 create view v_sales_agr_order as 
 with master_orders as (
-	select date_time, id_store, id_channel, row_number() over() as id_order
-  from sales_agr
-  group by date_time, id_store, id_channel)
+    select date_time, id_store, id_channel, row_number() over() as id_order
+    from sales_agr
+    group by date_time, id_store, id_channel)
 select id_sale, id_order, s.date_time, s.id_prod, s.id_store, s.id_channel, amount, official_price, offer_price, turnover 
 from sales_agr as s
-  left join master_orders as m
-  on (s.date_time = m.date_time) and (s.id_store = m.id_store) and (s.id_channel = m.id_channel);
+    left join master_orders as m
+    on (s.date_time = m.date_time) and (s.id_store = m.id_store) and (s.id_channel = m.id_channel);
     
 select * from v_sales_agr_order;
 ```
