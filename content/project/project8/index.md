@@ -96,7 +96,6 @@ A simple but effective approach is to combine the duplicated records by summing 
 -- We need to create a new table sales_agr with the right granularity, and also:
 	-- Change the date_time type 
 	-- Create a new field called turnover as the multiplication of amount times offer_price
-
 create table sales_agr as
 select str_to_date(date_time, '%d/%m/%Y') as date_time,
   id_prod, id_store, id_channel,
@@ -111,6 +110,28 @@ group by 1, 2, 3, 4;
 Now that we have created a new table with the correct granularity and adjusted the *date_time* type, we can move forward with the analysis. The cleaned table will allow for more accurate insights and ensure that the dataset is ready for deeper exploration, such as analyzing sales trends, client behavior, and product performance.
 
 {{< figure src="/project8/sw1_r2.png" title="Sprint Week 1. Results 2." >}}
+
+After completing the first task we recieved a new email from the IT Director.
+
+{{< figure src="/project8/sw1_task2.png" title="Sprint Week 1. Task 2." >}}
+
+It seems that the new created table *sales_agr* is still not properly connected with the rest of the tables. We need to fix that:
+
+```mysql
+-- The new sales_agr table is not connected with the rest of the tables. We need
+	--  to include a new key field called id_sale
+	--  id_prod as a FK with the corresponding table
+	--  id_store as a FK with the corresponding table
+	--  id_channel as a FK with the corresponding table
+alter table sales_agr add id_sale int auto_increment primary key,
+					  add foreign key(id_prod) references products (id_prod) on delete cascade,
+                      add foreign key(id_store) references stores (id_store) on delete cascade,
+                      add foreign key(id_channel) references channels (id_channel) on delete cascade;
+```
+
+The resultant Entity-Relationship (ER) Diagram can be seen in the image below.
+
+{{< figure src="/project8/sw1_r3.png" title="Sprint Week 1. Results 3." >}}
 
 
 ### 3.1 Company requirements
