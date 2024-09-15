@@ -46,7 +46,7 @@ In the first sprint week, we have recieved the following email from the IT Direc
 
 {{< figure src="/project8/sw1_task1.png" title="Sprint Week 1. Task 1." >}}
 
-Following the IT Director's advice, we need to import the database provided by the IT team, activate it in the MySQL Workbench environment, and review the content of the main tables. This can be done with the following code.
+Following the IT Director's advice, we need to import the database provided by the IT team, activate it in the MySQL Workbench environment, and review the content of the main tables. This can be done with the following code:
 
 ```mysql
 # SPRINT WEEK 1 - TASK 1
@@ -81,9 +81,9 @@ order by id_store, id_prod, id_channel, date_time;
 -- Some particular cases
 select * from sales
 where id_store = 1115
-	and id_prod = 127110
-    and id_channel = 5
-    and date_time = '22/12/2016';
+  and id_prod = 127110
+  and id_channel = 5
+  and date_time = '22/12/2016';
 ```
 
 {{< figure src="/project8/sw1_r1.png" title="Sprint Week 1. Results 1." >}}
@@ -92,12 +92,25 @@ It seems the dataset's granularity is incorrect, and some records are duplicated
 
 A simple but effective approach is to combine the duplicated records by summing the total amount and considering the average value for the official and offer prices. Here's an example of how to do that:
 
+```mysql
+-- We need to create a new table sales_agr with the right granularity, and also:
+	-- Change the date_time type 
+	-- Create a new field called turnover as the multiplication of amount times offer_price
+
+create table sales_agr as
+select str_to_date(date_time, '%d/%m/%Y') as date_time,
+	   id_prod, id_store, id_channel,
+       sum(amount) as amount,
+       avg(official_price) as official_price,
+       avg(offer_price) as offer_price,
+       sum(amount) * avg(offer_price) as turnover
+from sales
+group by 1, 2, 3, 4;
+```
+
+Now that we have created a new table with the correct granularity and adjusted the *date_time* type, we can move forward with the analysis. The cleaned table will allow for more accurate insights and ensure that the dataset is ready for deeper exploration, such as analyzing sales trends, client behavior, and product performance.
 
 
-
-For the design of this project, we have followed a straightforward methodology, summarized in the following image. The initial time invested in creating this methodology plan will help us to organize the information properly and to present a more complete and valuable final dashboard. Additionally, this methodology will also help to optimize time and resources in the implementation of the dashboard.
-
-{{< figure src="/project4/methodology.png" title="Summarized methodology followed in the project design of the interactive dashboard." >}}
 
 ### 3.1 Company requirements
 {style="color: #BBDEFC; font-weight: normal"}
