@@ -46,93 +46,22 @@ In the first sprint week, we have recieved the following email from the IT Direc
 
 {{< figure src="/project8/sw_1.png" title="Sprint Week 1. Task 1." >}}
 
+Following the IT Director's advice, we need to import the database provided by the IT team, activate it in the MySQL Workbench environment, and review the content of the main tables. This can be done with the following code.
 
 ```mysql
-# SPRINT SEMANA 2 - TAREA 1
----------------------------------------------------------------------------------------------------------------------------------------
+# SPRINT WEEK 1 - TASK 1
+---------------------------------------------
 
--- Importa la bbdd a partir de dump: caso.sql
-# Server/Data import/Import from self-contained file -> Start import
+-- Import database from dump: database.sql
 
--- Activala como la bbdd por defecto
-use caso;
+-- Activate the database as the default one
+use project_database;
 
--- Revisa el contenido de las 4 tablas
-select * from canales;
-select * from productos;
-select * from tiendas;
-select * from ventas;
-# Revisado. Parece que los principales id no están con un auto incremento lógico
-
--- ¿Cuantos registos tiene la tabla ventas?
-select count(*) from ventas;
-# Tiene 7 registros: id_tienda, id_prod, id_canal, fecha, cantidad, precio_oficial, precio_oferta.altera
-# Creo que le faltaría el id_venta. Parece una primary key necesaria
-
--- Revisa el tipo de los datos, ¿ves algo raro?
-# canales/canal -> debería ser varchar()?
-# productos -> varchar()?
-# tiendas -> varchar()?
-# ventas -> fecha-date?
-
--- ¿Está al nivel que necesitamos? tienda - producto - canal – fecha (no tiene que haber duplicados)
-select * from ventas;
-# Al fijarnos en la tabla ventas vemos que hay tiendas que han pedido varios productos por el mismo canal y en la misma fecha.
-# Vamos a ver si hay duplicados
-select id_tienda, id_prod, id_canal, fecha, count(*) as conteo
-from ventas
-group by id_tienda, id_prod, id_canal, fecha
-having conteo > 1;
-
-# Vemos que efectivamente hay algunos registros que están duplicados, quizás por que se hicieron el mismo día pero a diferentes horas.
-# Debemos depurar esa información para que la tabla quede en el nivel tienda - producto - canal – fecha, así podríamos darle un id_venta también
-
--- Si hay duplicados muéstralos para identificar algún caso concreto
-select id_tienda, id_prod, id_canal, fecha, count(*) as conteo
-from ventas
-group by id_tienda, id_prod, id_canal, fecha
-having conteo > 1
-order by id_tienda, id_prod, id_canal, fecha;
-
-
--- Revisa un par de ellos
-select * from ventas
-where id_tienda = 1115 and id_prod = 127110 and id_canal = 5 and fecha = '22/12/2016';
-
-select * from ventas
-where id_tienda = 1132 and id_prod = 92110 and id_canal = 5 and fecha = '10/04/2017';
-
-# Parece ser que el cmapo que está rompiendo el nivel es la cantidad, bien porque se hayan hecho distintos pedidos el mismo día.
-# Tenemos que hacer una agregación de los datos.
-select id_tienda, id_prod, id_canal, fecha, sum(cantidad) as cantidad, avg(precio_oficial) as precio_oficial, avg(precio_oferta) as precio_oferta from ventas
-group by id_tienda, id_prod, id_canal, fecha
-order by id_tienda, id_prod, id_canal, fecha;
-
-
--- Crea una nueva tabla de ventas_agr agregada a ese nivel, y además:
-	-- Cambia la fecha a tipo date 
-    -- (pista: usa la función de texto str_to_date con formato '%d/%m/%Y'. Ver: https://www.w3schools.com/sql/func_mysql_str_to_date.asp)
-	-- Crea un campo facturación como la multiplicación de la cantidad por el precio_oferta
-
-
-create table ventas_agr as
-select str_to_date(fecha, '%d/%m/%Y') as fecha,
-	   id_prod, id_tienda, id_canal, 
-	   sum(cantidad) as cantidad,
-	   avg(precio_oficial) as precio_oficial,
-	   avg(precio_oferta) as precio_oferta,
-	   sum(cantidad) * avg(precio_oferta) as facturacion
-from ventas
-group by 1, 2, 3, 4 # Los ordenamos por columnas en vez de por el nombre para evitar el warning al crear la tabla, debido a la repetición del nombre  
-order by 1, 3, 4;
-
-
--- Revisa la nueva tabla creada
-select * from ventas_agr;
-
--- Revisa cuantos registros tiene la nueva tabla
-select count(*) from ventas_agr;
-select count(*) from ventas;
+-- Review the dataset content in the main four tables
+select * from channels;
+select * from products;
+select * from stores;
+select * from sales;
 ```
 
 
