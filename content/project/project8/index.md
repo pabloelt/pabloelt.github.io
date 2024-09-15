@@ -44,7 +44,7 @@ The different department directors and their main goals are presented in the ima
 
 In the first sprint week, we have recieved the following email from the IT Director.
 
-{{< figure src="/project8/sw_1.png" title="Sprint Week 1. Task 1." >}}
+{{< figure src="/project8/sw1_task1.png" title="Sprint Week 1. Task 1." >}}
 
 Following the IT Director's advice, we need to import the database provided by the IT team, activate it in the MySQL Workbench environment, and review the content of the main tables. This can be done with the following code.
 
@@ -64,6 +64,29 @@ select * from stores;
 select * from sales;
 ```
 
+Now we need to check the granularity of the database and identify if any duplicate records exist. To do this, we can use the following SQL query:
+
+```mysql
+-- ¿Is it the granularity of the dataset right?
+select count(*) as COUNT from sales
+group by id_store, id_prod, id_channel, date_time
+having COUNT > 1;
+
+-- It seems that some of the records are duplicated, let's investigate that
+select id_store, id_prod, id_channel, date_time, count(*) as COUNT from sales
+group by id_store, id_prod, id_channel, date_time
+having COUNT > 1
+order by id_store, id_prod, id_channel, date_time;
+
+-- Some particular cases
+select * from sales
+where id_store = 1115
+	and id_prod = 127110
+    and id_channel = 5
+    and date_time = '22/12/2016';
+```
+
+{{< figure src="/project8/sw1_r1.png" title="Sprint Week 1. Results 1." >}}
 
 
 
