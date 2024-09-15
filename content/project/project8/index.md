@@ -103,13 +103,14 @@ select str_to_date(date_time, '%d/%m/%Y') as date_time,
        sum(amount) as amount,
        avg(official_price) as official_price,
        avg(offer_price) as offer_price,
-       sum(amount) * avg(offer_price) as turnover
+       round(sum(amount) * avg(offer_price),2) as turnover
 from sales
 group by 1, 2, 3, 4;
 ```
 
 Now that we have created a new table with the correct granularity and adjusted the *date_time* type, we can move forward with the analysis. The cleaned table will allow for more accurate insights and ensure that the dataset is ready for deeper exploration, such as analyzing sales trends, client behavior, and product performance.
 
+{{< figure src="/project8/sw1_r2.png" title="Sprint Week 1. Results 2." >}}
 
 
 ### 3.1 Company requirements
