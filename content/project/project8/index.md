@@ -99,11 +99,11 @@ A simple but effective approach is to combine the duplicated records by summing 
 
 create table sales_agr as
 select str_to_date(date_time, '%d/%m/%Y') as date_time,
-	   id_prod, id_store, id_channel,
-       sum(amount) as amount,
-       avg(official_price) as official_price,
-       avg(offer_price) as offer_price,
-       round(sum(amount) * avg(offer_price),2) as turnover
+  id_prod, id_store, id_channel,
+  sum(amount) as amount,
+  avg(official_price) as official_price,
+  avg(offer_price) as offer_price,
+  round(sum(amount) * avg(offer_price),2) as turnover
 from sales
 group by 1, 2, 3, 4;
 ```
