@@ -35,9 +35,16 @@ This entire project is conducted using **MySQL**, an open-source relational data
 
 As mentioned earlier, the project is divided into several sprint weeks, each with specific goals and interactions with various departments of the company. These sprints are designed to address different aspects of the business, such as sales, clients, products, and distribution channels.
 
+The different department directors and their main goals are presented in the image below.
+
+{{< figure src="/project8/departments.png" title="Different department directors that are in charge of the company's performance." >}}
+
 ### 3.1 Sprint Week 1
 {style="color: #BBDEFC; font-weight: normal"}
 
+In the first sprint week, we have recieved the following email from the IT Director.
+
+{{< figure src="/project8/sw_1.png" title="Sprint Week 1. Task 1." >}}
 
 
 ```mysql
