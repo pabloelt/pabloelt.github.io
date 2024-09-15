@@ -88,6 +88,11 @@ where id_store = 1115
 
 {{< figure src="/project8/sw1_r1.png" title="Sprint Week 1. Results 1." >}}
 
+It seems the dataset's granularity is incorrect, and some records are duplicated. This could be due to missing fields, such as the time when orders were taken or the number of orders on the same date. To analyze the data properly, we need to fix these issues.
+
+A simple but effective approach is to combine the duplicated records by summing the total amount and considering the average value for the official and offer prices. Here's an example of how to do that:
+
+
 
 
 For the design of this project, we have followed a straightforward methodology, summarized in the following image. The initial time invested in creating this methodology plan will help us to organize the information properly and to present a more complete and valuable final dashboard. Additionally, this methodology will also help to optimize time and resources in the implementation of the dashboard.
