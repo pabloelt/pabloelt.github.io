@@ -198,6 +198,8 @@ We've received a new email from the Marketing Director requesting more detailed 
 
 {{< figure src="/project8/sw2_task2.png" title="Sprint Week 2. Task 2." >}}
 
+These questions can be solved with the following querys:
+
 ```mysql
 # SPRINT WEEK 2 - TASK 2
 ---------------------------------------------
@@ -205,8 +207,8 @@ We've received a new email from the Marketing Director requesting more detailed 
 -- What are the top 3 channels with the highest turnover?
 select channel, round(sum(turnover),2) as turnover_channel
 from sales_agr as s
-	left join channels as c
-    on s.id_channel = c.id_channel
+  left join channels as c
+  on s.id_channel = c.id_channel
 group  by s.id_channel
 order by turnover_channel desc
 limit 3;
