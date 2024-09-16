@@ -42,6 +42,8 @@ The different department directors and their main goals are presented in the ima
 ### 3.1 Sprint Week 1
 {style="color: #BBDEFC; font-weight: normal"}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1</text>
+
 In the first sprint week, we have recieved the following email from the IT Director.
 
 {{< figure src="/project8/sw1_task1.png" title="Sprint Week 1. Task 1." >}}
@@ -90,12 +92,12 @@ where id_store = 1115
 
 It seems the dataset's granularity is incorrect, and some records are duplicated. This could be due to missing fields, such as the time when orders were taken or the number of orders on the same date. To analyze the data properly, we need to fix these issues.
 
-A simple but effective approach is to combine the duplicated records by summing the total amount and considering the average value for the official and offer prices. Here's an example of how to do that:
+A simple but effective approach is to combine the duplicated records by summing the total amount and considering the average value for the official and offer prices. In addition, a new field for turnover is created, calculated by multiplying the total amount by the average offer price for each record. Here, you can see an example of how to do that:
 
 ```mysql
 -- We need to create a new table sales_agr with the right granularity, and also:
-	-- Change the date_time type 
-	-- Create a new field called turnover as the multiplication of amount times offer_price
+  -- Change the date_time type 
+  -- Create a new field called turnover as the multiplication of amount times offer_price
 create table sales_agr as
 select str_to_date(date_time, '%d/%m/%Y') as date_time,
   id_prod, id_store, id_channel,
@@ -111,6 +113,8 @@ Now that we have created a new table with the correct granularity and adjusted t
 
 {{< figure src="/project8/sw1_r2.png" title="Sprint Week 1. Results 2." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
+
 After completing the first task we recieved a new email from the IT Director.
 
 {{< figure src="/project8/sw1_task2.png" title="Sprint Week 1. Task 2." >}}
@@ -119,10 +123,10 @@ It seems that the new created table *sales_agr* is still not properly connected 
 
 ```mysql
 -- The new sales_agr table is not connected with the rest of the tables. We need
-	--  to include a new key field called id_sale
-	--  id_prod as a FK with the corresponding table
-	--  id_store as a FK with the corresponding table
-	--  id_channel as a FK with the corresponding table
+ --  to include a new key field called id_sale
+ --  id_prod as a FK with the corresponding table
+ --  id_store as a FK with the corresponding table
+ --  id_channel as a FK with the corresponding table
 alter table sales_agr add id_sale int auto_increment primary key,
                       add foreign key(id_prod) references products (id_prod) on delete cascade,
                       add foreign key(id_store) references stores (id_store) on delete cascade,
@@ -153,7 +157,7 @@ select * from v_sales_agr_order;
 {{< figure src="/project8/sw1_r4.png" title="Sprint Week 1. Results 4." >}}
 
 
-### 3.1 Company requirements
+### 3.2 Sprint Week 2
 {style="color: #BBDEFC; font-weight: normal"}
 
 
