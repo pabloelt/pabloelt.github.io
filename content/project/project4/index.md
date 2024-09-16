@@ -138,7 +138,7 @@ In the final step, the dashboard design is addressed. The size and structure of 
 
 {{< figure src="/project4/dashboard_phone.png" title="Dream Resort Hotels Dynamic Dashboard. Phone version." >}}
 
-The final interactive dashboard and its individual sheets are publicly available here.
+The final interactive dashboard and its individual sheets are publicly available here:
 
 <ul class="cta-group">
   <li>
