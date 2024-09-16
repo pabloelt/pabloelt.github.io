@@ -190,12 +190,29 @@ select count(distinct id_store) as num_store from stores;
 select distinct channel from channels;
 ```
 
+Through these queries, we have discovered some new insights. There are 22721 orders in the company's historical data. Our records span from 2015-01-12 to 2018-07-20. We have 274 different products in our catalog and work with 562 different stores to distribute our products. The available channels for placing orders include: Fax, Telephone, Mail, E-mail, Web, Sales visits, Special, and Other.
+
 <text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
 
+We've received a new email from the Marketing Director requesting more detailed information about the channel dimension. Additionally, data on client performance is also required at this stage.
 
+{{< figure src="/project8/sw2_task2.png" title="Sprint Week 2. Task 2." >}}
 
+```mysql
+# SPRINT WEEK 2 - TASK 2
+---------------------------------------------
 
+-- What are the top 3 channels with the highest turnover?
+select channel, round(sum(turnover),2) as turnover_channel
+from sales_agr as s
+	left join channels as c
+    on s.id_channel = c.id_channel
+group  by s.id_channel
+order by turnover_channel desc
+limit 3;
+```
 
+{{< figure src="/project8/sw2_r1.png" title="Sprint Week 2. Results 1." >}}
 
 
 
