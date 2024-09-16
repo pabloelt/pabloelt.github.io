@@ -6,8 +6,6 @@ tags:
 date: 2024-07-02
 #external_link: http://github.com
 ---
-*Note: The final interactive dashboard and its individual sheets are publicly available [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).*
-{style="color: #aaaaaa"}
 
 {{< toc >}}
 
@@ -140,7 +138,7 @@ In the final step, the dashboard design is addressed. The size and structure of 
 
 {{< figure src="/project4/dashboard_phone.png" title="Dream Resort Hotels Dynamic Dashboard. Phone version." >}}
 
-The final interactive dashboard and its individual sheets are publicly available [here](https://public.tableau.com/views/Dream_resort_hotels_dynamic_dashboard/Dashboard1?:language=es-ES&publish=yes&:sid=&:display_count=n&:origin=viz_share_link).
+The final interactive dashboard and its individual sheets are publicly available here.
 
 <ul class="cta-group">
   <li>
