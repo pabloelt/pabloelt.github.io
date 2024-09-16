@@ -257,9 +257,29 @@ order by country, year, quarter;
 {{< figure src="/project8/sw2_r4.png" title="Sprint Week 2. Results 4." >}}
 
 
-### 3.2 Sprint Week 3
+### 3.3 Sprint Week 3
 {style="color: #BBDEFC; font-weight: normal"}
 
 <text style='color: #BBDEFC; font-weight: normal;'>Task 1</text>
+
+In the thrid sprint week, we have received the next email from the Financial Director.
+
+{{< figure src="/project8/sw3_task1.png" title="Sprint Week 3. Task 1." >}}
+
+To identify the products with the highest margins, we first need to define what we mean by margin. For this project, it will be considered as the net profit in percantage, whic is:
+
+{{< math >}}
+$$
+\textup{Margin}[\%] = \frac{\textup{Price} - \textup{Cost}}{\textup{Cost}} \cdot 100.
+$$
+{{< /math >}}
+
+
+
+<text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
+
+To identify products with excessive discounts, we will consider that a product's discount should not exceed the value that falls below the 90% of all discounts. This means that in the discount distribution, the maximum allowable discount corresponds to the value at the 90th percentile of that distribution.
+
+
 
 ---
