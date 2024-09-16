@@ -122,6 +122,8 @@ After completing the first task we recieved a new email from the IT Director.
 It seems that the new created table *sales_agr* is still not properly connected with the rest of the tables. We need to fix that:
 
 ```mysql
+# SPRINT WEEK 1 - TASK 2
+---------------------------------------------
 -- The new sales_agr table is not connected with the rest of the tables. We need
  --  to include a new key field called id_sale
  --  id_prod as a FK with the corresponding table
@@ -160,4 +162,44 @@ select * from v_sales_agr_order;
 ### 3.2 Sprint Week 2
 {style="color: #BBDEFC; font-weight: normal"}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1</text>
 
+At the beginning of the second sprint week we received an email from the Strategy Director with some general questions.
+
+{{< figure src="/project8/sw2_task1.png" title="Sprint Week 2. Task 1." >}}
+
+These general questions about the order, dates, products, stores, and channels can be easily solved with the following querys:
+
+```mysql
+# SPRINT WEEK 2 - TASK 1
+---------------------------------------------
+
+-- How many orders do we have in the historical data?
+select max(id_order) from v_sales_agr_order;
+
+-- From which day do we have data?
+select min(date_time) as first_day, max(date_time) as last_day from sales_agr;
+
+-- How many different products do we have in our catalog?
+select count(distinct id_prod) as num_prod from products;
+
+-- How many different stores do we distribute to?
+select count(distinct id_store) as num_store from stores;
+
+-- Through which channels can orders be placed with us?
+select distinct channel from channels;
+```
+
+<text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
+
+
+
+
+
+
+
+
+
+
+
+---
