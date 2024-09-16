@@ -217,8 +217,49 @@ limit 3;
 {{< figure src="/project8/sw2_r1.png" title="Sprint Week 2. Results 1." >}}
 
 
+```mysql
+-- What is the monthly turnover trend per channel over the last 12 full months?
+select channel, month(date_time) as month, round(sum(turnover),2) as turnover_channel
+from sales_agr as s
+  left join channels as c
+  on s.id_channel = c.id_channel
+where date_time between '2017-07-01' and '2018-06-30'
+group by s.id_channel, month
+order by s.id_channel, month;
+```
+
+{{< figure src="/project8/sw2_r2.png" title="Sprint Week 2. Results 2." >}}
+
+```mysql
+-- What are the top 50 clients (stores with highest turnover)?
+select store_name, round(sum(turnover),2) as turnover_store
+from sales_agr as s
+  left join stores as st
+  on s.id_store = st.id_store
+group by s.id_store
+order by turnover_store desc
+limit 50;
+```
+
+{{< figure src="/project8/sw2_r3.png" title="Sprint Week 2. Results 3." >}}
+
+```mysql
+-- Turnover trend by country per term since 2017.	
+select country, year(date_time) as year, quarter(date_time) as quarter, round(sum(turnover),2) as turnover_quarter
+from sales_agr as s
+  left join stores as st
+  on s.id_store = st.id_store
+where date_time between '2017-01-01' and '2018-06-30'
+group by country, year, quarter
+order by country, year, quarter;
+```
+
+{{< figure src="/project8/sw2_r4.png" title="Sprint Week 2. Results 4." >}}
 
 
+### 3.2 Sprint Week 3
+{style="color: #BBDEFC; font-weight: normal"}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1</text>
 
 ---
