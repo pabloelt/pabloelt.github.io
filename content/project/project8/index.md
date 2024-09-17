@@ -317,6 +317,19 @@ where discount_dist >= 0.9;
 
 <text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
 
+We’ve received a new email from the Financial Director requesting more information about the company's product portfolio and how many products can be eliminated while still maintaining at least 90% of the company's turnover.
+
+{{< figure src="/project8/sw3_task2.png" title="Sprint Week 3. Task 2." >}}
+
+```mysql
+# SPRINT WEEK 3 - TASK 2
+---------------------------------------------
+
+-- How many products are we selling?
+select count(distinct product) from products;
+
+-- Which products would we need to keep to maintain 90% of the current turnover?
+```
 
 
 
