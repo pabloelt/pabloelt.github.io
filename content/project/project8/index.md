@@ -321,16 +321,47 @@ We’ve received a new email from the Financial Director requesting more informa
 
 {{< figure src="/project8/sw3_task2.png" title="Sprint Week 3. Task 2." >}}
 
+
+The approach for solving product selection is as follows: first, we need to order the products by turnover. Once this is done, we calculate the total turnover, allowing us to determine the cumulative percentage each product contributes to the total revenue. Finally, we select the products that account for up to 90% of the total turnover.
+
 ```mysql
 # SPRINT WEEK 3 - TASK 2
 ---------------------------------------------
 
 -- How many products are we selling?
-select count(distinct product) from products;
+select count(distinct product) from products; #144 different products
+select count(distinct id_prod) from products; #274 different products (color distinction)
 
 -- Which products would we need to keep to maintain 90% of the current turnover?
+with table_turnover_prod_cum_per as(
+  select id_prod,
+         round(sum(turnover_prod) over(order by turnover_prod desc), 2) as turnover_prod_cum,
+         round(sum(turnover_prod) over(), 2) as turnover_prod_total,
+         round(sum(turnover_prod) over(order by turnover_prod desc)/sum(turnover_prod) over(), 4) as turnover_prod_cum_per
+  from (select id_prod, sum(turnover) as turnover_prod
+        from sales_agr
+        group by id_prod
+        order by turnover_prod desc) as subquery_turnover_prod)
+select id_prod, turnover_prod_cum, turnover_prod_cum_per
+from table_turnover_prod_cum_per
+where turnover_prod_cum_per <= 0.9;
+
+-- And therefore, which specific products could we eliminate and still maintain 90% of the revenue?
+with table_turnover_prod_cum_per as(
+  select id_prod,
+         round(sum(turnover_prod) over(order by turnover_prod desc), 2) as turnover_prod_cum,
+         round(sum(turnover_prod) over(), 2) as turnover_prod_total,
+         round(sum(turnover_prod) over(order by turnover_prod desc)/sum(turnover_prod) over(), 4) as turnover_prod_cum_per
+  from (select id_prod, sum(turnover) as turnover_prod
+        from sales_agr
+        group by id_prod
+        order by turnover_prod desc) as subquery_turnover_prod)
+select id_prod, turnover_prod_cum, turnover_prod_cum_per
+from table_turnover_prod_cum_per
+where turnover_prod_cum_per > 0.9;
 ```
 
+{{< figure src="/project8/sw3_r3.png" title="Sprint Week 3. Results 3." >}}
 
 
 
