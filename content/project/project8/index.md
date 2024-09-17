@@ -279,19 +279,45 @@ In addition, to separate the margin for each product line, we need to use what a
 ```mysql
 -- Find the top 20 products with higer margins for each line
 with table_margin as(
-  select *, round((price-cost)/cost*100,2) as margin
+  select *, round((price-cost)/cost*100, 2) as margin
   from products)
 select *
 from (select id_prod, line, product, margin, row_number() over(partition by line order by margin desc) as ranking
-      from table_margin) as ranking_query
+      from table_margin) as subquery_ranking
 where ranking <= 20;
 ```
 
 {{< figure src="/project8/sw3_r1.png" title="Sprint Week 3. Results 1." >}}
 
+On the other hand, to identify products with excessive discounts, we will consider that a product's discount should not exceed the value that falls below the 90% of all discounts. This means that in the discount distribution, the maximum allowable discount corresponds to the value at the 90th percentile of that distribution. Discounts are defined as follows:
+
+{{< math >}}
+$$
+\textup{Discount}[\%] = \frac{\textup{Official_Price} - \textup{Offer_Price}}{\textup{Offer_Price}} \cdot 100,
+$$
+{{< /math >}}
+
+where the official and offer prices first need to be averaged for each product line. We can solve this query with the following code:
+
+```mysql
+-- Find those products (id_prod) with discounts that exceed the value that falls below the 90% of all discounts
+with table_discount as(
+	select *, round((official_price_avg - offer_price_avg) / official_price_avg, 2) as discount
+	from(select id_prod, avg(official_price) as official_price_avg, avg(offer_price) as offer_price_avg
+		 from sales_agr
+		 group by id_prod) as subquery_avg_price)
+select *
+from (select id_prod, discount, round(cume_dist() over(order by discount), 5) as discount_dist
+	 from table_discount) as subquery_dist
+where discount_dist >= 0.9;
+```
+
+{{< figure src="/project8/sw3_r2.png" title="Sprint Week 3. Results 2." >}}
+
+
 <text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
 
-To identify products with excessive discounts, we will consider that a product's discount should not exceed the value that falls below the 90% of all discounts. This means that in the discount distribution, the maximum allowable discount corresponds to the value at the 90th percentile of that distribution.
+
 
 
 
