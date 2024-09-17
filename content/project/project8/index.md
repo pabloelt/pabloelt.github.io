@@ -363,7 +363,7 @@ where turnover_prod_cum_per > 0.9;
 
 {{< figure src="/project8/sw3_r3.png" title="Sprint Week 3. Results 3." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 3</text>
 
 At the end of the third sprint week, we received another email from the Marketing Director.
 
