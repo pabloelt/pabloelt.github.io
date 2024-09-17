@@ -302,13 +302,13 @@ where the official and offer prices first need to be averaged for each product l
 ```mysql
 -- Find those products (id_prod) with discounts that exceed the value that falls below the 90% of all discounts
 with table_discount as(
-	select *, round((official_price_avg - offer_price_avg) / official_price_avg, 2) as discount
-	from(select id_prod, avg(official_price) as official_price_avg, avg(offer_price) as offer_price_avg
-		 from sales_agr
-		 group by id_prod) as subquery_avg_price)
+  select *, (official_price_avg - offer_price_avg) / official_price_avg as discount
+  from(select id_prod, avg(official_price) as official_price_avg, avg(offer_price) as offer_price_avg
+       from sales_agr
+       group by id_prod) as subquery_avg_price)
 select *
-from (select id_prod, discount, round(cume_dist() over(order by discount), 5) as discount_dist
-	 from table_discount) as subquery_dist
+from (select id_prod, round(discount*100, 2) as discount, round(cume_dist() over(order by discount), 5) as discount_dist
+      from table_discount) as subquery_dist
 where discount_dist >= 0.9;
 ```
 
