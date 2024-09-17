@@ -392,6 +392,6 @@ from table_turnover_line;
 
 {{< figure src="/project8/sw3_r4.png" title="Sprint Week 3. Results 4." >}}
 
-The outdoor protection line accounts for only 1% of the overall turnover, so eliminating this product line should be considered.
+The best-seller product line is *Personal Accessories* holding a 33% of the overall turnover. On the other hand, *Outdoor Protection* line accounts for only 1% of the overall turnover, so eliminating this product line should be considered.
 
 ---
