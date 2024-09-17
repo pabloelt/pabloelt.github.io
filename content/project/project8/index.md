@@ -363,6 +363,35 @@ where turnover_prod_cum_per > 0.9;
 
 {{< figure src="/project8/sw3_r3.png" title="Sprint Week 3. Results 3." >}}
 
+<text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
 
+At the end of the third sprint week, we received another email from the Marketing Director.
+
+{{< figure src="/project8/sw3_task3.png" title="Sprint Week 3. Task 3." >}}
+
+She is concerned about the various product lines and how we can reduce costs in that area without significantly impacting the company’s overall turnover. Additionally, we need to identify which products are trending. In this context, we will define a trend as the product’s performance over the last two terms, comparing the evolution between the first and second terms of 2018.
+
+```mysql
+# SPRINT WEEK 3 - TASK 3
+---------------------------------------------
+
+-- What different product lines are we selling?
+select distinct line from products;
+
+-- What is the contribution (in percentage) of each line to the total turnover?
+with table_turnover_line as(
+  select line, round(sum(turnover), 2) as turnover_line
+  from sales_agr as s
+    left join products as p
+    on s.id_prod = p.id_prod
+  group by line
+  order by turnover_line desc)
+select line, turnover_line, round(turnover_line / sum(turnover_line) over(), 2) as turnover_line_per
+from table_turnover_line;
+```
+
+{{< figure src="/project8/sw3_r4.png" title="Sprint Week 3. Results 4." >}}
+
+The outdoor protection line accounts for only 1% of the overall turnover, so eliminating this product line should be considered.
 
 ---
