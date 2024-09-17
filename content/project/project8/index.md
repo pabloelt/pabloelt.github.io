@@ -293,7 +293,7 @@ On the other hand, to identify products with excessive discounts, we will consid
 
 {{< math >}}
 $$
-\textup{Discount}[\%] = \frac{\textup{Official_Price} - \textup{Offer_Price}}{\textup{Offer_Price}} \cdot 100,
+\textup{Discount}[\%] = \frac{\textup{Price}_{\textup{official}} - \textup{Price}_{\textup{offer}}}{\textup{Price}_{\textup{official}}} \cdot 100,
 $$
 {{< /math >}}
 
