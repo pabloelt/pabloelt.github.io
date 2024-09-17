@@ -42,7 +42,7 @@ The different department directors and their main goals are presented in the ima
 ### 3.1 Sprint Week 1
 {style="color: #BBDEFC; font-weight: normal"}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 1</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1. Database Access</text>
 
 In the first sprint week, we have recieved the following email from the IT Director.
 
@@ -113,7 +113,7 @@ Now that we have created a new table with the correct granularity and adjusted t
 
 {{< figure src="/project8/sw1_r2.png" title="Sprint Week 1. Results 2." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 2. Entity-Relationship Diagram</text>
 
 After completing the first task we recieved a new email from the IT Director.
 
@@ -162,7 +162,7 @@ select * from v_sales_agr_order;
 ### 3.2 Sprint Week 2
 {style="color: #BBDEFC; font-weight: normal"}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 1</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1. Starting point</text>
 
 At the beginning of the second sprint week we received an email from the Strategy Director with some general questions.
 
@@ -192,7 +192,7 @@ select distinct channel from channels;
 
 Through these queries, we have discovered some new insights. There are 22721 orders in the company's historical data. Our records span from 2015-01-12 to 2018-07-20. We have 274 different products in our catalog and work with 562 different stores to distribute our products. The available channels for placing orders include: Fax, Telephone, Mail, E-mail, Web, Sales visits, Special, and Other.
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 2. Channels and clients analysis</text>
 
 We've received a new email from the Marketing Director requesting more detailed information about the channel dimension. Additionally, data on client performance is also required at this stage.
 
@@ -260,7 +260,7 @@ order by country, year, quarter;
 ### 3.3 Sprint Week 3
 {style="color: #BBDEFC; font-weight: normal"}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 1</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1. Margin analysis</text>
 
 In the thrid sprint week, we have received the next email from the Financial Director.
 
@@ -315,7 +315,7 @@ where discount_dist >= 0.9;
 {{< figure src="/project8/sw3_r2.png" title="Sprint Week 3. Results 2." >}}
 
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 2. Cost reduction analysis</text>
 
 We’ve received a new email from the Financial Director requesting more information about the company's product portfolio and how many products can be eliminated while still maintaining at least 90% of the company's turnover.
 
@@ -363,7 +363,7 @@ where turnover_prod_cum_per > 0.9;
 
 {{< figure src="/project8/sw3_r3.png" title="Sprint Week 3. Results 3." >}}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 3</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 3. Product lines analysis</text>
 
 At the end of the third sprint week, we received another email from the Marketing Director.
 
