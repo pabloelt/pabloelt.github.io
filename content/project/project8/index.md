@@ -266,7 +266,7 @@ In the thrid sprint week, we have received the next email from the Financial Dir
 
 {{< figure src="/project8/sw3_task1.png" title="Sprint Week 3. Task 1." >}}
 
-To identify the products with the highest margins, we first need to define what we mean by margin. For this project, it will be considered as the net profit in percantage, whic is:
+To identify the products with the highest margins for each product line, we first need to define what we mean by margin. For this project, it will be considered as the net profit in percantage, which is:
 
 {{< math >}}
 $$
@@ -274,7 +274,20 @@ $$
 $$
 {{< /math >}}
 
+In addition, to separate the margin for each product line, we need to use what are called **window functions**. Specifically, we need to create a ranking partitioned by the product line. Additionally, a **common table expression** (CTE) and a **subquery** are required to properly access the ranking and the margin variables created. This can be achieved with the following code:
 
+```mysql
+-- Find the top 20 products with higer margins for each line
+with table_margin as(
+  select *, round((price-cost)/cost*100,2) as margin
+  from products)
+select *
+from (select id_prod, line, product, margin, row_number() over(partition by line order by margin desc) as ranking
+      from table_margin) as ranking_query
+where ranking <= 20;
+```
+
+{{< figure src="/project8/sw3_r1.png" title="Sprint Week 3. Results 1." >}}
 
 <text style='color: #BBDEFC; font-weight: normal;'>Task 2</text>
 
