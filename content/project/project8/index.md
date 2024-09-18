@@ -148,6 +148,7 @@ with master_orders as (
   select date_time, id_store, id_channel, row_number() over() as id_order
   from sales_agr
   group by date_time, id_store, id_channel)
+  
 select id_sale, id_order, s.date_time, s.id_prod, s.id_store, s.id_channel, amount, official_price, offer_price, turnover 
 from sales_agr as s
   left join master_orders as m
@@ -281,6 +282,7 @@ In addition, to separate the margin for each product line, we need to use what a
 with table_margin as(
   select *, round((price-cost)/cost*100, 2) as margin
   from products)
+
 select *
 from (select id_prod, line, product, margin, row_number() over(partition by line order by margin desc) as ranking
       from table_margin) as subquery_ranking
@@ -306,6 +308,7 @@ with table_discount as(
   from(select id_prod, avg(official_price) as official_price_avg, avg(offer_price) as offer_price_avg
        from sales_agr
        group by id_prod) as subquery_avg_price)
+
 select *
 from (select id_prod, round(discount*100, 2) as discount, round(cume_dist() over(order by discount), 5) as discount_dist
       from table_discount) as subquery_dist
@@ -342,6 +345,7 @@ with table_turnover_prod_cum_per as(
         from sales_agr
         group by id_prod
         order by turnover_prod desc) as subquery_turnover_prod)
+
 select id_prod, turnover_prod_cum, turnover_prod_cum_per
 from table_turnover_prod_cum_per
 where turnover_prod_cum_per <= 0.9;
@@ -356,6 +360,7 @@ with table_turnover_prod_cum_per as(
         from sales_agr
         group by id_prod
         order by turnover_prod desc) as subquery_turnover_prod)
+
 select id_prod, turnover_prod_cum, turnover_prod_cum_per
 from table_turnover_prod_cum_per
 where turnover_prod_cum_per > 0.9;
@@ -386,6 +391,7 @@ with table_turnover_line as(
     on s.id_prod = p.id_prod
   group by line
   order by turnover_line desc)
+
 select line, turnover_line, round(turnover_line / sum(turnover_line) over(), 2) as turnover_line_per
 from table_turnover_line;
 ```
@@ -406,6 +412,7 @@ with table_prod_quarter as(
   where line = 'Personal Accessories' and date_time between '2018-01-01' and '2018-06-30'
   group by product, quarter
   order by product, quarter)
+
 select product, trend
 from (select line, product, quarter, turnover_prod,
              round(turnover_prod / lag(turnover_prod) over(partition by product order by quarter), 4) as trend
@@ -449,6 +456,7 @@ with table_orders_turnover_store as(
   table_avg as(
     select round(avg(num_orders), 2) as avg_orders, round(avg(turnover_store), 2) as avg_turnover_store
     from table_orders_turnover_store)
+
 select *,
        case
           when num_orders <= avg_orders and turnover_store <= avg_turnover_store then 'O- T-'
