@@ -475,7 +475,7 @@ With this framework, we are able to identify the four main types of customers, w
 * <text style='color: #BBDEFC; font-weight: normal;'>Customers (stores) with low turnover and a low volume of orders:</text> This is the least beneficial group for the company, as their order frequency and turnover are both low. No specific campaigns are needed for this group.
 
 
-Working now with the second point, which is the evaluation of the growth potential of each client (store), a common approach is to segment customers by their main activity. The 75th percentile within each segment is typically set as the target. Clients with a significant gap from that value show great potential, and with minor adjustments in the commercial strategy, their turnover can be significantly improved. This information can be gathered with the code developed below:
+Working now on the second point, which is the evaluation of the growth potential of each client (store), a common approach is to segment customers by their main activity. The 75th percentile within each segment is typically set as the target. Clients with a significant gap from that value show great potential, and with minor adjustments in the commercial strategy, their turnover can be significantly improved. This information can be gathered with the code developed below:
 
 ```mysql
 -- Growth potential:
@@ -491,10 +491,10 @@ with table_store_type as(
     
      table_p75_values as(
   select type, turnover_store_type as turnover_p75
-  from (select *, row_number() over(partition by type order by percent) as ranking
-        from (select *, round(percent_rank() over(partition by type order by turnover_store_type)*100, 2)as percent
+  from (select *, row_number() over(partition by type order by percentil) as ranking
+        from (select *, round(percent_rank() over(partition by type order by turnover_store_type)*100, 2)as percentile
               from table_store_type) as subquery_percent
-        where percent >= 75) as subquery_ranking
+        where percentil >= 75) as subquery_ranking
   where ranking = 1)
 
 select id_store, t1.type, turnover_store_type, turnover_p75,
@@ -510,7 +510,7 @@ order by potential desc;
 ```
 {{< figure src="/project8/sw4_r2.png" title="Sprint Week 4. Results 2." >}}
 
-
+For this query, we first need to create two **common table expressions (CTEs)**: one to gather the necessary information from the relevant tables, and a second to calculate the 75th percentile values for each store type. The **percent_rank** and **row_number** functions are used to calculate the percentile progression by type and to identify the first value that surpasses the 75th percentile, respectively. A **CASE WHEN** structure is applied in the final query to distinguish stores with turnover greater than the 75th percentile. Finally, the stores are ordered by growth potential. It appears that Golf Shop stores are significantly below the optimal value, presenting a great opportunity to increase the company's revenue.
 
 
 
