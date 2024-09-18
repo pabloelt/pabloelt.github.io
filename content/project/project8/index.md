@@ -426,7 +426,7 @@ Note that to compare trends between the two quarters, we need to use the **lag**
 
 In the fourth sprint week, we have received the next email from the Sales Director.
 
-{{< figure src="/project8/sw3_task3.png" title="Sprint Week 4. Task 1." >}}
+{{< figure src="/project8/sw4_task1.png" title="Sprint Week 4. Task 1." >}}
 
 We are now focusing more deeply on the client sector. In this context, we aim to create a client segmentation, evaluate customer growth potential, and reactivate clients who haven't made purchases in the last three months.
 
