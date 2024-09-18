@@ -30,7 +30,7 @@ This entire project is conducted using **MySQL**, an open-source relational data
 
 ---
 
-## 3. Project Results
+## 3. Project Development
 {style="color: #BBDEFC"}
 
 As mentioned earlier, the project is divided into several sprint weeks, each with specific goals and interactions with various departments of the company. These sprints are designed to address different aspects of the business, such as sales, clients, products, and distribution channels.
@@ -555,5 +555,13 @@ Note that only 15 stores have not made a purchase in the last 3 months, so targe
 In the fifth sprint week, we received the final email from the Marketing Director, requesting a basic recommendation system based on each store's historical purchases. While more powerful tools like Python or R are available for this purpose, it’s still possible to achieve meaningful results using SQL.
 
 {{< figure src="/project8/sw5_task1.png" title="Sprint Week 5. Task 1." >}}
+
+
+
+
+
+## 4. Results comunication
+{style="color: #BBDEFC"}
+
 
 ---
