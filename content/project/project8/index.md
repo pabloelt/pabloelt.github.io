@@ -552,7 +552,7 @@ Note that only 15 stores have not made a purchase in the last 3 months, so targe
 
 <text style='color: #BBDEFC; font-weight: normal;'>Task 1. Recommendation system</text>
 
-In the fifth sprint week, we have received the last email from the Marketing Director asking for a basic recommendation system based on the historical purchase of each of the stores.
+In the fifth sprint week, we received the final email from the Marketing Director, requesting a basic recommendation system based on each store's historical purchases. While more powerful tools like Python or R are available for this purpose, it’s still possible to achieve meaningful results using SQL.
 
 {{< figure src="/project8/sw5_task1.png" title="Sprint Week 5. Task 1." >}}
 
