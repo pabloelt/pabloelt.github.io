@@ -422,7 +422,7 @@ Note that to compare trends between the two quarters, we need to use the **lag**
 ### 3.4 Sprint Week 4
 {style="color: #BBDEFC; font-weight: normal"}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 1. Margin analysis</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1. CLient analysis and segmentation</text>
 
 In the fourth sprint week, we have received the next email from the Sales Director.
 
