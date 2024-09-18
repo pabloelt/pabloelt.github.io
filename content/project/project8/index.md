@@ -416,7 +416,7 @@ order by trend desc;
 
 {{< figure src="/project8/sw3_r5.png" title="Sprint Week 3. Results 5." >}}
 
-Note that to compare trends between the two quarters, we need to use the **lag** function. This allows us to divide the total turnover of the second quarter by that of the first. Additionally, a **partition by** product is required to differentiate the products in the segmentation. Finally, only the product and trend information are included in the analysis results.
+Note that to compare trends between the two quarters, we need to use the **lag** function. This allows us to divide the total turnover of the second quarter by that of the first. Additionally, a **partition by** product is required to differentiate the products in the segmentation. Finally, only the product and trend information are included in the results.
 
 
 ### 3.4 Sprint Week 4
