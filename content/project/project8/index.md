@@ -469,10 +469,59 @@ group by segmentation;
 
 With this framework, we are able to identify the four main types of customers, which are:
 
-* <text style='color: #BBDEFC; font-weight: normal;'>Customers with high turnover and a high volume of orders:</text> This group is the most valuable to the company, so the strategy should focus on maintaining these clients.
-* <text style='color: #BBDEFC; font-weight: normal;'>Customers with high turnover and a low volume of orders:</text> Although they place fewer orders, the orders they do generate significant turnover. The company should develop targeted strategies to increase their order frequency.
-* <text style='color: #BBDEFC; font-weight: normal;'>Customers with low turnover and a high volume of orders:</text> This group places many orders, but the associated turnover is relatively low. Strategies should focus on increasing the average order value from this group.
-* <text style='color: #BBDEFC; font-weight: normal;'>Customers with low turnover and a low volume of orders:</text> This is the least beneficial group for the company, as their order frequency and turnover are both low. No specific campaigns are needed for this group.
+* <text style='color: #BBDEFC; font-weight: normal;'>Customers (stores) with high turnover and a high volume of orders:</text> This group is the most valuable to the company, so the strategy should focus on maintaining these clients.
+* <text style='color: #BBDEFC; font-weight: normal;'>Customers (stores) with high turnover and a low volume of orders:</text> Although they place fewer orders, the orders they do generate significant turnover. The company should develop targeted strategies to increase their order frequency.
+* <text style='color: #BBDEFC; font-weight: normal;'>Customers (stores) with low turnover and a high volume of orders:</text> This group places many orders, but the associated turnover is relatively low. Strategies should focus on increasing the average order value from this group.
+* <text style='color: #BBDEFC; font-weight: normal;'>Customers (stores) with low turnover and a low volume of orders:</text> This is the least beneficial group for the company, as their order frequency and turnover are both low. No specific campaigns are needed for this group.
+
+
+Working now with the second point, which is the evaluation of the growth potential of each client (store), a common approach is to segment customers by their main activity. The 75th percentile within each segment is typically set as the target. Clients with a significant gap from that value show great potential, and with minor adjustments in the commercial strategy, their turnover can be significantly improved. This information can be gathered with the code developed below:
+
+```mysql
+-- Growth potential:
+  -- Segment the stores by their type, and calculate the 75th percentile (P75) of the revenue
+  -- For each store that is below the 75th percentile (P75), calculate its growth potential
+with table_store_type as(
+  select s.id_store, type, round(sum(turnover), 0) as turnover_store_type
+  from sales_agr as s
+    left join stores as st
+    on s.id_store = st.id_store
+  group by s.id_store, type
+  order by type, s.id_store),
+    
+     table_p75_values as(
+  select type, turnover_store_type as turnover_p75
+  from (select *, row_number() over(partition by type order by percent) as ranking
+        from (select *, round(percent_rank() over(partition by type order by turnover_store_type)*100, 2)as percent
+              from table_store_type) as subquery_percent
+        where percent >= 75) as subquery_ranking
+  where ranking = 1)
+
+select id_store, t1.type, turnover_store_type, turnover_p75,
+       case
+          when (turnover_store_type - turnover_p75) >= 0 then 0
+          when (turnover_store_type - turnover_p75) < 0 then round(turnover_p75 - turnover_store_type, 0)
+          else -999999999999
+       end as potential
+from table_store_type as t1
+  inner join table_p75_values as t2
+  on t1.type = t2.type
+order by potential desc;
+```
+{{< figure src="/project8/sw4_r2.png" title="Sprint Week 4. Results 2." >}}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ### 3.5 Sprint Week 5
