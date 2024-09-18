@@ -398,9 +398,45 @@ Additionally, we need to identify which products are on trend. In this context, 
 
 ```mysql
 -- Inside the top-seller product line, is there any particular product on trend?
+with table_prod_quarter as(
+  select line, product, quarter(date_time) as quarter, round(sum(turnover),2) as turnover_prod
+  from sales_agr as s
+    left join products as p
+    on s.id_prod = p.id_prod
+  where line = 'Personal Accessories' and date_time between '2018-01-01' and '2018-06-30'
+  group by product, quarter
+  order by product, quarter)
+select product, trend
+from (select line, product, quarter, turnover_prod,
+             round(turnover_prod / lag(turnover_prod) over(partition by product order by quarter), 4) as trend
+      from table_prod_quarter) as subquery_trend
+where trend is not null
+order by trend desc;
 ```
 
+{{< figure src="/project8/sw3_r5.png" title="Sprint Week 3. Results 5." >}}
+
+Note that to compare trends between the two quarters, we need to use the **lag** function. This allows us to divide the total turnover of the second quarter by that of the first. Additionally, a **partition by** product is required to differentiate the products in the segmentation. Finally, only the product and trend information are included in the analysis results.
+
+
+### 3.4 Sprint Week 4
+{style="color: #BBDEFC; font-weight: normal"}
+
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1. Margin analysis</text>
+
+In the thrid sprint week, we have received the next email from the Financial Director.
 
 
 
+
+
+
+
+
+### 3.5 Sprint Week 5
+{style="color: #BBDEFC; font-weight: normal"}
+
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1. Margin analysis</text>
+
+In the thrid sprint week, we have received the next email from the Financial Director.
 ---
