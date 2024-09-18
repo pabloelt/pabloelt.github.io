@@ -424,11 +424,23 @@ Note that to compare trends between the two quarters, we need to use the **lag**
 
 <text style='color: #BBDEFC; font-weight: normal;'>Task 1. Margin analysis</text>
 
-In the thrid sprint week, we have received the next email from the Financial Director.
+In the fourth sprint week, we have received the next email from the Sales Director.
 
+{{< figure src="/project8/sw3_task3.png" title="Sprint Week 4. Task 1." >}}
 
+We are now focusing more deeply on the client sector. In this context, we aim to create a client segmentation, evaluate customer growth potential, and reactivate clients who haven't made purchases in the last three months.
 
+For client segmentation, more powerful tools like machine learning approaches exist, but it is still possible to achieve meaningful results using SQL. In this case, we will create a 4-segment matrix based on the number of orders and the client's turnover. This matrix will be divided by two axes, separating records above and below the average. With this framework, we will be able to identify the four main types of customers.
 
+```mysql
+# SPRINT WEEK 4 - TASK 1
+---------------------------------------------
+
+-- Client segmentation: 
+	-- Create a 4-segment matrix based on the number of orders and client (store) turnover
+	-- Each axis will divide between those above and below the average
+	-- Save the query as a view for easy access
+```
 
 
 
