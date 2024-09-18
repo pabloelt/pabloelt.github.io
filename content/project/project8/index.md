@@ -513,11 +513,30 @@ order by potential desc;
 For this query, we first need to create two **common table expressions (CTEs)**: one to gather the necessary information from the relevant tables, and a second to calculate the 75th percentile values for each store type. The **percent_rank** and **row_number** functions are used to calculate the percentile progression by type and to identify the first value that surpasses the 75th percentile, respectively. A **CASE WHEN** structure is applied in the final query to distinguish stores with turnover greater than the 75th percentile. Finally, the stores are ordered by growth potential. It appears that Golf Shop stores are significantly below the optimal value, presenting a great opportunity to increase the company's revenue.
 
 
+Now, focusing on client reactivation, we define inactive clients as stores that have not made a purchase in the last 90 days. This information can be retrieved using the following code:
 
+```mysql
+-- Client reactivation:
+  -- Identify customers who haven't made a purchase in over 3 months
+with table_last_date_total as(
+  select max(date_time) as last_date_total
+  from sales_agr),
+    
+     table_last_date_store as(
+  select id_store, max(date_time) as last_date_store
+  from sales_agr
+  group by id_store)
+    
+select *
+from (select *, datediff(last_date_total,last_date_store) as days_no_purchase
+      from table_last_date_store, table_last_date_total) as subquery_days
+where days_no_purchase > 90
+order by days_no_purchase desc;
+```
 
+{{< figure src="/project8/sw4_r3.png" title="Sprint Week 4. Results 3." >}}
 
-
-
+Note that only 15 stores have not made a purchase in the last 3 months, so targeted campaigns can be implemented to reactivate these specific stores.
 
 
 
