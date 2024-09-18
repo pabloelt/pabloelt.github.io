@@ -148,7 +148,7 @@ with master_orders as (
   select date_time, id_store, id_channel, row_number() over() as id_order
   from sales_agr
   group by date_time, id_store, id_channel)
-  
+
 select id_sale, id_order, s.date_time, s.id_prod, s.id_store, s.id_channel, amount, official_price, offer_price, turnover 
 from sales_agr as s
   left join master_orders as m
@@ -554,7 +554,8 @@ Note that only 15 stores have not made a purchase in the last 3 months, so targe
 ### 3.5 Sprint Week 5
 {style="color: #BBDEFC; font-weight: normal"}
 
-<text style='color: #BBDEFC; font-weight: normal;'>Task 1. Margin analysis</text>
+<text style='color: #BBDEFC; font-weight: normal;'>Task 1. Recommendation system</text>
 
-In the thrid sprint week, we have received the next email from the Financial Director.
+In the fifth sprint week, we have received the next email from the Strategy Director.
+
 ---
