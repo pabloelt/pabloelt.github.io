@@ -430,7 +430,7 @@ In the fourth sprint week, we have received the next email from the Sales Direct
 
 We are now focusing more deeply on the client sector. In this context, we aim to create a client segmentation, evaluate customer growth potential, and reactivate clients who haven't made purchases in the last three months.
 
-For client segmentation, more powerful tools like machine learning approaches exist, but it is still possible to achieve meaningful results using SQL. In this case, we will create a 4-segment matrix based on the number of orders and the client's turnover. This matrix will be divided by two axes, separating records above and below the average. With this framework, we will be able to identify the four main types of customers.
+For client segmentation, more powerful tools like machine learning approaches exist, but it is still possible to achieve meaningful results using SQL. In this case, we will create a 4-segment matrix based on the number of orders and the client's turnover. This matrix will be divided by two axes, separating records above and below the average. It can be done with the following code:
 
 ```mysql
 # SPRINT WEEK 4 - TASK 1
@@ -440,10 +440,39 @@ For client segmentation, more powerful tools like machine learning approaches ex
   -- Create a 4-segment matrix based on the number of orders and client (store) turnover
   -- Each axis will divide between those above and below the average
   -- Save the query as a view for easy access
+create view v_segmentation_matrix as
+with table_orders_turnover_store as(
+  select id_store, count(distinct id_order) as num_orders, round(sum(turnover), 2) as turnover_store
+  from v_sales_agr_order
+  group by id_store),
 
+  table_avg as(
+    select round(avg(num_orders), 2) as avg_orders, round(avg(turnover_store), 2) as avg_turnover_store
+    from table_orders_turnover_store)
+select *,
+       case
+          when num_orders <= avg_orders and turnover_store <= avg_turnover_store then 'O- T-'
+          when num_orders <= avg_orders and turnover_store > avg_turnover_store then 'O- T+'
+          when num_orders > avg_orders and turnover_store <= avg_turnover_store then 'O+ T-'
+          when num_orders > avg_orders and turnover_store > avg_turnover_store then 'O+ T+'
+          else 'ERROR'
+       end as segmentation
+from table_orders_turnover_store, table_avg;
+
+-- Calculate how many customers we have in each segment of the matrix
+select segmentation, count(*)
+from v_segmentation_matrix
+group by segmentation;
 ```
 
+{{< figure src="/project8/sw4_r1.png" title="Sprint Week 4. Results 1." >}}
 
+With this framework, we are able to identify the four main types of customers, which are:
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Customers with high turnover and a high volume of orders:</text> This group is the most valuable to the company, so the strategy should focus on maintaining these clients.
+* <text style='color: #BBDEFC; font-weight: normal;'>Customers with high turnover and a low volume of orders:</text> Although they place fewer orders, the orders they do generate significant turnover. The company should develop targeted strategies to increase their order frequency.
+* <text style='color: #BBDEFC; font-weight: normal;'>Customers with low turnover and a high volume of orders:</text> This group places many orders, but the associated turnover is relatively low. Strategies should focus on increasing the average order value from this group.
+* <text style='color: #BBDEFC; font-weight: normal;'>Customers with low turnover and a low volume of orders:</text> This is the least beneficial group for the company, as their order frequency and turnover are both low. No specific campaigns are needed for this group.
 
 
 ### 3.5 Sprint Week 5
