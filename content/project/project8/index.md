@@ -437,9 +437,9 @@ For client segmentation, more powerful tools like machine learning approaches ex
 ---------------------------------------------
 
 -- Client segmentation: 
-	-- Create a 4-segment matrix based on the number of orders and client (store) turnover
-	-- Each axis will divide between those above and below the average
-	-- Save the query as a view for easy access
+  -- Create a 4-segment matrix based on the number of orders and client (store) turnover
+  -- Each axis will divide between those above and below the average
+  -- Save the query as a view for easy access
 ```
 
 
