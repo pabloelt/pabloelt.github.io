@@ -12,7 +12,7 @@ date: 2024-09-12
 ## 1. Introduction
 {style="color: #BBDEFC"}
 
-The client for this project is a sports company specializing in extreme activities, including modalities like skiing, hiking, climbing, and scuba diving, among others. However, the company's database has not been properly analyzed, leaving many potential insights unexplored. The company seeks to uncover valuable information, particularly related to sales, clients, products, and distribution channels. To achieve this, a plan involving six sprint weeks, managed by the directors of various departments, has been proposed to extract and analyze this critical data.
+The client for this project is a sports company specializing in extreme activities, including modalities like skiing, hiking, climbing, and scuba diving, among others. However, the company's database has not been properly analyzed, leaving many potential insights unexplored. The company seeks to uncover valuable information, particularly related to sales, clients, products, and distribution channels. To achieve this, a plan involving five sprint weeks, managed by the directors of various departments, has been proposed to extract and analyze this critical data.
 
 Notes:
 
@@ -24,7 +24,7 @@ Notes:
 ## 2. Objectives
 {style="color: #BBDEFC"}
 
-The main objective of this project is to thoroughly analyze the company's database to extract insights and valuable information related to sales, clients, products, and distribution channels. The project is designed to simulate real-world operations, with 6 sprint weeks planned and regular interactions with various departments. The insights gained from this analysis are expected to significantly enhance the company's performance, leading to increased profitability and reduced costs.
+The main objective of this project is to thoroughly analyze the company's database to extract insights and valuable information related to sales, clients, products, and distribution channels. The project is designed to simulate real-world operations, with five sprint weeks planned and regular interactions with various departments. The insights gained from this analysis are expected to significantly enhance the company's performance, leading to increased profitability and reduced costs.
 
 This entire project is conducted using **MySQL**, an open-source relational database management system. Specifically, the **MySQL Workbench** IDE (Integrated Development Environment) is used for the database analysis.
 
@@ -556,12 +556,88 @@ In the fifth sprint week, we received the final email from the Marketing Directo
 
 {{< figure src="/project8/sw5_task1.png" title="Sprint Week 5. Task 1." >}}
 
+This basic recommendation system is built on association rules and only suggests new products that the store has not purchased before. It first identifies products frequently purchased together in the same order, then generates recommendations for each store based on their historical purchases. The process can be summarized in three steps:
 
+* Create a table with the master item-item recommendations.
+* Generate a query that produces recommendations for each specific store.
+* Remove already purchased products from the recommendations for each client.
 
+Note: Before running any query, it's necessary to adjust an option in the SQL Editor to avoid a timeout error:
 
+* Go to Edit -> Preferences -> SQL Editor -> DBMS connection read timeout interval (in seconds).
+
+The code to create the table with the master item-item recommendations is provided below:
+
+```mysql
+# SPRINT WEEK 5 - TASK 1
+---------------------------------------------
+
+-- Generate an item-item recommendation system
+  -- That identifies products frequently bought together in the same order
+  -- And recommends to each store based on their own purchase history
+  -- NOTE: you will need to change an option to avoid a timeout error:
+  -- Edit --> Preferences --> SQL Editor --> DBMS connection read timeout interval (in seconds)
+    
+-- Procedure:
+-- Create a table with the master item-item recommendations
+create table recommender
+select v1.id_prod as precedent, v2.id_prod as consequent, count(v1.id_order) as frequency
+from v_sales_agr_order as v1
+  inner join v_sales_agr_order as v2
+  on v1.id_order = v2.id_order #we cross-check order with order to identify the products that are purchased in the same order
+    and v1.id_prod != v2.id_prod #we remove the records of each product with itself
+    and v1.id_prod < v2.id_prod #we avoid the symmetrical matrix
+group by v1.id_prod, v2.id_prod; #we check in how many orders they mach
+
+select * from recommender
+order by precedent, frequency desc;
+```
+
+{{< figure src="/project8/sw5_r1.png" title="Sprint Week 5. Results 1." >}}
+
+And the code for the final recommendation system is the following:
+
+```mysql
+-- Generate a query that produces recommendations for each specific store
+-- It has to remove already purchased products from the recommendations for each store
+with table_input_client as(
+  select id_prod, id_store
+  from sales_agr
+  where id_store = '1201'),
+    
+     table_recommended_prod as(
+  select consequent, sum(frequency) as frequency
+  from table_input_client as t
+    left join recommender as r
+    on t.id_prod = r.precedent
+  group by consequent
+  order by frequency desc)
+    
+select consequent as recommended_prod, frequency
+from table_recommended_prod as t1
+  left join table_input_client as t2
+  on t1.consequent = t2.id_prod
+where id_prod is null
+limit 10;
+```
+
+For store 1201, the top 10 new products suggested by the recommendation system are the following:
+
+{{< figure src="/project8/sw5_r2.png" title="Sprint Week 5. Results 2." >}}
+
+---
 
 ## 4. Results comunication
 {style="color: #BBDEFC"}
 
+In this project, we conducted an extensive analysis of a sports company’s database using SQL technology. The project was structured into five sprint weeks, aiming to uncover valuable insights and information, particularly related to sales, clients, products, and distribution channels.
 
----
+* <text style='color: #BBDEFC; font-weight: normal;'>First sprint week:</text> We collaborated with the IT Director to access the company's database and made initial improvements to data quality, including checking granularity and eliminating duplicate records. At this stage, we also properly established the entity relationships for the corrected data.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Second sprint week:</text> Working with the Strategy and Marketing Directors, we conducted simple queries to gain an overview of database performance. We also gathered valuable insights on top channels, key clients, and their turnover trends.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Third sprint week:</text> Our focus was on margin analysis and cost reduction in the company’s portfolio, in collaboration with the Financial and Marketing Directors. We analyzed the main product lines, evaluated their turnover contributions, and identified trending products.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Fourth sprint week:</text> With the Sales Director, we developed a client segmentation model, categorizing stores into four main groups based on their performance, considering turnover and order volume. We also evaluated the growth potential of each client and created a system to identify inactive clients.
+
+* <text style='color: #BBDEFC; font-weight: normal;'>Fifth sprint week:</text> In the final sprint, we worked with the Financial Director to develop a basic yet effective recommendation system based on each store's historical purchases. This system helps the company offer more relevant recommendations to clients, ultimately boosting profitability.
