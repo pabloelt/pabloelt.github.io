@@ -3,7 +3,7 @@ title: Sports Company Database Analysis with SQL
 summary: A database analysis is conducted using SQL technology for a sports company. The project is structured in sprint weeks to simulate real-world company operations, where various aspects such as sales, clients, products, and distribution channels are investigated.
 tags:
   - SQL
-date: 2024-09-12
+date: 2024-09-16
 #external_link: http://github.com
 ---
 
@@ -17,6 +17,7 @@ The client for this project is a sports company specializing in extreme activiti
 Notes:
 
 * This article presents a technical explanation of the development process followed in the project.
+* Source code can be found [here](https://github.com/pabloelt/sports-company-database-analysis-with-sql).
 * You can also download the {{< staticref "uploads/project_database.sql" "newtab" >}}database{{< /staticref >}} used in this project.
 
 ---
