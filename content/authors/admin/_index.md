@@ -48,7 +48,7 @@ social:
     #link: 'about/#contact' # For a direct email link, use "mailto:test@example.org".
   - icon: linkedin
     icon_pack: fab
-    link: https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/
+    link: https://www.linkedin.com/in/pablo-esteban-lopez-tello/
   - icon: github
     icon_pack: fab
     link: https://github.com/pabloelt
@@ -96,6 +96,6 @@ Email: &nbsp; pe.lopeztello@gmail.com
 
 Phone: &nbsp; <text style='color: #BBDEFC; font-weight: normal;'>(+34) 648842486</text>
 
-LinkedIn: &nbsp; [Contact me here](https://www.linkedin.com/in/pablo-esteban-l%C3%B3pez-tello-1056ab176/)
+LinkedIn: &nbsp; [Contact me here](https://www.linkedin.com/in/pablo-esteban-lopez-tello/)
 
 
